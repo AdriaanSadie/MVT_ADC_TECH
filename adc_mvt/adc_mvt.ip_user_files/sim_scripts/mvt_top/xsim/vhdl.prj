@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../bd/mvt_top/ip/mvt_top_proc_sys_reset_0_0/sim/mvt_top_proc_sys_reset_0_0.vhd" \
+"../../../bd/mvt_top/ip/mvt_top_util_ds_buf_0_0/util_ds_buf.vhd" \
+"../../../bd/mvt_top/ip/mvt_top_util_ds_buf_0_0/sim/mvt_top_util_ds_buf_0_0.vhd" \
+"../../../bd/mvt_top/ip/mvt_top_util_ds_buf_0_1/sim/mvt_top_util_ds_buf_0_1.vhd" \
+"../../../bd/mvt_top/ip/mvt_top_util_ds_buf_0_2/sim/mvt_top_util_ds_buf_0_2.vhd" \
+"../../../bd/mvt_top/ip/mvt_top_c_counter_binary_0_1/sim/mvt_top_c_counter_binary_0_1.vhd" \
+
+# Do not sort compile order
+nosort
