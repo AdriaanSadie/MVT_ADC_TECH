@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/adc_tech_data_splitter_0_0_synth_1'
+HD_PWD='C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_data_splitter_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

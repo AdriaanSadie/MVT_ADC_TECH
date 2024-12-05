@@ -7,10 +7,10 @@
 ##
 ##  Details :     Constraints file
 ##                    FPGA family:       zynq
-##                    FPGA:              PROD-1
-##                    Device Size:       xczu2cg
-##                    Package:           sfvc784
-##                    Speedgrade:        -1
+##                    FPGA:              PROD-2
+##                    Device Size:       xczu7ev
+##                    Package:           ffvc1156
+##                    Speedgrade:        -2
 ##
 ##
 ############################################################################

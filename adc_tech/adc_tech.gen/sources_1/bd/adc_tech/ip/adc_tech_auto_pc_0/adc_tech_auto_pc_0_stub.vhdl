@@ -1,13 +1,13 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Dec  4 11:46:02 2024
+-- Date        : Thu Dec  5 10:34:30 2024
 -- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/work/Technology/Vivado2020/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0_stub.vhdl
+--               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0_stub.vhdl
 -- Design      : adc_tech_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
--- Device      : xczu2cg-sfvc784-1-i
+-- Device      : xczu7ev-ffvc1156-2-e
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/sim/adc_tech_proc_sys_reset_0_0.vhd" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/sim/adc_tech_axi_gpio_0_0.vhd" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/util_ds_buf.vhd" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/sim/adc_tech_util_ds_buf_0_2.vhd" \
+
+nosort

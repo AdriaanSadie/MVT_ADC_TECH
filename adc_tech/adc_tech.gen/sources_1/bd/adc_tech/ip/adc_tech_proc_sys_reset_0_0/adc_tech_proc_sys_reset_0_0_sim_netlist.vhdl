@@ -1,14 +1,14 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Dec  4 11:22:59 2024
+-- Date        : Thu Dec  5 10:32:01 2024
 -- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_proc_sys_reset_0_0 -prefix
---               adc_tech_proc_sys_reset_0_0_ adc_tech_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0_sim_netlist.vhdl
 -- Design      : adc_tech_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
--- Device      : xczu2cg-sfvc784-1-i
+-- Device      : xczu7ev-ffvc1156-2-e
 -- --------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -25,6 +25,8 @@ entity adc_tech_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end adc_tech_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of adc_tech_proc_sys_reset_0_0_cdc_sync is
@@ -235,6 +237,8 @@ entity adc_tech_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end adc_tech_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of adc_tech_proc_sys_reset_0_0_upcnt_n is
@@ -399,6 +403,8 @@ entity adc_tech_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_proc_sys_reset_0_0_lpf : entity is "lpf";
 end adc_tech_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of adc_tech_proc_sys_reset_0_0_lpf is
@@ -585,6 +591,8 @@ entity adc_tech_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end adc_tech_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of adc_tech_proc_sys_reset_0_0_sequence_psr is
@@ -923,6 +931,8 @@ entity adc_tech_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of adc_tech_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of adc_tech_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end adc_tech_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of adc_tech_proc_sys_reset_0_0_proc_sys_reset is

@@ -1,14 +1,14 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Wed Dec  4 11:23:01 2024
+// Date        : Thu Dec  5 10:31:40 2024
 // Host        : ZA-WASADIE running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top adc_tech_clk_wiz_0_0 -prefix
-//               adc_tech_clk_wiz_0_0_ adc_tech_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_sim_netlist.v
 // Design      : adc_tech_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
-// Device      : xczu2cg-sfvc784-1-i
+// Device      : xczu7ev-ffvc1156-2-e
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
@@ -31,6 +31,7 @@ module adc_tech_clk_wiz_0_0
         .locked(locked));
 endmodule
 
+(* ORIG_REF_NAME = "adc_tech_clk_wiz_0_0_clk_wiz" *) 
 module adc_tech_clk_wiz_0_0_adc_tech_clk_wiz_0_0_clk_wiz
    (clk_out1,
     locked,
@@ -86,10 +87,10 @@ module adc_tech_clk_wiz_0_0_adc_tech_clk_wiz_0_0_clk_wiz
   (* OPT_MODIFIED = "MLO" *) 
   MMCME4_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(24.000000),
+    .CLKFBOUT_MULT_F(48.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(20.000000),
+    .CLKIN1_PERIOD(8.000000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE_F(6.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
@@ -121,7 +122,7 @@ module adc_tech_clk_wiz_0_0_adc_tech_clk_wiz_0_0_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("INTERNAL"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(5),
     .IS_CLKFBIN_INVERTED(1'b0),
     .IS_CLKIN1_INVERTED(1'b0),
     .IS_CLKIN2_INVERTED(1'b0),

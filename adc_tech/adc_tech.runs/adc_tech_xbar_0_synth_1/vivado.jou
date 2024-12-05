@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Dec  4 11:44:10 2024
-# Process ID: 944884
-# Current directory: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1
+# Start of session at: Thu Dec  5 10:32:49 2024
+# Process ID: 2781200
+# Current directory: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1
 # Command line: vivado.exe -log adc_tech_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_tech_xbar_0.tcl
-# Log file: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1/adc_tech_xbar_0.vds
-# Journal file: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1\vivado.jou
+# Log file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1/adc_tech_xbar_0.vds
+# Journal file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_xbar_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source adc_tech_xbar_0.tcl -notrace

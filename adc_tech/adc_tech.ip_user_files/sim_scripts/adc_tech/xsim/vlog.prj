@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vitis/Vivado/2020.2/data/xilinx_vip/include" --include "../../../../adc_tech.gen/sources_1/bd/adc_tech/ipshared/d0f7" --include "../../../../adc_tech.gen/sources_1/bd/adc_tech/ipshared/ec67/hdl" --include "../../../../adc_tech.gen/sources_1/bd/adc_tech/ipshared/da1e/hdl" --include "../../../../adc_tech.gen/sources_1/bd/adc_tech/ipshared/1b7e/hdl/verilog" --include "../../../../adc_tech.gen/sources_1/bd/adc_tech/ipshared/122e/hdl/verilog" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_clk_wiz.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/sim/adc_tech_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/sim/adc_tech_jtag_axi_0_0.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/sim/adc_tech_data_splitter_0_0.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/sim/adc_tech_xbar_0.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/sim/adc_tech_auto_pc_0.v" \
+"../../../../adc_tech.gen/sources_1/bd/adc_tech/sim/adc_tech.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
