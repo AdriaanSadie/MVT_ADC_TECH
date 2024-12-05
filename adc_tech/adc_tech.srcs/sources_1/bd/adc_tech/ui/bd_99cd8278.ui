@@ -1,0 +1,31 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.839999",
+   "Default View_TopLeft":"-56,-60",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port M00_AXI_0 -pg 1 -lvl 3 -x 1340 -y 380 -defaultsOSRD
+preplace port M01_AXI_0 -pg 1 -lvl 3 -x 1340 -y 400 -defaultsOSRD
+preplace port clk_in -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
+preplace port global_clk -pg 1 -lvl 3 -x 1340 -y 220 -defaultsOSRD
+preplace portBus global_rst_n -pg 1 -lvl 3 -x 1340 -y 150 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 1120 -y 50 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 1120 -y 200 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 310 -y 90 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 2 -x 1120 -y 420 -defaultsOSRD
+preplace inst jtag_axi_0 -pg 1 -lvl 1 -x 310 -y 270 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 1 610J 30n
+preplace netloc clk_in_1 1 0 2 0J 200 NJ
+preplace netloc clk_wiz_0_clk_out1 1 0 3 10 0 620J -50 1320
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 10 340 610 600 1300
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 2 630 590 1290
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 1 1 630 70n
+preplace netloc Conn1 1 2 1 1310 380n
+preplace netloc Conn2 1 2 1 1320 400n
+preplace netloc jtag_axi_0_M_AXI 1 1 1 610 270n
+levelinfo -pg 1 -20 310 1120 1340
+pagesize -pg 1 -db -bbox -sgen -110 -60 1500 610
+"
+}
+

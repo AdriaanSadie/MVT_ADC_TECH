@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Dec  4 11:48:16 2024
+# Process ID: 2742212
+# Current directory: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/impl_1
+# Command line: vivado.exe -log adc_tech_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source adc_tech_wrapper.tcl -notrace
+# Log file: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper.vdi
+# Journal file: C:/work/Technology/Vivado2020/adc_tech/adc_tech.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source adc_tech_wrapper.tcl -notrace
