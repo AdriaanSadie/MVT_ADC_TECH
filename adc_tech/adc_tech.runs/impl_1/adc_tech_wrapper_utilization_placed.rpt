@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Dec  5 10:52:21 2024
+| Date         : Thu Dec  5 15:02:30 2024
 | Host         : ZA-WASADIE running 64-bit major release  (build 9200)
 | Command      : report_utilization -file adc_tech_wrapper_utilization_placed.rpt -pb adc_tech_wrapper_utilization_placed.pb
 | Design       : adc_tech_wrapper
@@ -32,8 +32,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs                   | 5325 |     0 |    230400 |  2.31 |
-|   LUT as Logic             | 2659 |     0 |    230400 |  1.15 |
+| CLB LUTs                   | 5334 |     0 |    230400 |  2.32 |
+|   LUT as Logic             | 2668 |     0 |    230400 |  1.16 |
 |   LUT as Memory            | 2666 |     0 |    101760 |  2.62 |
 |     LUT as Distributed RAM | 2592 |     0 |           |       |
 |     LUT as Shift Register  |   74 |     0 |           |       |
@@ -72,13 +72,13 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| CLB                                        | 1120 |     0 |     28800 |  3.89 |
-|   CLBL                                     |  460 |     0 |           |       |
-|   CLBM                                     |  660 |     0 |           |       |
-| LUT as Logic                               | 2659 |     0 |    230400 |  1.15 |
-|   using O5 output only                     |  103 |       |           |       |
-|   using O6 output only                     | 1955 |       |           |       |
-|   using O5 and O6                          |  601 |       |           |       |
+| CLB                                        | 1150 |     0 |     28800 |  3.99 |
+|   CLBL                                     |  471 |     0 |           |       |
+|   CLBM                                     |  679 |     0 |           |       |
+| LUT as Logic                               | 2668 |     0 |    230400 |  1.16 |
+|   using O5 output only                     |   94 |       |           |       |
+|   using O6 output only                     | 1982 |       |           |       |
+|   using O5 and O6                          |  592 |       |           |       |
 | LUT as Memory                              | 2666 |     0 |    101760 |  2.62 |
 |   LUT as Distributed RAM                   | 2592 |     0 |           |       |
 |     using O5 output only                   |    0 |       |           |       |
@@ -89,10 +89,10 @@ Table of Contents
 |     using O6 output only                   |   66 |       |           |       |
 |     using O5 and O6                        |    8 |       |           |       |
 | CLB Registers                              | 4082 |     0 |    460800 |  0.89 |
-|   Register driven from within the CLB      | 1668 |       |           |       |
-|   Register driven from outside the CLB     | 2414 |       |           |       |
-|     LUT in front of the register is unused | 1964 |       |           |       |
-|     LUT in front of the register is used   |  450 |       |           |       |
+|   Register driven from within the CLB      | 1692 |       |           |       |
+|   Register driven from outside the CLB     | 2390 |       |           |       |
+|     LUT in front of the register is unused | 1927 |       |           |       |
+|     LUT in front of the register is used   |  463 |       |           |       |
 | Unique Control Sets                        |  315 |       |     57600 |  0.55 |
 +--------------------------------------------+------+-------+-----------+-------+
 * * Note: Available Control Sets calculated as Slices * 2, Review the Control Sets Report for more information regarding control sets.
@@ -130,13 +130,13 @@ Table of Contents
 |     Site Type    | Used | Fixed | Available | Util% |
 +------------------+------+-------+-----------+-------+
 | Bonded IOB       |    6 |     6 |       360 |  1.67 |
-| HPIOB_M          |    4 |     4 |       144 |  2.78 |
+| HPIOB_M          |    3 |     3 |       144 |  2.08 |
 |   INPUT          |    1 |       |           |       |
-|   OUTPUT         |    3 |       |           |       |
+|   OUTPUT         |    2 |       |           |       |
 |   BIDIR          |    0 |       |           |       |
-| HPIOB_S          |    2 |     2 |       144 |  1.39 |
+| HPIOB_S          |    3 |     3 |       144 |  2.08 |
 |   INPUT          |    1 |       |           |       |
-|   OUTPUT         |    1 |       |           |       |
+|   OUTPUT         |    2 |       |           |       |
 |   BIDIR          |    0 |       |           |       |
 | HDIOB_M          |    0 |     0 |        24 |  0.00 |
 | HDIOB_S          |    0 |     0 |        24 |  0.00 |
