@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Dec  5 10:34:30 2024
+-- Date        : Thu Dec  5 10:34:29 2024
 -- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_auto_pc_0 -prefix
+--               adc_tech_auto_pc_0_ adc_tech_auto_pc_0_sim_netlist.vhdl
 -- Design      : adc_tech_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -49,8 +49,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd is
     \axaddr_incr_reg[11]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \axaddr_incr_reg[11]_2\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_22_b2s_incr_cmd";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd is
@@ -1222,8 +1220,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm is
     m_valid_i_reg_1 : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm is
@@ -1561,8 +1557,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo is
     \in\ : in STD_LOGIC_VECTOR ( 24 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_22_b2s_simple_fifo";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo is
@@ -3623,8 +3617,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm is
     \axaddr_incr[11]_i_5_1\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm is
@@ -4015,8 +4007,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd is
     \wrap_boundary_axaddr_r_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \axaddr_wrap_reg[11]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_22_b2s_wrap_cmd";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd is
@@ -6002,8 +5992,6 @@ entity adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axic_register_slice is
     aresetn : in STD_LOGIC;
     \m_payload_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axic_register_slice : entity is "axi_register_slice_v2_1_22_axic_register_slice";
 end adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axic_register_slice;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axic_register_slice is
@@ -13807,8 +13795,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel is
     m_axi_bvalid : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 24 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel : entity is "axi_protocol_converter_v2_1_22_b2s_b_channel";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel is
@@ -14157,8 +14143,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator is
     \axaddr_incr_reg[11]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \axaddr_incr_reg[11]_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_22_b2s_cmd_translator";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator is
@@ -14531,8 +14515,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel is
     D : in STD_LOGIC_VECTOR ( 16 downto 0 );
     areset_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel : entity is "axi_protocol_converter_v2_1_22_b2s_r_channel";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel is
@@ -14845,8 +14827,6 @@ entity adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice : entity is "axi_register_slice_v2_1_22_axi_register_slice";
 end adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice is
@@ -15065,8 +15045,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel is
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \axaddr_incr_reg[11]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_22_b2s_ar_channel";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel is
@@ -15424,8 +15402,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel is
     \wrap_cnt_r_reg[1]\ : in STD_LOGIC;
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_22_b2s_aw_channel";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel is
@@ -15838,8 +15814,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s is
     s_axi_arvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s : entity is "axi_protocol_converter_v2_1_22_b2s";
 end adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s;
 
 architecture STRUCTURE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_b2s is
@@ -16493,8 +16467,6 @@ entity adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter 
   attribute C_TRANSLATION_MODE of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_22_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of adc_tech_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;

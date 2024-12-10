@@ -28,67 +28,23 @@
 -- [ 7:0    ]   -- [ Data                 ]
 --
 --
--- A transaction will be clocked in once, when the trigger bit (31) is asserted high. 
--- 
--- Important Registers:
---
--- [ Name 	]		-- [ Address			]		--	[ Notes ]
---
--- [ IOCON	]		-- [ 0x0A, 0x0B		]		--	[ Configuration Register. See below for more details on IOCON Register
--- [ IODIRA ]		-- [ 0x00					]		-- 	[ I/O Direction Register Port A. Input: 1; Output: 0. Default is 0xFF (all inputs)
--- [ IODIRB ]		-- [ 0x01					]		-- 	[ I/O Direction Register Port B. Input: 1; Output: 0. Default is 0xFF (all inputs)
--- [ GPPUA	] 	-- [ 0x0C					]		-- 	[ Pull-up resistor configuration register. If bit is set (=1) AND pin is set to input, the port is pulled up with 100k resistor
--- [ GPPUB	]		-- [ 0x0D					]		-- 	[ Pull-up resistor configuration register. If bit is set (=1) AND pin is set to input, the port is pulled up with 100k resistor
--- [ GPIOA	] 	-- [ 0x12					] 	-- 	[ Reflects value on the port A. Writing to this register modifies the OLAT register.
--- [ GPIOB	] 	-- [ 0x13					] 	-- 	[ Reflects value on the port B. Writing to this register modifies the OLAT register.
--- [ OLATA	]		-- [ 0x14					] 	-- 	[ Output latch register of port A. Writing to this register modifies output latch, modifying pins configured as outputs.
--- [ OLATB	]		-- [ 0x15					] 	-- 	[ Output latch register of port B. Writing to this register modifies output latch, modifying pins configured as outputs.
 --
 --
 --
 --
--- 
---
--- IOCON Regiser:
---
--- [ Bit ]	-- [ Name		]		--	[ Description	]
--- 
--- [ 7	 ]	-- [ BANK		]		-- 	[ Controls how registers are addressed. 1 - Registers separated into different banks. 0 - Sequential addressing.
--- [ 6	 ]	-- [ MIRROR	]		-- 	[ How interrupt pins are connected. 1 - INT pins OR'd. 0 - INT pins not connected.
--- [ 5	 ] 	-- [ SEQOP	]		--	[ Sequential operation mode. 1 - Address pointer does not increment. 0 - Addres pointer increments
--- [ 4	 ]	-- [ DISSLW ]		--  [ Slew rate control bit for SDA output. 1 - slew rate disabled. 0 - slew rate enabled.
--- [ 3	 ] 	-- [ HAEN		]		-- 	[ Hardware Address Enable (only for the SPI device, MCP23S017. For our purpose, it's always enabled
--- [ 2	 ] 	-- [ ODR		] 	--  [ Configures the INT pin as an open-drain output. 1 - open-drain output. 0 - active driver output
--- [ 1	 ]	-- [ INTPOL	]		-- 	[ Sets polarity of INT output pin. 1 - Active high. 0 - Active low.
---
--- For the purposes of this firmware block, the IOCON register will be set to 0x00, as it is after PORST
---
---
--- 
---
--- Software write example to set 4 pins high on port A of device 1 (remember to prime the GPIO block after each write):
---
---	[ Prime the firmware GPIO : ]
--- 	-> ./i2c i2c 0
---
---	[ Set direction of both ports A and B as outputs : ]
--- 	-> ./i2c i2c 0x80000000
--- 	-> ./i2c i2c 0
---	-> ./i2c i2c 0x80000100
--- 	-> ./i2c i2c 0
---
--- 	[ Set pins 0 to 3 high on Port A : ]
--- 	-> ./i2c i2c 0x8000140F
--- 	-> ./i2c i2c 0
 --
 --
 --
--- I2C Manager:
 --
--- The I2C manager process tracks the clocks that each underlying process should take, e.g. for a write cycle:
 --
---    
---  |	-	Start Bit	-	| - - Write Opcode - - | - ACK - | - - Write Control Address - - | - ACK - | - - Write Data - - | - ACK - | - STOP BIT - |
+--
+--
+--
+--
+--
+--
+--
+--
 --
 --
 ----------------------------------------------------------------------------------
@@ -108,7 +64,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity ad5669 is
     generic(
-			C_I2C_DEV_ADDR_LEN   	: integer := 7;
+	  C_I2C_DEV_ADDR_LEN   	: integer := 7;
       C_CLOCKS_PER_HALF_BIT : integer := 50 -- 100 clocks for a 100_000 kHz I2C clock, half is 50 @ 10 MHz input clock
     );
     Port ( 

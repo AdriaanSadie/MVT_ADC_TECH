@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date              : Thu Dec  5 15:04:15 2024
-| Host              : ZA-WASADIE running 64-bit major release  (build 9200)
+| Date              : Thu Dec  5 21:24:14 2024
+| Host              : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 | Command           : report_clock_utilization -file adc_tech_wrapper_clock_utilization_routed.rpt
 | Design            : adc_tech_wrapper
 | Device            : xczu7ev-ffvc1156

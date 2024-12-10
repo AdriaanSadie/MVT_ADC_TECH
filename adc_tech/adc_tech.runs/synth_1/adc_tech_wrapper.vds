@@ -2,18 +2,18 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Thu Dec  5 10:35:20 2024
-# Process ID: 2770144
-# Current directory: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1
+# Start of session at: Thu Dec  5 21:19:22 2024
+# Process ID: 11328
+# Current directory: C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1
 # Command line: vivado.exe -log adc_tech_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_tech_wrapper.tcl
-# Log file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.vds
-# Journal file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1\vivado.jou
+# Log file: C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.vds
+# Journal file: C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source adc_tech_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vitis/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1125.688 ; gain = 0.000
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1106.746 ; gain = 0.000
 Command: synth_design -top adc_tech_wrapper -part xczu7ev-ffvc1156-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
@@ -21,144 +21,137 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev
 INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2773204
+INFO: [Synth 8-7075] Helper process launched with PID 15124
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1843.910 ; gain = 119.387
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1805.891 ; gain = 119.008
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_wrapper' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:572]
-INFO: [Synth 8-6157] synthesizing module 'Processing_Subsystem_imp_AKKRWG' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:12]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_axi_interconnect_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:685]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JJ7H1L' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1799]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_auto_pc_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_auto_pc_0' (1#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_auto_pc_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'adc_tech_auto_pc_0' is unconnected for instance 'auto_pc' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2038]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'adc_tech_auto_pc_0' is unconnected for instance 'auto_pc' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2038]
-WARNING: [Synth 8-7023] instance 'auto_pc' of module 'adc_tech_auto_pc_0' has 60 connections declared, but only 58 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2038]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JJ7H1L' (2#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1799]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1AY5IP4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2099]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1AY5IP4' (3#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2099]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1H3AURV' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2385]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1H3AURV' (4#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2385]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_M7HS4Q' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2671]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_M7HS4Q' (5#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2671]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_xbar_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xbar_0' (6#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awuser' of module 'adc_tech_xbar_0' is unconnected for instance 'xbar' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1716]
-WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'adc_tech_xbar_0' is unconnected for instance 'xbar' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1716]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'adc_tech_xbar_0' has 82 connections declared, but only 80 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1716]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_axi_interconnect_0_0' (7#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:685]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_clk_wiz_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_clk_wiz_0_0' (8#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_clk_wiz_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'locked' of module 'adc_tech_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:476]
-WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'adc_tech_clk_wiz_0_0' has 3 connections declared, but only 2 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:476]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_jtag_axi_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_jtag_axi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_jtag_axi_0_0' (9#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_jtag_axi_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_proc_sys_reset_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_proc_sys_reset_0_0' (10#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:519]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:519]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:519]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'adc_tech_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:519]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' (11#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'pl_clk0' of module 'adc_tech_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:527]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'adc_tech_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 41 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:527]
-INFO: [Synth 8-6155] done synthesizing module 'Processing_Subsystem_imp_AKKRWG' (12#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:12]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_araddr' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arburst' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arcache' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arlen' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arlock' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arprot' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arqos' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arregion' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arsize' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_aruser' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awaddr' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awburst' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awcache' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awlen' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awlock' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awprot' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awqos' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awregion' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awsize' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awuser' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_bready' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_rready' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_wdata' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_wlast' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_wstrb' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_wvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-WARNING: [Synth 8-7023] instance 'Processing_Subsystem' of module 'Processing_Subsystem_imp_AKKRWG' has 61 connections declared, but only 31 given [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:620]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_axi_gpio_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_axi_gpio_0_0' (13#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_data_splitter_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_data_splitter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_data_splitter_0_0' (14#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_data_splitter_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'adc_tech_util_ds_buf_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_util_ds_buf_0_2' (15#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-2770144-ZA-WASADIE/realtime/adc_tech_util_ds_buf_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech' (16#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:572]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_wrapper' (17#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_wrapper' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:578]
+INFO: [Synth 8-6157] synthesizing module 'Processing_Subsystem_imp_AKKRWG' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:12]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_axi_interconnect_0_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:691]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JJ7H1L' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1823]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_auto_pc_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_auto_pc_0' (1#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'adc_tech_auto_pc_0' is unconnected for instance 'auto_pc' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2062]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'adc_tech_auto_pc_0' is unconnected for instance 'auto_pc' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2062]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'adc_tech_auto_pc_0' has 60 connections declared, but only 58 given [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2062]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JJ7H1L' (2#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:1823]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1AY5IP4' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2123]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1AY5IP4' (3#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2123]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1H3AURV' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2423]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1H3AURV' (4#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2423]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_M7HS4Q' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2709]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_M7HS4Q' (5#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:2709]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_xbar_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xbar_0' (6#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_axi_interconnect_0_0' (7#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:691]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_clk_wiz_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_clk_wiz_0_0' (8#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_clk_wiz_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'locked' of module 'adc_tech_clk_wiz_0_0' is unconnected for instance 'clk_wiz_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:482]
+WARNING: [Synth 8-7023] instance 'clk_wiz_0' of module 'adc_tech_clk_wiz_0_0' has 3 connections declared, but only 2 given [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:482]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_jtag_axi_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_jtag_axi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_jtag_axi_0_0' (9#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_jtag_axi_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_proc_sys_reset_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_proc_sys_reset_0_0' (10#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:525]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:525]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'adc_tech_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:525]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'adc_tech_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:525]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' (11#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'pl_clk0' of module 'adc_tech_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:533]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'adc_tech_zynq_ultra_ps_e_0_0' has 42 connections declared, but only 41 given [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:533]
+INFO: [Synth 8-6155] done synthesizing module 'Processing_Subsystem_imp_AKKRWG' (12#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:12]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_araddr' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arburst' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arcache' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arlen' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arlock' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arprot' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arqos' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arregion' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arsize' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_aruser' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_arvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awaddr' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awburst' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awcache' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awlen' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awlock' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awprot' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awqos' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awregion' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awsize' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awuser' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_awvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_bready' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_rready' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_wdata' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_wlast' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_wstrb' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7071] port 'M01_AXI_0_wvalid' of module 'Processing_Subsystem_imp_AKKRWG' is unconnected for instance 'Processing_Subsystem' [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+WARNING: [Synth 8-7023] instance 'Processing_Subsystem' of module 'Processing_Subsystem_imp_AKKRWG' has 61 connections declared, but only 31 given [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:626]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_axi_gpio_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_axi_gpio_0_0' (13#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_data_splitter_0_0' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_data_splitter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_data_splitter_0_0' (14#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_data_splitter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'adc_tech_util_ds_buf_0_2' [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_util_ds_buf_0_2' (15#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-11328-DESKTOP-NG70LRJ/realtime/adc_tech_util_ds_buf_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech' (16#1) [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.v:578]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_wrapper' (17#1) [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1900.227 ; gain = 175.703
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1861.523 ; gain = 174.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1916.480 ; gain = 191.957
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1879.449 ; gain = 192.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1916.480 ; gain = 191.957
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1879.449 ; gain = 192.566
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1916.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1879.449 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0/adc_tech_xbar_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/xbar'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0/adc_tech_xbar_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/xbar'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0/adc_tech_auto_pc_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m00_couplers/auto_pc'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0/adc_tech_auto_pc_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m00_couplers/auto_pc'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/proc_sys_reset_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/proc_sys_reset_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/zynq_ultra_ps_e_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/zynq_ultra_ps_e_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc] for cell 'adc_tech_i/util_ds_buf_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc] for cell 'adc_tech_i/util_ds_buf_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/axi_gpio_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/axi_gpio_0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0_in_context.xdc] for cell 'adc_tech_i/data_splitter_0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0_in_context.xdc] for cell 'adc_tech_i/data_splitter_0'
-Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]
-WARNING: [Vivado 12-584] No ports matched 'pl_clk'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:2]
-WARNING: [Vivado 12-584] No ports matched 'pl_clk'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:3]
-WARNING: [Vivado 12-584] No ports matched 'pl_clk'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:24]
-Finished Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/adc_tech_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adc_tech_wrapper_propImpl.xdc].
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0/adc_tech_xbar_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0/adc_tech_xbar_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/xbar'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0/adc_tech_auto_pc_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0/adc_tech_auto_pc_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m00_couplers/auto_pc'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/proc_sys_reset_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0/adc_tech_proc_sys_reset_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/proc_sys_reset_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/zynq_ultra_ps_e_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc] for cell 'adc_tech_i/util_ds_buf_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc] for cell 'adc_tech_i/util_ds_buf_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/axi_gpio_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/axi_gpio_0'
+Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0_in_context.xdc] for cell 'adc_tech_i/data_splitter_0'
+Finished Parsing XDC File [c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0_in_context.xdc] for cell 'adc_tech_i/data_splitter_0'
+Parsing XDC File [C:/work/MVT_ADC_TECH/constraints/io_pins.xdc]
+Finished Parsing XDC File [C:/work/MVT_ADC_TECH/constraints/io_pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/work/MVT_ADC_TECH/constraints/io_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adc_tech_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/adc_tech_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1940.004 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1910.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1940.004 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1910.578 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1947.613 ; gain = 223.090
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1911.523 ; gain = 224.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -166,15 +159,15 @@ Start Loading Part and Timing Information
 Loading part: xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1947.613 ; gain = 223.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1911.523 ; gain = 224.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for pl_clk_n. (constraint file  c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 2).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for pl_clk_n. (constraint file  c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 3).
-Applied set_property IO_BUFFER_TYPE = NONE for pl_clk_p. (constraint file  c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for pl_clk_p. (constraint file  c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for pl_clk_n. (constraint file  c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pl_clk_n. (constraint file  c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for pl_clk_p. (constraint file  c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for pl_clk_p. (constraint file  c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2_in_context.xdc, line 5).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/m00_couplers/auto_pc. (constraint file  auto generated constraint).
@@ -187,10 +180,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/util_ds_buf_0. (constr
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/axi_gpio_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/data_splitter_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1947.613 ; gain = 223.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1911.523 ; gain = 224.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1947.613 ; gain = 223.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1911.523 ; gain = 224.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -212,25 +205,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1947.613 ; gain = 223.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1911.523 ; gain = 224.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2566.453 ; gain = 841.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2526.867 ; gain = 839.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2566.602 ; gain = 842.078
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2527.016 ; gain = 840.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 2585.707 ; gain = 861.184
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2546.133 ; gain = 859.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -248,37 +241,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -315,23 +308,23 @@ Report Cell Usage:
 |10    |OBUF                       |     4|
 +------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 2592.438 ; gain = 836.781
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2592.438 ; gain = 867.914
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 2553.223 ; gain = 834.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2553.223 ; gain = 866.340
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2604.531 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2565.273 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2633.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2595.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2633.617 ; gain = 1507.930
-INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2595.578 ; gain = 1488.832
+INFO: [Common 17-1381] The checkpoint 'C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_tech_wrapper_utilization_synth.rpt -pb adc_tech_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 10:36:44 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 21:20:20 2024...

@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Thu Dec  5 10:28:32 2024
-//Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+//Date        : Thu Dec  5 21:18:21 2024
+//Host        : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 //Command     : generate_target adc_tech.bd
 //Design      : adc_tech
 //Purpose     : IP block netlist
@@ -161,6 +161,7 @@ module Processing_Subsystem_imp_AKKRWG
   wire Conn2_ARREADY;
   wire Conn2_ARREGION;
   wire Conn2_ARSIZE;
+  wire Conn2_ARUSER;
   wire Conn2_ARVALID;
   wire Conn2_AWADDR;
   wire Conn2_AWBURST;
@@ -173,6 +174,7 @@ module Processing_Subsystem_imp_AKKRWG
   wire Conn2_AWREADY;
   wire Conn2_AWREGION;
   wire Conn2_AWSIZE;
+  wire Conn2_AWUSER;
   wire Conn2_AWVALID;
   wire Conn2_BID;
   wire Conn2_BREADY;
@@ -309,6 +311,7 @@ module Processing_Subsystem_imp_AKKRWG
   assign M01_AXI_0_arqos = Conn2_ARQOS;
   assign M01_AXI_0_arregion = Conn2_ARREGION;
   assign M01_AXI_0_arsize = Conn2_ARSIZE;
+  assign M01_AXI_0_aruser = Conn2_ARUSER;
   assign M01_AXI_0_arvalid = Conn2_ARVALID;
   assign M01_AXI_0_awaddr = Conn2_AWADDR;
   assign M01_AXI_0_awburst = Conn2_AWBURST;
@@ -320,6 +323,7 @@ module Processing_Subsystem_imp_AKKRWG
   assign M01_AXI_0_awqos = Conn2_AWQOS;
   assign M01_AXI_0_awregion = Conn2_AWREGION;
   assign M01_AXI_0_awsize = Conn2_AWSIZE;
+  assign M01_AXI_0_awuser = Conn2_AWUSER;
   assign M01_AXI_0_awvalid = Conn2_AWVALID;
   assign M01_AXI_0_bready = Conn2_BREADY;
   assign M01_AXI_0_rready = Conn2_RREADY;
@@ -365,6 +369,7 @@ module Processing_Subsystem_imp_AKKRWG
         .M01_AXI_arready(Conn2_ARREADY),
         .M01_AXI_arregion(Conn2_ARREGION),
         .M01_AXI_arsize(Conn2_ARSIZE),
+        .M01_AXI_aruser(Conn2_ARUSER),
         .M01_AXI_arvalid(Conn2_ARVALID),
         .M01_AXI_awaddr(Conn2_AWADDR),
         .M01_AXI_awburst(Conn2_AWBURST),
@@ -377,6 +382,7 @@ module Processing_Subsystem_imp_AKKRWG
         .M01_AXI_awready(Conn2_AWREADY),
         .M01_AXI_awregion(Conn2_AWREGION),
         .M01_AXI_awsize(Conn2_AWSIZE),
+        .M01_AXI_awuser(Conn2_AWUSER),
         .M01_AXI_awvalid(Conn2_AWVALID),
         .M01_AXI_bid(Conn2_BID),
         .M01_AXI_bready(Conn2_BREADY),
@@ -717,6 +723,7 @@ module adc_tech_axi_interconnect_0_0
     M01_AXI_arready,
     M01_AXI_arregion,
     M01_AXI_arsize,
+    M01_AXI_aruser,
     M01_AXI_arvalid,
     M01_AXI_awaddr,
     M01_AXI_awburst,
@@ -729,6 +736,7 @@ module adc_tech_axi_interconnect_0_0
     M01_AXI_awready,
     M01_AXI_awregion,
     M01_AXI_awsize,
+    M01_AXI_awuser,
     M01_AXI_awvalid,
     M01_AXI_bid,
     M01_AXI_bready,
@@ -859,6 +867,7 @@ module adc_tech_axi_interconnect_0_0
   input M01_AXI_arready;
   output M01_AXI_arregion;
   output M01_AXI_arsize;
+  output M01_AXI_aruser;
   output M01_AXI_arvalid;
   output M01_AXI_awaddr;
   output M01_AXI_awburst;
@@ -871,6 +880,7 @@ module adc_tech_axi_interconnect_0_0
   input M01_AXI_awready;
   output M01_AXI_awregion;
   output M01_AXI_awsize;
+  output M01_AXI_awuser;
   output M01_AXI_awvalid;
   input M01_AXI_bid;
   output M01_AXI_bready;
@@ -1082,6 +1092,7 @@ module adc_tech_axi_interconnect_0_0
   wire m01_couplers_to_axi_interconnect_0_ARREADY;
   wire m01_couplers_to_axi_interconnect_0_ARREGION;
   wire m01_couplers_to_axi_interconnect_0_ARSIZE;
+  wire m01_couplers_to_axi_interconnect_0_ARUSER;
   wire m01_couplers_to_axi_interconnect_0_ARVALID;
   wire m01_couplers_to_axi_interconnect_0_AWADDR;
   wire m01_couplers_to_axi_interconnect_0_AWBURST;
@@ -1094,6 +1105,7 @@ module adc_tech_axi_interconnect_0_0
   wire m01_couplers_to_axi_interconnect_0_AWREADY;
   wire m01_couplers_to_axi_interconnect_0_AWREGION;
   wire m01_couplers_to_axi_interconnect_0_AWSIZE;
+  wire m01_couplers_to_axi_interconnect_0_AWUSER;
   wire m01_couplers_to_axi_interconnect_0_AWVALID;
   wire m01_couplers_to_axi_interconnect_0_BID;
   wire m01_couplers_to_axi_interconnect_0_BREADY;
@@ -1236,6 +1248,7 @@ module adc_tech_axi_interconnect_0_0
   wire xbar_to_m01_couplers_ARREADY;
   wire [7:4]xbar_to_m01_couplers_ARREGION;
   wire [5:3]xbar_to_m01_couplers_ARSIZE;
+  wire [31:16]xbar_to_m01_couplers_ARUSER;
   wire [1:1]xbar_to_m01_couplers_ARVALID;
   wire [79:40]xbar_to_m01_couplers_AWADDR;
   wire [3:2]xbar_to_m01_couplers_AWBURST;
@@ -1248,6 +1261,7 @@ module adc_tech_axi_interconnect_0_0
   wire xbar_to_m01_couplers_AWREADY;
   wire [7:4]xbar_to_m01_couplers_AWREGION;
   wire [5:3]xbar_to_m01_couplers_AWSIZE;
+  wire [31:16]xbar_to_m01_couplers_AWUSER;
   wire [1:1]xbar_to_m01_couplers_AWVALID;
   wire xbar_to_m01_couplers_BID;
   wire [1:1]xbar_to_m01_couplers_BREADY;
@@ -1264,6 +1278,8 @@ module adc_tech_axi_interconnect_0_0
   wire xbar_to_m01_couplers_WREADY;
   wire [7:4]xbar_to_m01_couplers_WSTRB;
   wire [1:1]xbar_to_m01_couplers_WVALID;
+  wire [31:0]NLW_xbar_m_axi_aruser_UNCONNECTED;
+  wire [31:0]NLW_xbar_m_axi_awuser_UNCONNECTED;
 
   assign M00_ACLK_1 = M00_ACLK;
   assign M00_ARESETN_1 = M00_ARESETN;
@@ -1288,6 +1304,7 @@ module adc_tech_axi_interconnect_0_0
   assign M01_AXI_arqos = m01_couplers_to_axi_interconnect_0_ARQOS;
   assign M01_AXI_arregion = m01_couplers_to_axi_interconnect_0_ARREGION;
   assign M01_AXI_arsize = m01_couplers_to_axi_interconnect_0_ARSIZE;
+  assign M01_AXI_aruser = m01_couplers_to_axi_interconnect_0_ARUSER;
   assign M01_AXI_arvalid = m01_couplers_to_axi_interconnect_0_ARVALID;
   assign M01_AXI_awaddr = m01_couplers_to_axi_interconnect_0_AWADDR;
   assign M01_AXI_awburst = m01_couplers_to_axi_interconnect_0_AWBURST;
@@ -1299,6 +1316,7 @@ module adc_tech_axi_interconnect_0_0
   assign M01_AXI_awqos = m01_couplers_to_axi_interconnect_0_AWQOS;
   assign M01_AXI_awregion = m01_couplers_to_axi_interconnect_0_AWREGION;
   assign M01_AXI_awsize = m01_couplers_to_axi_interconnect_0_AWSIZE;
+  assign M01_AXI_awuser = m01_couplers_to_axi_interconnect_0_AWUSER;
   assign M01_AXI_awvalid = m01_couplers_to_axi_interconnect_0_AWVALID;
   assign M01_AXI_bready = m01_couplers_to_axi_interconnect_0_BREADY;
   assign M01_AXI_rready = m01_couplers_to_axi_interconnect_0_RREADY;
@@ -1482,6 +1500,7 @@ module adc_tech_axi_interconnect_0_0
         .M_AXI_arready(m01_couplers_to_axi_interconnect_0_ARREADY),
         .M_AXI_arregion(m01_couplers_to_axi_interconnect_0_ARREGION),
         .M_AXI_arsize(m01_couplers_to_axi_interconnect_0_ARSIZE),
+        .M_AXI_aruser(m01_couplers_to_axi_interconnect_0_ARUSER),
         .M_AXI_arvalid(m01_couplers_to_axi_interconnect_0_ARVALID),
         .M_AXI_awaddr(m01_couplers_to_axi_interconnect_0_AWADDR),
         .M_AXI_awburst(m01_couplers_to_axi_interconnect_0_AWBURST),
@@ -1494,6 +1513,7 @@ module adc_tech_axi_interconnect_0_0
         .M_AXI_awready(m01_couplers_to_axi_interconnect_0_AWREADY),
         .M_AXI_awregion(m01_couplers_to_axi_interconnect_0_AWREGION),
         .M_AXI_awsize(m01_couplers_to_axi_interconnect_0_AWSIZE),
+        .M_AXI_awuser(m01_couplers_to_axi_interconnect_0_AWUSER),
         .M_AXI_awvalid(m01_couplers_to_axi_interconnect_0_AWVALID),
         .M_AXI_bid(m01_couplers_to_axi_interconnect_0_BID),
         .M_AXI_bready(m01_couplers_to_axi_interconnect_0_BREADY),
@@ -1523,6 +1543,7 @@ module adc_tech_axi_interconnect_0_0
         .S_AXI_arready(xbar_to_m01_couplers_ARREADY),
         .S_AXI_arregion(xbar_to_m01_couplers_ARREGION[4]),
         .S_AXI_arsize(xbar_to_m01_couplers_ARSIZE[3]),
+        .S_AXI_aruser(xbar_to_m01_couplers_ARUSER[16]),
         .S_AXI_arvalid(xbar_to_m01_couplers_ARVALID),
         .S_AXI_awaddr(xbar_to_m01_couplers_AWADDR[40]),
         .S_AXI_awburst(xbar_to_m01_couplers_AWBURST[2]),
@@ -1535,6 +1556,7 @@ module adc_tech_axi_interconnect_0_0
         .S_AXI_awready(xbar_to_m01_couplers_AWREADY),
         .S_AXI_awregion(xbar_to_m01_couplers_AWREGION[4]),
         .S_AXI_awsize(xbar_to_m01_couplers_AWSIZE[3]),
+        .S_AXI_awuser(xbar_to_m01_couplers_AWUSER[16]),
         .S_AXI_awvalid(xbar_to_m01_couplers_AWVALID),
         .S_AXI_bid(xbar_to_m01_couplers_BID),
         .S_AXI_bready(xbar_to_m01_couplers_BREADY),
@@ -1727,6 +1749,7 @@ module adc_tech_axi_interconnect_0_0
         .m_axi_arready({xbar_to_m01_couplers_ARREADY,xbar_to_m00_couplers_ARREADY}),
         .m_axi_arregion({xbar_to_m01_couplers_ARREGION,xbar_to_m00_couplers_ARREGION}),
         .m_axi_arsize({xbar_to_m01_couplers_ARSIZE,xbar_to_m00_couplers_ARSIZE}),
+        .m_axi_aruser({xbar_to_m01_couplers_ARUSER,NLW_xbar_m_axi_aruser_UNCONNECTED[15:0]}),
         .m_axi_arvalid({xbar_to_m01_couplers_ARVALID,xbar_to_m00_couplers_ARVALID}),
         .m_axi_awaddr({xbar_to_m01_couplers_AWADDR,xbar_to_m00_couplers_AWADDR}),
         .m_axi_awburst({xbar_to_m01_couplers_AWBURST,xbar_to_m00_couplers_AWBURST}),
@@ -1739,6 +1762,7 @@ module adc_tech_axi_interconnect_0_0
         .m_axi_awready({xbar_to_m01_couplers_AWREADY,xbar_to_m00_couplers_AWREADY}),
         .m_axi_awregion({xbar_to_m01_couplers_AWREGION,xbar_to_m00_couplers_AWREGION}),
         .m_axi_awsize({xbar_to_m01_couplers_AWSIZE,xbar_to_m00_couplers_AWSIZE}),
+        .m_axi_awuser({xbar_to_m01_couplers_AWUSER,NLW_xbar_m_axi_awuser_UNCONNECTED[15:0]}),
         .m_axi_awvalid({xbar_to_m01_couplers_AWVALID,xbar_to_m00_couplers_AWVALID}),
         .m_axi_bid({xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m01_couplers_BID,xbar_to_m00_couplers_BID}),
         .m_axi_bready({xbar_to_m01_couplers_BREADY,xbar_to_m00_couplers_BREADY}),
@@ -2110,6 +2134,7 @@ module m01_couplers_imp_1AY5IP4
     M_AXI_arready,
     M_AXI_arregion,
     M_AXI_arsize,
+    M_AXI_aruser,
     M_AXI_arvalid,
     M_AXI_awaddr,
     M_AXI_awburst,
@@ -2122,6 +2147,7 @@ module m01_couplers_imp_1AY5IP4
     M_AXI_awready,
     M_AXI_awregion,
     M_AXI_awsize,
+    M_AXI_awuser,
     M_AXI_awvalid,
     M_AXI_bid,
     M_AXI_bready,
@@ -2151,6 +2177,7 @@ module m01_couplers_imp_1AY5IP4
     S_AXI_arready,
     S_AXI_arregion,
     S_AXI_arsize,
+    S_AXI_aruser,
     S_AXI_arvalid,
     S_AXI_awaddr,
     S_AXI_awburst,
@@ -2163,6 +2190,7 @@ module m01_couplers_imp_1AY5IP4
     S_AXI_awready,
     S_AXI_awregion,
     S_AXI_awsize,
+    S_AXI_awuser,
     S_AXI_awvalid,
     S_AXI_bid,
     S_AXI_bready,
@@ -2192,6 +2220,7 @@ module m01_couplers_imp_1AY5IP4
   input M_AXI_arready;
   output M_AXI_arregion;
   output M_AXI_arsize;
+  output M_AXI_aruser;
   output M_AXI_arvalid;
   output M_AXI_awaddr;
   output M_AXI_awburst;
@@ -2204,6 +2233,7 @@ module m01_couplers_imp_1AY5IP4
   input M_AXI_awready;
   output M_AXI_awregion;
   output M_AXI_awsize;
+  output M_AXI_awuser;
   output M_AXI_awvalid;
   input M_AXI_bid;
   output M_AXI_bready;
@@ -2233,6 +2263,7 @@ module m01_couplers_imp_1AY5IP4
   output S_AXI_arready;
   input S_AXI_arregion;
   input S_AXI_arsize;
+  input S_AXI_aruser;
   input S_AXI_arvalid;
   input S_AXI_awaddr;
   input S_AXI_awburst;
@@ -2245,6 +2276,7 @@ module m01_couplers_imp_1AY5IP4
   output S_AXI_awready;
   input S_AXI_awregion;
   input S_AXI_awsize;
+  input S_AXI_awuser;
   input S_AXI_awvalid;
   output S_AXI_bid;
   input S_AXI_bready;
@@ -2273,6 +2305,7 @@ module m01_couplers_imp_1AY5IP4
   wire m01_couplers_to_m01_couplers_ARREADY;
   wire m01_couplers_to_m01_couplers_ARREGION;
   wire m01_couplers_to_m01_couplers_ARSIZE;
+  wire m01_couplers_to_m01_couplers_ARUSER;
   wire m01_couplers_to_m01_couplers_ARVALID;
   wire m01_couplers_to_m01_couplers_AWADDR;
   wire m01_couplers_to_m01_couplers_AWBURST;
@@ -2285,6 +2318,7 @@ module m01_couplers_imp_1AY5IP4
   wire m01_couplers_to_m01_couplers_AWREADY;
   wire m01_couplers_to_m01_couplers_AWREGION;
   wire m01_couplers_to_m01_couplers_AWSIZE;
+  wire m01_couplers_to_m01_couplers_AWUSER;
   wire m01_couplers_to_m01_couplers_AWVALID;
   wire m01_couplers_to_m01_couplers_BID;
   wire m01_couplers_to_m01_couplers_BREADY;
@@ -2312,6 +2346,7 @@ module m01_couplers_imp_1AY5IP4
   assign M_AXI_arqos = m01_couplers_to_m01_couplers_ARQOS;
   assign M_AXI_arregion = m01_couplers_to_m01_couplers_ARREGION;
   assign M_AXI_arsize = m01_couplers_to_m01_couplers_ARSIZE;
+  assign M_AXI_aruser = m01_couplers_to_m01_couplers_ARUSER;
   assign M_AXI_arvalid = m01_couplers_to_m01_couplers_ARVALID;
   assign M_AXI_awaddr = m01_couplers_to_m01_couplers_AWADDR;
   assign M_AXI_awburst = m01_couplers_to_m01_couplers_AWBURST;
@@ -2323,6 +2358,7 @@ module m01_couplers_imp_1AY5IP4
   assign M_AXI_awqos = m01_couplers_to_m01_couplers_AWQOS;
   assign M_AXI_awregion = m01_couplers_to_m01_couplers_AWREGION;
   assign M_AXI_awsize = m01_couplers_to_m01_couplers_AWSIZE;
+  assign M_AXI_awuser = m01_couplers_to_m01_couplers_AWUSER;
   assign M_AXI_awvalid = m01_couplers_to_m01_couplers_AWVALID;
   assign M_AXI_bready = m01_couplers_to_m01_couplers_BREADY;
   assign M_AXI_rready = m01_couplers_to_m01_couplers_RREADY;
@@ -2352,6 +2388,7 @@ module m01_couplers_imp_1AY5IP4
   assign m01_couplers_to_m01_couplers_ARREADY = M_AXI_arready;
   assign m01_couplers_to_m01_couplers_ARREGION = S_AXI_arregion;
   assign m01_couplers_to_m01_couplers_ARSIZE = S_AXI_arsize;
+  assign m01_couplers_to_m01_couplers_ARUSER = S_AXI_aruser;
   assign m01_couplers_to_m01_couplers_ARVALID = S_AXI_arvalid;
   assign m01_couplers_to_m01_couplers_AWADDR = S_AXI_awaddr;
   assign m01_couplers_to_m01_couplers_AWBURST = S_AXI_awburst;
@@ -2364,6 +2401,7 @@ module m01_couplers_imp_1AY5IP4
   assign m01_couplers_to_m01_couplers_AWREADY = M_AXI_awready;
   assign m01_couplers_to_m01_couplers_AWREGION = S_AXI_awregion;
   assign m01_couplers_to_m01_couplers_AWSIZE = S_AXI_awsize;
+  assign m01_couplers_to_m01_couplers_AWUSER = S_AXI_awuser;
   assign m01_couplers_to_m01_couplers_AWVALID = S_AXI_awvalid;
   assign m01_couplers_to_m01_couplers_BID = M_AXI_bid;
   assign m01_couplers_to_m01_couplers_BREADY = S_AXI_bready;
