@@ -371,7 +371,7 @@ begin
               when C_I2C_DATA_END + 3 =>
 								-- Stop bit -- Extra state to get timing of SDA and SCL right
                 
-                scl_write	<= '0';
+                				scl_write	<= '0';
 								sda_write	<= '1';
                 
 								

@@ -112,9 +112,12 @@ architecture rtl of i2c is
 begin
 
   -- Set scl and sda outputs
+  --scl <= i2c_clk when ((scl_write = '1')) else
+  --  '1' when (scl_en = '1') else
+  --  '0';
+
   scl <= i2c_clk when ((scl_write = '1')) else
-    '1' when (scl_en = '1') else
-    '0';
+    '1';
 
   sda <= sda_out when (sda_write = '1') else
     '1';
