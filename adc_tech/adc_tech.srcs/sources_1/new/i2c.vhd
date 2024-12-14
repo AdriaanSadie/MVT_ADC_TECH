@@ -54,7 +54,7 @@ end i2c;
 architecture rtl of i2c is
 
   -- I2C shift registers:
-  constant dac_address : std_logic_vector(7 downto 0) := x"AB";
+  constant dac_address : std_logic_vector(7 downto 0) := x"A8";
   signal dac_command   : std_logic_vector(7 downto 0);
   signal dac_data_msb  : std_logic_vector(7 downto 0);
   signal dac_data_lsb  : std_logic_vector(7 downto 0);

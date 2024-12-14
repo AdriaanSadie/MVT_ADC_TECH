@@ -33,7 +33,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_ax
 # IP: bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_data_splitter_0_0 || ORIG_REF_NAME==adc_tech_data_splitter_0_0} -quiet] -quiet
 
+# IP: bd/adc_tech/ip/adc_tech_i2c_0_0/adc_tech_i2c_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_i2c_0_0 || ORIG_REF_NAME==adc_tech_i2c_0_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_gpio_1_0 || ORIG_REF_NAME==adc_tech_axi_gpio_1_0} -quiet] -quiet
+
 # IP: bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_auto_pc_0 || ORIG_REF_NAME==adc_tech_auto_pc_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_auto_pc_1/adc_tech_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_auto_pc_1 || ORIG_REF_NAME==adc_tech_auto_pc_1} -quiet] -quiet
 
 # XDC: c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/adc_tech_ooc.xdc

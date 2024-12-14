@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date                      : Thu Dec  5 21:23:12 2024
+| Date                      : Wed Dec 11 12:29:25 2024
 | Host                      : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 | Command                   : report_io -file adc_tech_wrapper_io_placed.rpt
 | Design                    : adc_tech_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|             6 |
+|             8 |
 +---------------+
 
 
@@ -46,8 +46,8 @@ Table of Contents
 | A9         |                 | High Performance | IO_T3U_N12_68                      | User IO       |             |      68 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A10        |                 | High Performance | IO_L22N_T3U_N7_DBC_AD0N_68         | User IO       |             |      68 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A11        |                 | High Performance | IO_L24N_T3U_N11_68                 | User IO       |             |      68 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| A12        |                 | High Performance | IO_L5N_T0U_N9_AD14N_67             | User IO       |             |      67 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
-| A13        |                 | High Performance | IO_L5P_T0U_N8_AD14P_67             | User IO       |             |      67 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
+| A12        | i2c_sda         | High Performance | IO_L5N_T0U_N9_AD14N_67             | BIDIR         | LVCMOS18    |      67 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
+| A13        | i2c_scl         | High Performance | IO_L5P_T0U_N8_AD14P_67             | OUTPUT        | LVCMOS18    |      67 |         12 |                         | SLOW |                   |            FP_VTT_50 |           | FIXED      |           |          |      | NONE             |              |                   |              |
 | A14        |                 | High Performance | IO_L3N_T0L_N5_AD15N_67             | User IO       |             |      67 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A15        |                 | High Performance | IO_L3P_T0L_N4_AD15P_67             | User IO       |             |      67 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |
 | A16        |                 | High Performance | IO_L1N_T0L_N1_DBC_67               | User IO       |             |      67 |            |                         |      |                   |                      |           |            |           |          |      |                  |              |                   |              |

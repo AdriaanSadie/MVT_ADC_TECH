@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1733426306">
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1733912786">
   <File Type="PA-TCL" Name="adc_tech_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="adc_tech_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="adc_tech_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="adc_tech_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="adc_tech_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="adc_tech_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="adc_tech_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="adc_tech_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="adc_tech_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/data_splitter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/i2c.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -63,11 +72,12 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_jtag_axi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_data_splitter_0_0"/>

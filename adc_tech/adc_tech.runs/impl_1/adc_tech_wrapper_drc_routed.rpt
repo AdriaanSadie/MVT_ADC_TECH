@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Dec  5 21:23:57 2024
+| Date         : Wed Dec 11 12:30:12 2024
 | Host         : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 | Command      : report_drc -file adc_tech_wrapper_drc_routed.rpt -pb adc_tech_wrapper_drc_routed.pb -rpx adc_tech_wrapper_drc_routed.rpx
 | Design       : adc_tech_wrapper
@@ -20,20 +20,26 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_adc_tech_wrapper
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 4
 +-----------+----------+----------------------------------------+------------+
 | Rule      | Severity | Description                            | Violations |
 +-----------+----------+----------------------------------------+------------+
+| RPBF-3    | Warning  | IO port buffering is incomplete        | 1          |
 | RTSTAT-10 | Warning  | No routable loads                      | 1          |
 | REQP-1858 | Advisory | RAMB36E2_writefirst_collision_advisory | 2          |
 +-----------+----------+----------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port i2c_sda expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
 RTSTAT-10#1 Warning
 No routable loads  
 38 net(s) have no routable loads. The problem bus(es) and/or net(s) are adc_tech_i/Processing_Subsystem/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i,
