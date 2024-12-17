@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper.tcl"
+  variable script "C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,42 +122,21 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param general.maxThreads 8
-  set_param chipscope.maxJobs 2
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xczu7ev-ffvc1156-2-e
-  set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.cache/wt [current_project]
-  set_property parent.project_path C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.xpr [current_project]
-  set_property ip_output_repo C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.cache/ip [current_project]
+  set_param power.BramSDPPropagationFix 1
+  set_param chipscope.maxJobs 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
+  set_param power.enableLutRouteBelPower 1
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/work/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper.dcp
+  set_property webtalk.parent_dir C:/work/MVT_ADC_TECH/adc_tech/adc_tech.cache/wt [current_project]
+  set_property parent.project_path C:/work/MVT_ADC_TECH/adc_tech/adc_tech.xpr [current_project]
+  set_property ip_output_repo C:/work/MVT_ADC_TECH/adc_tech/adc_tech.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-OPTRACE "add files" START { }
-  add_files -quiet C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/adc_tech.bd
-  set_param project.isImplRun false
-OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc
-OPTRACE "read constraints: implementation" END { }
-OPTRACE "add files" END { }
-OPTRACE "link_design" START { }
-  set_param project.isImplRun true
-  link_design -top adc_tech_wrapper -part xczu7ev-ffvc1156-2-e
-OPTRACE "link_design" END { }
-  set_param project.isImplRun false
-OPTRACE "gray box cells" START { }
-OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
-  write_hwdef -force -file adc_tech_wrapper.hwdef
 OPTRACE "init_design_write_hwdef" END { }
   close_msg_db -file init_design.pb
 } RESULT]
@@ -181,6 +160,8 @@ OPTRACE "opt_design" START { }
   opt_design 
 OPTRACE "opt_design" END { }
 OPTRACE "read constraints: opt_design_post" START { }
+  read_xdc -ref adc_tech_jtag_axi_0_0 -cells inst c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc
+  set_property processing_order LATE [get_files c:/work/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc]
 OPTRACE "read constraints: opt_design_post" END { }
 OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
   write_checkpoint -force adc_tech_wrapper_opt.dcp

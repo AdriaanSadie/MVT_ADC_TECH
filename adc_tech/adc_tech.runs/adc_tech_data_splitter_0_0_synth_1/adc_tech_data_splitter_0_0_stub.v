@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Dec 17 09:45:15 2024
-// Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+// Date        : Tue Dec 17 19:46:41 2024
+// Host        : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_data_splitter_0_0_stub.v
 // Design      : adc_tech_data_splitter_0_0

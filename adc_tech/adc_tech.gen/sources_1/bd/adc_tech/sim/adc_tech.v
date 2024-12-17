@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Tue Dec 17 09:43:53 2024
-//Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+//Date        : Tue Dec 17 19:45:31 2024
+//Host        : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
 //Command     : generate_target adc_tech.bd
 //Design      : adc_tech
 //Purpose     : IP block netlist
@@ -448,7 +448,7 @@ module Processing_Subsystem_imp_AKKRWG
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0));
 endmodule
 
-(* CORE_GENERATION_INFO = "adc_tech,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_tech,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "adc_tech.hwdef" *) 
+(* CORE_GENERATION_INFO = "adc_tech,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_tech,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=6,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "adc_tech.hwdef" *) 
 module adc_tech
    (i2c_scl,
     i2c_sda,
@@ -458,7 +458,7 @@ module adc_tech
     pl_led1,
     pl_led2,
     pl_led3);
-  output i2c_scl;
+  inout i2c_scl;
   inout i2c_sda;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.PL_CLK_N CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.PL_CLK_N, CLK_DOMAIN adc_tech_pl_clk_n, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input pl_clk_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.PL_CLK_P CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.PL_CLK_P, CLK_DOMAIN adc_tech_pl_clk_p, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) input pl_clk_p;
@@ -468,6 +468,7 @@ module adc_tech
   output pl_led3;
 
   wire Net;
+  wire Net1;
   wire [39:0]Processing_Subsystem_M00_AXI_0_ARADDR;
   wire Processing_Subsystem_M00_AXI_0_ARREADY;
   wire Processing_Subsystem_M00_AXI_0_ARVALID;
@@ -505,44 +506,26 @@ module adc_tech
   wire Processing_Subsystem_global_clk;
   wire [0:0]Processing_Subsystem_global_rst_n;
   wire [31:0]axi_gpio_0_gpio_io_o;
-  wire [31:0]axi_gpio_1_gpio_io_o;
+  wire axi_iic_0_scl_o;
+  wire axi_iic_0_scl_t;
+  wire axi_iic_0_sda_o;
+  wire axi_iic_0_sda_t;
   wire data_splitter_0_port_out0;
   wire data_splitter_0_port_out1;
   wire data_splitter_0_port_out2;
   wire data_splitter_0_port_out3;
-  wire i2c_0_scl;
   wire pl_clk_n_1;
   wire pl_clk_p_1;
   wire [0:0]util_ds_buf_0_IBUF_OUT;
+  wire [0:0]util_ds_buf_1_IOBUF_IO_O;
+  wire [0:0]util_ds_buf_2_IOBUF_IO_O;
 
-  assign i2c_scl = i2c_0_scl;
   assign pl_clk_n_1 = pl_clk_n;
   assign pl_clk_p_1 = pl_clk_p;
   assign pl_led0 = data_splitter_0_port_out0;
   assign pl_led1 = data_splitter_0_port_out1;
   assign pl_led2 = data_splitter_0_port_out2;
   assign pl_led3 = data_splitter_0_port_out3;
-  adc_tech_axi_gpio_1_0 I2C_Driver
-       (.gpio_io_o(axi_gpio_1_gpio_io_o),
-        .s_axi_aclk(Processing_Subsystem_global_clk),
-        .s_axi_araddr(Processing_Subsystem_M01_AXI_0_ARADDR[8:0]),
-        .s_axi_aresetn(Processing_Subsystem_global_rst_n),
-        .s_axi_arready(Processing_Subsystem_M01_AXI_0_ARREADY),
-        .s_axi_arvalid(Processing_Subsystem_M01_AXI_0_ARVALID),
-        .s_axi_awaddr(Processing_Subsystem_M01_AXI_0_AWADDR[8:0]),
-        .s_axi_awready(Processing_Subsystem_M01_AXI_0_AWREADY),
-        .s_axi_awvalid(Processing_Subsystem_M01_AXI_0_AWVALID),
-        .s_axi_bready(Processing_Subsystem_M01_AXI_0_BREADY),
-        .s_axi_bresp(Processing_Subsystem_M01_AXI_0_BRESP),
-        .s_axi_bvalid(Processing_Subsystem_M01_AXI_0_BVALID),
-        .s_axi_rdata(Processing_Subsystem_M01_AXI_0_RDATA),
-        .s_axi_rready(Processing_Subsystem_M01_AXI_0_RREADY),
-        .s_axi_rresp(Processing_Subsystem_M01_AXI_0_RRESP),
-        .s_axi_rvalid(Processing_Subsystem_M01_AXI_0_RVALID),
-        .s_axi_wdata(Processing_Subsystem_M01_AXI_0_WDATA),
-        .s_axi_wready(Processing_Subsystem_M01_AXI_0_WREADY),
-        .s_axi_wstrb(Processing_Subsystem_M01_AXI_0_WSTRB),
-        .s_axi_wvalid(Processing_Subsystem_M01_AXI_0_WVALID));
   Processing_Subsystem_imp_AKKRWG Processing_Subsystem
        (.M00_AXI_0_araddr(Processing_Subsystem_M00_AXI_0_ARADDR),
         .M00_AXI_0_arready(Processing_Subsystem_M00_AXI_0_ARREADY),
@@ -602,6 +585,32 @@ module adc_tech
         .s_axi_wready(Processing_Subsystem_M00_AXI_0_WREADY),
         .s_axi_wstrb(Processing_Subsystem_M00_AXI_0_WSTRB),
         .s_axi_wvalid(Processing_Subsystem_M00_AXI_0_WVALID));
+  adc_tech_axi_iic_0_0 axi_iic_0
+       (.s_axi_aclk(Processing_Subsystem_global_clk),
+        .s_axi_araddr(Processing_Subsystem_M01_AXI_0_ARADDR[8:0]),
+        .s_axi_aresetn(Processing_Subsystem_global_rst_n),
+        .s_axi_arready(Processing_Subsystem_M01_AXI_0_ARREADY),
+        .s_axi_arvalid(Processing_Subsystem_M01_AXI_0_ARVALID),
+        .s_axi_awaddr(Processing_Subsystem_M01_AXI_0_AWADDR[8:0]),
+        .s_axi_awready(Processing_Subsystem_M01_AXI_0_AWREADY),
+        .s_axi_awvalid(Processing_Subsystem_M01_AXI_0_AWVALID),
+        .s_axi_bready(Processing_Subsystem_M01_AXI_0_BREADY),
+        .s_axi_bresp(Processing_Subsystem_M01_AXI_0_BRESP),
+        .s_axi_bvalid(Processing_Subsystem_M01_AXI_0_BVALID),
+        .s_axi_rdata(Processing_Subsystem_M01_AXI_0_RDATA),
+        .s_axi_rready(Processing_Subsystem_M01_AXI_0_RREADY),
+        .s_axi_rresp(Processing_Subsystem_M01_AXI_0_RRESP),
+        .s_axi_rvalid(Processing_Subsystem_M01_AXI_0_RVALID),
+        .s_axi_wdata(Processing_Subsystem_M01_AXI_0_WDATA),
+        .s_axi_wready(Processing_Subsystem_M01_AXI_0_WREADY),
+        .s_axi_wstrb(Processing_Subsystem_M01_AXI_0_WSTRB),
+        .s_axi_wvalid(Processing_Subsystem_M01_AXI_0_WVALID),
+        .scl_i(util_ds_buf_1_IOBUF_IO_O),
+        .scl_o(axi_iic_0_scl_o),
+        .scl_t(axi_iic_0_scl_t),
+        .sda_i(util_ds_buf_2_IOBUF_IO_O),
+        .sda_o(axi_iic_0_sda_o),
+        .sda_t(axi_iic_0_sda_t));
   adc_tech_data_splitter_0_0 data_splitter_0
        (.port_in(axi_gpio_0_gpio_io_o),
         .port_out0(data_splitter_0_port_out0),
@@ -609,15 +618,23 @@ module adc_tech
         .port_out2(data_splitter_0_port_out2),
         .port_out3(data_splitter_0_port_out3));
   adc_tech_i2c_0_0 i2c_0
-       (.axi_gpio_in(axi_gpio_1_gpio_io_o),
+       (.axi_gpio_in({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clk_in(Processing_Subsystem_global_clk),
-        .rst_n(Processing_Subsystem_global_rst_n),
-        .scl(i2c_0_scl),
-        .sda(i2c_sda));
+        .rst_n(Processing_Subsystem_global_rst_n));
   adc_tech_util_ds_buf_0_2 util_ds_buf_0
        (.IBUF_DS_N(pl_clk_n_1),
         .IBUF_DS_P(pl_clk_p_1),
         .IBUF_OUT(util_ds_buf_0_IBUF_OUT));
+  adc_tech_util_ds_buf_1_0 util_ds_buf_1
+       (.IOBUF_IO_I(axi_iic_0_scl_o),
+        .IOBUF_IO_IO(i2c_scl),
+        .IOBUF_IO_O(util_ds_buf_1_IOBUF_IO_O),
+        .IOBUF_IO_T(axi_iic_0_scl_t));
+  adc_tech_util_ds_buf_1_1 util_ds_buf_2
+       (.IOBUF_IO_I(axi_iic_0_sda_o),
+        .IOBUF_IO_IO(i2c_sda),
+        .IOBUF_IO_O(util_ds_buf_2_IOBUF_IO_O),
+        .IOBUF_IO_T(axi_iic_0_sda_t));
 endmodule
 
 module adc_tech_axi_interconnect_0_0

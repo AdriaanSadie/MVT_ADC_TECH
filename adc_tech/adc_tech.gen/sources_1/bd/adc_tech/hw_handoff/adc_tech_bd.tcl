@@ -1666,7 +1666,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set i2c_scl [ create_bd_port -dir O i2c_scl ]
+  set i2c_scl [ create_bd_port -dir IO i2c_scl ]
   set i2c_sda [ create_bd_port -dir IO i2c_sda ]
   set pl_clk_n [ create_bd_port -dir I -type clk -freq_hz 125000000 pl_clk_n ]
   set pl_clk_p [ create_bd_port -dir I -type clk -freq_hz 125000000 pl_clk_p ]
@@ -1674,12 +1674,6 @@ proc create_root_design { parentCell } {
   set pl_led1 [ create_bd_port -dir O pl_led1 ]
   set pl_led2 [ create_bd_port -dir O pl_led2 ]
   set pl_led3 [ create_bd_port -dir O pl_led3 ]
-
-  # Create instance: I2C_Driver, and set properties
-  set I2C_Driver [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 I2C_Driver ]
-  set_property -dict [ list \
-   CONFIG.C_ALL_OUTPUTS {1} \
- ] $I2C_Driver
 
   # Create instance: Processing_Subsystem
   create_hier_cell_Processing_Subsystem [current_bd_instance .] Processing_Subsystem
@@ -1689,6 +1683,9 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ALL_OUTPUTS {1} \
  ] $axi_gpio_0
+
+  # Create instance: axi_iic_0, and set properties
+  set axi_iic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0 ]
 
   # Create instance: data_splitter_0, and set properties
   set block_name data_splitter
@@ -1715,30 +1712,47 @@ proc create_root_design { parentCell } {
   # Create instance: util_ds_buf_0, and set properties
   set util_ds_buf_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_0 ]
 
+  # Create instance: util_ds_buf_1, and set properties
+  set util_ds_buf_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_1 ]
+  set_property -dict [ list \
+   CONFIG.C_BUF_TYPE {IOBUF} \
+ ] $util_ds_buf_1
+
+  # Create instance: util_ds_buf_2, and set properties
+  set util_ds_buf_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_2 ]
+  set_property -dict [ list \
+   CONFIG.C_BUF_TYPE {IOBUF} \
+ ] $util_ds_buf_2
+
   # Create interface connections
   connect_bd_intf_net -intf_net Processing_Subsystem_M00_AXI_0 [get_bd_intf_pins Processing_Subsystem/M00_AXI_0] [get_bd_intf_pins axi_gpio_0/S_AXI]
-  connect_bd_intf_net -intf_net Processing_Subsystem_M01_AXI_0 [get_bd_intf_pins I2C_Driver/S_AXI] [get_bd_intf_pins Processing_Subsystem/M01_AXI_0]
+  connect_bd_intf_net -intf_net Processing_Subsystem_M01_AXI_0 [get_bd_intf_pins Processing_Subsystem/M01_AXI_0] [get_bd_intf_pins axi_iic_0/S_AXI]
 
   # Create port connections
-  connect_bd_net -net Net [get_bd_ports i2c_sda] [get_bd_pins i2c_0/sda]
-  connect_bd_net -net Processing_Subsystem_global_clk [get_bd_pins I2C_Driver/s_axi_aclk] [get_bd_pins Processing_Subsystem/global_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins i2c_0/clk_in]
-  connect_bd_net -net Processing_Subsystem_global_rst_n [get_bd_pins I2C_Driver/s_axi_aresetn] [get_bd_pins Processing_Subsystem/global_rst_n] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins i2c_0/rst_n]
+  connect_bd_net -net Net [get_bd_ports i2c_scl] [get_bd_pins util_ds_buf_1/IOBUF_IO_IO]
+  connect_bd_net -net Net1 [get_bd_ports i2c_sda] [get_bd_pins util_ds_buf_2/IOBUF_IO_IO]
+  connect_bd_net -net Processing_Subsystem_global_clk [get_bd_pins Processing_Subsystem/global_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins i2c_0/clk_in]
+  connect_bd_net -net Processing_Subsystem_global_rst_n [get_bd_pins Processing_Subsystem/global_rst_n] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins i2c_0/rst_n]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins data_splitter_0/port_in]
-  connect_bd_net -net axi_gpio_1_gpio_io_o [get_bd_pins I2C_Driver/gpio_io_o] [get_bd_pins i2c_0/axi_gpio_in]
+  connect_bd_net -net axi_iic_0_scl_o [get_bd_pins axi_iic_0/scl_o] [get_bd_pins util_ds_buf_1/IOBUF_IO_I]
+  connect_bd_net -net axi_iic_0_scl_t [get_bd_pins axi_iic_0/scl_t] [get_bd_pins util_ds_buf_1/IOBUF_IO_T]
+  connect_bd_net -net axi_iic_0_sda_o [get_bd_pins axi_iic_0/sda_o] [get_bd_pins util_ds_buf_2/IOBUF_IO_I]
+  connect_bd_net -net axi_iic_0_sda_t [get_bd_pins axi_iic_0/sda_t] [get_bd_pins util_ds_buf_2/IOBUF_IO_T]
   connect_bd_net -net data_splitter_0_port_out0 [get_bd_ports pl_led0] [get_bd_pins data_splitter_0/port_out0]
   connect_bd_net -net data_splitter_0_port_out1 [get_bd_ports pl_led1] [get_bd_pins data_splitter_0/port_out1]
   connect_bd_net -net data_splitter_0_port_out2 [get_bd_ports pl_led2] [get_bd_pins data_splitter_0/port_out2]
   connect_bd_net -net data_splitter_0_port_out3 [get_bd_ports pl_led3] [get_bd_pins data_splitter_0/port_out3]
-  connect_bd_net -net i2c_0_scl [get_bd_ports i2c_scl] [get_bd_pins i2c_0/scl]
   connect_bd_net -net pl_clk_n_1 [get_bd_ports pl_clk_n] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net pl_clk_p_1 [get_bd_ports pl_clk_p] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins Processing_Subsystem/clk_in] [get_bd_pins util_ds_buf_0/IBUF_OUT]
+  connect_bd_net -net util_ds_buf_1_IOBUF_IO_O [get_bd_pins axi_iic_0/scl_i] [get_bd_pins util_ds_buf_1/IOBUF_IO_O]
+  connect_bd_net -net util_ds_buf_2_IOBUF_IO_O [get_bd_pins axi_iic_0/sda_i] [get_bd_pins util_ds_buf_2/IOBUF_IO_O]
 
   # Create address segments
-  assign_bd_address -offset 0x80008000 -range 0x00008000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs I2C_Driver/S_AXI/Reg] -force
   assign_bd_address -offset 0x80000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
-  assign_bd_address -offset 0x80008000 -range 0x00008000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs I2C_Driver/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x80000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] -force
 
 
   # Restore current instance
