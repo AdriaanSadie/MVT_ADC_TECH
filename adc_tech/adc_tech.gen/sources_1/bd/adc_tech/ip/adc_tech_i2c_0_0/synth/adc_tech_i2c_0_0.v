@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "i2c,Vivado 2020.2" *)
 (* CHECK_LICENSE_TYPE = "adc_tech_i2c_0_0,i2c,{}" *)
-(* CORE_GENERATION_INFO = "adc_tech_i2c_0_0,i2c,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=i2c,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CLOCKS_PER_HALF_BIT=1000}" *)
+(* CORE_GENERATION_INFO = "adc_tech_i2c_0_0,i2c,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=i2c,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_CLOCKS_PER_HALF_BIT=2000}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module adc_tech_i2c_0_0 (
@@ -72,7 +72,7 @@ output wire scl;
 inout wire sda;
 
   i2c #(
-    .C_CLOCKS_PER_HALF_BIT(1000)
+    .C_CLOCKS_PER_HALF_BIT(2000)
   ) inst (
     .clk_in(clk_in),
     .rst_n(rst_n),

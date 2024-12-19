@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Dec 17 19:51:29 2024
-| Host         : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
+| Date         : Wed Dec 18 15:25:49 2024
+| Host         : ZA-WASADIE running 64-bit major release  (build 9200)
 | Command      : report_drc -file adc_tech_wrapper_drc_opted.rpt -pb adc_tech_wrapper_drc_opted.pb -rpx adc_tech_wrapper_drc_opted.rpx
 | Design       : adc_tech_wrapper
 | Device       : xczu7ev-ffvc1156-2-e
@@ -20,19 +20,25 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_adc_tech_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 3
 +-----------+----------+----------------------------------------+------------+
 | Rule      | Severity | Description                            | Violations |
 +-----------+----------+----------------------------------------+------------+
+| RPBF-3    | Warning  | IO port buffering is incomplete        | 1          |
 | REQP-1858 | Advisory | RAMB36E2_writefirst_collision_advisory | 2          |
 +-----------+----------+----------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+RPBF-3#1 Warning
+IO port buffering is incomplete  
+Device port my_i2c_sda expects both input and output buffering but the buffers are incomplete.
+Related violations: <none>
+
 REQP-1858#1 Advisory
 RAMB36E2_writefirst_collision_advisory  
 Synchronous clocking is detected for BRAM (adc_tech_i/Processing_Subsystem/jtag_axi_0/inst/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.

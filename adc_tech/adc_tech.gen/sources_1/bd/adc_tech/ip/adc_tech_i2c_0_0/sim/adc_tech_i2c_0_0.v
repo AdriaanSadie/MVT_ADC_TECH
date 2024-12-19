@@ -71,7 +71,7 @@ output wire scl;
 inout wire sda;
 
   i2c #(
-    .C_CLOCKS_PER_HALF_BIT(1000)
+    .C_CLOCKS_PER_HALF_BIT(2000)
   ) inst (
     .clk_in(clk_in),
     .rst_n(rst_n),

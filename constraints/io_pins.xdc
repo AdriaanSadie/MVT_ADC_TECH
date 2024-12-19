@@ -30,6 +30,11 @@ set_property IOSTANDARD LVCMOS18 [get_ports i2c_scl]
 set_property IOSTANDARD LVCMOS18 [get_ports i2c_sda]
 
 set_property BITSTREAM.STARTUP.LCK_CYCLE 3 [current_design]
+
+set_property PACKAGE_PIN G18 [get_ports my_i2c_scl]
+set_property PACKAGE_PIN F18 [get_ports my_i2c_sda]
+set_property IOSTANDARD LVCMOS18 [get_ports my_i2c_scl]
+set_property IOSTANDARD LVCMOS18 [get_ports my_i2c_sda]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]

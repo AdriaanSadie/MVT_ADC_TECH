@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Dec 11 11:47:39 2024
--- Host        : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
+-- Date        : Wed Dec 18 15:21:45 2024
+-- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_i2c_0_0_sim_netlist.vhdl
 -- Design      : adc_tech_i2c_0_0
@@ -94,14 +94,14 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal i2c_ack_flag_i_2_n_0 : STD_LOGIC;
   signal i2c_ack_flag_reg_n_0 : STD_LOGIC;
   signal \^i2c_clk\ : STD_LOGIC;
-  signal \i2c_clk_counter[3]_i_2_n_0\ : STD_LOGIC;
-  signal \i2c_clk_counter[5]_i_1_n_0\ : STD_LOGIC;
-  signal \i2c_clk_counter[5]_i_2_n_0\ : STD_LOGIC;
-  signal \i2c_clk_counter[7]_i_1_n_0\ : STD_LOGIC;
+  signal \i2c_clk_counter[10]_i_1_n_0\ : STD_LOGIC;
+  signal \i2c_clk_counter[10]_i_3_n_0\ : STD_LOGIC;
+  signal \i2c_clk_counter[10]_i_4_n_0\ : STD_LOGIC;
+  signal \i2c_clk_counter[4]_i_2_n_0\ : STD_LOGIC;
   signal \i2c_clk_counter[8]_i_1_n_0\ : STD_LOGIC;
+  signal \i2c_clk_counter[8]_i_2_n_0\ : STD_LOGIC;
   signal \i2c_clk_counter[9]_i_1_n_0\ : STD_LOGIC;
-  signal \i2c_clk_counter[9]_i_3_n_0\ : STD_LOGIC;
-  signal i2c_clk_counter_reg : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal i2c_clk_counter_reg : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal i2c_clk_i_1_n_0 : STD_LOGIC;
   signal i2c_shift_reg_counter : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \i2c_shift_reg_counter[3]_i_1_n_0\ : STD_LOGIC;
@@ -126,15 +126,15 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal i2c_write_data_lsb_flag_reg_n_0 : STD_LOGIC;
   signal i2c_write_data_msb_flag_i_1_n_0 : STD_LOGIC;
   signal i2c_write_data_msb_flag_i_2_n_0 : STD_LOGIC;
-  signal i2c_write_data_msb_flag_i_3_n_0 : STD_LOGIC;
   signal i2c_write_data_msb_flag_reg_n_0 : STD_LOGIC;
   signal i2c_write_stop_flag : STD_LOGIC;
   signal i2c_write_stop_flag_i_1_n_0 : STD_LOGIC;
   signal i2c_write_stop_flag_i_2_n_0 : STD_LOGIC;
+  signal i2c_write_stop_flag_i_3_n_0 : STD_LOGIC;
   signal \i2c_write_tracker[0]_i_1_n_0\ : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
   signal p_0_in_0 : STD_LOGIC;
-  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \p_0_in__0\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \p_0_in__1\ : STD_LOGIC_VECTOR ( 5 downto 1 );
   signal p_1_in13_in : STD_LOGIC;
   signal \^rst_n_0\ : STD_LOGIC;
@@ -142,7 +142,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal scl_write_i_2_n_0 : STD_LOGIC;
   signal scl_write_i_3_n_0 : STD_LOGIC;
   signal scl_write_i_4_n_0 : STD_LOGIC;
-  signal scl_write_i_5_n_0 : STD_LOGIC;
   signal scl_write_reg_n_0 : STD_LOGIC;
   signal sda_out : STD_LOGIC;
   signal sda_out_tristate_oe_i_10_n_0 : STD_LOGIC;
@@ -164,56 +163,58 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal sda_write_reg_n_0 : STD_LOGIC;
   signal sel0 : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \dac_command[0]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \dac_command[1]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \dac_command[2]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \dac_command[3]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \dac_command[4]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \dac_command[5]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \dac_command[6]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \dac_command[7]_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \dac_command[7]_i_3\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \dac_data_lsb[0]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dac_data_lsb[1]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dac_data_lsb[2]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \dac_data_lsb[3]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \dac_data_lsb[4]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dac_data_lsb[5]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dac_data_lsb[6]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \dac_data_lsb[7]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \dac_data_msb[0]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \dac_data_msb[1]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \dac_data_msb[2]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \dac_data_msb[3]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \dac_data_msb[4]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \dac_data_msb[5]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \dac_data_msb[6]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \dac_data_msb[7]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of i2c_ack_flag_i_1 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[0]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[1]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[2]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[5]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[6]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[7]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of i2c_clk_i_1 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \i2c_shift_reg_counter[3]_i_3\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of i2c_start_flag_i_2 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of i2c_state_i_1 : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of i2c_write_address_flag_i_2 : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of i2c_write_address_flag_i_3 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of i2c_write_data_lsb_flag_i_1 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_2 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_3 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \i2c_write_tracker[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of scl_INST_0 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of scl_write_i_2 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of scl_write_i_5 : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_4 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_5 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_9 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \dac_command[0]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \dac_command[1]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \dac_command[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \dac_command[3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \dac_command[4]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \dac_command[5]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \dac_command[6]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \dac_command[7]_i_2\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \dac_command[7]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \dac_data_lsb[0]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dac_data_lsb[1]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dac_data_lsb[2]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dac_data_lsb[3]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dac_data_lsb[4]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dac_data_lsb[5]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dac_data_lsb[6]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \dac_data_lsb[7]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \dac_data_msb[0]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dac_data_msb[1]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dac_data_msb[2]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \dac_data_msb[3]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \dac_data_msb[4]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \dac_data_msb[5]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \dac_data_msb[6]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \dac_data_msb[7]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[0]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_3\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_4\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[2]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[3]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[5]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[6]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[7]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[8]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of i2c_clk_i_1 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \i2c_shift_reg_counter[3]_i_3\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of i2c_start_flag_i_2 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of i2c_state_i_1 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of i2c_write_address_flag_i_2 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of i2c_write_address_flag_i_3 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of i2c_write_data_lsb_flag_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_1 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_2 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of i2c_write_stop_flag_i_3 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \i2c_write_tracker[3]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of scl_INST_0 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of scl_write_i_2 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of scl_write_i_4 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_4 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_5 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_9 : label is "soft_lutpair9";
 begin
   i2c_clk <= \^i2c_clk\;
   i2c_start_flag_reg_0 <= \^i2c_start_flag_reg_0\;
@@ -896,6 +897,51 @@ i2c_ack_flag_reg: unisim.vcomponents.FDCE
       I1 => p_0_in,
       O => \p_0_in__0\(0)
     );
+\i2c_clk_counter[10]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5555555540000000"
+    )
+        port map (
+      I0 => p_0_in,
+      I1 => i2c_clk_counter_reg(7),
+      I2 => i2c_clk_counter_reg(8),
+      I3 => \i2c_clk_counter[10]_i_3_n_0\,
+      I4 => i2c_clk_counter_reg(9),
+      I5 => i2c_clk_counter_reg(10),
+      O => \i2c_clk_counter[10]_i_1_n_0\
+    );
+\i2c_clk_counter[10]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"0E"
+    )
+        port map (
+      I0 => \i2c_clk_counter[10]_i_4_n_0\,
+      I1 => i2c_clk_counter_reg(5),
+      I2 => \i2c_clk_counter[4]_i_2_n_0\,
+      O => p_0_in
+    );
+\i2c_clk_counter[10]_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"08"
+    )
+        port map (
+      I0 => i2c_clk_counter_reg(6),
+      I1 => i2c_clk_counter_reg(5),
+      I2 => \i2c_clk_counter[8]_i_2_n_0\,
+      O => \i2c_clk_counter[10]_i_3_n_0\
+    );
+\i2c_clk_counter[10]_i_4\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"EAAAAAAA"
+    )
+        port map (
+      I0 => i2c_clk_counter_reg(4),
+      I1 => i2c_clk_counter_reg(3),
+      I2 => i2c_clk_counter_reg(1),
+      I3 => i2c_clk_counter_reg(0),
+      I4 => i2c_clk_counter_reg(2),
+      O => \i2c_clk_counter[10]_i_4_n_0\
+    );
 \i2c_clk_counter[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"06"
@@ -919,134 +965,110 @@ i2c_ack_flag_reg: unisim.vcomponents.FDCE
     );
 \i2c_clk_counter[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2AAA8000"
+      INIT => X"15554000"
     )
         port map (
-      I0 => \i2c_clk_counter[3]_i_2_n_0\,
+      I0 => p_0_in,
       I1 => i2c_clk_counter_reg(1),
       I2 => i2c_clk_counter_reg(0),
       I3 => i2c_clk_counter_reg(2),
       I4 => i2c_clk_counter_reg(3),
       O => \p_0_in__0\(3)
     );
-\i2c_clk_counter[3]_i_2\: unisim.vcomponents.LUT5
+\i2c_clk_counter[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFF800000000000"
+    )
+        port map (
+      I0 => i2c_clk_counter_reg(3),
+      I1 => i2c_clk_counter_reg(1),
+      I2 => i2c_clk_counter_reg(0),
+      I3 => i2c_clk_counter_reg(2),
+      I4 => i2c_clk_counter_reg(4),
+      I5 => \i2c_clk_counter[4]_i_2_n_0\,
+      O => \p_0_in__0\(4)
+    );
+\i2c_clk_counter[4]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"7FFFFFFF"
     )
         port map (
-      I0 => i2c_clk_counter_reg(7),
-      I1 => i2c_clk_counter_reg(6),
-      I2 => i2c_clk_counter_reg(9),
-      I3 => i2c_clk_counter_reg(5),
-      I4 => i2c_clk_counter_reg(8),
-      O => \i2c_clk_counter[3]_i_2_n_0\
+      I0 => i2c_clk_counter_reg(8),
+      I1 => i2c_clk_counter_reg(7),
+      I2 => i2c_clk_counter_reg(10),
+      I3 => i2c_clk_counter_reg(6),
+      I4 => i2c_clk_counter_reg(9),
+      O => \i2c_clk_counter[4]_i_2_n_0\
     );
-\i2c_clk_counter[4]_i_1\: unisim.vcomponents.LUT6
+\i2c_clk_counter[5]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"1555555540000000"
+      INIT => X"41"
     )
         port map (
       I0 => p_0_in,
-      I1 => i2c_clk_counter_reg(2),
-      I2 => i2c_clk_counter_reg(0),
-      I3 => i2c_clk_counter_reg(1),
-      I4 => i2c_clk_counter_reg(3),
-      I5 => i2c_clk_counter_reg(4),
-      O => \p_0_in__0\(4)
+      I1 => \i2c_clk_counter[8]_i_2_n_0\,
+      I2 => i2c_clk_counter_reg(5),
+      O => \p_0_in__0\(5)
     );
-\i2c_clk_counter[5]_i_1\: unisim.vcomponents.LUT5
+\i2c_clk_counter[6]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"51550400"
+      INIT => X"4510"
     )
         port map (
       I0 => p_0_in,
-      I1 => i2c_clk_counter_reg(3),
-      I2 => \i2c_clk_counter[5]_i_2_n_0\,
-      I3 => i2c_clk_counter_reg(4),
-      I4 => i2c_clk_counter_reg(5),
-      O => \i2c_clk_counter[5]_i_1_n_0\
-    );
-\i2c_clk_counter[5]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"7F"
-    )
-        port map (
-      I0 => i2c_clk_counter_reg(1),
-      I1 => i2c_clk_counter_reg(0),
-      I2 => i2c_clk_counter_reg(2),
-      O => \i2c_clk_counter[5]_i_2_n_0\
-    );
-\i2c_clk_counter[6]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"06"
-    )
-        port map (
-      I0 => \i2c_clk_counter[9]_i_3_n_0\,
-      I1 => i2c_clk_counter_reg(6),
-      I2 => p_0_in,
+      I1 => \i2c_clk_counter[8]_i_2_n_0\,
+      I2 => i2c_clk_counter_reg(5),
+      I3 => i2c_clk_counter_reg(6),
       O => \p_0_in__0\(6)
     );
-\i2c_clk_counter[7]_i_1\: unisim.vcomponents.LUT4
+\i2c_clk_counter[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"1540"
+      INIT => X"0000F708"
+    )
+        port map (
+      I0 => i2c_clk_counter_reg(6),
+      I1 => i2c_clk_counter_reg(5),
+      I2 => \i2c_clk_counter[8]_i_2_n_0\,
+      I3 => i2c_clk_counter_reg(7),
+      I4 => p_0_in,
+      O => \p_0_in__0\(7)
+    );
+\i2c_clk_counter[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"5155555504000000"
     )
         port map (
       I0 => p_0_in,
-      I1 => i2c_clk_counter_reg(6),
-      I2 => \i2c_clk_counter[9]_i_3_n_0\,
-      I3 => i2c_clk_counter_reg(7),
-      O => \i2c_clk_counter[7]_i_1_n_0\
+      I1 => i2c_clk_counter_reg(7),
+      I2 => \i2c_clk_counter[8]_i_2_n_0\,
+      I3 => i2c_clk_counter_reg(5),
+      I4 => i2c_clk_counter_reg(6),
+      I5 => i2c_clk_counter_reg(8),
+      O => \i2c_clk_counter[8]_i_1_n_0\
     );
-\i2c_clk_counter[8]_i_1\: unisim.vcomponents.LUT5
+\i2c_clk_counter[8]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => i2c_clk_counter_reg(3),
+      I1 => i2c_clk_counter_reg(1),
+      I2 => i2c_clk_counter_reg(0),
+      I3 => i2c_clk_counter_reg(2),
+      I4 => i2c_clk_counter_reg(4),
+      O => \i2c_clk_counter[8]_i_2_n_0\
+    );
+\i2c_clk_counter[9]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"15554000"
     )
         port map (
       I0 => p_0_in,
-      I1 => \i2c_clk_counter[9]_i_3_n_0\,
-      I2 => i2c_clk_counter_reg(7),
-      I3 => i2c_clk_counter_reg(6),
-      I4 => i2c_clk_counter_reg(8),
-      O => \i2c_clk_counter[8]_i_1_n_0\
-    );
-\i2c_clk_counter[9]_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"5555555540000000"
-    )
-        port map (
-      I0 => p_0_in,
-      I1 => i2c_clk_counter_reg(6),
-      I2 => i2c_clk_counter_reg(7),
-      I3 => \i2c_clk_counter[9]_i_3_n_0\,
-      I4 => i2c_clk_counter_reg(8),
-      I5 => i2c_clk_counter_reg(9),
+      I1 => \i2c_clk_counter[10]_i_3_n_0\,
+      I2 => i2c_clk_counter_reg(8),
+      I3 => i2c_clk_counter_reg(7),
+      I4 => i2c_clk_counter_reg(9),
       O => \i2c_clk_counter[9]_i_1_n_0\
-    );
-\i2c_clk_counter[9]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000FFFFFF80"
-    )
-        port map (
-      I0 => i2c_clk_counter_reg(1),
-      I1 => i2c_clk_counter_reg(0),
-      I2 => i2c_clk_counter_reg(2),
-      I3 => i2c_clk_counter_reg(3),
-      I4 => i2c_clk_counter_reg(4),
-      I5 => \i2c_clk_counter[3]_i_2_n_0\,
-      O => p_0_in
-    );
-\i2c_clk_counter[9]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"8000000000000000"
-    )
-        port map (
-      I0 => i2c_clk_counter_reg(5),
-      I1 => i2c_clk_counter_reg(4),
-      I2 => i2c_clk_counter_reg(2),
-      I3 => i2c_clk_counter_reg(0),
-      I4 => i2c_clk_counter_reg(1),
-      I5 => i2c_clk_counter_reg(3),
-      O => \i2c_clk_counter[9]_i_3_n_0\
     );
 \i2c_clk_counter_reg[0]\: unisim.vcomponents.FDCE
      port map (
@@ -1055,6 +1077,14 @@ i2c_ack_flag_reg: unisim.vcomponents.FDCE
       CLR => \^rst_n_0\,
       D => \p_0_in__0\(0),
       Q => i2c_clk_counter_reg(0)
+    );
+\i2c_clk_counter_reg[10]\: unisim.vcomponents.FDCE
+     port map (
+      C => clk_in,
+      CE => '1',
+      CLR => \^rst_n_0\,
+      D => \i2c_clk_counter[10]_i_1_n_0\,
+      Q => i2c_clk_counter_reg(10)
     );
 \i2c_clk_counter_reg[1]\: unisim.vcomponents.FDCE
      port map (
@@ -1093,7 +1123,7 @@ i2c_ack_flag_reg: unisim.vcomponents.FDCE
       C => clk_in,
       CE => '1',
       CLR => \^rst_n_0\,
-      D => \i2c_clk_counter[5]_i_1_n_0\,
+      D => \p_0_in__0\(5),
       Q => i2c_clk_counter_reg(5)
     );
 \i2c_clk_counter_reg[6]\: unisim.vcomponents.FDCE
@@ -1109,7 +1139,7 @@ i2c_ack_flag_reg: unisim.vcomponents.FDCE
       C => clk_in,
       CE => '1',
       CLR => \^rst_n_0\,
-      D => \i2c_clk_counter[7]_i_1_n_0\,
+      D => \p_0_in__0\(7),
       Q => i2c_clk_counter_reg(7)
     );
 \i2c_clk_counter_reg[8]\: unisim.vcomponents.FDCE
@@ -1295,13 +1325,13 @@ i2c_start_flag_reg: unisim.vcomponents.FDCE
     );
 i2c_state_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0F44"
+      INIT => X"2722"
     )
         port map (
-      I0 => p_0_in_0,
-      I1 => p_1_in13_in,
-      I2 => \dac_command[7]_i_3_n_0\,
-      I3 => i2c_state,
+      I0 => i2c_state,
+      I1 => \dac_command[7]_i_3_n_0\,
+      I2 => p_0_in_0,
+      I3 => p_1_in13_in,
       O => i2c_state_i_1_n_0
     );
 i2c_state_reg: unisim.vcomponents.FDCE
@@ -1381,9 +1411,9 @@ i2c_write_data_lsb_flag_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => i2c_state,
-      I1 => sel0(2),
-      I2 => sel0(3),
-      I3 => sel0(4),
+      I1 => sel0(3),
+      I2 => sel0(4),
+      I3 => sel0(2),
       I4 => sel0(5),
       O => i2c_write_data_lsb_flag_i_1_n_0
     );
@@ -1395,36 +1425,27 @@ i2c_write_data_lsb_flag_reg: unisim.vcomponents.FDCE
       D => i2c_write_data_lsb_flag_i_1_n_0,
       Q => i2c_write_data_lsb_flag_reg_n_0
     );
-i2c_write_data_msb_flag_i_1: unisim.vcomponents.LUT6
+i2c_write_data_msb_flag_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000780000000000"
+      INIT => X"00600000"
     )
         port map (
       I0 => i2c_write_data_msb_flag_i_2_n_0,
-      I1 => i2c_write_data_msb_flag_i_3_n_0,
-      I2 => sel0(3),
-      I3 => i2c_state,
-      I4 => sel0(5),
-      I5 => sel0(4),
+      I1 => sel0(3),
+      I2 => i2c_state,
+      I3 => sel0(5),
+      I4 => sel0(4),
       O => i2c_write_data_msb_flag_i_1_n_0
     );
-i2c_write_data_msb_flag_i_2: unisim.vcomponents.LUT2
+i2c_write_data_msb_flag_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"E"
+      INIT => X"EC"
     )
         port map (
       I0 => sel0(0),
       I1 => sel0(2),
+      I2 => sel0(1),
       O => i2c_write_data_msb_flag_i_2_n_0
-    );
-i2c_write_data_msb_flag_i_3: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => sel0(1),
-      I1 => sel0(2),
-      O => i2c_write_data_msb_flag_i_3_n_0
     );
 i2c_write_data_msb_flag_reg: unisim.vcomponents.FDCE
      port map (
@@ -1436,25 +1457,38 @@ i2c_write_data_msb_flag_reg: unisim.vcomponents.FDCE
     );
 i2c_write_stop_flag_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0800000000000000"
+      INIT => X"0000000000000800"
+    )
+        port map (
+      I0 => i2c_write_stop_flag_i_2_n_0,
+      I1 => sel0(5),
+      I2 => sel0(4),
+      I3 => sel0(0),
+      I4 => sel0(1),
+      I5 => i2c_write_stop_flag_i_3_n_0,
+      O => i2c_write_stop_flag_i_1_n_0
+    );
+i2c_write_stop_flag_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00020202AAAAAAAA"
     )
         port map (
       I0 => i2c_state,
-      I1 => i2c_write_stop_flag_i_2_n_0,
-      I2 => sel0(4),
-      I3 => sel0(5),
-      I4 => sel0(0),
-      I5 => sel0(2),
-      O => i2c_write_stop_flag_i_1_n_0
+      I1 => sel0(4),
+      I2 => sel0(3),
+      I3 => sel0(2),
+      I4 => sel0(1),
+      I5 => sel0(5),
+      O => i2c_write_stop_flag_i_2_n_0
     );
-i2c_write_stop_flag_i_2: unisim.vcomponents.LUT2
+i2c_write_stop_flag_i_3: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"B"
     )
         port map (
-      I0 => sel0(1),
-      I1 => sel0(3),
-      O => i2c_write_stop_flag_i_2_n_0
+      I0 => sel0(3),
+      I1 => sel0(2),
+      O => i2c_write_stop_flag_i_3_n_0
     );
 i2c_write_stop_flag_reg: unisim.vcomponents.FDCE
      port map (
@@ -1530,14 +1564,14 @@ i2c_write_stop_flag_reg: unisim.vcomponents.FDCE
     );
 \i2c_write_tracker[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4000000000000AAA"
+      INIT => X"4000000002220222"
     )
         port map (
       I0 => sel0(5),
-      I1 => sel0(0),
-      I2 => sel0(1),
-      I3 => sel0(2),
-      I4 => sel0(3),
+      I1 => sel0(3),
+      I2 => sel0(2),
+      I3 => sel0(1),
+      I4 => sel0(0),
       I5 => sel0(4),
       O => \p_0_in__1\(5)
     );
@@ -1600,14 +1634,14 @@ scl_INST_0: unisim.vcomponents.LUT2
     );
 scl_write_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFF222F00002220"
+      INIT => X"FFFF22F200002202"
     )
         port map (
       I0 => scl_write_i_2_n_0,
       I1 => i2c_write_address_flag_i_2_n_0,
-      I2 => scl_write_i_3_n_0,
-      I3 => scl_write_i_4_n_0,
-      I4 => scl_write_i_5_n_0,
+      I2 => i2c_write_stop_flag_i_2_n_0,
+      I3 => scl_write_i_3_n_0,
+      I4 => scl_write_i_4_n_0,
       I5 => scl_write_reg_n_0,
       O => scl_write_i_1_n_0
     );
@@ -1633,20 +1667,7 @@ scl_write_i_3: unisim.vcomponents.LUT6
       I5 => sel0(4),
       O => scl_write_i_3_n_0
     );
-scl_write_i_4: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEEE0000FFFFFFFF"
-    )
-        port map (
-      I0 => sel0(4),
-      I1 => sel0(3),
-      I2 => sel0(2),
-      I3 => sel0(1),
-      I4 => sel0(5),
-      I5 => i2c_state,
-      O => scl_write_i_4_n_0
-    );
-scl_write_i_5: unisim.vcomponents.LUT3
+scl_write_i_4: unisim.vcomponents.LUT3
     generic map(
       INIT => X"45"
     )
@@ -1654,7 +1675,7 @@ scl_write_i_5: unisim.vcomponents.LUT3
       I0 => i2c_state,
       I1 => p_0_in_0,
       I2 => p_1_in13_in,
-      O => scl_write_i_5_n_0
+      O => scl_write_i_4_n_0
     );
 scl_write_reg: unisim.vcomponents.FDCE
      port map (
@@ -1898,12 +1919,12 @@ sda_out_tristate_oe_reg: unisim.vcomponents.FDPE
     );
 sda_write_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"040404FF04040400"
+      INIT => X"080808FF08080800"
     )
         port map (
-      I0 => sel0(0),
+      I0 => i2c_write_stop_flag_i_2_n_0,
       I1 => i2c_start_flag_i_2_n_0,
-      I2 => scl_write_i_4_n_0,
+      I2 => sel0(0),
       I3 => i2c_start_flag_i_1_n_0,
       I4 => dac_data_lsb,
       I5 => sda_write_reg_n_0,
