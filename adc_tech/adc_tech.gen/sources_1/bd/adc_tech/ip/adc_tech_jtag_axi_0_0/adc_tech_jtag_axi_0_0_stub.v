@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Dec  5 10:35:16 2024
-// Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+// Date        : Mon Sep 22 10:03:58 2025
+// Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0_stub.v
 // Design      : adc_tech_jtag_axi_0_0
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "jtag_axi_v1_2_12_jtag_axi,Vivado 2020.2" *)
+(* x_core_info = "jtag_axi_v1_2_12_jtag_axi,Vivado 2020.2" *)
 module adc_tech_jtag_axi_0_0(aclk, aresetn, m_axi_awid, m_axi_awaddr, 
   m_axi_awlen, m_axi_awsize, m_axi_awburst, m_axi_awlock, m_axi_awcache, m_axi_awprot, 
   m_axi_awqos, m_axi_awvalid, m_axi_awready, m_axi_wdata, m_axi_wstrb, m_axi_wlast, 

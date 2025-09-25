@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Dec 18 14:27:47 2024
--- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+-- Date        : Mon Sep 22 10:03:04 2025
+-- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0_sim_netlist.vhdl
 -- Design      : adc_tech_data_splitter_0_0
@@ -26,12 +26,12 @@ entity adc_tech_data_splitter_0_0 is
   attribute NotValidForBitStream of adc_tech_data_splitter_0_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of adc_tech_data_splitter_0_0 : entity is "adc_tech_data_splitter_0_0,data_splitter,{}";
-  attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of adc_tech_data_splitter_0_0 : entity is "yes";
-  attribute IP_DEFINITION_SOURCE : string;
-  attribute IP_DEFINITION_SOURCE of adc_tech_data_splitter_0_0 : entity is "module_ref";
-  attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of adc_tech_data_splitter_0_0 : entity is "data_splitter,Vivado 2020.2";
+  attribute downgradeipidentifiedwarnings : string;
+  attribute downgradeipidentifiedwarnings of adc_tech_data_splitter_0_0 : entity is "yes";
+  attribute ip_definition_source : string;
+  attribute ip_definition_source of adc_tech_data_splitter_0_0 : entity is "module_ref";
+  attribute x_core_info : string;
+  attribute x_core_info of adc_tech_data_splitter_0_0 : entity is "data_splitter,Vivado 2020.2";
 end adc_tech_data_splitter_0_0;
 
 architecture STRUCTURE of adc_tech_data_splitter_0_0 is

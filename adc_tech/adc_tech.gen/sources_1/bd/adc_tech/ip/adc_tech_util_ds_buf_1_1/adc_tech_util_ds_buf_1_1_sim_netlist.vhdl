@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Dec 17 19:46:41 2024
--- Host        : DESKTOP-NG70LRJ running 64-bit major release  (build 9200)
+-- Date        : Mon Sep 22 10:03:11 2025
+-- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_util_ds_buf_1_1 -prefix
 --               adc_tech_util_ds_buf_1_1_ adc_tech_util_ds_buf_1_0_sim_netlist.vhdl
 -- Design      : adc_tech_util_ds_buf_1_0

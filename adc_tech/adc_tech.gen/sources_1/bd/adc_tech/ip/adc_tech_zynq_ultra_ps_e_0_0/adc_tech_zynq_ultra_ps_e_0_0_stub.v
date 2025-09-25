@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Thu Dec  5 10:31:57 2024
-// Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+// Date        : Mon Sep 22 10:03:22 2025
+// Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_zynq_ultra_ps_e_0_0/adc_tech_zynq_ultra_ps_e_0_0_stub.v
 // Design      : adc_tech_zynq_ultra_ps_e_0_0
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e,Vivado 2020.2" *)
+(* x_core_info = "zynq_ultra_ps_e_v3_3_3_zynq_ultra_ps_e,Vivado 2020.2" *)
 module adc_tech_zynq_ultra_ps_e_0_0(maxihpm0_lpd_aclk, maxigp2_awid, 
   maxigp2_awaddr, maxigp2_awlen, maxigp2_awsize, maxigp2_awburst, maxigp2_awlock, 
   maxigp2_awcache, maxigp2_awprot, maxigp2_awvalid, maxigp2_awuser, maxigp2_awready, 

@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2024 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -173,7 +173,7 @@ ARCHITECTURE adc_tech_util_ds_buf_1_0_arch OF adc_tech_util_ds_buf_1_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF adc_tech_util_ds_buf_1_0_arch : ARCHITECTURE IS "adc_tech_util_ds_buf_1_0,util_ds_buf,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF adc_tech_util_ds_buf_1_0_arch: ARCHITECTURE IS "adc_tech_util_ds_buf_1_0,util_ds_buf,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=23,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_BUF_TYPE=IOBUF,C_SIZE=1,C_BUFGCE_DIV=1,C_BUFG_GT_SYNC=0,C_SIM_DEVICE=VERSAL_AI_CORE_ES1,C_OBUFDS_GTE5_ADV=00,C_REFCLK_ICNTL_TX=00000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF adc_tech_util_ds_buf_1_0_arch: ARCHITECTURE IS "adc_tech_util_ds_buf_1_0,util_ds_buf,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=util_ds_buf,x_ipVersion=2.1,x_ipCoreRevision=23,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_BUF_TYPE=IOBUF,C_SIZE=1,C_BUFGCE_DIV=1,C_BUFG_GT_SYNC=0,C_SIM_DEVICE=VERSAL_AI_CORE_ES1,C_OBUFDS_GTE5_ADV=00,C_REFCLK_ICNTL_TX=00000}";
 BEGIN
   U0 : util_ds_buf
     GENERIC MAP (

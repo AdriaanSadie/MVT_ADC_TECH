@@ -22,7 +22,8 @@
 --
 -- [ 31		]   -- [ Trigger Bit            ]	(Rising edge triggers write transaction)
 -- [ 30     ]   -- [ Read/Write             ]	(Write = 0, Read = 1)
--- [ 29:24	]   -- [ Reserved				]
+-- [ 29:25	]   -- [ Reserved				]
+-- [ 24 ]     -- [ 0: DAC 0, 1: DAC 1]
 -- [ 23:16  ]   -- [ DAC Command          	]
 -- [ 15:8   ]   -- [ Data MSB			    ]
 -- [ 7:0    ]   -- [ Data LSB           	]
@@ -54,7 +55,7 @@ end i2c;
 architecture rtl of i2c is
 
   -- I2C shift registers:
-  constant dac_address : std_logic_vector(7 downto 0) := x"A8";
+  signal dac_address : std_logic_vector(7 downto 0) := x"A8";
   signal dac_command   : std_logic_vector(7 downto 0);
   signal dac_data_msb  : std_logic_vector(7 downto 0);
   signal dac_data_lsb  : std_logic_vector(7 downto 0);
@@ -145,6 +146,7 @@ begin
       axi_gpio_in_reg2 <= (others => '0');
       i2c_state        <= i2c_s_idle;
 
+      dac_address <= x"A8";
       dac_command  <= (others => '0');
       dac_data_msb <= (others => '0');
       dac_data_lsb <= (others => '0');
@@ -182,6 +184,14 @@ begin
             scl_en <= '1'; -- Pull high for start condition
 
             -- Load all data:
+            if (axi_gpio_in_reg1(24) = '0') then
+              dac_address <= x"A8";
+            elsif (axi_gpio_in_reg1(24) = '1') then
+              dac_address <= x"AC";
+            else
+              dac_address <= x"A8";
+            end if;
+
             dac_command  <= axi_gpio_in_reg1(23 downto 16);
             dac_data_msb <= axi_gpio_in_reg1(15 downto 8);
             dac_data_lsb <= axi_gpio_in_reg1(7 downto 0);

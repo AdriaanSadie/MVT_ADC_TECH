@@ -1,8 +1,8 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Wed Dec 18 15:20:16 2024
-//Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+//Date        : Thu Sep 18 09:44:24 2025
+//Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 //Command     : generate_target adc_tech.bd
 //Design      : adc_tech
 //Purpose     : IP block netlist

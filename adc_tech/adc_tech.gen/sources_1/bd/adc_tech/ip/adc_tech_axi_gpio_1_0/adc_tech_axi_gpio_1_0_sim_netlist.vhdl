@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Dec  5 10:32:06 2024
--- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+-- Date        : Mon Sep 22 10:03:20 2025
+-- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_axi_gpio_1_0 -prefix
 --               adc_tech_axi_gpio_1_0_ adc_tech_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : adc_tech_axi_gpio_0_0

@@ -1,8 +1,8 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Wed Dec 18 15:21:45 2024
-// Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+// Date        : Mon Sep 22 10:03:29 2025
+// Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_i2c_0_0_sim_netlist.v
 // Design      : adc_tech_i2c_0_0
@@ -12,8 +12,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "adc_tech_i2c_0_0,i2c,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
-(* X_CORE_INFO = "i2c,Vivado 2020.2" *) 
+(* CHECK_LICENSE_TYPE = "adc_tech_i2c_0_0,i2c,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "i2c,Vivado 2020.2" *) 
 (* NotValidForBitStream *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
    (clk_in,
@@ -22,30 +22,30 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     scl,
     sda);
   input clk_in;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst_n;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 rst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst_n;
   input [31:0]axi_gpio_in;
   output scl;
   inout sda;
 
+  wire U0_n_0;
+  wire U0_n_2;
+  wire U0_n_4;
   wire [31:0]axi_gpio_in;
   wire clk_in;
   wire i2c_clk;
-  wire inst_n_0;
-  wire inst_n_2;
-  wire inst_n_4;
   wire rst_n;
   wire scl;
   wire sda;
   wire sda_INST_0_i_2_n_0;
 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c inst
-       (.axi_gpio_in({axi_gpio_in[31],axi_gpio_in[23:0]}),
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c U0
+       (.axi_gpio_in({axi_gpio_in[31],axi_gpio_in[24:0]}),
         .clk_in(clk_in),
         .i2c_clk(i2c_clk),
-        .i2c_start_flag_reg_0(inst_n_0),
-        .i2c_start_flag_reg_1(inst_n_4),
+        .i2c_start_flag_reg_0(U0_n_0),
+        .i2c_start_flag_reg_1(U0_n_4),
         .rst_n(rst_n),
-        .rst_n_0(inst_n_2),
+        .rst_n_0(U0_n_2),
         .scl(scl),
         .sda(sda),
         .sda_0(sda_INST_0_i_2_n_0));
@@ -54,9 +54,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     .IS_C_INVERTED(1'b1)) 
     sda_INST_0_i_2
        (.C(i2c_clk),
-        .CE(inst_n_0),
-        .D(inst_n_4),
-        .PRE(inst_n_2),
+        .CE(U0_n_0),
+        .D(U0_n_4),
+        .PRE(U0_n_2),
         .Q(sda_INST_0_i_2_n_0));
 endmodule
 
@@ -80,9 +80,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
   input clk_in;
   input rst_n;
   input sda_0;
-  input [24:0]axi_gpio_in;
+  input [25:0]axi_gpio_in;
 
-  wire [24:0]axi_gpio_in;
+  wire [25:0]axi_gpio_in;
   wire \axi_gpio_in_reg1_reg_n_0_[0] ;
   wire \axi_gpio_in_reg1_reg_n_0_[10] ;
   wire \axi_gpio_in_reg1_reg_n_0_[11] ;
@@ -108,6 +108,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
   wire \axi_gpio_in_reg1_reg_n_0_[8] ;
   wire \axi_gpio_in_reg1_reg_n_0_[9] ;
   wire clk_in;
+  wire [2:2]dac_address;
+  wire \dac_address[2]_i_1_n_0 ;
+  wire \dac_address_reg_n_0_[2] ;
   wire [7:0]dac_command;
   wire \dac_command[0]_i_1_n_0 ;
   wire \dac_command[1]_i_1_n_0 ;
@@ -318,6 +321,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(axi_gpio_in[23]),
         .Q(\axi_gpio_in_reg1_reg_n_0_[23] ));
+  FDCE \axi_gpio_in_reg1_reg[24] 
+       (.C(i2c_clk),
+        .CE(1'b1),
+        .CLR(rst_n_0),
+        .D(axi_gpio_in[24]),
+        .Q(dac_address));
   FDCE \axi_gpio_in_reg1_reg[2] 
        (.C(i2c_clk),
         .CE(1'b1),
@@ -328,7 +337,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
        (.C(i2c_clk),
         .CE(1'b1),
         .CLR(rst_n_0),
-        .D(axi_gpio_in[24]),
+        .D(axi_gpio_in[25]),
         .Q(p_1_in13_in));
   FDCE \axi_gpio_in_reg1_reg[3] 
        (.C(i2c_clk),
@@ -378,49 +387,67 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(p_1_in13_in),
         .Q(p_0_in_0));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hFFEF0020)) 
+    \dac_address[2]_i_1 
+       (.I0(dac_address),
+        .I1(p_0_in_0),
+        .I2(p_1_in13_in),
+        .I3(i2c_state),
+        .I4(\dac_address_reg_n_0_[2] ),
+        .O(\dac_address[2]_i_1_n_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \dac_address_reg[2] 
+       (.C(i2c_clk),
+        .CE(1'b1),
+        .CLR(rst_n_0),
+        .D(\dac_address[2]_i_1_n_0 ),
+        .Q(\dac_address_reg_n_0_[2] ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[0]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[16] ),
         .I1(i2c_state),
         .O(\dac_command[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[1]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[17] ),
         .I1(i2c_state),
         .O(\dac_command[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[2]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[18] ),
         .I1(i2c_state),
         .O(\dac_command[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[3]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[19] ),
         .I1(i2c_state),
         .O(\dac_command[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[4]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[20] ),
         .I1(i2c_state),
         .O(\dac_command[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[5]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[21] ),
         .I1(i2c_state),
         .O(\dac_command[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[6]_i_1 
@@ -435,14 +462,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I2(p_0_in_0),
         .I3(i2c_state),
         .O(dac_data_lsb));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_command[7]_i_2 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[23] ),
         .I1(i2c_state),
         .O(\dac_command[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hAAAAAA80)) 
     \dac_command[7]_i_3 
@@ -500,56 +527,56 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(\dac_command[7]_i_2_n_0 ),
         .Q(dac_command[7]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[0]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[0] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[1]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[1] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[2]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[2] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[3]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[3] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[4]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[4] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[5]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[5] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[6]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[6] ),
         .I1(i2c_state),
         .O(\dac_data_lsb[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_lsb[7]_i_1 
@@ -604,56 +631,56 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(\dac_data_lsb[7]_i_1_n_0 ),
         .Q(\dac_data_lsb_reg_n_0_[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[0]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[8] ),
         .I1(i2c_state),
         .O(\dac_data_msb[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[1]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[9] ),
         .I1(i2c_state),
         .O(\dac_data_msb[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[2]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[10] ),
         .I1(i2c_state),
         .O(\dac_data_msb[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[3]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[11] ),
         .I1(i2c_state),
         .O(\dac_data_msb[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[4]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[12] ),
         .I1(i2c_state),
         .O(\dac_data_msb[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[5]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[13] ),
         .I1(i2c_state),
         .O(\dac_data_msb[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[6]_i_1 
        (.I0(\axi_gpio_in_reg1_reg_n_0_[14] ),
         .I1(i2c_state),
         .O(\dac_data_msb[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \dac_data_msb[7]_i_1 
@@ -708,6 +735,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(\dac_data_msb[7]_i_1_n_0 ),
         .Q(dac_data_msb[7]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
     i2c_ack_flag_i_1
@@ -730,7 +758,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(i2c_ack_flag_i_1_n_0),
         .Q(i2c_ack_flag_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \i2c_clk_counter[0]_i_1 
@@ -754,7 +782,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I1(i2c_clk_counter_reg[5]),
         .I2(\i2c_clk_counter[4]_i_2_n_0 ),
         .O(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \i2c_clk_counter[10]_i_3 
@@ -762,7 +790,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I1(i2c_clk_counter_reg[5]),
         .I2(\i2c_clk_counter[8]_i_2_n_0 ),
         .O(\i2c_clk_counter[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hEAAAAAAA)) 
     \i2c_clk_counter[10]_i_4 
@@ -772,7 +800,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I3(i2c_clk_counter_reg[0]),
         .I4(i2c_clk_counter_reg[2]),
         .O(\i2c_clk_counter[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h06)) 
     \i2c_clk_counter[1]_i_1 
@@ -780,7 +808,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I1(i2c_clk_counter_reg[0]),
         .I2(p_0_in),
         .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h1540)) 
     \i2c_clk_counter[2]_i_1 
@@ -789,7 +817,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I2(i2c_clk_counter_reg[1]),
         .I3(i2c_clk_counter_reg[2]),
         .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h15554000)) 
     \i2c_clk_counter[3]_i_1 
@@ -818,7 +846,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I3(i2c_clk_counter_reg[6]),
         .I4(i2c_clk_counter_reg[9]),
         .O(\i2c_clk_counter[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h41)) 
     \i2c_clk_counter[5]_i_1 
@@ -826,7 +854,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I1(\i2c_clk_counter[8]_i_2_n_0 ),
         .I2(i2c_clk_counter_reg[5]),
         .O(p_0_in__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h4510)) 
     \i2c_clk_counter[6]_i_1 
@@ -835,7 +863,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I2(i2c_clk_counter_reg[5]),
         .I3(i2c_clk_counter_reg[6]),
         .O(p_0_in__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h0000F708)) 
     \i2c_clk_counter[7]_i_1 
@@ -855,7 +883,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(i2c_clk_counter_reg[6]),
         .I5(i2c_clk_counter_reg[8]),
         .O(\i2c_clk_counter[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFFFFFF)) 
     \i2c_clk_counter[8]_i_2 
@@ -940,7 +968,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(\i2c_clk_counter[9]_i_1_n_0 ),
         .Q(i2c_clk_counter_reg[9]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h6)) 
     i2c_clk_i_1
@@ -1003,7 +1031,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sda_out_tristate_oe_i_5_n_0),
         .I5(i2c_ack_flag_reg_n_0),
         .O(i2c_shift_reg_counter[3]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \i2c_shift_reg_counter[3]_i_3 
@@ -1052,7 +1080,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(i2c_state),
         .I5(sel0[5]),
         .O(i2c_start_flag_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h1)) 
     i2c_start_flag_i_2
@@ -1065,7 +1093,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(i2c_start_flag_i_1_n_0),
         .Q(i2c_start_flag_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h2722)) 
     i2c_state_i_1
@@ -1090,7 +1118,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sel0[3]),
         .I5(i2c_write_address_flag_i_3_n_0),
         .O(i2c_write_address_flag_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     i2c_write_address_flag_i_2
@@ -1099,7 +1127,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I2(sel0[2]),
         .I3(sel0[0]),
         .O(i2c_write_address_flag_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h01)) 
     i2c_write_address_flag_i_3
@@ -1129,7 +1157,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(i2c_write_command_flag_i_1_n_0),
         .Q(i2c_write_command_flag_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
     .INIT(32'h00028000)) 
     i2c_write_data_lsb_flag_i_1
@@ -1145,7 +1173,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(i2c_write_data_lsb_flag_i_1_n_0),
         .Q(i2c_write_data_lsb_flag_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h00600000)) 
     i2c_write_data_msb_flag_i_1
@@ -1155,7 +1183,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I3(sel0[5]),
         .I4(sel0[4]),
         .O(i2c_write_data_msb_flag_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hEC)) 
     i2c_write_data_msb_flag_i_2
@@ -1189,7 +1217,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sel0[1]),
         .I5(sel0[5]),
         .O(i2c_write_stop_flag_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'hB)) 
     i2c_write_stop_flag_i_3
@@ -1232,7 +1260,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sel0[1]),
         .I5(sel0[5]),
         .O(p_0_in__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00006CCC)) 
     \i2c_write_tracker[3]_i_1 
@@ -1298,7 +1326,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .CLR(rst_n_0),
         .D(p_0_in__1[5]),
         .Q(sel0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'hB)) 
     scl_INST_0
@@ -1315,7 +1343,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(scl_write_i_4_n_0),
         .I5(scl_write_reg_n_0),
         .O(scl_write_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     scl_write_i_2
@@ -1332,7 +1360,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sel0[3]),
         .I5(sel0[4]),
         .O(scl_write_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h45)) 
     scl_write_i_4
@@ -1384,6 +1412,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(dac_command[2]),
         .I5(dac_command[3]),
         .O(sda_out_tristate_oe_i_10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h1E)) 
     sda_out_tristate_oe_i_11
@@ -1456,7 +1485,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
     sda_out_tristate_oe_i_3
        (.I0(rst_n),
         .O(rst_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     sda_out_tristate_oe_i_4
@@ -1465,7 +1493,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I2(\i2c_shift_reg_counter_reg_n_0_[0] ),
         .I3(\i2c_shift_reg_counter_reg_n_0_[3] ),
         .O(sda_out_tristate_oe_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     sda_out_tristate_oe_i_5
@@ -1504,14 +1532,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
         .I4(sda_out_tristate_oe_i_16_n_0),
         .I5(i2c_write_data_lsb_flag_reg_n_0),
         .O(sda_out_tristate_oe_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h2300)) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h63230000)) 
     sda_out_tristate_oe_i_9
        (.I0(\i2c_shift_reg_counter_reg_n_0_[2] ),
         .I1(\i2c_shift_reg_counter_reg_n_0_[0] ),
         .I2(\i2c_shift_reg_counter_reg_n_0_[1] ),
-        .I3(i2c_write_address_flag_reg_n_0),
+        .I3(\dac_address_reg_n_0_[2] ),
+        .I4(i2c_write_address_flag_reg_n_0),
         .O(sda_out_tristate_oe_i_9_n_0));
   FDPE #(
     .IS_C_INVERTED(1'b1)) 

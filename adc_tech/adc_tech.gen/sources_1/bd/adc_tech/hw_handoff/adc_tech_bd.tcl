@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# data_splitter, i2c
+# dac_cal, data_splitter, i2c
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -170,6 +170,10 @@ proc create_hier_cell_Processing_Subsystem { parentCell nameHier } {
 
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M02_AXI_0
 
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M03_AXI_0
+
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M04_AXI_0
+
 
   # Create pins
   create_bd_pin -dir I -type clk clk_in
@@ -179,7 +183,7 @@ proc create_hier_cell_Processing_Subsystem { parentCell nameHier } {
   # Create instance: axi_interconnect_0, and set properties
   set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {3} \
+   CONFIG.NUM_MI {5} \
    CONFIG.NUM_SI {2} \
  ] $axi_interconnect_0
 
@@ -1619,14 +1623,16 @@ proc create_hier_cell_Processing_Subsystem { parentCell nameHier } {
   connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins M00_AXI_0] [get_bd_intf_pins axi_interconnect_0/M00_AXI]
   connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins M01_AXI_0] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
   connect_bd_intf_net -intf_net Conn3 [get_bd_intf_pins M02_AXI_0] [get_bd_intf_pins axi_interconnect_0/M02_AXI]
+  connect_bd_intf_net -intf_net Conn4 [get_bd_intf_pins M03_AXI_0] [get_bd_intf_pins axi_interconnect_0/M03_AXI]
+  connect_bd_intf_net -intf_net Conn5 [get_bd_intf_pins M04_AXI_0] [get_bd_intf_pins axi_interconnect_0/M04_AXI]
   connect_bd_intf_net -intf_net jtag_axi_0_M_AXI [get_bd_intf_pins axi_interconnect_0/S01_AXI] [get_bd_intf_pins jtag_axi_0/M_AXI]
   connect_bd_intf_net -intf_net zynq_ultra_ps_e_0_M_AXI_HPM0_LPD [get_bd_intf_pins axi_interconnect_0/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_LPD]
 
   # Create port connections
   connect_bd_net -net clk_in_1 [get_bd_pins clk_in] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins global_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins global_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/M02_ACLK] [get_bd_pins axi_interconnect_0/M03_ACLK] [get_bd_pins axi_interconnect_0/M04_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_0/S01_ACLK] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk]
   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins global_rst_n] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins global_rst_n] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/M02_ARESETN] [get_bd_pins axi_interconnect_0/M03_ARESETN] [get_bd_pins axi_interconnect_0/M04_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_0/S01_ARESETN] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Restore current instance
@@ -1669,16 +1675,23 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
+  set counting_flag [ create_bd_port -dir O counting_flag ]
+  set debug0 [ create_bd_port -dir O -from 0 -to 0 debug0 ]
+  set debug1 [ create_bd_port -dir O -from 0 -to 0 debug1 ]
+  set debug2 [ create_bd_port -dir O -from 0 -to 0 debug2 ]
   set i2c_scl [ create_bd_port -dir IO i2c_scl ]
   set i2c_sda [ create_bd_port -dir IO i2c_sda ]
   set my_i2c_scl [ create_bd_port -dir O my_i2c_scl ]
   set my_i2c_sda [ create_bd_port -dir IO my_i2c_sda ]
   set pl_clk_n [ create_bd_port -dir I -type clk -freq_hz 125000000 pl_clk_n ]
   set pl_clk_p [ create_bd_port -dir I -type clk -freq_hz 125000000 pl_clk_p ]
-  set pl_led0 [ create_bd_port -dir O pl_led0 ]
+  set pl_led0 [ create_bd_port -dir O -from 0 -to 0 pl_led0 ]
   set pl_led1 [ create_bd_port -dir O pl_led1 ]
   set pl_led2 [ create_bd_port -dir O pl_led2 ]
   set pl_led3 [ create_bd_port -dir O pl_led3 ]
+  set pulse_in_n [ create_bd_port -dir I pulse_in_n ]
+  set pulse_in_p [ create_bd_port -dir I pulse_in_p ]
+  set sync_in [ create_bd_port -dir I sync_in ]
 
   # Create instance: Processing_Subsystem
   create_hier_cell_Processing_Subsystem [current_bd_instance .] Processing_Subsystem
@@ -1691,6 +1704,35 @@ proc create_root_design { parentCell } {
 
   # Create instance: axi_iic_0, and set properties
   set axi_iic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0 ]
+
+  # Create instance: c_counter_binary_0, and set properties
+  set c_counter_binary_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_0 ]
+  set_property -dict [ list \
+   CONFIG.Output_Width {32} \
+ ] $c_counter_binary_0
+
+  # Create instance: dac_cal, and set properties
+  set block_name dac_cal
+  set block_cell_name dac_cal
+  if { [catch {set dac_cal [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $dac_cal eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: dac_cal_control, and set properties
+  set dac_cal_control [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 dac_cal_control ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_OUTPUTS {1} \
+ ] $dac_cal_control
+
+  # Create instance: dac_cal_read, and set properties
+  set dac_cal_read [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 dac_cal_read ]
+  set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {1} \
+ ] $dac_cal_read
 
   # Create instance: data_splitter_0, and set properties
   set block_name data_splitter
@@ -1738,23 +1780,67 @@ proc create_root_design { parentCell } {
    CONFIG.C_BUF_TYPE {IOBUF} \
  ] $util_ds_buf_2
 
+  # Create instance: util_ds_buf_3, and set properties
+  set util_ds_buf_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.1 util_ds_buf_3 ]
+  set_property -dict [ list \
+   CONFIG.C_BUF_TYPE {IBUFDS} \
+ ] $util_ds_buf_3
+
+  # Create instance: xlslice_0, and set properties
+  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {27} \
+   CONFIG.DIN_TO {27} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_0
+
+  # Create instance: xlslice_1, and set properties
+  set xlslice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_1 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {2} \
+   CONFIG.DIN_TO {2} \
+   CONFIG.DIN_WIDTH {3} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_1
+
+  # Create instance: xlslice_2, and set properties
+  set xlslice_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_2 ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {1} \
+   CONFIG.DIN_TO {1} \
+   CONFIG.DIN_WIDTH {3} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $xlslice_2
+
+  # Create instance: xlslice_3, and set properties
+  set xlslice_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_3 ]
+  set_property -dict [ list \
+   CONFIG.DIN_WIDTH {3} \
+ ] $xlslice_3
+
   # Create interface connections
   connect_bd_intf_net -intf_net Processing_Subsystem_M00_AXI_0 [get_bd_intf_pins Processing_Subsystem/M00_AXI_0] [get_bd_intf_pins axi_gpio_0/S_AXI]
   connect_bd_intf_net -intf_net Processing_Subsystem_M01_AXI_0 [get_bd_intf_pins Processing_Subsystem/M01_AXI_0] [get_bd_intf_pins axi_iic_0/S_AXI]
   connect_bd_intf_net -intf_net Processing_Subsystem_M02_AXI_0 [get_bd_intf_pins Processing_Subsystem/M02_AXI_0] [get_bd_intf_pins my_i2c/S_AXI]
+  connect_bd_intf_net -intf_net Processing_Subsystem_M03_AXI_0 [get_bd_intf_pins Processing_Subsystem/M03_AXI_0] [get_bd_intf_pins dac_cal_read/S_AXI]
+  connect_bd_intf_net -intf_net Processing_Subsystem_M04_AXI_0 [get_bd_intf_pins Processing_Subsystem/M04_AXI_0] [get_bd_intf_pins dac_cal_control/S_AXI]
 
   # Create port connections
   connect_bd_net -net Net [get_bd_ports i2c_scl] [get_bd_pins util_ds_buf_1/IOBUF_IO_IO]
   connect_bd_net -net Net1 [get_bd_ports i2c_sda] [get_bd_pins util_ds_buf_2/IOBUF_IO_IO]
   connect_bd_net -net Net2 [get_bd_ports my_i2c_sda] [get_bd_pins i2c_0/sda]
-  connect_bd_net -net Processing_Subsystem_global_clk [get_bd_pins Processing_Subsystem/global_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins i2c_0/clk_in] [get_bd_pins my_i2c/s_axi_aclk]
-  connect_bd_net -net Processing_Subsystem_global_rst_n [get_bd_pins Processing_Subsystem/global_rst_n] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins i2c_0/rst_n] [get_bd_pins my_i2c/s_axi_aresetn]
+  connect_bd_net -net Processing_Subsystem_global_clk [get_bd_pins Processing_Subsystem/global_clk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins dac_cal/clk] [get_bd_pins dac_cal_control/s_axi_aclk] [get_bd_pins dac_cal_read/s_axi_aclk] [get_bd_pins i2c_0/clk_in] [get_bd_pins my_i2c/s_axi_aclk]
+  connect_bd_net -net Processing_Subsystem_global_rst_n [get_bd_pins Processing_Subsystem/global_rst_n] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins dac_cal/rst_n] [get_bd_pins dac_cal_control/s_axi_aresetn] [get_bd_pins dac_cal_read/s_axi_aresetn] [get_bd_pins i2c_0/rst_n] [get_bd_pins my_i2c/s_axi_aresetn]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins data_splitter_0/port_in]
   connect_bd_net -net axi_iic_0_scl_o [get_bd_pins axi_iic_0/scl_o] [get_bd_pins util_ds_buf_1/IOBUF_IO_I]
   connect_bd_net -net axi_iic_0_scl_t [get_bd_pins axi_iic_0/scl_t] [get_bd_pins util_ds_buf_1/IOBUF_IO_T]
   connect_bd_net -net axi_iic_0_sda_o [get_bd_pins axi_iic_0/sda_o] [get_bd_pins util_ds_buf_2/IOBUF_IO_I]
   connect_bd_net -net axi_iic_0_sda_t [get_bd_pins axi_iic_0/sda_t] [get_bd_pins util_ds_buf_2/IOBUF_IO_T]
-  connect_bd_net -net data_splitter_0_port_out0 [get_bd_ports pl_led0] [get_bd_pins data_splitter_0/port_out0]
+  connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlslice_0/Din]
+  connect_bd_net -net dac_cal_0_counter [get_bd_pins dac_cal/counter] [get_bd_pins dac_cal_read/gpio_io_i]
+  connect_bd_net -net dac_cal_0_counting_flag [get_bd_ports counting_flag] [get_bd_pins dac_cal/counting_flag]
+  connect_bd_net -net dac_cal_control_gpio_io_o [get_bd_pins dac_cal/control] [get_bd_pins dac_cal_control/gpio_io_o]
+  connect_bd_net -net dac_cal_debug [get_bd_pins dac_cal/debug] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
   connect_bd_net -net data_splitter_0_port_out1 [get_bd_ports pl_led1] [get_bd_pins data_splitter_0/port_out1]
   connect_bd_net -net data_splitter_0_port_out2 [get_bd_ports pl_led2] [get_bd_pins data_splitter_0/port_out2]
   connect_bd_net -net data_splitter_0_port_out3 [get_bd_ports pl_led3] [get_bd_pins data_splitter_0/port_out3]
@@ -1762,16 +1848,28 @@ proc create_root_design { parentCell } {
   connect_bd_net -net my_i2c_gpio_io_o [get_bd_pins i2c_0/axi_gpio_in] [get_bd_pins my_i2c/gpio_io_o]
   connect_bd_net -net pl_clk_n_1 [get_bd_ports pl_clk_n] [get_bd_pins util_ds_buf_0/IBUF_DS_N]
   connect_bd_net -net pl_clk_p_1 [get_bd_ports pl_clk_p] [get_bd_pins util_ds_buf_0/IBUF_DS_P]
+  connect_bd_net -net pulse_in_n_1 [get_bd_ports pulse_in_n] [get_bd_pins util_ds_buf_3/IBUF_DS_N]
+  connect_bd_net -net pulse_in_p_1 [get_bd_ports pulse_in_p] [get_bd_pins util_ds_buf_3/IBUF_DS_P]
+  connect_bd_net -net sync_in_0_1 [get_bd_ports sync_in] [get_bd_pins dac_cal/sync_in]
   connect_bd_net -net util_ds_buf_0_IBUF_OUT [get_bd_pins Processing_Subsystem/clk_in] [get_bd_pins util_ds_buf_0/IBUF_OUT]
   connect_bd_net -net util_ds_buf_1_IOBUF_IO_O [get_bd_pins axi_iic_0/scl_i] [get_bd_pins util_ds_buf_1/IOBUF_IO_O]
   connect_bd_net -net util_ds_buf_2_IOBUF_IO_O [get_bd_pins axi_iic_0/sda_i] [get_bd_pins util_ds_buf_2/IOBUF_IO_O]
+  connect_bd_net -net util_ds_buf_3_IBUF_OUT [get_bd_pins dac_cal/pulse_in] [get_bd_pins util_ds_buf_3/IBUF_OUT]
+  connect_bd_net -net xlslice_0_Dout [get_bd_ports pl_led0] [get_bd_pins xlslice_0/Dout]
+  connect_bd_net -net xlslice_1_Dout [get_bd_ports debug2] [get_bd_pins xlslice_1/Dout]
+  connect_bd_net -net xlslice_2_Dout [get_bd_ports debug1] [get_bd_pins xlslice_2/Dout]
+  connect_bd_net -net xlslice_3_Dout [get_bd_ports debug0] [get_bd_pins xlslice_3/Dout]
 
   # Create address segments
   assign_bd_address -offset 0x80000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80030000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs dac_cal_control/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80040000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs dac_cal_read/S_AXI/Reg] -force
   assign_bd_address -offset 0x80020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/jtag_axi_0/Data] [get_bd_addr_segs my_i2c/S_AXI/Reg] -force
   assign_bd_address -offset 0x80000000 -range 0x00001000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force
   assign_bd_address -offset 0x80010000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80030000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs dac_cal_control/S_AXI/Reg] -force
+  assign_bd_address -offset 0x80040000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs dac_cal_read/S_AXI/Reg] -force
   assign_bd_address -offset 0x80020000 -range 0x00010000 -target_address_space [get_bd_addr_spaces Processing_Subsystem/zynq_ultra_ps_e_0/Data] [get_bd_addr_segs my_i2c/S_AXI/Reg] -force
 
 

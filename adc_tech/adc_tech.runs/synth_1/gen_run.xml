@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1734528023">
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1758801022">
   <File Type="PA-TCL" Name="adc_tech_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="adc_tech_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="adc_tech_wrapper_reports.tcl"/>
@@ -11,13 +11,19 @@
   <File Type="VDS-TIMING-PB" Name="adc_tech_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/data_splitter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/i2c.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/data_splitter.vhd">
+    <File Path="$PSRCDIR/sources_1/new/dac_cal.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -30,10 +36,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.v">
+    <File Path="$PGENDIR/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -76,19 +81,27 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_jtag_axi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_data_splitter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_read_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_c_counter_binary_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_0_0"/>
 </GenRun>

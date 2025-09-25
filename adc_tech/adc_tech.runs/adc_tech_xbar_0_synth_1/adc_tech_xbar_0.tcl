@@ -71,11 +71,10 @@ proc create_report { reportName command } {
 }
 OPTRACE "adc_tech_xbar_0_synth_1" START { ROLLUP_AUTO }
 set_param power.BramSDPPropagationFix 1
-set_param chipscope.maxJobs 2
+set_param chipscope.maxJobs 5
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_param power.enableLutRouteBelPower 1
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -89,7 +88,7 @@ set_property webtalk.parent_dir C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/
 set_property parent.project_path C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
-set_property target_language Verilog [current_project]
+set_property target_language VHDL [current_project]
 set_property board_part xilinx.com:zcu106:part0:2.6 [current_project]
 set_property ip_output_repo c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

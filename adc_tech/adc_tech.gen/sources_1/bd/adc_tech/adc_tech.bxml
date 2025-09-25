@@ -2,18 +2,17 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="adc_tech" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1734528018"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1734528018"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1734528018"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1734528018"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1758801017"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1758801017"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1758801017"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1758801017"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\adc_tech.v" Type="Verilog">
+      <File Name="synth\adc_tech.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
       </File>
-      <File Name="sim\adc_tech.v" Type="Verilog">
+      <File Name="sim\adc_tech.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

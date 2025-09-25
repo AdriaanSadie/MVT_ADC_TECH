@@ -1,8 +1,8 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Dec 18 15:21:45 2024
--- Host        : ZA-WASADIE running 64-bit major release  (build 9200)
+-- Date        : Mon Sep 22 10:03:29 2025
+-- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_i2c_0_0_sim_netlist.vhdl
 -- Design      : adc_tech_i2c_0_0
@@ -25,7 +25,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
     clk_in : in STD_LOGIC;
     rst_n : in STD_LOGIC;
     sda_0 : in STD_LOGIC;
-    axi_gpio_in : in STD_LOGIC_VECTOR ( 24 downto 0 )
+    axi_gpio_in : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c;
 
@@ -54,6 +54,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal \axi_gpio_in_reg1_reg_n_0_[7]\ : STD_LOGIC;
   signal \axi_gpio_in_reg1_reg_n_0_[8]\ : STD_LOGIC;
   signal \axi_gpio_in_reg1_reg_n_0_[9]\ : STD_LOGIC;
+  signal dac_address : STD_LOGIC_VECTOR ( 2 to 2 );
+  signal \dac_address[2]_i_1_n_0\ : STD_LOGIC;
+  signal \dac_address_reg_n_0_[2]\ : STD_LOGIC;
   signal dac_command : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \dac_command[0]_i_1_n_0\ : STD_LOGIC;
   signal \dac_command[1]_i_1_n_0\ : STD_LOGIC;
@@ -163,58 +166,60 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c is
   signal sda_write_reg_n_0 : STD_LOGIC;
   signal sel0 : STD_LOGIC_VECTOR ( 5 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \dac_command[0]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \dac_command[1]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \dac_command[2]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \dac_command[3]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \dac_command[4]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \dac_command[5]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \dac_command[6]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \dac_command[7]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \dac_command[7]_i_3\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \dac_data_lsb[0]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \dac_data_lsb[1]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \dac_data_lsb[2]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dac_data_lsb[3]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \dac_data_lsb[4]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \dac_data_lsb[5]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \dac_data_lsb[6]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dac_data_lsb[7]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \dac_data_msb[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \dac_data_msb[1]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \dac_data_msb[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \dac_data_msb[3]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \dac_data_msb[4]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \dac_data_msb[5]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \dac_data_msb[6]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \dac_data_msb[7]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[0]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_3\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_4\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[1]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[2]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[5]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[6]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[7]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \i2c_clk_counter[8]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of i2c_clk_i_1 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \i2c_shift_reg_counter[3]_i_3\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of i2c_start_flag_i_2 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of i2c_state_i_1 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of i2c_write_address_flag_i_2 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of i2c_write_address_flag_i_3 : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of i2c_write_data_lsb_flag_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_1 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_2 : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of i2c_write_stop_flag_i_3 : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \i2c_write_tracker[3]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of scl_INST_0 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of scl_write_i_2 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of scl_write_i_4 : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_4 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_5 : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_9 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \dac_address[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \dac_command[0]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \dac_command[1]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \dac_command[2]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \dac_command[3]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \dac_command[4]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \dac_command[5]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \dac_command[6]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \dac_command[7]_i_2\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \dac_command[7]_i_3\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \dac_data_lsb[0]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \dac_data_lsb[1]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \dac_data_lsb[2]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dac_data_lsb[3]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \dac_data_lsb[4]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dac_data_lsb[5]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \dac_data_lsb[6]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dac_data_lsb[7]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \dac_data_msb[0]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \dac_data_msb[1]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \dac_data_msb[2]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dac_data_msb[3]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \dac_data_msb[4]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \dac_data_msb[5]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \dac_data_msb[6]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \dac_data_msb[7]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of i2c_ack_flag_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[0]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_3\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[10]_i_4\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[1]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[2]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[3]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[5]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[6]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[7]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \i2c_clk_counter[8]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of i2c_clk_i_1 : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \i2c_shift_reg_counter[3]_i_3\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of i2c_start_flag_i_2 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of i2c_state_i_1 : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of i2c_write_address_flag_i_2 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of i2c_write_address_flag_i_3 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of i2c_write_data_lsb_flag_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of i2c_write_data_msb_flag_i_2 : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of i2c_write_stop_flag_i_3 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \i2c_write_tracker[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of scl_INST_0 : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of scl_write_i_2 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of scl_write_i_4 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_11 : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_5 : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of sda_out_tristate_oe_i_9 : label is "soft_lutpair2";
 begin
   i2c_clk <= \^i2c_clk\;
   i2c_start_flag_reg_0 <= \^i2c_start_flag_reg_0\;
@@ -347,6 +352,14 @@ begin
       D => axi_gpio_in(23),
       Q => \axi_gpio_in_reg1_reg_n_0_[23]\
     );
+\axi_gpio_in_reg1_reg[24]\: unisim.vcomponents.FDCE
+     port map (
+      C => \^i2c_clk\,
+      CE => '1',
+      CLR => \^rst_n_0\,
+      D => axi_gpio_in(24),
+      Q => dac_address(2)
+    );
 \axi_gpio_in_reg1_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => \^i2c_clk\,
@@ -360,7 +373,7 @@ begin
       C => \^i2c_clk\,
       CE => '1',
       CLR => \^rst_n_0\,
-      D => axi_gpio_in(24),
+      D => axi_gpio_in(25),
       Q => p_1_in13_in
     );
 \axi_gpio_in_reg1_reg[3]\: unisim.vcomponents.FDCE
@@ -426,6 +439,29 @@ begin
       CLR => \^rst_n_0\,
       D => p_1_in13_in,
       Q => p_0_in_0
+    );
+\dac_address[2]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"FFEF0020"
+    )
+        port map (
+      I0 => dac_address(2),
+      I1 => p_0_in_0,
+      I2 => p_1_in13_in,
+      I3 => i2c_state,
+      I4 => \dac_address_reg_n_0_[2]\,
+      O => \dac_address[2]_i_1_n_0\
+    );
+\dac_address_reg[2]\: unisim.vcomponents.FDCE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => \^i2c_clk\,
+      CE => '1',
+      CLR => \^rst_n_0\,
+      D => \dac_address[2]_i_1_n_0\,
+      Q => \dac_address_reg_n_0_[2]\
     );
 \dac_command[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1895,15 +1931,16 @@ sda_out_tristate_oe_i_8: unisim.vcomponents.LUT6
       I5 => i2c_write_data_lsb_flag_reg_n_0,
       O => sda_out_tristate_oe_i_8_n_0
     );
-sda_out_tristate_oe_i_9: unisim.vcomponents.LUT4
+sda_out_tristate_oe_i_9: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2300"
+      INIT => X"63230000"
     )
         port map (
       I0 => \i2c_shift_reg_counter_reg_n_0_[2]\,
       I1 => \i2c_shift_reg_counter_reg_n_0_[0]\,
       I2 => \i2c_shift_reg_counter_reg_n_0_[1]\,
-      I3 => i2c_write_address_flag_reg_n_0,
+      I3 => \dac_address_reg_n_0_[2]\,
+      I4 => i2c_write_address_flag_reg_n_0,
       O => sda_out_tristate_oe_i_9_n_0
     );
 sda_out_tristate_oe_reg: unisim.vcomponents.FDPE
@@ -1955,35 +1992,35 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "adc_tech_i2c_0_0,i2c,{}";
-  attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
-  attribute IP_DEFINITION_SOURCE : string;
-  attribute IP_DEFINITION_SOURCE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "module_ref";
-  attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "i2c,Vivado 2020.2";
+  attribute downgradeipidentifiedwarnings : string;
+  attribute downgradeipidentifiedwarnings of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "yes";
+  attribute ip_definition_source : string;
+  attribute ip_definition_source of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "module_ref";
+  attribute x_core_info : string;
+  attribute x_core_info of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is "i2c,Vivado 2020.2";
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
+  signal U0_n_0 : STD_LOGIC;
+  signal U0_n_2 : STD_LOGIC;
+  signal U0_n_4 : STD_LOGIC;
   signal i2c_clk : STD_LOGIC;
-  signal inst_n_0 : STD_LOGIC;
-  signal inst_n_2 : STD_LOGIC;
-  signal inst_n_4 : STD_LOGIC;
   signal sda_INST_0_i_2_n_0 : STD_LOGIC;
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of rst_n : signal is "xilinx.com:signal:reset:1.0 rst_n RST";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of rst_n : signal is "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute x_interface_info : string;
+  attribute x_interface_info of rst_n : signal is "xilinx.com:signal:reset:1.0 rst_n RST";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of rst_n : signal is "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
-inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
+U0: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_i2c
      port map (
-      axi_gpio_in(24) => axi_gpio_in(31),
-      axi_gpio_in(23 downto 0) => axi_gpio_in(23 downto 0),
+      axi_gpio_in(25) => axi_gpio_in(31),
+      axi_gpio_in(24 downto 0) => axi_gpio_in(24 downto 0),
       clk_in => clk_in,
       i2c_clk => i2c_clk,
-      i2c_start_flag_reg_0 => inst_n_0,
-      i2c_start_flag_reg_1 => inst_n_4,
+      i2c_start_flag_reg_0 => U0_n_0,
+      i2c_start_flag_reg_1 => U0_n_4,
       rst_n => rst_n,
-      rst_n_0 => inst_n_2,
+      rst_n_0 => U0_n_2,
       scl => scl,
       sda => sda,
       sda_0 => sda_INST_0_i_2_n_0
@@ -1995,9 +2032,9 @@ sda_INST_0_i_2: unisim.vcomponents.FDPE
     )
         port map (
       C => i2c_clk,
-      CE => inst_n_0,
-      D => inst_n_4,
-      PRE => inst_n_2,
+      CE => U0_n_0,
+      D => U0_n_4,
+      PRE => U0_n_2,
       Q => sda_INST_0_i_2_n_0
     );
 end STRUCTURE;
