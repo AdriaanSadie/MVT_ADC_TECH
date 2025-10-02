@@ -92,12 +92,43 @@ create_hw_axi_txn wr_dac_chA18 [get_hw_axis hw_axi_1] -address 80020000 -data 81
 #Reading the calibration counter:
 create_hw_axi_txn rd_dac_count [get_hw_axis hw_axi_1] -address 80040000 -type read
 
+create_hw_axi_txn rd_dac_control [get_hw_axis hw_axi_1] -address 80030000 -type read
+
+
+
+# BRAM tcl
+
+create_hw_axi_txn wr_bram_f [get_hw_axis hw_axi_1] -address 80050000 -data ffffffff -type write
+create_hw_axi_txn wr_bram_0 [get_hw_axis hw_axi_1] -address 80050000 -data 00000000 -type write
+
+
+create_hw_axi_txn rd_bram_control [get_hw_axis hw_axi_1] -address 0x82000000 -type read -len 4
+run_hw_axi rd_bram_control
+set data_list [get_property DATA rd_bram_control]
+set dec_list {}
+foreach val $data_list {
+    set dec_val [expr 0x$val]
+    lappend dec_list $dec_val
+}
+puts $dec_list
+set fp [open "bram_dump.csv" w]
+foreach val $data_list {
+    set dec_val [expr 0x$val]
+    puts $fp $dec_val
+}
+close $fp
+
+run_hw_axi wr_bram_f
+run_hw_axi rd_bram_control
 
 
 
 
 
 
+# BRAM DAC 
+
+create_hw_axi_txn rd_dac_bram [get_hw_axis hw_axi_1] -address C0000000 -type read -len 128
 
 
 

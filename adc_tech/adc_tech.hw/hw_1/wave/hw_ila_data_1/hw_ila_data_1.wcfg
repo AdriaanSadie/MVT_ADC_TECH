@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="9fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="309"></NameColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[12:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_ctrl_0_BRAM_PORTA_ADDR[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axi_bram_ctrl_0_BRAM_PORTA_DOUT[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="adc_tech_i/bram_tester/bram_writer_0_addra" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/bram_writer_0_addra[12:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_writer_0_addra[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="adc_tech_i/bram_tester/bram_writer_0_dia" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/bram_writer_0_dia[31:0]</obj_property>
+      <obj_property name="ObjectShortName">bram_writer_0_dia[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="adc_tech_i/bram_tester/bram_writer_0_wea" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/bram_writer_0_wea</obj_property>
+      <obj_property name="ObjectShortName">bram_writer_0_wea</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="adc_tech_i/bram_tester/xlslice_4_Dout" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">adc_tech_i/bram_tester/xlslice_4_Dout</obj_property>
+      <obj_property name="ObjectShortName">xlslice_4_Dout</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

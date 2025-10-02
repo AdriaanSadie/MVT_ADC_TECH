@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Thu Sep 25 13:51:38 2025
+| Date         : Wed Oct  1 13:03:05 2025
 | Host         : ZA-WASADIE1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file adc_tech_wrapper_utilization_synth.rpt -pb adc_tech_wrapper_utilization_synth.pb
 | Design       : adc_tech_wrapper
@@ -170,23 +170,34 @@ Table of Contents
 | adc_tech_zynq_ultra_ps_e_0_0  |    1 |
 | adc_tech_xbar_0               |    1 |
 | adc_tech_util_ds_buf_3_0      |    1 |
-| adc_tech_util_ds_buf_1_1      |    1 |
-| adc_tech_util_ds_buf_1_0      |    1 |
 | adc_tech_util_ds_buf_0_2      |    1 |
+| adc_tech_s01_mmu_0            |    1 |
+| adc_tech_s00_mmu_0            |    1 |
 | adc_tech_proc_sys_reset_0_0   |    1 |
 | adc_tech_jtag_axi_0_0         |    1 |
 | adc_tech_i2c_0_0              |    1 |
 | adc_tech_data_splitter_0_0    |    1 |
 | adc_tech_dac_cal_read_0       |    1 |
+| adc_tech_dac_cal_control_0    |    1 |
 | adc_tech_dac_cal_0_0          |    1 |
 | adc_tech_clk_wiz_0_0          |    1 |
 | adc_tech_c_counter_binary_0_0 |    1 |
-| adc_tech_axi_iic_0_0          |    1 |
+| adc_tech_bram_writer_0_1      |    1 |
+| adc_tech_blk_mem_gen_0_2      |    1 |
+| adc_tech_blk_mem_gen_0_1      |    1 |
 | adc_tech_axi_gpio_1_1         |    1 |
 | adc_tech_axi_gpio_1_0         |    1 |
 | adc_tech_axi_gpio_0_0         |    1 |
+| adc_tech_axi_bram_ctrl_0_2    |    1 |
+| adc_tech_axi_bram_ctrl_0_0    |    1 |
+| adc_tech_auto_pc_4            |    1 |
+| adc_tech_auto_pc_3            |    1 |
+| adc_tech_auto_pc_2            |    1 |
 | adc_tech_auto_pc_1            |    1 |
 | adc_tech_auto_pc_0            |    1 |
+| adc_tech_adc_bit_0_2          |    1 |
+| adc_tech_adc_bit_0_1          |    1 |
+| adc_tech_adc_bit_0_0          |    1 |
 +-------------------------------+------+
 
 

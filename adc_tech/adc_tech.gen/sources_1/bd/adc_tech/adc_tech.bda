@@ -21,128 +21,46 @@
   <key attr.name="vert_type" attr.type="string" for="node" id="VT"/>
   <graph edgedefault="undirected" id="G" parse.edgeids="canonical" parse.nodeids="canonical" parse.order="nodesfirst">
     <node id="n0">
-      <data key="BA">0x0080000000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x0080000FFF</data>
-      <data key="HP">C_HIGHADDR</data>
+      <data key="BA">0x0084000000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x0084001FFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
       <data key="MA">Data</data>
       <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
       <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_axi_gpio_0_Reg</data>
+      <data key="MS">SEG_dac_bram_Mem0</data>
       <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
       <data key="TM">both</data>
-      <data key="SX">/axi_gpio_0</data>
+      <data key="SX">/dac_calibration/dac_bram</data>
       <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
     <node id="n1">
+      <data key="BA">0x0080050000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x008005FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_bram_test_control_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/bram_tester/bram_test_control</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n2">
       <data key="VM">adc_tech</data>
       <data key="VT">BC</data>
     </node>
-    <node id="n2">
-      <data key="BA">0x80010000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x8001FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
-      <data key="MI">M_AXI</data>
-      <data key="MS">SEG_axi_iic_0_Reg</data>
-      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
-      <data key="TM">both</data>
-      <data key="SX">/axi_iic_0</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_iic:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
     <node id="n3">
-      <data key="BA">0x0080010000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x008001FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
-      <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_axi_iic_0_Reg</data>
-      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TM">both</data>
-      <data key="SX">/axi_iic_0</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_iic:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n4">
-      <data key="BA">0x0080020000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x008002FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
-      <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_my_i2c_Reg</data>
-      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TM">both</data>
-      <data key="SX">/my_i2c</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n5">
-      <data key="TU">active</data>
-      <data key="VH">2</data>
-      <data key="VT">PM</data>
-    </node>
-    <node id="n6">
-      <data key="BA">0x80030000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x8003FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
-      <data key="MI">M_AXI</data>
-      <data key="MS">SEG_dac_cal_control_Reg</data>
-      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
-      <data key="TM">both</data>
-      <data key="SX">/dac_cal_control</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n7">
-      <data key="BA">0x80040000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x8004FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
-      <data key="MI">M_AXI</data>
-      <data key="MS">SEG_dac_cal_read_Reg</data>
-      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
-      <data key="TM">both</data>
-      <data key="SX">/dac_cal_read</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n8">
-      <data key="VH">2</data>
-      <data key="VM">adc_tech</data>
-      <data key="VT">VR</data>
-    </node>
-    <node id="n9">
       <data key="BA">0x80020000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x8002FFFF</data>
@@ -160,43 +78,30 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n10">
-      <data key="BA">0x0080040000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x008004FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
+    <node id="n4">
+      <data key="VH">2</data>
+      <data key="VM">adc_tech</data>
+      <data key="VT">VR</data>
+    </node>
+    <node id="n5">
+      <data key="BA">0x0082000000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x0082001FFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
       <data key="MA">Data</data>
       <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
       <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_dac_cal_read_Reg</data>
+      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
       <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
       <data key="TM">both</data>
-      <data key="SX">/dac_cal_read</data>
+      <data key="SX">/bram_tester/axi_bram_ctrl_0</data>
       <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n11">
-      <data key="BA">0x0080030000</data>
-      <data key="BP">C_BASEADDR</data>
-      <data key="HA">0x008003FFFF</data>
-      <data key="HP">C_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
-      <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_dac_cal_control_Reg</data>
-      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
-      <data key="TM">both</data>
-      <data key="SX">/dac_cal_control</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Reg</data>
-      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
-      <data key="TU">register</data>
-      <data key="VT">AC</data>
-    </node>
-    <node id="n12">
+    <node id="n6">
       <data key="BA">0x80000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x80000FFF</data>
@@ -207,45 +112,224 @@
       <data key="MS">SEG_axi_gpio_0_Reg</data>
       <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
       <data key="TM">both</data>
-      <data key="SX">/axi_gpio_0</data>
+      <data key="SX">/axi_gpio_leds</data>
       <data key="SI">S_AXI</data>
       <data key="SS">Reg</data>
       <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <edge id="e0" source="n1" target="n8">
+    <node id="n7">
+      <data key="BA">0x0080020000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x008002FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_my_i2c_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/my_i2c</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n8">
+      <data key="BA">0x0080030000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x008003FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_dac_cal_control_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/dac_calibration/dac_cal_control</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n9">
+      <data key="BA">0x0080000000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x0080000FFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_axi_gpio_0_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/axi_gpio_leds</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n10">
+      <data key="BA">0x80050000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x8005007F</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
+      <data key="MI">M_AXI</data>
+      <data key="MS">SEG_bram_test_control_Reg</data>
+      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
+      <data key="TM">both</data>
+      <data key="SX">/bram_tester/bram_test_control</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n11">
+      <data key="BA">0x82000000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x82001FFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
+      <data key="MI">M_AXI</data>
+      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
+      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
+      <data key="TM">both</data>
+      <data key="SX">/bram_tester/axi_bram_ctrl_0</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n12">
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
+    </node>
+    <node id="n13">
+      <data key="BA">0x80040000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x8004FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
+      <data key="MI">M_AXI</data>
+      <data key="MS">SEG_dac_cal_read_Reg</data>
+      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
+      <data key="TM">both</data>
+      <data key="SX">/dac_calibration/dac_cal_read</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n14">
+      <data key="BA">0x84000000</data>
+      <data key="BP">C_S_AXI_BASEADDR</data>
+      <data key="HA">0x8403FFFF</data>
+      <data key="HP">C_S_AXI_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
+      <data key="MI">M_AXI</data>
+      <data key="MS">SEG_dac_bram_Mem0</data>
+      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
+      <data key="TM">both</data>
+      <data key="SX">/dac_calibration/dac_bram</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Mem0</data>
+      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
+      <data key="TU">memory</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n15">
+      <data key="BA">0x0080040000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x008004FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_dac_cal_read_Reg</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.3</data>
+      <data key="TM">both</data>
+      <data key="SX">/dac_calibration/dac_cal_read</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n16">
+      <data key="BA">0x80030000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x8003FFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/Processing_Subsystem/jtag_axi_0</data>
+      <data key="MI">M_AXI</data>
+      <data key="MS">SEG_dac_cal_control_Reg</data>
+      <data key="MV">xilinx.com:ip:jtag_axi:1.2</data>
+      <data key="TM">both</data>
+      <data key="SX">/dac_calibration/dac_cal_control</data>
+      <data key="SI">S_AXI</data>
+      <data key="SS">Reg</data>
+      <data key="SV">xilinx.com:ip:axi_gpio:2.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <edge id="e0" source="n2" target="n4">
     </edge>
-    <edge id="e1" source="n8" target="n5">
+    <edge id="e1" source="n4" target="n12">
     </edge>
-    <edge id="e2" source="n12" target="n5">
+    <edge id="e2" source="n6" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n2" target="n5">
+    <edge id="e3" source="n14" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n9" target="n5">
+    <edge id="e4" source="n3" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n7" target="n5">
+    <edge id="e5" source="n13" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e6" source="n6" target="n5">
+    <edge id="e6" source="n16" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e7" source="n0" target="n5">
+    <edge id="e7" source="n11" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e8" source="n3" target="n5">
+    <edge id="e8" source="n10" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e9" source="n11" target="n5">
+    <edge id="e9" source="n9" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e10" source="n10" target="n5">
+    <edge id="e10" source="n5" target="n12">
       <data key="EH">2</data>
     </edge>
-    <edge id="e11" source="n4" target="n5">
+    <edge id="e11" source="n1" target="n12">
+      <data key="EH">2</data>
+    </edge>
+    <edge id="e12" source="n0" target="n12">
+      <data key="EH">2</data>
+    </edge>
+    <edge id="e13" source="n8" target="n12">
+      <data key="EH">2</data>
+    </edge>
+    <edge id="e14" source="n15" target="n12">
+      <data key="EH">2</data>
+    </edge>
+    <edge id="e15" source="n7" target="n12">
       <data key="EH">2</data>
     </edge>
   </graph>

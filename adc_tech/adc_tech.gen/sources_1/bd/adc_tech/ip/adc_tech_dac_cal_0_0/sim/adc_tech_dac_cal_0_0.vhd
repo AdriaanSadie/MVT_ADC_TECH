@@ -62,6 +62,9 @@ ENTITY adc_tech_dac_cal_0_0 IS
     control : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     counting_flag : OUT STD_LOGIC;
     counter : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    bram_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    bram_addr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    bram_we : OUT STD_LOGIC;
     debug : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
   );
 END adc_tech_dac_cal_0_0;
@@ -78,6 +81,9 @@ ARCHITECTURE adc_tech_dac_cal_0_0_arch OF adc_tech_dac_cal_0_0 IS
       control : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       counting_flag : OUT STD_LOGIC;
       counter : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      bram_data : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      bram_addr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      bram_we : OUT STD_LOGIC;
       debug : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
     );
   END COMPONENT dac_cal;
@@ -99,6 +105,9 @@ BEGIN
       control => control,
       counting_flag => counting_flag,
       counter => counter,
+      bram_data => bram_data,
+      bram_addr => bram_addr,
+      bram_we => bram_we,
       debug => debug
     );
 END adc_tech_dac_cal_0_0_arch;

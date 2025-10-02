@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 5
 set_param power.enableUnconnectedCarry8PinPower 1
@@ -93,7 +94,8 @@ set_property ip_output_repo c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd
+add_files c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/bram_test.coe
+read_vhdl -library xil_defaultlib C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd
 add_files C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/adc_tech.bd
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_board.xdc]
@@ -113,12 +115,6 @@ set_property used_in_implementation false [get_files -all c:/work/Technology/Viv
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_iic_0_0/adc_tech_axi_iic_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_iic_0_0/adc_tech_axi_iic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_1_0/adc_tech_util_ds_buf_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_1_0/adc_tech_util_ds_buf_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_1_1/adc_tech_util_ds_buf_1_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_1_1/adc_tech_util_ds_buf_1_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0.xdc]
@@ -131,8 +127,26 @@ set_property used_in_implementation false [get_files -all c:/work/Technology/Viv
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_0/adc_tech_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_1/adc_tech_blk_mem_gen_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_2/adc_tech_blk_mem_gen_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_2/adc_tech_axi_bram_ctrl_0_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_1/adc_tech_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_2/adc_tech_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_3/adc_tech_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_4/adc_tech_auto_pc_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/adc_tech_ooc.xdc]
 
 OPTRACE "Adding files" END { }

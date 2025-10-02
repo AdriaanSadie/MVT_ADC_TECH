@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "adc_tech_dac_cal_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param power.BramSDPPropagationFix 1
 set_param chipscope.maxJobs 5
 set_param power.enableUnconnectedCarry8PinPower 1
@@ -95,7 +96,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/dac_cal.vhd
-read_ip -quiet c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_0_0/adc_tech_dac_cal_0_0.xci
+read_ip -quiet C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_0_0/adc_tech_dac_cal_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

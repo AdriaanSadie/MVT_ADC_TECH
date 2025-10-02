@@ -52,6 +52,13 @@ entity dac_cal is
         control       : in  std_logic_vector(31 downto 0); -- Control input from another AXI GPIO register
         counting_flag : out std_logic;  -- Toggle this flag as soon as triangle wave triggers rising edge
         counter       : out std_logic_vector(31 downto 0); -- Output to AXI GPIO register
+
+        -- BRAM signals:
+        bram_data     : out std_logic_vector(31 downto 0);
+        bram_addr     : out std_logic_vector(15 downto 0);
+        bram_we       : out std_logic;
+
+
         debug         : out std_logic_vector(2 downto 0)
     );
 end dac_cal;
@@ -65,17 +72,21 @@ architecture rtl of dac_cal is
     signal pulse_in_r2 : std_logic;
 
     -- State machine signals:
-    type   dac_state_type is (dac_s_idle, dac_s_count);
+    type   dac_state_type is (dac_s_idle, dac_s_count, dac_s_write);
     signal dac_state      : dac_state_type;
 
     -- Counter signal:
     signal dac_counter : unsigned(31 downto 0);
 
+    -- BRAM address counter:
+    signal addr_count : unsigned(31 downto 0);
+    signal addr_count_4 : unsigned(31 downto 0);
+
 begin
 
     sync_p : process(clk,rst_n) is
     begin
-        if (rst_n = '0' and control = x"FFFFFFFF") then
+        if (rst_n = '0') then
 
             sync_in_r1 <= '0';
             sync_in_r2 <= '0';
@@ -93,7 +104,7 @@ begin
 
     counter_p : process(clk,rst_n) is
     begin
-        if (rst_n = '0' and control = x"FFFFFFFF") then
+        if (rst_n = '0') then
 
             counter       <= (others => '0');
             counting_flag <= '0';
@@ -102,6 +113,14 @@ begin
 
             debug <= (others => '0');
 
+            --BRAM signals:
+            bram_data <= (others => '0');
+            bram_addr <= (others => '0');
+            bram_we  <= '0';
+
+            addr_count <= (others => '0');
+            addr_count_4 <= (others => '0');
+
         elsif (rising_edge(clk)) then
 
             case dac_state is
@@ -109,7 +128,7 @@ begin
                 when dac_s_idle =>
 
                     -- Check for rising edge on sync input
-                    if (sync_in_r1 = '1' and sync_in_r2 = '0') then
+                    if (sync_in_r1 = '1' and sync_in_r2 = '0' and control /= x"00000000") then
                         dac_state     <= dac_s_count;
                         counting_flag <= '1';
                     else
@@ -118,6 +137,8 @@ begin
 
                     counting_flag <= '0';
 
+                    bram_we  <= '0';
+
                     debug <= b"001";
 
                 when dac_s_count =>
@@ -125,8 +146,22 @@ begin
                     -- Check for rising edge in triangle wave:
                     if (pulse_in_r1 = '1' and pulse_in_r2 = '0') then
                         counter     <= std_logic_vector(dac_counter);
-                        dac_state   <= dac_s_idle;
                         dac_counter <= (others => '0');
+
+                        -- Update BRAM values:
+                        if (addr_count < 128) then
+                            bram_data <= std_logic_vector(dac_counter);
+                            bram_addr <= std_logic_vector(addr_count_4(15 downto 0)); -- use the 2-bit shifted value for address, since we can only write to 0,4,8,C...
+                            addr_count <= addr_count + 1; -- Increment counter normally
+                            addr_count_4 <= addr_count sll 2; -- This is the bit shifted value
+                            bram_we  <= '0'; -- Not enabled yet
+                            -- Change state to enable write:
+                            dac_state   <= dac_s_write;
+                        else
+                            dac_state <= dac_s_idle; -- BRAM is full. Ignore
+                        end if;
+                        
+
                     else
                         dac_counter <= dac_counter + 1;
                     end if;
@@ -134,6 +169,14 @@ begin
                     counting_flag <= '1';
 
                     debug <= b"010";
+
+                when dac_s_write =>
+
+                    bram_we  <= '1'; -- Enable write for one clock cycle now that data is stable
+
+                    dac_state <= dac_s_idle;
+
+                    debug <= b"011";
 
                 when others =>
 

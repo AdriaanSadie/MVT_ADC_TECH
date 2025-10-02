@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1758801024">
+<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1759316511">
   <File Type="BITSTR-BMM" Name="adc_tech_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="adc_tech_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="adc_tech_wrapper_timing_summary_init.rpt"/>
@@ -95,6 +95,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/bram_tester.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/adc_tech/adc_tech.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -104,6 +110,13 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fifo_tester.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -118,6 +131,12 @@
     <File Path="$PSRCDIR/sources_1/new/i2c_new.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bram_test.coe">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -147,9 +166,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -163,19 +180,20 @@
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_bram_writer_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_jtag_axi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_1_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_iic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_data_splitter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_read_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_c_counter_binary_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_blk_mem_gen_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_bram_ctrl_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_0_0"/>
 </GenRun>

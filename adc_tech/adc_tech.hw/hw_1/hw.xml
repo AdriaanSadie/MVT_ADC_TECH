@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xczu7_0" gui_info=""/>
+  <device name="xczu7_0" gui_info="dashboard1=hw_ila_1[xczu7_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xczu7_0/hw_ila_1/Status=ILA_STATUS_1;xczu7_0/hw_ila_1/Waveform=ILA_WAVE_1;xczu7_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xczu7_0/hw_ila_1/Settings=ILA_SETTINGS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xczu2_0" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/$_project_name__wrapper.ltx"/>
@@ -19,5 +19,463 @@
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="1024"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31:0]" gui_info=""/>
+    <Object name="adc_tech_i/bram_writer_0_wea" gui_info=""/>
+    <Object name="adc_tech_i/xlslice_4_Dout" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[12:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[12]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[11]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[10]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[9]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[8]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[7]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[6]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[5]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[4]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[3]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[2]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[1]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_CLK"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[30]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[29]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[28]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[27]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[26]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[25]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[24]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[23]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[22]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[21]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[20]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[19]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[18]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[17]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[16]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[15]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[14]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[13]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[12]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[11]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[10]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[9]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[8]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[7]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[6]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[5]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[4]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[3]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[2]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[1]"/>
+        <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[12:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[12]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[11]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[10]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[9]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[8]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[7]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[6]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[5]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[4]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[3]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[2]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[1]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[30]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[29]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[28]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[27]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[26]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[25]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[24]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[23]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[22]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[21]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[20]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[19]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[18]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[17]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[16]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[15]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[14]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[13]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[12]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[11]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[10]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[9]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[8]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[7]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[6]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[5]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[4]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[3]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[2]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[1]"/>
+        <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[12:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[12]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[11]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[10]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[9]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[8]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[7]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[6]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[5]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[4]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[3]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[2]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[1]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_addra[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[31]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[30]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[29]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[28]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[27]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[26]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[25]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[24]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[23]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[22]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[21]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[20]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[19]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[18]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[17]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[16]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[15]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[14]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[13]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[12]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[11]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[10]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[9]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[8]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[7]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[6]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[5]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[4]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[3]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[2]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[1]"/>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_dia[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/bram_writer_0_wea"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_tester/xlslice_4_Dout"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[12:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_writer_0_addra[12]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[11]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[10]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[9]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[8]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[7]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[6]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[5]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[4]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[3]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[2]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[1]"/>
+        <net name="adc_tech_i/bram_writer_0_addra[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_writer_0_dia[31]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[30]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[29]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[28]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[27]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[26]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[25]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[24]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[23]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[22]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[21]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[20]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[19]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[18]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[17]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[16]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[15]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[14]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[13]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[12]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[11]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[10]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[9]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[8]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[7]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[6]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[5]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[4]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[3]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[2]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[1]"/>
+        <net name="adc_tech_i/bram_writer_0_dia[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/bram_writer_0_wea"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/xlslice_4_Dout"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>
