@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vitis/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a579572a191344d6b971e0746032eb8e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2c_tb_behav xil_defaultlib.i2c_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto a579572a191344d6b971e0746032eb8e --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot i2c_master_tb_behav xil_defaultlib.i2c_master_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -11,7 +11,8 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
 Compiling module xil_defaultlib.glbl
-Compiling architecture rtl of entity xil_defaultlib.i2c [i2c_default]
-Compiling architecture behavioral of entity xil_defaultlib.i2c_tb
-Built simulation snapshot i2c_tb_behav
+Compiling architecture rtl of entity xil_defaultlib.i2c_master [i2c_master_default]
+Compiling architecture sim of entity xil_defaultlib.i2c_master_tb
+Built simulation snapshot i2c_master_tb_behav

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Sep 30 08:50:32 2025
+-- Date        : Thu Oct  2 08:30:56 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_bram_writer_0_1_sim_netlist.vhdl
@@ -130,7 +130,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer 
   attribute SOFT_HLUTNM of \addr_cnt[10]_i_2\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \addr_cnt[11]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \addr_cnt[12]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \addr_cnt[1]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \addr_cnt[2]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \addr_cnt[3]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \addr_cnt[5]_i_1\ : label is "soft_lutpair5";
@@ -139,35 +138,36 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer 
   attribute SOFT_HLUTNM of \addr_cnt[8]_i_1\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \data_cnt[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \data_cnt[10]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \data_cnt[11]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \data_cnt[11]_i_1\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of \data_cnt[12]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \data_cnt[13]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \data_cnt[13]_i_1\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \data_cnt[14]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \data_cnt[15]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \data_cnt[15]_i_1\ : label is "soft_lutpair13";
   attribute SOFT_HLUTNM of \data_cnt[16]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \data_cnt[17]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \data_cnt[17]_i_1\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \data_cnt[18]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \data_cnt[19]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \data_cnt[19]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \data_cnt[1]_i_1\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of \data_cnt[20]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \data_cnt[21]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \data_cnt[21]_i_1\ : label is "soft_lutpair10";
   attribute SOFT_HLUTNM of \data_cnt[22]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \data_cnt[23]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \data_cnt[23]_i_1\ : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of \data_cnt[24]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \data_cnt[25]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \data_cnt[25]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \data_cnt[26]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \data_cnt[27]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \data_cnt[27]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \data_cnt[28]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \data_cnt[29]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \data_cnt[29]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \data_cnt[2]_i_1\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of \data_cnt[30]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \data_cnt[31]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \data_cnt[3]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \data_cnt[31]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \data_cnt[3]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \data_cnt[4]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \data_cnt[5]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \data_cnt[5]_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \data_cnt[6]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \data_cnt[7]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \data_cnt[7]_i_1\ : label is "soft_lutpair17";
   attribute SOFT_HLUTNM of \data_cnt[8]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \data_cnt[9]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \data_cnt[9]_i_1\ : label is "soft_lutpair16";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of plusOp_carry : label is 35;
   attribute ADDER_THRESHOLD of \plusOp_carry__0\ : label is 35;
@@ -308,14 +308,16 @@ begin
       I4 => \FSM_onehot_state_reg_n_0_[1]\,
       O => \addr_cnt[12]_i_1_n_0\
     );
-\addr_cnt[1]_i_1\: unisim.vcomponents.LUT3
+\addr_cnt[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"60"
+      INIT => X"EEFEFEEE"
     )
         port map (
-      I0 => \^q\(1),
-      I1 => \^q\(0),
+      I0 => \^done\,
+      I1 => \FSM_onehot_state_reg_n_0_[0]\,
       I2 => \FSM_onehot_state_reg_n_0_[1]\,
+      I3 => \^q\(0),
+      I4 => \^q\(1),
       O => \addr_cnt[1]_i_1_n_0\
     );
 \addr_cnt[2]_i_1\: unisim.vcomponents.LUT4
@@ -479,15 +481,15 @@ begin
       D => \addr_cnt[12]_i_1_n_0\,
       Q => \addr_cnt_reg_n_0_[12]\
     );
-\addr_cnt_reg[1]\: unisim.vcomponents.FDCE
+\addr_cnt_reg[1]\: unisim.vcomponents.FDPE
     generic map(
       INIT => '0'
     )
         port map (
       C => clk,
       CE => \addr_cnt[10]_i_1_n_0\,
-      CLR => \addr_cnt[10]_i_3_n_0\,
       D => \addr_cnt[1]_i_1_n_0\,
+      PRE => \addr_cnt[10]_i_3_n_0\,
       Q => \^q\(1)
     );
 \addr_cnt_reg[2]\: unisim.vcomponents.FDCE

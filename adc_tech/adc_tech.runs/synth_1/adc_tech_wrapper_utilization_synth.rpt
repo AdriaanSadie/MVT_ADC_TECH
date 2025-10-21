@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Oct  1 13:03:05 2025
+| Date         : Tue Oct 21 09:27:22 2025
 | Host         : ZA-WASADIE1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file adc_tech_wrapper_utilization_synth.rpt -pb adc_tech_wrapper_utilization_synth.pb
 | Design       : adc_tech_wrapper
@@ -94,7 +94,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |   10 |     0 |       360 |  2.78 |
+| Bonded IOB |    7 |     0 |       360 |  1.94 |
 +------------+------+-------+-----------+-------+
 
 
@@ -155,7 +155,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    9 |                 I/O |
+| OBUF     |    6 |                 I/O |
 | INBUF    |    1 |                 I/O |
 | IBUFCTRL |    1 |              Others |
 +----------+------+---------------------+
@@ -175,7 +175,7 @@ Table of Contents
 | adc_tech_s00_mmu_0            |    1 |
 | adc_tech_proc_sys_reset_0_0   |    1 |
 | adc_tech_jtag_axi_0_0         |    1 |
-| adc_tech_i2c_0_0              |    1 |
+| adc_tech_i2c_master_0_0       |    1 |
 | adc_tech_data_splitter_0_0    |    1 |
 | adc_tech_dac_cal_read_0       |    1 |
 | adc_tech_dac_cal_control_0    |    1 |
@@ -187,14 +187,28 @@ Table of Contents
 | adc_tech_blk_mem_gen_0_1      |    1 |
 | adc_tech_axi_gpio_1_1         |    1 |
 | adc_tech_axi_gpio_1_0         |    1 |
+| adc_tech_axi_gpio_0_1         |    1 |
 | adc_tech_axi_gpio_0_0         |    1 |
 | adc_tech_axi_bram_ctrl_0_2    |    1 |
 | adc_tech_axi_bram_ctrl_0_0    |    1 |
+| adc_tech_auto_pc_5            |    1 |
 | adc_tech_auto_pc_4            |    1 |
 | adc_tech_auto_pc_3            |    1 |
 | adc_tech_auto_pc_2            |    1 |
 | adc_tech_auto_pc_1            |    1 |
 | adc_tech_auto_pc_0            |    1 |
+| adc_tech_adc_bit_3_9          |    1 |
+| adc_tech_adc_bit_3_8          |    1 |
+| adc_tech_adc_bit_3_7          |    1 |
+| adc_tech_adc_bit_3_6          |    1 |
+| adc_tech_adc_bit_3_5          |    1 |
+| adc_tech_adc_bit_3_4          |    1 |
+| adc_tech_adc_bit_3_3          |    1 |
+| adc_tech_adc_bit_3_2          |    1 |
+| adc_tech_adc_bit_3_11         |    1 |
+| adc_tech_adc_bit_3_10         |    1 |
+| adc_tech_adc_bit_3_1          |    1 |
+| adc_tech_adc_bit_3_0          |    1 |
 | adc_tech_adc_bit_0_2          |    1 |
 | adc_tech_adc_bit_0_1          |    1 |
 | adc_tech_adc_bit_0_0          |    1 |

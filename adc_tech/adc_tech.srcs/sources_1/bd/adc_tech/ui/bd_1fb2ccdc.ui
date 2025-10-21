@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.829032",
-   "Default View_TopLeft":"-294,-10",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-192,-17",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
 preplace port S_AXI1 -pg 1 -lvl 0 -x 0 -y 440 -defaultsOSRD
@@ -11,31 +11,31 @@ preplace port S_AXI_0 -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
 preplace port s_axi_aclk -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
 preplace port s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
 preplace port sync_in -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
-preplace port pulse_in -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
-preplace port counting_flag -pg 1 -lvl 3 -x 1010 -y 140 -defaultsOSRD
-preplace portBus debug -pg 1 -lvl 3 -x 1010 -y 180 -defaultsOSRD
+preplace port counting_flag -pg 1 -lvl 3 -x 1040 -y 140 -defaultsOSRD
+preplace portBus debug -pg 1 -lvl 3 -x 1040 -y 180 -defaultsOSRD
+preplace portBus adc_frontend -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
 preplace inst dac_cal_control -pg 1 -lvl 1 -x 470 -y 80 -defaultsOSRD
-preplace inst dac_cal_bram -pg 1 -lvl 2 -x 810 -y 360 -defaultsOSRD
-preplace inst dac_cal_read -pg 1 -lvl 2 -x 810 -y 530 -defaultsOSRD
-preplace inst dac_bram -pg 1 -lvl 1 -x 470 -y 340 -defaultsOSRD
-preplace inst dac_cal -pg 1 -lvl 2 -x 810 -y 160 -defaultsOSRD
+preplace inst dac_cal_bram -pg 1 -lvl 2 -x 830 -y 360 -defaultsOSRD
+preplace inst dac_cal_read -pg 1 -lvl 2 -x 830 -y 530 -defaultsOSRD
+preplace inst dac_bram -pg 1 -lvl 1 -x 470 -y 350 -defaultsOSRD
+preplace inst dac_cal -pg 1 -lvl 2 -x 830 -y 160 -defaultsOSRD
 preplace netloc dac_cal_control_gpio_io_o 1 1 1 640 90n
-preplace netloc Processing_Subsystem_global_clk 1 0 2 20 0 620
-preplace netloc Processing_Subsystem_global_rst_n 1 0 2 30 170 630
+preplace netloc Processing_Subsystem_global_clk 1 0 2 40 0 620
+preplace netloc Processing_Subsystem_global_rst_n 1 0 2 50 170 630
 preplace netloc sync_in_0_1 1 0 2 NJ 160 NJ
-preplace netloc util_ds_buf_3_IBUF_OUT 1 0 2 NJ 180 NJ
-preplace netloc dac_cal_0_counting_flag 1 2 1 990J 110n
-preplace netloc dac_cal_debug 1 2 1 990J 180n
-preplace netloc dac_cal_counter 1 2 1 970 130n
-preplace netloc dac_cal_bram_data 1 1 2 660 40 960
-preplace netloc dac_cal_bram_addr 1 1 2 670 50 950
-preplace netloc dac_cal_bram_we 1 1 2 650 30 980
+preplace netloc dac_cal_0_counting_flag 1 2 1 1020J 110n
+preplace netloc dac_cal_debug 1 2 1 1020J 180n
+preplace netloc dac_cal_counter 1 2 1 1000 130n
+preplace netloc dac_cal_bram_data 1 1 2 660 40 990
+preplace netloc dac_cal_bram_addr 1 1 2 670 50 980
+preplace netloc dac_cal_bram_we 1 1 2 650 30 1010
+preplace netloc adc_frontend_1 1 0 2 20J 180 N
+preplace netloc Conn2 1 0 1 30 320n
+preplace netloc Conn1 1 0 2 30J 510 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 610 350n
 preplace netloc Processing_Subsystem_M04_AXI_0 1 0 1 NJ 60
-preplace netloc Conn1 1 0 2 NJ 440 610J
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 610 340n
-preplace netloc Conn2 1 0 1 N 320
-levelinfo -pg 1 0 470 810 1010
-pagesize -pg 1 -db -bbox -sgen -140 -40 1150 610
+levelinfo -pg 1 0 470 830 1040
+pagesize -pg 1 -db -bbox -sgen -170 -40 1180 610
 "
 }
-
+0

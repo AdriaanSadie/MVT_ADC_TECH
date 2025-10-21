@@ -1,4 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/i2c.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'i2c'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sim_1/new/i2c_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'i2c_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sim_1/new/i2c_master_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'i2c_master_tb'

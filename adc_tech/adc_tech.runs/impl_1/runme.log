@@ -13,18 +13,16 @@ source adc_tech_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1025.523 ; gain = 0.000
 Command: link_design -top adc_tech_wrapper -part xczu7ev-ffvc1156-2-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
-INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0.dcp' for cell 'adc_tech_i/adc_bit_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0.dcp' for cell 'adc_tech_i/adc_bit_1'
-INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1.dcp' for cell 'adc_tech_i/adc_bit_2'
-INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2.dcp' for cell 'adc_tech_i/adc_bit_3'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_0/adc_tech_axi_gpio_0_0.dcp' for cell 'adc_tech_i/axi_gpio_leds'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0.dcp' for cell 'adc_tech_i/c_counter_binary_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0.dcp' for cell 'adc_tech_i/data_splitter_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_0_0/adc_tech_i2c_0_0.dcp' for cell 'adc_tech_i/i2c_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0.dcp' for cell 'adc_tech_i/i2c_master_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1.dcp' for cell 'adc_tech_i/i2c_read'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0.dcp' for cell 'adc_tech_i/my_i2c'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_0_2/adc_tech_util_ds_buf_0_2.dcp' for cell 'adc_tech_i/util_ds_buf_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0.dcp' for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0'
@@ -39,6 +37,23 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_A
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_2/adc_tech_auto_pc_2.dcp' for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m03_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_3/adc_tech_auto_pc_3.dcp' for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m04_couplers/auto_pc'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_4/adc_tech_auto_pc_4.dcp' for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m06_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_5/adc_tech_auto_pc_5.dcp' for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m07_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_6/adc_tech_adc_bit_3_6.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_7/adc_tech_adc_bit_3_7.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_11'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_8/adc_tech_adc_bit_3_8.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_12'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_9/adc_tech_adc_bit_3_9.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_13'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_10/adc_tech_adc_bit_3_10.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_14'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_11/adc_tech_adc_bit_3_11.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_15'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_3'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_0/adc_tech_adc_bit_3_0.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_1/adc_tech_adc_bit_3_1.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_5'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_2/adc_tech_adc_bit_3_2.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_6'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_3/adc_tech_adc_bit_3_3.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_7'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_4/adc_tech_adc_bit_3_4.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_8'
+INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_5/adc_tech_adc_bit_3_5.dcp' for cell 'adc_tech_i/adc_front_end/adc_bit_9'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_0/adc_tech_axi_bram_ctrl_0_0.dcp' for cell 'adc_tech_i/bram_tester/axi_bram_ctrl_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_1/adc_tech_blk_mem_gen_0_1.dcp' for cell 'adc_tech_i/bram_tester/blk_mem_gen_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0.dcp' for cell 'adc_tech_i/bram_tester/bram_test_control'
@@ -48,8 +63,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_A
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_2/adc_tech_blk_mem_gen_0_2.dcp' for cell 'adc_tech_i/dac_calibration/dac_cal_bram'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_read_0/adc_tech_dac_cal_read_0.dcp' for cell 'adc_tech_i/dac_calibration/dac_cal_control'
 INFO: [Project 1-454] Reading design checkpoint 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1.dcp' for cell 'adc_tech_i/dac_calibration/dac_cal_read'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1567.262 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 837 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 1573.738 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 857 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -57,10 +72,22 @@ WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a t
 Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
 INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/Processing_Subsystem/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_bit_0/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_bit_1/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_bit_2/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_bit_3/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_0/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_1/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_10/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_11/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_12/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_13/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_14/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_15/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_2/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_3/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_4/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_5/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_6/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_7/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_8/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/adc_front_end/adc_bit_9/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
 WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'adc_tech_i/util_ds_buf_0/IBUF_OUT[0]' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
 INFO: [Chipscope 16-324] Core: adc_tech_i/Processing_Subsystem/jtag_axi_0 UUID: a641387b-d15c-509a-8554-04ae76b81bb1 
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_clk_wiz_0_0/adc_tech_clk_wiz_0_0_board.xdc] for cell 'adc_tech_i/Processing_Subsystem/clk_wiz_0/inst'
@@ -87,8 +114,6 @@ Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/s
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0_board.xdc] for cell 'adc_tech_i/my_i2c/U0'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0.xdc] for cell 'adc_tech_i/my_i2c/U0'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_0/adc_tech_axi_gpio_1_0.xdc] for cell 'adc_tech_i/my_i2c/U0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_board.xdc] for cell 'adc_tech_i/adc_bit_0/U0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_board.xdc] for cell 'adc_tech_i/adc_bit_0/U0'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0_board.xdc] for cell 'adc_tech_i/bram_tester/bram_test_control/U0'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0_board.xdc] for cell 'adc_tech_i/bram_tester/bram_test_control/U0'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0.xdc] for cell 'adc_tech_i/bram_tester/bram_test_control/U0'
@@ -101,146 +126,195 @@ Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/s
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1_board.xdc] for cell 'adc_tech_i/dac_calibration/dac_cal_read/U0'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1.xdc] for cell 'adc_tech_i/dac_calibration/dac_cal_read/U0'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1.xdc] for cell 'adc_tech_i/dac_calibration/dac_cal_read/U0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_board.xdc] for cell 'adc_tech_i/adc_bit_1/U0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_board.xdc] for cell 'adc_tech_i/adc_bit_1/U0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_board.xdc] for cell 'adc_tech_i/adc_bit_2/U0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_board.xdc] for cell 'adc_tech_i/adc_bit_2/U0'
-Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_board.xdc] for cell 'adc_tech_i/adc_bit_3/U0'
-Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_board.xdc] for cell 'adc_tech_i/adc_bit_3/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_2/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_2/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_3/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_3/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_0/adc_tech_adc_bit_3_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_4/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_0/adc_tech_adc_bit_3_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_4/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_1/adc_tech_adc_bit_3_1_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_5/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_1/adc_tech_adc_bit_3_1_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_5/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_2/adc_tech_adc_bit_3_2_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_6/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_2/adc_tech_adc_bit_3_2_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_6/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_3/adc_tech_adc_bit_3_3_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_7/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_3/adc_tech_adc_bit_3_3_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_7/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_4/adc_tech_adc_bit_3_4_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_8/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_4/adc_tech_adc_bit_3_4_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_8/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_6/adc_tech_adc_bit_3_6_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_10/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_6/adc_tech_adc_bit_3_6_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_10/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_7/adc_tech_adc_bit_3_7_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_11/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_7/adc_tech_adc_bit_3_7_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_11/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_5/adc_tech_adc_bit_3_5_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_9/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_5/adc_tech_adc_bit_3_5_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_9/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_8/adc_tech_adc_bit_3_8_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_12/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_8/adc_tech_adc_bit_3_8_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_12/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_9/adc_tech_adc_bit_3_9_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_13/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_9/adc_tech_adc_bit_3_9_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_13/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_10/adc_tech_adc_bit_3_10_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_14/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_10/adc_tech_adc_bit_3_10_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_14/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_11/adc_tech_adc_bit_3_11_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_15/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_3_11/adc_tech_adc_bit_3_11_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_15/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_0/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_0/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_1/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0_board.xdc] for cell 'adc_tech_i/adc_front_end/adc_bit_1/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1_board.xdc] for cell 'adc_tech_i/i2c_read/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1_board.xdc] for cell 'adc_tech_i/i2c_read/U0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1.xdc] for cell 'adc_tech_i/i2c_read/U0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1.xdc] for cell 'adc_tech_i/i2c_read/U0'
 Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]
-WARNING: [Vivado 12-584] No ports matched 'i2c_scl'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'pl_led1'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pl_led2'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pl_led3'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i2c_scl'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i2c_sda'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i2c_scl'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'i2c_sda'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:27]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i2c_sda'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:37]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i2c_scl'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:38]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'i2c_sda'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:41]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pulse_in_n'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:43]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:43]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:44]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:44]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'pulse_in_n'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:45]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in_n'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in_p'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'pulse_in_n'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[13]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[14]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[15]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[16]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[17]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[18]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[19]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[20]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[21]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[22]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[23]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[24]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[25]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[26]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[27]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[28]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[29]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[30]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[13]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[14]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[15]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[16]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[17]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[18]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[19]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[20]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[21]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[22]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[23]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[24]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[25]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[26]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[27]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[28]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[29]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[30]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:52]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:54]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[13]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[14]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[15]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[16]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[17]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[18]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[19]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[20]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[21]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[22]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[23]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[24]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[25]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[26]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[27]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[28]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[29]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[30]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[31]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:55]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_CLK'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:56]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:56]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_wea'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:57]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:57]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/xlslice_4_Dout'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
 CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_addra[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_ADDR[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[7]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[8]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[9]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[10]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[11]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[12]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[13]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[14]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[15]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[16]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[17]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[18]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[19]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[20]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[21]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[22]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[23]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[24]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[25]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[26]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[27]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[28]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[29]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[30]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_dia[31]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_CLK'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:62]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:62]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/bram_writer_0_wea'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:63]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:63]
-WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/xlslice_4_Dout'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:64]
-CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[0]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[1]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[2]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[3]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[4]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[5]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+WARNING: [Vivado 12-507] No nets matched 'adc_tech_i/internal_axi_gpio2[6]'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:118]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:119]
 Finished Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]
 INFO: [Project 1-1715] 1 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -310,18 +384,16 @@ INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/dac_c
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/dac_calibration/dac_cal_bram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/dac_calibration/dac_cal_bram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/dac_calibration/dac_cal_bram/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2547.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2584.941 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 326 instances were transformed.
+  A total of 338 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
-  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 5 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 17 instances
   RAM64M8 => RAM64M8 (RAMD64E(x8)): 320 instances
 
-112 Infos, 111 Warnings, 18 Critical Warnings and 0 Errors encountered.
+127 Infos, 133 Warnings, 23 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 2547.023 ; gain = 1520.898
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:34 . Memory (MB): peak = 2584.941 ; gain = 1559.418
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
@@ -333,163 +405,78 @@ WARNING: [DRC RPBF-3] IO port buffering is incomplete: Device port my_i2c_sda ex
 INFO: [Project 1-461] DRC finished with 0 Errors, 1 Warnings
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.889 . Memory (MB): peak = 2547.023 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.944 . Memory (MB): peak = 2584.941 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1b4a65d44
+Ending Cache Timing Information Task | Checksum: 19481db6e
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2547.023 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2584.941 ; gain = 0.000
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
-INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_0 
-INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = f518ec3d59a9ef5a.
-INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 51276232c8d84c03.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2794.656 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 12b570d6e
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = f496e352156248ee.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2834.668 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1a769e39e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 2794.656 ; gain = 45.816
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 2834.668 ; gain = 46.836
 
 Phase 2 Retarget
-INFO: [Opt 31-138] Pushed 35 inverter(s) to 1021 load pin(s).
+INFO: [Opt 31-138] Pushed 37 inverter(s) to 1122 load pin(s).
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[32].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[33].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[34].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[35].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[36].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[37].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[38].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[39].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[40].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[41].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[42].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[43].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[44].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[45].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[46].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[47].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[53].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[54].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[55].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[56].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[57].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[58].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[59].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[60].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[61].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[62].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[63].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[64].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[65].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[66].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[67].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[68].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[69].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[70].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[71].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[72].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[73].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[74].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[75].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[76].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[77].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[78].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[79].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[80].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[81].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[82].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell u_ila_0/inst/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 262c753cb
+Phase 2 Retarget | Checksum: 17423ed16
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 2800.727 ; gain = 51.887
-INFO: [Opt 31-389] Phase Retarget created 32 cells and removed 370 cells
-INFO: [Opt 31-1021] In phase Retarget, 64 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 2834.668 ; gain = 46.836
+INFO: [Opt 31-389] Phase Retarget created 38 cells and removed 354 cells
+INFO: [Opt 31-1021] In phase Retarget, 45 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 3 Constant propagation | Checksum: 26fcbc5c3
+Phase 3 Constant propagation | Checksum: 1aad7dc9e
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 2800.727 ; gain = 51.887
-INFO: [Opt 31-389] Phase Constant propagation created 12 cells and removed 137 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 47 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 2834.668 ; gain = 46.836
+INFO: [Opt 31-389] Phase Constant propagation created 23 cells and removed 139 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 44 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 1e1adbdcc
+Phase 4 Sweep | Checksum: 1689fa3d5
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 2800.727 ; gain = 51.887
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1774 cells
-INFO: [Opt 31-1021] In phase Sweep, 1462 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2834.668 ; gain = 46.836
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2042 cells
+INFO: [Opt 31-1021] In phase Sweep, 1005 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
-INFO: [Opt 31-194] Inserted BUFG adc_tech_i/i2c_0/U0/i2c_clk_BUFG_inst to drive 76 load(s) on clock net adc_tech_i/i2c_0/U0/i2c_clk_BUFGCE
-INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+INFO: [Opt 31-194] Inserted BUFG adc_tech_i/i2c_master_0/U0/ctrl_clk_BUFG_inst to drive 98 load(s) on clock net adc_tech_i/i2c_master_0/U0/ctrl_clk_BUFGCE
+INFO: [Opt 31-194] Inserted BUFG adc_tech_i/i2c_master_0/U0/scl_active_reg_0_BUFG_inst to drive 53 load(s) on clock net adc_tech_i/i2c_master_0/U0/scl_active_reg_0_BUFGCE
+INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
-Phase 5 BUFG optimization | Checksum: 1b382fdd4
+Phase 5 BUFG optimization | Checksum: 1c870443a
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 2800.727 ; gain = 51.887
-INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2834.668 ; gain = 46.836
+INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 1b382fdd4
+Phase 6 Shift Register Optimization | Checksum: 1c870443a
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 2800.727 ; gain = 51.887
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2834.668 ; gain = 46.836
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: 1b382fdd4
+Phase 7 Post Processing Netlist | Checksum: 1c870443a
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:24 . Memory (MB): peak = 2800.727 ; gain = 51.887
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2834.668 ; gain = 46.836
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 75 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 72 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -497,77 +484,69 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              32  |             370  |                                             64  |
-|  Constant propagation         |              12  |             137  |                                             47  |
-|  Sweep                        |               0  |            1774  |                                           1462  |
-|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Retarget                     |              38  |             354  |                                             45  |
+|  Constant propagation         |              23  |             139  |                                             44  |
+|  Sweep                        |               0  |            2042  |                                           1005  |
+|  BUFG optimization            |               2  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                             75  |
+|  Post Processing Netlist      |               0  |               0  |                                             72  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2800.727 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: bfd95930
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2834.668 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 13ace338e
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:25 . Memory (MB): peak = 2800.727 ; gain = 51.887
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:18 . Memory (MB): peak = 2834.668 ; gain = 46.836
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 4 BRAM(s) out of a total of 155 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 4 BRAM(s) out of a total of 72 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-201] Structural ODC has moved 4 WE to EN ports
-Number of BRAM Ports augmented: 200 newly gated: 63 Total Ports: 310
-Ending PowerOpt Patch Enables Task | Checksum: fe5128d5
+Number of BRAM Ports augmented: 60 newly gated: 63 Total Ports: 144
+Ending PowerOpt Patch Enables Task | Checksum: 131a5b347
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3317.430 ; gain = 0.000
-Ending Power Optimization Task | Checksum: fe5128d5
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3147.891 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 131a5b347
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 3317.430 ; gain = 516.703
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 3147.891 ; gain = 313.223
 
 Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 131a5b347
 
-Starting Logic Optimization Task
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 108dbc20b
-
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3317.430 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 108dbc20b
-
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3317.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3147.891 ; gain = 0.000
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc] from IP C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/adc_tech_jtag_axi_0_0.xci
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc:69]
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_jtag_axi_0_0/constraints/adc_tech_jtag_axi_0_0_impl.xdc] for cell 'adc_tech_i/Processing_Subsystem/jtag_axi_0/U0'
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3317.430 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 108dbc20b
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 3147.891 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 18cdc94f7
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3317.430 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 3147.891 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-246 Infos, 120 Warnings, 18 Critical Warnings and 0 Errors encountered.
+171 Infos, 134 Warnings, 23 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 3317.430 ; gain = 770.406
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
+opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:33 . Memory (MB): peak = 3147.891 ; gain = 562.949
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 3317.430 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 3147.891 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file adc_tech_wrapper_drc_opted.rpt -pb adc_tech_wrapper_drc_opted.pb -rpx adc_tech_wrapper_drc_opted.rpx
 Command: report_drc -file adc_tech_wrapper_drc_opted.rpt -pb adc_tech_wrapper_drc_opted.pb -rpx adc_tech_wrapper_drc_opted.rpx
@@ -575,7 +554,7 @@ INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 4003.504 ; gain = 686.074
+report_drc: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 3989.762 ; gain = 841.871
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
@@ -596,29 +575,29 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: a62002db
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: de1e3183
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 111e9dfeb
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1bc3347fd
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 11cba479c
+Phase 1.3 Build Placer Netlist Model | Checksum: 270e4ac5e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 11cba479c
+Phase 1.4 Constrain Clocks/Macros | Checksum: 270e4ac5e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 11cba479c
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 270e4ac5e
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2 Global Placement
 
@@ -627,72 +606,67 @@ Phase 2.1 Floorplanning
 Phase 2.1.1 Partition Driven Placement
 
 Phase 2.1.1.1 PBP: Partition Driven Placement
-Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1cff75a86
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 1fb119aa8
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.1.1.2 PBP: Clock Region Placement
-Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 27a795a39
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 15d1f06c8
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
-Phase 2.1.1.3 PBP: Discrete Incremental
-Phase 2.1.1.3 PBP: Discrete Incremental | Checksum: 1f2c39ff4
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 15d1f06c8
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
-Phase 2.1.1.4 PBP: Compute Congestion
-Phase 2.1.1.4 PBP: Compute Congestion | Checksum: 1f2c39ff4
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 2128b178d
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
-Phase 2.1.1.5 PBP: Macro Placement
-Phase 2.1.1.5 PBP: Macro Placement | Checksum: 16c71894f
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 2128b178d
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 2.1.1 Partition Driven Placement | Checksum: 2128b178d
 
-Phase 2.1.1.6 PBP: UpdateTiming
-Phase 2.1.1.6 PBP: UpdateTiming | Checksum: 1863b79fb
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 2.1 Floorplanning | Checksum: 14cd0728e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 4003.504 ; gain = 0.000
-
-Phase 2.1.1.7 PBP: Add part constraints
-Phase 2.1.1.7 PBP: Add part constraints | Checksum: 1863b79fb
-
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 2.1.1 Partition Driven Placement | Checksum: 1863b79fb
-
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 2.1 Floorplanning | Checksum: 13ffdc0fa
-
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 13ffdc0fa
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 14cd0728e
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.3 Global Placement Core
 
 Phase 2.3.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 461 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 188 nets or cells. Created 0 new cell, deleted 188 existing cells and moved 0 existing cell
-INFO: [Physopt 32-1030] Pass 1. Identified 19 candidate driver sets for equivalent driver rewiring.
-INFO: [Physopt 32-661] Optimized 14 nets.  Re-placed 23 instances.
-INFO: [Physopt 32-775] End 1 Pass. Optimized 14 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 23 existing cells
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 4003.504 ; gain = 0.000
+INFO: [Physopt 32-1035] Found 6 LUTNM shape to break, 315 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 4, two critical 2, total 6, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 147 nets or cells. Created 6 new cells, deleted 141 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1030] Pass 1. Identified 18 candidate driver sets for equivalent driver rewiring.
+INFO: [Physopt 32-661] Optimized 11 nets.  Re-placed 23 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 11 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 23 existing cells
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
-INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -701,73 +675,73 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            188  |                   188  |           0  |           1  |  00:00:00  |
-|  Equivalent Driver Rewiring                       |            0  |              0  |                    14  |           0  |           1  |  00:00:01  |
+|  LUT Combining                                    |            6  |            141  |                   147  |           0  |           1  |  00:00:00  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                    11  |           0  |           1  |  00:00:01  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            188  |                   202  |           0  |           4  |  00:00:01  |
+|  Total                                            |            6  |            141  |                   158  |           0  |           9  |  00:00:01  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.3.1 Physical Synthesis In Placer | Checksum: 14606684e
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: d6ce1721
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 2.3 Global Placement Core | Checksum: 125cbbee9
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 2.3 Global Placement Core | Checksum: 16f823851
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 125cbbee9
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 16f823851
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 15e1d8de1
+Phase 3.1 Commit Multi Column Macros | Checksum: c9a8a240
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10ef3c2e8
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: f6182a5a
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.3 Small Shape DP
 
 Phase 3.3.1 Small Shape Clustering
-Phase 3.3.1 Small Shape Clustering | Checksum: 1bab2bc94
+Phase 3.3.1 Small Shape Clustering | Checksum: 191ff7978
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:29 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.3.2 Flow Legalize Slice Clusters
-Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 11d51589a
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 17efdfd51
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.3.3 Slice Area Swap
-Phase 3.3.3 Slice Area Swap | Checksum: 1c4b264bf
+Phase 3.3.3 Slice Area Swap | Checksum: 16d05e126
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 3.3 Small Shape DP | Checksum: 1909a2cd7
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 3.3 Small Shape DP | Checksum: dcf7de96
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.4 Re-assign LUT pins
-Phase 3.4 Re-assign LUT pins | Checksum: 19e3935af
+Phase 3.4 Re-assign LUT pins | Checksum: 1437c7ae6
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 3.5 Pipeline Register Optimization
-Phase 3.5 Pipeline Register Optimization | Checksum: 1bf7835f0
+Phase 3.5 Pipeline Register Optimization | Checksum: 1dbdc59d1
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 1bf7835f0
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1dbdc59d1
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:37 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -775,7 +749,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 12a1439de
+Post Placement Optimization Initialization | Checksum: 12dfe2cc8
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -783,29 +757,29 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.945 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 15742fdbb
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.751 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 8d949999
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.364 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.308 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 1c9b64da2
+Ending Physical Synthesis Task | Checksum: 112f38cbe
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.409 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 12a1439de
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.342 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 12dfe2cc8
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 4003.504 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.945. For the most accurate timing information please run report_timing.
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:38 . Memory (MB): peak = 3989.762 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.751. For the most accurate timing information please run report_timing.
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 126b5bca2
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:38 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1a8e11840
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:41 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:38 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1c4dcd1cc
+Phase 4.2 Post Placement Cleanup | Checksum: 23e617a40
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:40 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -815,62 +789,62 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |           | Global Congestion | Long Congestion   | Short Congestion  |
 | Direction | Region Size       | Region Size       | Region Size       |
 |___________|___________________|___________________|___________________|
-|      North|                1x1|                1x1|                2x2|
+|      North|                1x1|                4x4|                4x4|
 |___________|___________________|___________________|___________________|
-|      South|                1x1|                2x2|                2x2|
+|      South|                1x1|              16x16|                2x2|
 |___________|___________________|___________________|___________________|
-|       East|                1x1|                1x1|                4x4|
+|       East|                2x2|                1x1|                4x4|
 |___________|___________________|___________________|___________________|
-|       West|                2x2|                4x4|                8x8|
+|       West|                2x2|                2x2|                8x8|
 |___________|___________________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 1c4dcd1cc
+Phase 4.3.1 Print Estimated Congestion | Checksum: 23e617a40
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 1c4dcd1cc
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 23e617a40
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 24c9bd7a1
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 2d53e5736
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Ending Placer Task | Checksum: 21fffb547
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Ending Placer Task | Checksum: 20c42bf37
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:44 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-285 Infos, 122 Warnings, 18 Critical Warnings and 0 Errors encountered.
+214 Infos, 136 Warnings, 23 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:45 . Memory (MB): peak = 4003.504 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:42 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.671 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.637 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file adc_tech_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 4003.504 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file adc_tech_wrapper_utilization_placed.rpt -pb adc_tech_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file adc_tech_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 4003.504 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 3989.762 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu7ev'
 INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
 INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-294 Infos, 122 Warnings, 18 Critical Warnings and 0 Errors encountered.
+223 Infos, 136 Warnings, 23 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.701 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.609 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu7ev'
@@ -883,164 +857,142 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: a26def7d ConstDB: 0 ShapeSum: df6ab0a0 RouteDB: 9e27152a
+Checksum: PlaceDB: d3779fac ConstDB: 0 ShapeSum: a34abd8b RouteDB: 95806200
 
 Phase 1 Build RT Design
-Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.746 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Phase 1 Build RT Design | Checksum: ae79300b
+Nodegraph reading from file.  Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.758 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 1 Build RT Design | Checksum: b66a1161
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4003.504 ; gain = 0.000
-Post Restoration Checksum: NetGraph: 8ea95aa NumContArr: d53f4064 Constraints: 25980ca0 Timing: 0
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Post Restoration Checksum: NetGraph: f15676ac NumContArr: ffab6d1c Constraints: efd3453d Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 103c1e2ae
+Phase 2.1 Create Timer | Checksum: 2e0d52905
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 103c1e2ae
+Phase 2.2 Fix Topology Constraints | Checksum: 2e0d52905
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 103c1e2ae
+Phase 2.3 Pre Route Cleanup | Checksum: 2e0d52905
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 4003.504 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: 1b1fa91fc
+Phase 2.4 Global Clock Net Routing | Checksum: 1ef8f8fb4
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 1fe68e816
+Phase 2.5 Update Timing | Checksum: 16067f09f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 4059.309 ; gain = 55.805
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.167  | TNS=0.000  | WHS=-0.074 | THS=-17.984|
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3989.762 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.811  | TNS=0.000  | WHS=-0.075 | THS=-4.818 |
 
 
 Phase 2.6 Update Timing for Bus Skew
 
 Phase 2.6.1 Update Timing
-Phase 2.6.1 Update Timing | Checksum: 1b3fac3a0
+Phase 2.6.1 Update Timing | Checksum: 107d6fbda
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4059.309 ; gain = 55.805
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.167  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3989.762 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.811  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Phase 2.6 Update Timing for Bus Skew | Checksum: 21a8db2d7
+Phase 2.6 Update Timing for Bus Skew | Checksum: 1431c45ff
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4059.309 ; gain = 55.805
-Phase 2 Router Initialization | Checksum: 1f69c3702
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 2 Router Initialization | Checksum: 1b830551c
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.000163859 %
-  Global Horizontal Routing Utilization  = 0.000571134 %
+  Global Vertical Routing Utilization    = 0.00239486 %
+  Global Horizontal Routing Utilization  = 0.00212877 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 16149
+  Number of Failed Nets               = 13660
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 12170
-  Number of Partially Routed Nets     = 3979
-  Number of Node Overlaps             = 0
+  Number of Unrouted Nets             = 9839
+  Number of Partially Routed Nets     = 3821
+  Number of Node Overlaps             = 2
 
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1f69c3702
+Phase 3.1 Global Routing | Checksum: 1b830551c
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 4059.309 ; gain = 55.805
-Phase 3 Initial Routing | Checksum: 17c6f754f
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 3 Initial Routing | Checksum: 1d02a7662
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:13 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 3635
- Number of Nodes with overlaps = 209
- Number of Nodes with overlaps = 13
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 3230
+ Number of Nodes with overlaps = 199
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.708  | TNS=0.000  | WHS=-0.021 | THS=-0.028 |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.011  | TNS=0.000  | WHS=0.007  | THS=0.000  |
 
-Phase 4.1 Global Iteration 0 | Checksum: 2a16f291b
+Phase 4.1 Global Iteration 0 | Checksum: 16b93dd2d
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
-Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.708  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 17b379e9c
 
-Phase 4.2 Global Iteration 1 | Checksum: 2af1ea211
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 4 Rip-up And Reroute | Checksum: 17b379e9c
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 4059.309 ; gain = 55.805
-
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 9
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.708  | TNS=0.000  | WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 25c659154
-
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 4059.309 ; gain = 55.805
-Phase 4 Rip-up And Reroute | Checksum: 25c659154
-
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 200bc3d82
 
-Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1bcbfe4c4
-
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:31 . Memory (MB): peak = 4059.309 ; gain = 55.805
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.708  | TNS=0.000  | WHS=0.011  | THS=0.000  |
-
-Phase 5.1 Delay CleanUp | Checksum: 1a8cd114c
-
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1a8cd114c
+Phase 5.2 Clock Skew Optimization | Checksum: 200bc3d82
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 4059.309 ; gain = 55.805
-Phase 5 Delay and Skew Optimization | Checksum: 1a8cd114c
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 5 Delay and Skew Optimization | Checksum: 200bc3d82
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 22fcc3f16
+Phase 6.1.1 Update Timing | Checksum: 1c4d24833
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4059.309 ; gain = 55.805
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.708  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.011  | TNS=0.000  | WHS=0.007  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 1aecbb67f
+Phase 6.1 Hold Fix Iter | Checksum: 1e983b509
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4059.309 ; gain = 55.805
-Phase 6 Post Hold Fix | Checksum: 1aecbb67f
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
+Phase 6 Post Hold Fix | Checksum: 1e983b509
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.73457 %
-  Global Horizontal Routing Utilization  = 1.40813 %
+  Global Vertical Routing Utilization    = 1.16197 %
+  Global Horizontal Routing Utilization  = 1.10182 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1050,44 +1002,44 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 16ba9952d
+Phase 7 Route finalize | Checksum: 29671a935
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 16ba9952d
+Phase 8 Verifying routed nets | Checksum: 29671a935
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 16ba9952d
+Phase 9 Depositing Routes | Checksum: 29671a935
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.708  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.011  | TNS=0.000  | WHS=0.007  | THS=0.000  |
 
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 16ba9952d
+Phase 10 Post Router Timing | Checksum: 29671a935
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 4059.309 ; gain = 55.805
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 3989.762 ; gain = 0.000
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-312 Infos, 122 Warnings, 18 Critical Warnings and 0 Errors encountered.
+238 Infos, 136 Warnings, 23 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 4059.309 ; gain = 55.805
+route_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 4059.309 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.899 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/impl_1/adc_tech_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file adc_tech_wrapper_drc_routed.rpt -pb adc_tech_wrapper_drc_routed.pb -rpx adc_tech_wrapper_drc_routed.rpx
 Command: report_drc -file adc_tech_wrapper_drc_routed.rpt -pb adc_tech_wrapper_drc_routed.pb -rpx adc_tech_wrapper_drc_routed.rpx
@@ -1109,9 +1061,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-324 Infos, 123 Warnings, 18 Critical Warnings and 0 Errors encountered.
+250 Infos, 137 Warnings, 23 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4059.309 ; gain = 0.000
+report_power: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3989.762 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file adc_tech_wrapper_route_status.rpt -pb adc_tech_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file adc_tech_wrapper_timing_summary_routed.rpt -pb adc_tech_wrapper_timing_summary_routed.pb -rpx adc_tech_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
@@ -1129,7 +1081,7 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC RTSTAT-10] No routable loads: 44 net(s) have no routable loads. The problem bus(es) and/or net(s) are adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ENA_I, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0]... and (the first 15 of 42 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 38 net(s) have no routable loads. The problem bus(es) and/or net(s) are adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ENA_I, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0]... and (the first 15 of 36 listed).
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (adc_tech_i/Processing_Subsystem/jtag_axi_0/U0/jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings, 2 Advisories
@@ -1147,5 +1099,5 @@ INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK 
 INFO: [Common 17-83] Releasing license: Implementation
 14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 4276.031 ; gain = 216.723
-INFO: [Common 17-206] Exiting Vivado at Wed Oct  1 13:07:21 2025...
+write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 4187.668 ; gain = 197.906
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 21 09:31:05 2025...

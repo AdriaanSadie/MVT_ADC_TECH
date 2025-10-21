@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1759316509">
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1761031564">
   <File Type="PA-TCL" Name="adc_tech_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="adc_tech_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="adc_tech_wrapper_reports.tcl"/>
@@ -17,7 +17,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/i2c.vhd">
+    <File Path="$PSRCDIR/sources_1/new/bram_tester.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -29,7 +29,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/bram_tester.vhd">
+    <File Path="$PSRCDIR/sources_1/new/i2c_master.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -48,7 +48,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/fifo_tester.vhd">
+    <File Path="$PSRCDIR/sources_1/new/i2c.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -56,6 +56,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ad5669.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fifo_tester.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,14 +113,13 @@
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_bram_writer_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_jtag_axi_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_data_splitter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_gpio_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_util_ds_buf_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_read_0"/>
@@ -122,4 +128,5 @@
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_blk_mem_gen_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_bram_ctrl_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_master_0_0"/>
 </GenRun>

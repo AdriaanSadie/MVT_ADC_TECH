@@ -74,10 +74,10 @@ begin
     -- Setup GPIO word:
     axi_gpio_in <= stim_zeros;
 
-    wait for 10 us;
+    wait for 20 us;
     rst_n <= '1';
 
-    wait for 10 us;
+    wait for 20 us;
 
     -- Create write transaction
     -- ----------------------------------
@@ -94,7 +94,7 @@ begin
     axi_gpio_in <= stim_zeros;
     -----------------------------------
 
-    wait for 100 us;
+    wait for 20 us;
 
     -- Create write transaction
     -- ----------------------------------
@@ -104,6 +104,16 @@ begin
     -- Data lower : 56
     --
     axi_gpio_in <= x"80123456";
+
+    wait for 1 ms;
+
+    -- Reset GPIO word:
+    axi_gpio_in <= stim_zeros;
+
+    wait for 20 us;
+    
+    axi_gpio_in <= x"C0300000";
+
     wait;
 
 

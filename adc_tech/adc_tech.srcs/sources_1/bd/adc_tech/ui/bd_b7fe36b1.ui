@@ -1,0 +1,111 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.52174",
+   "Default View_TopLeft":"306,898",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace portBus pulse_in_p2 -pg 1 -lvl 0 -x -10 -y 350 -defaultsOSRD
+preplace portBus pulse_in_n2 -pg 1 -lvl 0 -x -10 -y 370 -defaultsOSRD
+preplace portBus pulse_in_p3 -pg 1 -lvl 0 -x -10 -y 490 -defaultsOSRD
+preplace portBus pulse_in_n3 -pg 1 -lvl 0 -x -10 -y 510 -defaultsOSRD
+preplace portBus pulse_in_p4 -pg 1 -lvl 0 -x -10 -y 630 -defaultsOSRD
+preplace portBus pulse_in_n4 -pg 1 -lvl 0 -x -10 -y 650 -defaultsOSRD
+preplace portBus pulse_in_p5 -pg 1 -lvl 0 -x -10 -y 770 -defaultsOSRD
+preplace portBus pulse_in_n5 -pg 1 -lvl 0 -x -10 -y 790 -defaultsOSRD
+preplace portBus pulse_in_p6 -pg 1 -lvl 0 -x -10 -y 910 -defaultsOSRD
+preplace portBus pulse_in_n6 -pg 1 -lvl 0 -x -10 -y 930 -defaultsOSRD
+preplace portBus pulse_in_p7 -pg 1 -lvl 0 -x -10 -y 1050 -defaultsOSRD
+preplace portBus pulse_in_n7 -pg 1 -lvl 0 -x -10 -y 1070 -defaultsOSRD
+preplace portBus pulse_in_p8 -pg 1 -lvl 0 -x -10 -y 1190 -defaultsOSRD
+preplace portBus pulse_in_n8 -pg 1 -lvl 0 -x -10 -y 1210 -defaultsOSRD
+preplace portBus pulse_in_p10 -pg 1 -lvl 0 -x -10 -y 1470 -defaultsOSRD
+preplace portBus pulse_in_n10 -pg 1 -lvl 0 -x -10 -y 1490 -defaultsOSRD
+preplace portBus pulse_in_p11 -pg 1 -lvl 0 -x -10 -y 1610 -defaultsOSRD
+preplace portBus pulse_in_n11 -pg 1 -lvl 0 -x -10 -y 1630 -defaultsOSRD
+preplace portBus pulse_in_p9 -pg 1 -lvl 0 -x -10 -y 1330 -defaultsOSRD
+preplace portBus pulse_in_n9 -pg 1 -lvl 0 -x -10 -y 1350 -defaultsOSRD
+preplace portBus pulse_in_p12 -pg 1 -lvl 0 -x -10 -y 1750 -defaultsOSRD
+preplace portBus pulse_in_n12 -pg 1 -lvl 0 -x -10 -y 1770 -defaultsOSRD
+preplace portBus pulse_in_p13 -pg 1 -lvl 0 -x -10 -y 1890 -defaultsOSRD
+preplace portBus pulse_in_n13 -pg 1 -lvl 0 -x -10 -y 1910 -defaultsOSRD
+preplace portBus pulse_in_p14 -pg 1 -lvl 0 -x -10 -y 2030 -defaultsOSRD
+preplace portBus pulse_in_n14 -pg 1 -lvl 0 -x -10 -y 2050 -defaultsOSRD
+preplace portBus pulse_in_p15 -pg 1 -lvl 0 -x -10 -y 2170 -defaultsOSRD
+preplace portBus pulse_in_n15 -pg 1 -lvl 0 -x -10 -y 2190 -defaultsOSRD
+preplace portBus pulse_in_p0 -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace portBus pulse_in_n0 -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace portBus pulse_in_p1 -pg 1 -lvl 0 -x -10 -y 210 -defaultsOSRD
+preplace portBus pulse_in_n1 -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
+preplace portBus adc_frontend -pg 1 -lvl 3 -x 600 -y 1070 -defaultsOSRD
+preplace inst adc_bit_2 -pg 1 -lvl 1 -x 160 -y 350 -defaultsOSRD
+preplace inst adc_bit_3 -pg 1 -lvl 1 -x 160 -y 490 -defaultsOSRD
+preplace inst adc_bit_4 -pg 1 -lvl 1 -x 160 -y 630 -defaultsOSRD
+preplace inst adc_bit_5 -pg 1 -lvl 1 -x 160 -y 770 -defaultsOSRD
+preplace inst adc_bit_6 -pg 1 -lvl 1 -x 160 -y 910 -defaultsOSRD
+preplace inst adc_bit_7 -pg 1 -lvl 1 -x 160 -y 1050 -defaultsOSRD
+preplace inst adc_bit_8 -pg 1 -lvl 1 -x 160 -y 1190 -defaultsOSRD
+preplace inst adc_bit_10 -pg 1 -lvl 1 -x 160 -y 1470 -defaultsOSRD
+preplace inst adc_bit_11 -pg 1 -lvl 1 -x 160 -y 1610 -defaultsOSRD
+preplace inst adc_bit_9 -pg 1 -lvl 1 -x 160 -y 1330 -defaultsOSRD
+preplace inst adc_bit_12 -pg 1 -lvl 1 -x 160 -y 1750 -defaultsOSRD
+preplace inst adc_bit_13 -pg 1 -lvl 1 -x 160 -y 1890 -defaultsOSRD
+preplace inst adc_bit_14 -pg 1 -lvl 1 -x 160 -y 2030 -defaultsOSRD
+preplace inst adc_bit_15 -pg 1 -lvl 1 -x 160 -y 2170 -defaultsOSRD
+preplace inst adc_bit_0 -pg 1 -lvl 1 -x 160 -y 70 -defaultsOSRD
+preplace inst adc_bit_1 -pg 1 -lvl 1 -x 160 -y 210 -defaultsOSRD
+preplace inst adc_inputs -pg 1 -lvl 2 -x 480 -y 1060 -defaultsOSRD
+preplace netloc adc_bit_2_IBUF_OUT 1 1 1 360 350n
+preplace netloc adc_bit_3_IBUF_OUT 1 1 1 340 490n
+preplace netloc adc_bit_4_IBUF_OUT 1 1 1 330 630n
+preplace netloc adc_bit_5_IBUF_OUT 1 1 1 320 770n
+preplace netloc adc_bit_6_IBUF_OUT 1 1 1 310 910n
+preplace netloc adc_bit_7_IBUF_OUT 1 1 1 N 1050
+preplace netloc adc_bit_8_IBUF_OUT 1 1 1 310 1070n
+preplace netloc adc_bit_10_IBUF_OUT 1 1 1 330 1110n
+preplace netloc adc_bit_11_IBUF_OUT 1 1 1 340 1130n
+preplace netloc adc_bit_9_IBUF_OUT 1 1 1 320 1090n
+preplace netloc adc_bit_12_IBUF_OUT 1 1 1 350 1150n
+preplace netloc adc_bit_13_IBUF_OUT 1 1 1 360 1170n
+preplace netloc adc_bit_14_IBUF_OUT 1 1 1 370 1190n
+preplace netloc adc_bit_15_IBUF_OUT 1 1 1 380 1210n
+preplace netloc adc_bit_0_IBUF_OUT 1 1 1 380 70n
+preplace netloc adc_bit_1_IBUF_OUT 1 1 1 370 210n
+preplace netloc pulse_in_p2_1 1 0 1 NJ 350
+preplace netloc pulse_in_n2_1 1 0 1 NJ 370
+preplace netloc pulse_in_p3_1 1 0 1 NJ 490
+preplace netloc pulse_in_n3_1 1 0 1 NJ 510
+preplace netloc pulse_in_p4_1 1 0 1 NJ 630
+preplace netloc pulse_in_n4_1 1 0 1 NJ 650
+preplace netloc pulse_in_p5_1 1 0 1 NJ 770
+preplace netloc pulse_in_n5_1 1 0 1 NJ 790
+preplace netloc pulse_in_p6_1 1 0 1 NJ 910
+preplace netloc pulse_in_n6_1 1 0 1 NJ 930
+preplace netloc pulse_in_p7_1 1 0 1 NJ 1050
+preplace netloc pulse_in_n7_1 1 0 1 NJ 1070
+preplace netloc pulse_in_p8_1 1 0 1 NJ 1190
+preplace netloc pulse_in_n8_1 1 0 1 NJ 1210
+preplace netloc pulse_in_p10_1 1 0 1 NJ 1470
+preplace netloc pulse_in_n10_1 1 0 1 NJ 1490
+preplace netloc pulse_in_p11_1 1 0 1 NJ 1610
+preplace netloc pulse_in_n11_1 1 0 1 NJ 1630
+preplace netloc pulse_in_p9_1 1 0 1 NJ 1330
+preplace netloc pulse_in_n9_1 1 0 1 NJ 1350
+preplace netloc pulse_in_p12_1 1 0 1 NJ 1750
+preplace netloc pulse_in_n12_1 1 0 1 NJ 1770
+preplace netloc pulse_in_p13_1 1 0 1 NJ 1890
+preplace netloc pulse_in_n13_1 1 0 1 NJ 1910
+preplace netloc pulse_in_p14_1 1 0 1 NJ 2030
+preplace netloc pulse_in_n14_1 1 0 1 NJ 2050
+preplace netloc pulse_in_p15_1 1 0 1 NJ 2170
+preplace netloc pulse_in_n15_1 1 0 1 NJ 2190
+preplace netloc pulse_in_p_1 1 0 1 NJ 70
+preplace netloc pulse_in_n_1 1 0 1 NJ 90
+preplace netloc pulse_in_p1_1 1 0 1 NJ 210
+preplace netloc pulse_in_n1_1 1 0 1 NJ 230
+preplace netloc adc_inputs_dout 1 2 1 580 1060n
+levelinfo -pg 1 -10 160 480 600
+pagesize -pg 1 -db -bbox -sgen -180 -20 770 2250
+"
+}
+

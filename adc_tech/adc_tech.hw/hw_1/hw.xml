@@ -29,6 +29,8 @@
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[31:0]" gui_info=""/>
     <Object name="adc_tech_i/bram_writer_0_wea" gui_info=""/>
+    <Object name="adc_tech_i/internal_axi_gpio1[31:0]" gui_info="Trigger Setup=0"/>
+    <Object name="adc_tech_i/my_i2c_gpio_io_o[31:0]" gui_info="Trigger Setup=0"/>
     <Object name="adc_tech_i/xlslice_4_Dout" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
@@ -138,7 +140,7 @@
         <net name="adc_tech_i/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
@@ -171,7 +173,7 @@
         <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_ADDR[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -223,7 +225,7 @@
         <net name="adc_tech_i/bram_tester/axi_bram_ctrl_0_BRAM_PORTA_DOUT[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq13&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq13&apos;hXXXX"/>
@@ -256,7 +258,7 @@
         <net name="adc_tech_i/bram_tester/bram_writer_0_addra[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -454,6 +456,162 @@
       </probeOptions>
       <nets>
         <net name="adc_tech_i/bram_writer_0_wea"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq32&apos;h0000_0000"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq32&apos;h0000_0000"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/internal_axi_gpio1[31]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[30]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[29]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[28]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[27]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[26]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[25]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[24]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[23]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[22]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[21]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[20]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[19]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[18]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[17]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[16]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[15]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[14]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[13]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[12]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[11]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[10]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[9]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[8]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[7]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[6]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[5]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[4]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[3]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[2]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[1]"/>
+        <net name="adc_tech_i/internal_axi_gpio1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/internal_axi_gpio2[31]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[30]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[29]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[28]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[27]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[26]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[25]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[24]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[23]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[22]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[21]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[20]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[19]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[18]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[17]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[16]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[15]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[14]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[13]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[12]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[11]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[10]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[9]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[8]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[7]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[6]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[5]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[4]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[3]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[2]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[1]"/>
+        <net name="adc_tech_i/internal_axi_gpio2[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq32&apos;h0000_0000"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq32&apos;h0000_0000"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[31]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[30]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[29]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[28]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[27]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[26]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[25]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[24]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[23]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[22]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[21]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[20]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[19]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[18]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[17]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[16]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[15]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[14]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[13]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[12]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[11]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[10]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[9]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[8]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[7]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[6]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[5]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[4]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[3]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[2]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[1]"/>
+        <net name="adc_tech_i/my_i2c_gpio_io_o[0]"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">

@@ -58,7 +58,7 @@ ENTITY adc_tech_dac_cal_0_0 IS
     clk : IN STD_LOGIC;
     rst_n : IN STD_LOGIC;
     sync_in : IN STD_LOGIC;
-    pulse_in : IN STD_LOGIC;
+    pulse_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     control : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     counting_flag : OUT STD_LOGIC;
     counter : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -77,7 +77,7 @@ ARCHITECTURE adc_tech_dac_cal_0_0_arch OF adc_tech_dac_cal_0_0 IS
       clk : IN STD_LOGIC;
       rst_n : IN STD_LOGIC;
       sync_in : IN STD_LOGIC;
-      pulse_in : IN STD_LOGIC;
+      pulse_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       control : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       counting_flag : OUT STD_LOGIC;
       counter : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);

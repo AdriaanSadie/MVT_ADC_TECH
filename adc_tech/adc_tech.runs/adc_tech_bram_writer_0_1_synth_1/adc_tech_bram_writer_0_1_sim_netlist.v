@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Sep 30 08:50:32 2025
+// Date        : Thu Oct  2 08:30:56 2025
 // Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ adc_tech_bram_writer_0_1_sim_netlist.v
@@ -272,13 +272,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
         .I3(\addr_cnt[10]_i_4_n_0 ),
         .I4(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\addr_cnt[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'h60)) 
+  LUT5 #(
+    .INIT(32'hEEFEFEEE)) 
     \addr_cnt[1]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[0]),
+       (.I0(done),
+        .I1(\FSM_onehot_state_reg_n_0_[0] ),
         .I2(\FSM_onehot_state_reg_n_0_[1] ),
+        .I3(Q[0]),
+        .I4(Q[1]),
         .O(\addr_cnt[1]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
@@ -405,13 +406,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
         .CLR(\addr_cnt[10]_i_3_n_0 ),
         .D(\addr_cnt[12]_i_1_n_0 ),
         .Q(\addr_cnt_reg_n_0_[12] ));
-  FDCE #(
+  FDPE #(
     .INIT(1'b0)) 
     \addr_cnt_reg[1] 
        (.C(clk),
         .CE(\addr_cnt[10]_i_1_n_0 ),
-        .CLR(\addr_cnt[10]_i_3_n_0 ),
         .D(\addr_cnt[1]_i_1_n_0 ),
+        .PRE(\addr_cnt[10]_i_3_n_0 ),
         .Q(Q[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -491,7 +492,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(in4[10]),
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\data_cnt[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[11]_i_1 
@@ -505,7 +506,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(in4[12]),
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\data_cnt[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[13]_i_1 
@@ -519,7 +520,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[14]),
         .O(\data_cnt[14]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[15]_i_1 
@@ -533,7 +534,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[16]),
         .O(\data_cnt[16]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[17]_i_1 
@@ -547,13 +548,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[18]),
         .O(\data_cnt[18]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[19]_i_1 
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[19]),
         .O(\data_cnt[19]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[1]_i_1 
@@ -567,7 +569,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[20]),
         .O(\data_cnt[20]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[21]_i_1 
@@ -581,7 +583,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[22]),
         .O(\data_cnt[22]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[23]_i_1 
@@ -595,7 +597,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[24]),
         .O(\data_cnt[24]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[25]_i_1 
@@ -609,7 +611,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[26]),
         .O(\data_cnt[26]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[27]_i_1 
@@ -623,7 +625,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[28]),
         .O(\data_cnt[28]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[29]_i_1 
@@ -644,14 +646,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[30]),
         .O(\data_cnt[30]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[31]_i_1 
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
         .I1(in4[31]),
         .O(\data_cnt[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[3]_i_1 
@@ -665,7 +667,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(in4[4]),
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\data_cnt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[5]_i_1 
@@ -679,7 +681,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(in4[6]),
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\data_cnt[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[7]_i_1 
@@ -693,7 +695,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_writer
        (.I0(in4[8]),
         .I1(\FSM_onehot_state_reg_n_0_[1] ),
         .O(\data_cnt[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \data_cnt[9]_i_1 

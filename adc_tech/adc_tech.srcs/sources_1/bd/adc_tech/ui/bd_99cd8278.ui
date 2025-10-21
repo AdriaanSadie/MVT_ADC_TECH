@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.919936",
-   "Default View_TopLeft":"615,213",
+   "Default View_ScaleFactor":"1.49444",
+   "Default View_TopLeft":"935,504",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port M00_AXI_0 -pg 1 -lvl 3 -x 1290 -y 380 -defaultsOSRD
 preplace port M01_AXI_0 -pg 1 -lvl 3 -x 1290 -y 400 -defaultsOSRD
@@ -12,6 +12,7 @@ preplace port M03_AXI_0 -pg 1 -lvl 3 -x 1290 -y 500 -defaultsOSRD
 preplace port M04_AXI_0 -pg 1 -lvl 3 -x 1290 -y 520 -defaultsOSRD
 preplace port M05_AXI_0 -pg 1 -lvl 3 -x 1290 -y 550 -defaultsOSRD
 preplace port M06_AXI_0 -pg 1 -lvl 3 -x 1290 -y 580 -defaultsOSRD
+preplace port M07_AXI_0 -pg 1 -lvl 3 -x 1290 -y 650 -defaultsOSRD
 preplace port clk_in -pg 1 -lvl 0 -x -20 -y 260 -defaultsOSRD
 preplace port global_clk -pg 1 -lvl 3 -x 1290 -y 220 -defaultsOSRD
 preplace portBus global_rst_n -pg 1 -lvl 3 -x 1290 -y 150 -defaultsOSRD
@@ -23,17 +24,18 @@ preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 1 -x 310 -y 90 -defaultsOSRD
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 1 610J 30n
 preplace netloc clk_in_1 1 0 2 0J 200 NJ
 preplace netloc clk_wiz_0_clk_out1 1 0 3 10 180 620J -50 1230
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 10 340 640 280 1220
-preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 2 650 270 1210
-preplace netloc Conn3 1 2 1 1230 460n
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 1 1 630 70n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 3 10 340 640 270 1220
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 2 650 280 1210
 preplace netloc Conn1 1 2 1 1210 380n
-preplace netloc jtag_axi_0_M_AXI 1 1 1 610 270n
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 1 1 630 70n
 preplace netloc Conn2 1 2 1 1220 400n
-preplace netloc Conn4 1 2 1 1240J 500n
+preplace netloc jtag_axi_0_M_AXI 1 1 1 610 270n
+preplace netloc Conn3 1 2 1 1230 460n
 preplace netloc Conn5 1 2 1 1250J 520n
 preplace netloc Conn6 1 2 1 1260 550n
+preplace netloc Conn4 1 2 1 1240J 500n
 preplace netloc Conn7 1 2 1 1270 580n
+preplace netloc Conn8 1 2 1 N 650
 levelinfo -pg 1 -20 310 1040 1290
 pagesize -pg 1 -db -bbox -sgen -110 -60 1450 2320
 "

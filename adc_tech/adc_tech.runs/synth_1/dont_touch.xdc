@@ -36,23 +36,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_ax
 # IP: bd/adc_tech/ip/adc_tech_data_splitter_0_0/adc_tech_data_splitter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_data_splitter_0_0 || ORIG_REF_NAME==adc_tech_data_splitter_0_0} -quiet] -quiet
 
-# IP: bd/adc_tech/ip/adc_tech_i2c_0_0/adc_tech_i2c_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_i2c_0_0 || ORIG_REF_NAME==adc_tech_i2c_0_0} -quiet] -quiet
-
-# IP: bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_gpio_1_1 || ORIG_REF_NAME==adc_tech_axi_gpio_1_1} -quiet] -quiet
-
-# IP: bd/adc_tech/ip/adc_tech_dac_cal_read_0/adc_tech_dac_cal_read_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_read_0 || ORIG_REF_NAME==adc_tech_dac_cal_read_0} -quiet] -quiet
-
 # IP: bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_c_counter_binary_0_0 || ORIG_REF_NAME==adc_tech_c_counter_binary_0_0} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_xlslice_0_0/adc_tech_xlslice_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xlslice_0_0 || ORIG_REF_NAME==adc_tech_xlslice_0_0} -quiet] -quiet
-
-# IP: bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_util_ds_buf_3_0 || ORIG_REF_NAME==adc_tech_util_ds_buf_3_0} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_xlslice_1_0/adc_tech_xlslice_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xlslice_1_0 || ORIG_REF_NAME==adc_tech_xlslice_1_0} -quiet] -quiet
@@ -63,14 +51,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xl
 # IP: bd/adc_tech/ip/adc_tech_xlslice_1_2/adc_tech_xlslice_1_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xlslice_1_2 || ORIG_REF_NAME==adc_tech_xlslice_1_2} -quiet] -quiet
 
+# IP: bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_control_0 || ORIG_REF_NAME==adc_tech_dac_cal_control_0} -quiet] -quiet
+
 # IP: bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_0/adc_tech_axi_bram_ctrl_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_bram_ctrl_0_0 || ORIG_REF_NAME==adc_tech_axi_bram_ctrl_0_0} -quiet] -quiet
 
-# IP: bd/adc_tech/ip/adc_tech_dac_cal_0_0/adc_tech_dac_cal_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_0_0 || ORIG_REF_NAME==adc_tech_dac_cal_0_0} -quiet] -quiet
-
-# IP: bd/adc_tech/ip/adc_tech_dac_cal_control_0/adc_tech_dac_cal_control_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_control_0 || ORIG_REF_NAME==adc_tech_dac_cal_control_0} -quiet] -quiet
+# IP: bd/adc_tech/ip/adc_tech_blk_mem_gen_0_1/adc_tech_blk_mem_gen_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_blk_mem_gen_0_1 || ORIG_REF_NAME==adc_tech_blk_mem_gen_0_1} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_xlslice_4_0/adc_tech_xlslice_4_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xlslice_4_0 || ORIG_REF_NAME==adc_tech_xlslice_4_0} -quiet] -quiet
@@ -78,14 +66,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xl
 # IP: bd/adc_tech/ip/adc_tech_bram_writer_0_1/adc_tech_bram_writer_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_bram_writer_0_1 || ORIG_REF_NAME==adc_tech_bram_writer_0_1} -quiet] -quiet
 
-# IP: bd/adc_tech/ip/adc_tech_blk_mem_gen_0_1/adc_tech_blk_mem_gen_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_blk_mem_gen_0_1 || ORIG_REF_NAME==adc_tech_blk_mem_gen_0_1} -quiet] -quiet
+# IP: bd/adc_tech/ip/adc_tech_dac_cal_read_0/adc_tech_dac_cal_read_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_read_0 || ORIG_REF_NAME==adc_tech_dac_cal_read_0} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_blk_mem_gen_0_2/adc_tech_blk_mem_gen_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_blk_mem_gen_0_2 || ORIG_REF_NAME==adc_tech_blk_mem_gen_0_2} -quiet] -quiet
 
-# IP: bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_0_0 || ORIG_REF_NAME==adc_tech_adc_bit_0_0} -quiet] -quiet
+# IP: bd/adc_tech/ip/adc_tech_axi_gpio_1_1/adc_tech_axi_gpio_1_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_gpio_1_1 || ORIG_REF_NAME==adc_tech_axi_gpio_1_1} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_2/adc_tech_axi_bram_ctrl_0_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_bram_ctrl_0_2 || ORIG_REF_NAME==adc_tech_axi_bram_ctrl_0_2} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_dac_cal_0_0/adc_tech_dac_cal_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_dac_cal_0_0 || ORIG_REF_NAME==adc_tech_dac_cal_0_0} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_adc_bit_0_1/adc_tech_adc_bit_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_0_1 || ORIG_REF_NAME==adc_tech_adc_bit_0_1} -quiet] -quiet
@@ -93,8 +87,56 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_ad
 # IP: bd/adc_tech/ip/adc_tech_adc_bit_0_2/adc_tech_adc_bit_0_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_0_2 || ORIG_REF_NAME==adc_tech_adc_bit_0_2} -quiet] -quiet
 
-# IP: bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_2/adc_tech_axi_bram_ctrl_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_bram_ctrl_0_2 || ORIG_REF_NAME==adc_tech_axi_bram_ctrl_0_2} -quiet] -quiet
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_0/adc_tech_adc_bit_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_0 || ORIG_REF_NAME==adc_tech_adc_bit_3_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_1/adc_tech_adc_bit_3_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_1 || ORIG_REF_NAME==adc_tech_adc_bit_3_1} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_2/adc_tech_adc_bit_3_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_2 || ORIG_REF_NAME==adc_tech_adc_bit_3_2} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_3/adc_tech_adc_bit_3_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_3 || ORIG_REF_NAME==adc_tech_adc_bit_3_3} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_4/adc_tech_adc_bit_3_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_4 || ORIG_REF_NAME==adc_tech_adc_bit_3_4} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_6/adc_tech_adc_bit_3_6.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_6 || ORIG_REF_NAME==adc_tech_adc_bit_3_6} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_7/adc_tech_adc_bit_3_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_7 || ORIG_REF_NAME==adc_tech_adc_bit_3_7} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_5/adc_tech_adc_bit_3_5.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_5 || ORIG_REF_NAME==adc_tech_adc_bit_3_5} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_8/adc_tech_adc_bit_3_8.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_8 || ORIG_REF_NAME==adc_tech_adc_bit_3_8} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_9/adc_tech_adc_bit_3_9.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_9 || ORIG_REF_NAME==adc_tech_adc_bit_3_9} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_10/adc_tech_adc_bit_3_10.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_10 || ORIG_REF_NAME==adc_tech_adc_bit_3_10} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_3_11/adc_tech_adc_bit_3_11.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_3_11 || ORIG_REF_NAME==adc_tech_adc_bit_3_11} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_util_ds_buf_3_0/adc_tech_util_ds_buf_3_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_util_ds_buf_3_0 || ORIG_REF_NAME==adc_tech_util_ds_buf_3_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_adc_bit_0_0/adc_tech_adc_bit_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_adc_bit_0_0 || ORIG_REF_NAME==adc_tech_adc_bit_0_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_xlconcat_0_0/adc_tech_xlconcat_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_xlconcat_0_0 || ORIG_REF_NAME==adc_tech_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_i2c_master_0_0 || ORIG_REF_NAME==adc_tech_i2c_master_0_0} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_axi_gpio_0_1 || ORIG_REF_NAME==adc_tech_axi_gpio_0_1} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_auto_pc_0/adc_tech_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_auto_pc_0 || ORIG_REF_NAME==adc_tech_auto_pc_0} -quiet] -quiet
@@ -110,6 +152,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_au
 
 # IP: bd/adc_tech/ip/adc_tech_auto_pc_4/adc_tech_auto_pc_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_auto_pc_4 || ORIG_REF_NAME==adc_tech_auto_pc_4} -quiet] -quiet
+
+# IP: bd/adc_tech/ip/adc_tech_auto_pc_5/adc_tech_auto_pc_5.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_auto_pc_5 || ORIG_REF_NAME==adc_tech_auto_pc_5} -quiet] -quiet
 
 # IP: bd/adc_tech/ip/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_tech_s00_mmu_0 || ORIG_REF_NAME==adc_tech_s00_mmu_0} -quiet] -quiet

@@ -1,0 +1,261 @@
+
+*** Running vivado
+    with args -log adc_tech_i2c_master_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_tech_i2c_master_0_0.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source adc_tech_i2c_master_0_0.tcl -notrace
+Command: synth_design -top adc_tech_i2c_master_0_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'adc_tech_i2c_master_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6844
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1645.871 ; gain = 119.273
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'adc_tech_i2c_master_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/synth/adc_tech_i2c_master_0_0.vhd:68]
+	Parameter INPUT_CLOCK_FREQ bound to: 200000000 - type: integer 
+	Parameter I2C_CLOCK_FREQ bound to: 50000 - type: integer 
+INFO: [Synth 8-3491] module 'i2c_master' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/i2c_master.vhd:67' bound to instance 'U0' of component 'i2c_master' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/synth/adc_tech_i2c_master_0_0.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'i2c_master' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/i2c_master.vhd:88]
+	Parameter INPUT_CLOCK_FREQ bound to: 200000000 - type: integer 
+	Parameter I2C_CLOCK_FREQ bound to: 50000 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/i2c_master.vhd:233]
+INFO: [Synth 8-256] done synthesizing module 'i2c_master' (1#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/new/i2c_master.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'adc_tech_i2c_master_0_0' (2#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/synth/adc_tech_i2c_master_0_0.vhd:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1702.059 ; gain = 175.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1702.059 ; gain = 175.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1702.059 ; gain = 175.461
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1702.059 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1792.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1810.844 ; gain = 17.914
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1810.844 ; gain = 284.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1810.844 ; gain = 284.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1810.844 ; gain = 284.246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'i2c_state_reg' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              i2c_s_idle |                             0000 |                             0000
+             i2c_s_start |                             0001 |                             0001
+            i2c_s_delay1 |                             0010 |                             0010
+     i2c_s_write_address |                             0011 |                             0011
+              i2c_s_ack1 |                             0100 |                             0100
+            i2c_s_delay2 |                             0101 |                             0101
+               i2c_s_cmd |                             0110 |                             0110
+              i2c_s_ack2 |                             0111 |                             0111
+            i2c_s_delay3 |                             1000 |                             1000
+          i2c_s_data_msb |                             1001 |                             1001
+              i2c_s_ack3 |                             1010 |                             1010
+            i2c_s_delay4 |                             1011 |                             1011
+          i2c_s_data_lsb |                             1100 |                             1100
+              i2c_s_ack4 |                             1101 |                             1101
+            i2c_s_delay5 |                             1110 |                             1110
+              i2c_s_stop |                             1111 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'i2c_state_reg' using encoding 'sequential' in module 'i2c_master'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1810.844 ; gain = 284.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 6     
+	                8 Bit    Registers := 7     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 1     
+	  16 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	  16 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 10    
+	  16 Input    1 Bit        Muxes := 15    
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1810.844 ; gain = 284.246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2372.902 ; gain = 846.305
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2372.977 ; gain = 846.379
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 2392.043 ; gain = 865.445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_0' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_1' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     9|
+|3     |LUT3 |    36|
+|4     |LUT4 |    16|
+|5     |LUT5 |    42|
+|6     |LUT6 |    42|
+|7     |FDCE |   163|
+|8     |FDPE |     9|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 2 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 2400.078 ; gain = 764.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2400.078 ; gain = 873.480
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2412.152 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2439.727 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 1 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 2439.727 ; gain = 1412.836
+INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_i2c_master_0_0_synth_1/adc_tech_i2c_master_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_i2c_master_0_0_synth_1/adc_tech_i2c_master_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file adc_tech_i2c_master_0_0_utilization_synth.rpt -pb adc_tech_i2c_master_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 21 09:26:39 2025...
