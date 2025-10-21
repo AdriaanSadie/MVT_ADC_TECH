@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"mvt_top": {
-			"proto_instances": {
-			}
-		}
-	}
-}
