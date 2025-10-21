@@ -1,6 +1,6 @@
 # MVT_ADC_TECH
 Multi-voltage thresholding ADC technology project 
 
-> Initial project in 2023.1 is in **adc_mvt**. 
+> The project resides in **adc_tech** with its constraints defined in **constraints** folder.
 
-> Second project in 2020.2 is in **adc_tech** with its constraints defined in **constraints** folder.
+> The project runs in Vivado 2020.2.
