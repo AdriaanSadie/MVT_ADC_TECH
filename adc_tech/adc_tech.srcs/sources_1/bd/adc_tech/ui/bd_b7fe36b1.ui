@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.52174",
-   "Default View_TopLeft":"306,898",
+   "Default View_ScaleFactor":"0.936741",
+   "Default View_TopLeft":"109,742",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -37,7 +37,7 @@ preplace portBus pulse_in_p0 -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
 preplace portBus pulse_in_n0 -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
 preplace portBus pulse_in_p1 -pg 1 -lvl 0 -x -10 -y 210 -defaultsOSRD
 preplace portBus pulse_in_n1 -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
-preplace portBus adc_frontend -pg 1 -lvl 3 -x 600 -y 1070 -defaultsOSRD
+preplace portBus adc_frontend -pg 1 -lvl 3 -x 610 -y 1070 -defaultsOSRD
 preplace inst adc_bit_2 -pg 1 -lvl 1 -x 160 -y 350 -defaultsOSRD
 preplace inst adc_bit_3 -pg 1 -lvl 1 -x 160 -y 490 -defaultsOSRD
 preplace inst adc_bit_4 -pg 1 -lvl 1 -x 160 -y 630 -defaultsOSRD
@@ -104,8 +104,8 @@ preplace netloc pulse_in_n_1 1 0 1 NJ 90
 preplace netloc pulse_in_p1_1 1 0 1 NJ 210
 preplace netloc pulse_in_n1_1 1 0 1 NJ 230
 preplace netloc adc_inputs_dout 1 2 1 580 1060n
-levelinfo -pg 1 -10 160 480 600
-pagesize -pg 1 -db -bbox -sgen -180 -20 770 2250
+levelinfo -pg 1 -10 160 480 610
+pagesize -pg 1 -db -bbox -sgen -180 -20 780 2250
 "
 }
-
+0

@@ -13,7 +13,7 @@ source adc_tech_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1026.418 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1026.379 ; gain = 0.000
 Command: synth_design -top adc_tech_wrapper -part xczu7ev-ffvc1156-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
@@ -21,97 +21,115 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev
 INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24364
+INFO: [Synth 8-7075] Helper process launched with PID 10340
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1690.156 ; gain = 119.094
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1694.555 ; gain = 121.266
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'adc_tech_wrapper' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd:61]
-INFO: [Synth 8-3491] module 'adc_tech' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7514' bound to instance 'adc_tech_i' of component 'adc_tech' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd:109]
-INFO: [Synth 8-638] synthesizing module 'adc_tech' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7565]
-INFO: [Synth 8-638] synthesizing module 'Processing_Subsystem_imp_AKKRWG' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:6609]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_interconnect_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4039]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_JJ7H1L' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1297]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1469]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_0_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_JJ7H1L' (1#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1297]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1AY5IP4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1604]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1AY5IP4' (2#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1604]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_IS6YYY' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1765]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1937]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_1_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_IS6YYY' (3#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1765]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1BYTR3F' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2062]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2234]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_2_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1BYTR3F' (4#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2062]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_LL709B' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2359]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2531]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_3_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_LL709B' (5#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2359]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1949FXQ' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2666]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1949FXQ' (6#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2666]
-INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_K08EX8' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2827]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_4' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_4_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2999]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_4' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_4_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_K08EX8' (7#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2827]
-INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1AEY06L' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3124]
-INFO: [Synth 8-3491] module 'adc_tech_auto_pc_5' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_5_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_5' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3296]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_5' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_auto_pc_5_stub.vhdl:67]
-INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1AEY06L' (8#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3124]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1H3AURV' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3447]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1H3AURV' (9#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3447]
-INFO: [Synth 8-3491] module 'adc_tech_s00_mmu_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_s00_mmu_0_stub.vhdl:5' bound to instance 's00_mmu' of component 'adc_tech_s00_mmu_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:5818]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_s00_mmu_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_s00_mmu_0_stub.vhdl:91]
-INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_M7HS4Q' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3654]
-INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_M7HS4Q' (10#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3654]
-INFO: [Synth 8-3491] module 'adc_tech_s01_mmu_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_s01_mmu_0_stub.vhdl:5' bound to instance 's01_mmu' of component 'adc_tech_s01_mmu_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:5982]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_s01_mmu_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_s01_mmu_0_stub.vhdl:87]
-INFO: [Synth 8-3491] module 'adc_tech_xbar_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'adc_tech_xbar_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:6061]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_xbar_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_xbar_0_stub.vhdl:89]
-INFO: [Synth 8-256] done synthesizing module 'adc_tech_axi_interconnect_0_0' (11#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4039]
-INFO: [Synth 8-3491] module 'adc_tech_clk_wiz_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'adc_tech_clk_wiz_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7403]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_clk_wiz_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_clk_wiz_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_jtag_axi_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_jtag_axi_0_0_stub.vhdl:5' bound to instance 'jtag_axi_0' of component 'adc_tech_jtag_axi_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7409]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_jtag_axi_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_jtag_axi_0_0_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'adc_tech_proc_sys_reset_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'adc_tech_proc_sys_reset_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7451]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_proc_sys_reset_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_proc_sys_reset_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'adc_tech_zynq_ultra_ps_e_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.vhdl:5' bound to instance 'zynq_ultra_ps_e_0' of component 'adc_tech_zynq_ultra_ps_e_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7464]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.vhdl:53]
-INFO: [Synth 8-256] done synthesizing module 'Processing_Subsystem_imp_AKKRWG' (12#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:6609]
-INFO: [Synth 8-638] synthesizing module 'adc_front_end_imp_H4JROZ' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:52]
-INFO: [Synth 8-3491] module 'adc_tech_util_ds_buf_3_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_3_0_stub.vhdl:5' bound to instance 'adc_bit_0' of component 'adc_tech_util_ds_buf_3_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:269]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_util_ds_buf_3_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_3_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_0_stub.vhdl:5' bound to instance 'adc_bit_1' of component 'adc_tech_adc_bit_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:275]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_6' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_6_stub.vhdl:5' bound to instance 'adc_bit_10' of component 'adc_tech_adc_bit_3_6' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:281]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_6' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_6_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_7' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_7_stub.vhdl:5' bound to instance 'adc_bit_11' of component 'adc_tech_adc_bit_3_7' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:287]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_7' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_7_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_8' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_8_stub.vhdl:5' bound to instance 'adc_bit_12' of component 'adc_tech_adc_bit_3_8' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:293]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_8' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_8_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_9' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_9_stub.vhdl:5' bound to instance 'adc_bit_13' of component 'adc_tech_adc_bit_3_9' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:299]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_9' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_9_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_10' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_10_stub.vhdl:5' bound to instance 'adc_bit_14' of component 'adc_tech_adc_bit_3_10' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:305]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_10' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_10_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_11' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_11_stub.vhdl:5' bound to instance 'adc_bit_15' of component 'adc_tech_adc_bit_3_11' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:311]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_11' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_11_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_1_stub.vhdl:5' bound to instance 'adc_bit_2' of component 'adc_tech_adc_bit_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:317]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_2_stub.vhdl:5' bound to instance 'adc_bit_3' of component 'adc_tech_adc_bit_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:323]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_2_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_0_stub.vhdl:5' bound to instance 'adc_bit_4' of component 'adc_tech_adc_bit_3_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:329]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_1_stub.vhdl:5' bound to instance 'adc_bit_5' of component 'adc_tech_adc_bit_3_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:335]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_1_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_2_stub.vhdl:5' bound to instance 'adc_bit_6' of component 'adc_tech_adc_bit_3_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:341]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_2_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_3_stub.vhdl:5' bound to instance 'adc_bit_7' of component 'adc_tech_adc_bit_3_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:347]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_3_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_4' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_4_stub.vhdl:5' bound to instance 'adc_bit_8' of component 'adc_tech_adc_bit_3_4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:353]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_4' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_4_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_5' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_5_stub.vhdl:5' bound to instance 'adc_bit_9' of component 'adc_tech_adc_bit_3_5' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:359]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_5' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_5_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_xlconcat_0_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlconcat_0_0/synth/adc_tech_xlconcat_0_0.v:60' bound to instance 'adc_inputs' of component 'adc_tech_xlconcat_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:365]
+INFO: [Synth 8-3491] module 'adc_tech' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8970' bound to instance 'adc_tech_i' of component 'adc_tech' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'adc_tech' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9021]
+INFO: [Synth 8-638] synthesizing module 'ADC_blocks_imp_RKUWRX' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:70]
+INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_2_stub.vhdl:5' bound to instance 'adc_bram_control' of component 'adc_tech_axi_gpio_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:286]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_2_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'adc_tech_axi_bram_ctrl_0_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_3_stub.vhdl:5' bound to instance 'adc_bram_read' of component 'adc_tech_axi_bram_ctrl_0_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_bram_ctrl_0_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_3_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'adc_tech_data_acquitision_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_data_acquitision_0_0_stub.vhdl:5' bound to instance 'adc_encoder' of component 'adc_tech_data_acquitision_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:352]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_data_acquitision_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_data_acquitision_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'adc_tech_adc_to_bram_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_to_bram_0_0_stub.vhdl:5' bound to instance 'adc_to_bram_0' of component 'adc_tech_adc_to_bram_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:359]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_to_bram_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_to_bram_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'adc_tech_blk_mem_gen_0_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_3_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'adc_tech_blk_mem_gen_0_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:370]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_blk_mem_gen_0_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_3_stub.vhdl:18]
+INFO: [Synth 8-256] done synthesizing module 'ADC_blocks_imp_RKUWRX' (1#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'Processing_Subsystem_imp_AKKRWG' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7917]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_interconnect_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4931]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_JJ7H1L' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1669]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1841]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_0_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_JJ7H1L' (2#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1669]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1AY5IP4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1976]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1AY5IP4' (3#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1976]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_IS6YYY' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2137]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2309]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_1_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_IS6YYY' (4#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2137]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1BYTR3F' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2434]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2606]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_2_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1BYTR3F' (5#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2434]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_LL709B' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2731]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2903]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_3_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_LL709B' (6#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:2731]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1949FXQ' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3038]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1949FXQ' (7#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3038]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_K08EX8' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3199]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_4' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_4_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3371]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_4' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_4_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_K08EX8' (8#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3199]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1AEY06L' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3496]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_5' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_5_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_5' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3668]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_5' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_5_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1AEY06L' (9#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3496]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_MJ9LAD' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3803]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_MJ9LAD' (10#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3803]
+INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_1GTTAZO' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3964]
+INFO: [Synth 8-3491] module 'adc_tech_auto_pc_6' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_6_stub.vhdl:5' bound to instance 'auto_pc' of component 'adc_tech_auto_pc_6' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4136]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_auto_pc_6' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_auto_pc_6_stub.vhdl:67]
+INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_1GTTAZO' (11#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:3964]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1H3AURV' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4287]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1H3AURV' (12#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4287]
+INFO: [Synth 8-3491] module 'adc_tech_s00_mmu_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_s00_mmu_0_stub.vhdl:5' bound to instance 's00_mmu' of component 'adc_tech_s00_mmu_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7008]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_s00_mmu_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_s00_mmu_0_stub.vhdl:91]
+INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_M7HS4Q' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4494]
+INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_M7HS4Q' (13#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4494]
+INFO: [Synth 8-3491] module 'adc_tech_s01_mmu_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_s01_mmu_0_stub.vhdl:5' bound to instance 's01_mmu' of component 'adc_tech_s01_mmu_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7172]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_s01_mmu_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_s01_mmu_0_stub.vhdl:87]
+INFO: [Synth 8-3491] module 'adc_tech_xbar_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'adc_tech_xbar_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7251]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_xbar_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_xbar_0_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'adc_tech_axi_interconnect_0_0' (14#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:4931]
+INFO: [Synth 8-3491] module 'adc_tech_clk_wiz_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'adc_tech_clk_wiz_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8859]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_clk_wiz_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_clk_wiz_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_jtag_axi_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_jtag_axi_0_0_stub.vhdl:5' bound to instance 'jtag_axi_0' of component 'adc_tech_jtag_axi_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8865]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_jtag_axi_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_jtag_axi_0_0_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'adc_tech_proc_sys_reset_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'adc_tech_proc_sys_reset_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8907]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_proc_sys_reset_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'adc_tech_zynq_ultra_ps_e_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.vhdl:5' bound to instance 'zynq_ultra_ps_e_0' of component 'adc_tech_zynq_ultra_ps_e_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8920]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_zynq_ultra_ps_e_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_zynq_ultra_ps_e_0_0_stub.vhdl:53]
+INFO: [Synth 8-256] done synthesizing module 'Processing_Subsystem_imp_AKKRWG' (15#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7917]
+INFO: [Synth 8-638] synthesizing module 'adc_front_end_imp_H4JROZ' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:424]
+INFO: [Synth 8-3491] module 'adc_tech_util_ds_buf_3_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_3_0_stub.vhdl:5' bound to instance 'adc_bit_0' of component 'adc_tech_util_ds_buf_3_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:641]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_util_ds_buf_3_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_3_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_0_stub.vhdl:5' bound to instance 'adc_bit_1' of component 'adc_tech_adc_bit_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:647]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_6' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_6_stub.vhdl:5' bound to instance 'adc_bit_10' of component 'adc_tech_adc_bit_3_6' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:653]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_6' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_6_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_7' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_7_stub.vhdl:5' bound to instance 'adc_bit_11' of component 'adc_tech_adc_bit_3_7' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:659]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_7' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_7_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_8' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_8_stub.vhdl:5' bound to instance 'adc_bit_12' of component 'adc_tech_adc_bit_3_8' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:665]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_8' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_8_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_9' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_9_stub.vhdl:5' bound to instance 'adc_bit_13' of component 'adc_tech_adc_bit_3_9' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:671]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_9' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_9_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_10' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_10_stub.vhdl:5' bound to instance 'adc_bit_14' of component 'adc_tech_adc_bit_3_10' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:677]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_10' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_10_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_11' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_11_stub.vhdl:5' bound to instance 'adc_bit_15' of component 'adc_tech_adc_bit_3_11' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:683]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_11' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_11_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_1_stub.vhdl:5' bound to instance 'adc_bit_2' of component 'adc_tech_adc_bit_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:689]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_2_stub.vhdl:5' bound to instance 'adc_bit_3' of component 'adc_tech_adc_bit_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:695]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_0_2_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_0_stub.vhdl:5' bound to instance 'adc_bit_4' of component 'adc_tech_adc_bit_3_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:701]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_1_stub.vhdl:5' bound to instance 'adc_bit_5' of component 'adc_tech_adc_bit_3_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:707]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_2_stub.vhdl:5' bound to instance 'adc_bit_6' of component 'adc_tech_adc_bit_3_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:713]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_2_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_3' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_3_stub.vhdl:5' bound to instance 'adc_bit_7' of component 'adc_tech_adc_bit_3_3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:719]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_3' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_3_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_4' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_4_stub.vhdl:5' bound to instance 'adc_bit_8' of component 'adc_tech_adc_bit_3_4' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:725]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_4' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_4_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_adc_bit_3_5' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_5_stub.vhdl:5' bound to instance 'adc_bit_9' of component 'adc_tech_adc_bit_3_5' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:731]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_adc_bit_3_5' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_adc_bit_3_5_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_xlconcat_0_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlconcat_0_0/synth/adc_tech_xlconcat_0_0.v:60' bound to instance 'adc_inputs' of component 'adc_tech_xlconcat_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:737]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlconcat_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlconcat_0_0/synth/adc_tech_xlconcat_0_0.v:60]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -244,100 +262,100 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/work/Tec
 	Parameter IN127_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 16 - type: integer 
 	Parameter NUM_PORTS bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (13#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlconcat_0_0' (14#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlconcat_0_0/synth/adc_tech_xlconcat_0_0.v:60]
-INFO: [Synth 8-256] done synthesizing module 'adc_front_end_imp_H4JROZ' (15#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:52]
-INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_leds' of component 'adc_tech_axi_gpio_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8172]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-638] synthesizing module 'bram_tester_imp_HXNXDB' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:445]
-INFO: [Synth 8-3491] module 'adc_tech_axi_bram_ctrl_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'adc_tech_axi_bram_ctrl_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:672]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_bram_ctrl_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'adc_tech_blk_mem_gen_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_1_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'adc_tech_blk_mem_gen_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:715]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_blk_mem_gen_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_1_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'adc_tech_dac_cal_control_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_control_0_stub.vhdl:5' bound to instance 'bram_test_control' of component 'adc_tech_dac_cal_control_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:725]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_control_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_control_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'adc_tech_bram_writer_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_bram_writer_0_1_stub.vhdl:5' bound to instance 'bram_writer_0' of component 'adc_tech_bram_writer_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:748]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_bram_writer_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_bram_writer_0_1_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'adc_tech_xlslice_4_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_4_0/synth/adc_tech_xlslice_4_0.v:57' bound to instance 'xlslice_4' of component 'adc_tech_xlslice_4_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:758]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (16#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlconcat_0_0' (17#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlconcat_0_0/synth/adc_tech_xlconcat_0_0.v:60]
+INFO: [Synth 8-256] done synthesizing module 'adc_front_end_imp_H4JROZ' (18#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:424]
+INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_leds' of component 'adc_tech_axi_gpio_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9778]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-638] synthesizing module 'bram_tester_imp_HXNXDB' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:817]
+INFO: [Synth 8-3491] module 'adc_tech_axi_bram_ctrl_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'adc_tech_axi_bram_ctrl_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1044]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_bram_ctrl_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'adc_tech_blk_mem_gen_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_1_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'adc_tech_blk_mem_gen_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1087]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_blk_mem_gen_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_1_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'adc_tech_dac_cal_control_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_control_0_stub.vhdl:5' bound to instance 'bram_test_control' of component 'adc_tech_dac_cal_control_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1097]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_control_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_control_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'adc_tech_bram_writer_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_bram_writer_0_1_stub.vhdl:5' bound to instance 'bram_writer_0' of component 'adc_tech_bram_writer_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1120]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_bram_writer_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_bram_writer_0_1_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'adc_tech_xlslice_4_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_4_0/synth/adc_tech_xlslice_4_0.v:57' bound to instance 'xlslice_4' of component 'adc_tech_xlslice_4_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1130]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlslice_4_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_4_0/synth/adc_tech_xlslice_4_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
 	Parameter DIN_FROM bound to: 0 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (16#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_4_0' (17#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_4_0/synth/adc_tech_xlslice_4_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 'bram_tester_imp_HXNXDB' (18#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:445]
-INFO: [Synth 8-3491] module 'adc_tech_c_counter_binary_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'adc_tech_c_counter_binary_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8248]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_c_counter_binary_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_c_counter_binary_0_0_stub.vhdl:13]
-INFO: [Synth 8-638] synthesizing module 'dac_calibration_imp_1RQT82H' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:844]
-INFO: [Synth 8-3491] module 'adc_tech_axi_bram_ctrl_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_2_stub.vhdl:5' bound to instance 'dac_bram' of component 'adc_tech_axi_bram_ctrl_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1118]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_bram_ctrl_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_2_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'adc_tech_dac_cal_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_0_0_stub.vhdl:5' bound to instance 'dac_cal' of component 'adc_tech_dac_cal_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1161]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'adc_tech_blk_mem_gen_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_2_stub.vhdl:5' bound to instance 'dac_cal_bram' of component 'adc_tech_blk_mem_gen_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1175]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_blk_mem_gen_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_2_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'adc_tech_dac_cal_read_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_read_0_stub.vhdl:5' bound to instance 'dac_cal_control' of component 'adc_tech_dac_cal_read_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1185]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_read_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_dac_cal_read_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_1_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_1_stub.vhdl:5' bound to instance 'dac_cal_read' of component 'adc_tech_axi_gpio_1_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1208]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_1_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_1_stub.vhdl:31]
-INFO: [Synth 8-256] done synthesizing module 'dac_calibration_imp_1RQT82H' (19#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:844]
-INFO: [Synth 8-3491] module 'adc_tech_data_splitter_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_data_splitter_0_0_stub.vhdl:5' bound to instance 'data_splitter_0' of component 'adc_tech_data_splitter_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8327]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_data_splitter_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_data_splitter_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'adc_tech_i2c_master_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_i2c_master_0_0_stub.vhdl:5' bound to instance 'i2c_master_0' of component 'adc_tech_i2c_master_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8335]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_i2c_master_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_i2c_master_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_1_stub.vhdl:5' bound to instance 'i2c_read' of component 'adc_tech_axi_gpio_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8345]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_1_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_0_stub.vhdl:5' bound to instance 'my_i2c' of component 'adc_tech_axi_gpio_1_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8368]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_1_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'adc_tech_util_ds_buf_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_0_2_stub.vhdl:5' bound to instance 'util_ds_buf_0' of component 'adc_tech_util_ds_buf_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8391]
-INFO: [Synth 8-638] synthesizing module 'adc_tech_util_ds_buf_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-49912-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_0_2_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'adc_tech_xlslice_0_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_0_0/synth/adc_tech_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'adc_tech_xlslice_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8397]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (19#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_4_0' (20#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_4_0/synth/adc_tech_xlslice_4_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'bram_tester_imp_HXNXDB' (21#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:817]
+INFO: [Synth 8-3491] module 'adc_tech_c_counter_binary_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'adc_tech_c_counter_binary_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9854]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_c_counter_binary_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_c_counter_binary_0_0_stub.vhdl:13]
+INFO: [Synth 8-638] synthesizing module 'dac_calibration_imp_1RQT82H' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1216]
+INFO: [Synth 8-3491] module 'adc_tech_axi_bram_ctrl_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_2_stub.vhdl:5' bound to instance 'dac_bram' of component 'adc_tech_axi_bram_ctrl_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1490]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_bram_ctrl_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_bram_ctrl_0_2_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'adc_tech_dac_cal_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_0_0_stub.vhdl:5' bound to instance 'dac_cal' of component 'adc_tech_dac_cal_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1533]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_0_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'adc_tech_blk_mem_gen_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_2_stub.vhdl:5' bound to instance 'dac_cal_bram' of component 'adc_tech_blk_mem_gen_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1547]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_blk_mem_gen_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_blk_mem_gen_0_2_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'adc_tech_dac_cal_read_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_read_0_stub.vhdl:5' bound to instance 'dac_cal_control' of component 'adc_tech_dac_cal_read_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1557]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_dac_cal_read_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_dac_cal_read_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_1_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_1_stub.vhdl:5' bound to instance 'dac_cal_read' of component 'adc_tech_axi_gpio_1_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1580]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_1_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_1_stub.vhdl:31]
+INFO: [Synth 8-256] done synthesizing module 'dac_calibration_imp_1RQT82H' (22#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:1216]
+INFO: [Synth 8-3491] module 'adc_tech_data_splitter_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_data_splitter_0_0_stub.vhdl:5' bound to instance 'data_splitter_0' of component 'adc_tech_data_splitter_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9933]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_data_splitter_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_data_splitter_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'adc_tech_i2c_master_0_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_i2c_master_0_0_stub.vhdl:5' bound to instance 'i2c_master_0' of component 'adc_tech_i2c_master_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9941]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_i2c_master_0_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_i2c_master_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_0_1' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_1_stub.vhdl:5' bound to instance 'i2c_read' of component 'adc_tech_axi_gpio_0_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9951]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_0_1' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'adc_tech_axi_gpio_1_0' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_0_stub.vhdl:5' bound to instance 'my_i2c' of component 'adc_tech_axi_gpio_1_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9974]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_axi_gpio_1_0' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_axi_gpio_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'adc_tech_util_ds_buf_0_2' declared at 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_0_2_stub.vhdl:5' bound to instance 'util_ds_buf_0' of component 'adc_tech_util_ds_buf_0_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9997]
+INFO: [Synth 8-638] synthesizing module 'adc_tech_util_ds_buf_0_2' [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/.Xil/Vivado-50328-ZA-WASADIE1/realtime/adc_tech_util_ds_buf_0_2_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'adc_tech_xlslice_0_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_0_0/synth/adc_tech_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'adc_tech_xlslice_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:10003]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlslice_0_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_0_0/synth/adc_tech_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
 	Parameter DIN_FROM bound to: 27 - type: integer 
 	Parameter DIN_TO bound to: 27 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (19#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_0_0' (20#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_0_0/synth/adc_tech_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_0/synth/adc_tech_xlslice_1_0.v:57' bound to instance 'xlslice_1' of component 'adc_tech_xlslice_1_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8402]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (22#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_0_0' (23#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_0_0/synth/adc_tech_xlslice_0_0.v:57]
+INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_0' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_0/synth/adc_tech_xlslice_1_0.v:57' bound to instance 'xlslice_1' of component 'adc_tech_xlslice_1_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:10008]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlslice_1_0' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_0/synth/adc_tech_xlslice_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 3 - type: integer 
 	Parameter DIN_FROM bound to: 2 - type: integer 
 	Parameter DIN_TO bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (20#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_0' (21#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_0/synth/adc_tech_xlslice_1_0.v:57]
-INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_1' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_1/synth/adc_tech_xlslice_1_1.v:57' bound to instance 'xlslice_2' of component 'adc_tech_xlslice_1_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8407]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (23#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_0' (24#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_0/synth/adc_tech_xlslice_1_0.v:57]
+INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_1' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_1/synth/adc_tech_xlslice_1_1.v:57' bound to instance 'xlslice_2' of component 'adc_tech_xlslice_1_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:10013]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlslice_1_1' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_1/synth/adc_tech_xlslice_1_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 3 - type: integer 
 	Parameter DIN_FROM bound to: 1 - type: integer 
 	Parameter DIN_TO bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (21#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_1' (22#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_1/synth/adc_tech_xlslice_1_1.v:57]
-INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_2' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_2/synth/adc_tech_xlslice_1_2.v:57' bound to instance 'xlslice_3' of component 'adc_tech_xlslice_1_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:8412]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (24#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_1' (25#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_1/synth/adc_tech_xlslice_1_1.v:57]
+INFO: [Synth 8-3491] module 'adc_tech_xlslice_1_2' declared at 'c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_2/synth/adc_tech_xlslice_1_2.v:57' bound to instance 'xlslice_3' of component 'adc_tech_xlslice_1_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:10018]
 INFO: [Synth 8-6157] synthesizing module 'adc_tech_xlslice_1_2' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_2/synth/adc_tech_xlslice_1_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 3 - type: integer 
 	Parameter DIN_FROM bound to: 0 - type: integer 
 	Parameter DIN_TO bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (22#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_2' (23#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_2/synth/adc_tech_xlslice_1_2.v:57]
-INFO: [Synth 8-256] done synthesizing module 'adc_tech' (24#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:7565]
-INFO: [Synth 8-256] done synthesizing module 'adc_tech_wrapper' (25#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd:61]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (25#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'adc_tech_xlslice_1_2' (26#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xlslice_1_2/synth/adc_tech_xlslice_1_2.v:57]
+INFO: [Synth 8-256] done synthesizing module 'adc_tech' (27#1) [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/synth/adc_tech.vhd:9021]
+INFO: [Synth 8-256] done synthesizing module 'adc_tech_wrapper' (28#1) [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/hdl/adc_tech_wrapper.vhd:61]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1766.945 ; gain = 195.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1774.852 ; gain = 201.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1766.945 ; gain = 195.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1792.785 ; gain = 219.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1766.945 ; gain = 195.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1792.785 ; gain = 219.496
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1766.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1792.785 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -356,6 +374,8 @@ Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/s
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_4/adc_tech_auto_pc_4/adc_tech_auto_pc_3_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m06_couplers/auto_pc'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_5/adc_tech_auto_pc_5/adc_tech_auto_pc_3_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m07_couplers/auto_pc'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_5/adc_tech_auto_pc_5/adc_tech_auto_pc_3_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m07_couplers/auto_pc'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_6/adc_tech_auto_pc_6/adc_tech_auto_pc_3_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m09_couplers/auto_pc'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_auto_pc_6/adc_tech_auto_pc_6/adc_tech_auto_pc_3_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/m09_couplers/auto_pc'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/s00_mmu'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/s00_mmu'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0_in_context.xdc] for cell 'adc_tech_i/Processing_Subsystem/axi_interconnect_0/s01_mmu'
@@ -432,6 +452,16 @@ Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/s
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_0_1/adc_tech_axi_gpio_1_1_in_context.xdc] for cell 'adc_tech_i/i2c_read'
 Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0_in_context.xdc] for cell 'adc_tech_i/i2c_master_0'
 Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0/adc_tech_i2c_master_0_0_in_context.xdc] for cell 'adc_tech_i/i2c_master_0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_3/adc_tech_blk_mem_gen_0_3/adc_tech_blk_mem_gen_0_2_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/blk_mem_gen_0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_blk_mem_gen_0_3/adc_tech_blk_mem_gen_0_3/adc_tech_blk_mem_gen_0_2_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/blk_mem_gen_0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_acquitision_0_0/adc_tech_data_acquitision_0_0/adc_tech_data_acquitision_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_encoder'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_data_acquitision_0_0/adc_tech_data_acquitision_0_0/adc_tech_data_acquitision_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_encoder'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_3/adc_tech_axi_bram_ctrl_0_3/adc_tech_axi_bram_ctrl_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_bram_read'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_bram_ctrl_0_3/adc_tech_axi_bram_ctrl_0_3/adc_tech_axi_bram_ctrl_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_bram_read'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_to_bram_0_0/adc_tech_adc_to_bram_0_0/adc_tech_adc_to_bram_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_to_bram_0'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_adc_to_bram_0_0/adc_tech_adc_to_bram_0_0/adc_tech_adc_to_bram_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_to_bram_0'
+Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_2/adc_tech_axi_gpio_0_2/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_bram_control'
+Finished Parsing XDC File [c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_axi_gpio_0_2/adc_tech_axi_gpio_0_2/adc_tech_axi_gpio_0_0_in_context.xdc] for cell 'adc_tech_i/ADC_blocks/adc_bram_control'
 Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc]
 WARNING: [Vivado 12-584] No ports matched 'pl_led1'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:14]
 WARNING: [Vivado 12-584] No ports matched 'pl_led2'. [C:/work/Technology/Vivado/MVT_ADC_TECH/constraints/io_pins.xdc:15]
@@ -455,21 +485,23 @@ Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/
 Finished Parsing XDC File [C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1799.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1831.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1799.375 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1831.777 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/axi_gpio_leds' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/i2c_read' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/my_i2c' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/ADC_blocks/adc_bram_control' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'adc_tech_i/ADC_blocks/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'adc_tech_i/bram_tester/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/bram_tester/bram_test_control' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'adc_tech_i/dac_calibration/dac_cal_bram' at clock pin 'clka' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/dac_calibration/dac_cal_control' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'adc_tech_i/dac_calibration/dac_cal_read' at clock pin 's_axi_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1808.035 ; gain = 236.973
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.785 ; gain = 259.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -477,7 +509,7 @@ Start Loading Part and Timing Information
 Loading part: xczu7ev-ffvc1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1808.035 ; gain = 236.973
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1832.785 ; gain = 259.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -558,6 +590,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/a
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/m04_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/m06_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/m07_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/m09_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/s00_mmu. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0/s01_mmu. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/Processing_Subsystem/axi_interconnect_0. (constraint file  auto generated constraint).
@@ -603,11 +636,16 @@ Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/adc_front_end/adc_bit_
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/adc_front_end/adc_inputs. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/i2c_read. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/i2c_master_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/ADC_blocks/blk_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/ADC_blocks/adc_encoder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/ADC_blocks/adc_bram_read. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/ADC_blocks/adc_to_bram_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_tech_i/ADC_blocks/adc_bram_control. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1808.035 ; gain = 236.973
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1832.785 ; gain = 259.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1808.035 ; gain = 236.973
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1832.785 ; gain = 259.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -629,25 +667,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1808.035 ; gain = 236.973
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1832.785 ; gain = 259.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2400.652 ; gain = 829.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2412.902 ; gain = 839.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2401.613 ; gain = 830.551
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2414.023 ; gain = 840.734
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2422.062 ; gain = 851.000
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2434.727 ; gain = 861.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -665,37 +703,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -712,44 +750,50 @@ Report BlackBoxes:
 |5     |adc_tech_axi_gpio_0_1         |         1|
 |6     |adc_tech_axi_gpio_1_0         |         1|
 |7     |adc_tech_util_ds_buf_0_2      |         1|
-|8     |adc_tech_s00_mmu_0            |         1|
-|9     |adc_tech_s01_mmu_0            |         1|
-|10    |adc_tech_xbar_0               |         1|
-|11    |adc_tech_auto_pc_0            |         1|
-|12    |adc_tech_auto_pc_1            |         1|
-|13    |adc_tech_auto_pc_2            |         1|
-|14    |adc_tech_auto_pc_3            |         1|
-|15    |adc_tech_auto_pc_4            |         1|
-|16    |adc_tech_auto_pc_5            |         1|
-|17    |adc_tech_clk_wiz_0_0          |         1|
-|18    |adc_tech_jtag_axi_0_0         |         1|
-|19    |adc_tech_proc_sys_reset_0_0   |         1|
-|20    |adc_tech_zynq_ultra_ps_e_0_0  |         1|
-|21    |adc_tech_util_ds_buf_3_0      |         1|
-|22    |adc_tech_adc_bit_0_0          |         1|
-|23    |adc_tech_adc_bit_3_6          |         1|
-|24    |adc_tech_adc_bit_3_7          |         1|
-|25    |adc_tech_adc_bit_3_8          |         1|
-|26    |adc_tech_adc_bit_3_9          |         1|
-|27    |adc_tech_adc_bit_3_10         |         1|
-|28    |adc_tech_adc_bit_3_11         |         1|
-|29    |adc_tech_adc_bit_0_1          |         1|
-|30    |adc_tech_adc_bit_0_2          |         1|
-|31    |adc_tech_adc_bit_3_0          |         1|
-|32    |adc_tech_adc_bit_3_1          |         1|
-|33    |adc_tech_adc_bit_3_2          |         1|
-|34    |adc_tech_adc_bit_3_3          |         1|
-|35    |adc_tech_adc_bit_3_4          |         1|
-|36    |adc_tech_adc_bit_3_5          |         1|
-|37    |adc_tech_axi_bram_ctrl_0_0    |         1|
-|38    |adc_tech_blk_mem_gen_0_1      |         1|
-|39    |adc_tech_dac_cal_control_0    |         1|
-|40    |adc_tech_bram_writer_0_1      |         1|
-|41    |adc_tech_axi_bram_ctrl_0_2    |         1|
-|42    |adc_tech_dac_cal_0_0          |         1|
-|43    |adc_tech_blk_mem_gen_0_2      |         1|
-|44    |adc_tech_dac_cal_read_0       |         1|
-|45    |adc_tech_axi_gpio_1_1         |         1|
+|8     |adc_tech_axi_gpio_0_2         |         1|
+|9     |adc_tech_axi_bram_ctrl_0_3    |         1|
+|10    |adc_tech_data_acquitision_0_0 |         1|
+|11    |adc_tech_adc_to_bram_0_0      |         1|
+|12    |adc_tech_blk_mem_gen_0_3      |         1|
+|13    |adc_tech_s00_mmu_0            |         1|
+|14    |adc_tech_s01_mmu_0            |         1|
+|15    |adc_tech_xbar_0               |         1|
+|16    |adc_tech_auto_pc_0            |         1|
+|17    |adc_tech_auto_pc_1            |         1|
+|18    |adc_tech_auto_pc_2            |         1|
+|19    |adc_tech_auto_pc_3            |         1|
+|20    |adc_tech_auto_pc_4            |         1|
+|21    |adc_tech_auto_pc_5            |         1|
+|22    |adc_tech_auto_pc_6            |         1|
+|23    |adc_tech_clk_wiz_0_0          |         1|
+|24    |adc_tech_jtag_axi_0_0         |         1|
+|25    |adc_tech_proc_sys_reset_0_0   |         1|
+|26    |adc_tech_zynq_ultra_ps_e_0_0  |         1|
+|27    |adc_tech_util_ds_buf_3_0      |         1|
+|28    |adc_tech_adc_bit_0_0          |         1|
+|29    |adc_tech_adc_bit_3_6          |         1|
+|30    |adc_tech_adc_bit_3_7          |         1|
+|31    |adc_tech_adc_bit_3_8          |         1|
+|32    |adc_tech_adc_bit_3_9          |         1|
+|33    |adc_tech_adc_bit_3_10         |         1|
+|34    |adc_tech_adc_bit_3_11         |         1|
+|35    |adc_tech_adc_bit_0_1          |         1|
+|36    |adc_tech_adc_bit_0_2          |         1|
+|37    |adc_tech_adc_bit_3_0          |         1|
+|38    |adc_tech_adc_bit_3_1          |         1|
+|39    |adc_tech_adc_bit_3_2          |         1|
+|40    |adc_tech_adc_bit_3_3          |         1|
+|41    |adc_tech_adc_bit_3_4          |         1|
+|42    |adc_tech_adc_bit_3_5          |         1|
+|43    |adc_tech_axi_bram_ctrl_0_0    |         1|
+|44    |adc_tech_blk_mem_gen_0_1      |         1|
+|45    |adc_tech_dac_cal_control_0    |         1|
+|46    |adc_tech_bram_writer_0_1      |         1|
+|47    |adc_tech_axi_bram_ctrl_0_2    |         1|
+|48    |adc_tech_dac_cal_0_0          |         1|
+|49    |adc_tech_blk_mem_gen_0_2      |         1|
+|50    |adc_tech_dac_cal_read_0       |         1|
+|51    |adc_tech_axi_gpio_1_1         |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -771,60 +815,66 @@ Report Cell Usage:
 |13    |adc_tech_adc_bit_3_7_bbox          |     1|
 |14    |adc_tech_adc_bit_3_8_bbox          |     1|
 |15    |adc_tech_adc_bit_3_9_bbox          |     1|
-|16    |adc_tech_auto_pc_0_bbox            |     1|
-|17    |adc_tech_auto_pc_1_bbox            |     1|
-|18    |adc_tech_auto_pc_2_bbox            |     1|
-|19    |adc_tech_auto_pc_3_bbox            |     1|
-|20    |adc_tech_auto_pc_4_bbox            |     1|
-|21    |adc_tech_auto_pc_5_bbox            |     1|
-|22    |adc_tech_axi_bram_ctrl_0_0_bbox    |     1|
-|23    |adc_tech_axi_bram_ctrl_0_2_bbox    |     1|
-|24    |adc_tech_axi_gpio_0_0_bbox         |     1|
-|25    |adc_tech_axi_gpio_0_1_bbox         |     1|
-|26    |adc_tech_axi_gpio_1_0_bbox         |     1|
-|27    |adc_tech_axi_gpio_1_1_bbox         |     1|
-|28    |adc_tech_blk_mem_gen_0_1_bbox      |     1|
-|29    |adc_tech_blk_mem_gen_0_2_bbox      |     1|
-|30    |adc_tech_bram_writer_0_1_bbox      |     1|
-|31    |adc_tech_c_counter_binary_0_0_bbox |     1|
-|32    |adc_tech_clk_wiz_0_0_bbox          |     1|
-|33    |adc_tech_dac_cal_0_0_bbox          |     1|
-|34    |adc_tech_dac_cal_control_0_bbox    |     1|
-|35    |adc_tech_dac_cal_read_0_bbox       |     1|
-|36    |adc_tech_data_splitter_0_0_bbox    |     1|
-|37    |adc_tech_i2c_master_0_0_bbox       |     1|
-|38    |adc_tech_jtag_axi_0_0_bbox         |     1|
-|39    |adc_tech_proc_sys_reset_0_0_bbox   |     1|
-|40    |adc_tech_s00_mmu_0_bbox            |     1|
-|41    |adc_tech_s01_mmu_0_bbox            |     1|
-|42    |adc_tech_util_ds_buf_0_2_bbox      |     1|
-|43    |adc_tech_util_ds_buf_3_0_bbox      |     1|
-|44    |adc_tech_xbar_0_bbox               |     1|
-|45    |adc_tech_zynq_ultra_ps_e_0_0_bbox  |     1|
-|46    |IBUF                               |     1|
-|47    |OBUF                               |     6|
+|16    |adc_tech_adc_to_bram_0_0_bbox      |     1|
+|17    |adc_tech_auto_pc_0_bbox            |     1|
+|18    |adc_tech_auto_pc_1_bbox            |     1|
+|19    |adc_tech_auto_pc_2_bbox            |     1|
+|20    |adc_tech_auto_pc_3_bbox            |     1|
+|21    |adc_tech_auto_pc_4_bbox            |     1|
+|22    |adc_tech_auto_pc_5_bbox            |     1|
+|23    |adc_tech_auto_pc_6_bbox            |     1|
+|24    |adc_tech_axi_bram_ctrl_0_0_bbox    |     1|
+|25    |adc_tech_axi_bram_ctrl_0_2_bbox    |     1|
+|26    |adc_tech_axi_bram_ctrl_0_3_bbox    |     1|
+|27    |adc_tech_axi_gpio_0_0_bbox         |     1|
+|28    |adc_tech_axi_gpio_0_1_bbox         |     1|
+|29    |adc_tech_axi_gpio_0_2_bbox         |     1|
+|30    |adc_tech_axi_gpio_1_0_bbox         |     1|
+|31    |adc_tech_axi_gpio_1_1_bbox         |     1|
+|32    |adc_tech_blk_mem_gen_0_1_bbox      |     1|
+|33    |adc_tech_blk_mem_gen_0_2_bbox      |     1|
+|34    |adc_tech_blk_mem_gen_0_3_bbox      |     1|
+|35    |adc_tech_bram_writer_0_1_bbox      |     1|
+|36    |adc_tech_c_counter_binary_0_0_bbox |     1|
+|37    |adc_tech_clk_wiz_0_0_bbox          |     1|
+|38    |adc_tech_dac_cal_0_0_bbox          |     1|
+|39    |adc_tech_dac_cal_control_0_bbox    |     1|
+|40    |adc_tech_dac_cal_read_0_bbox       |     1|
+|41    |adc_tech_data_acquitision_0_0_bbox |     1|
+|42    |adc_tech_data_splitter_0_0_bbox    |     1|
+|43    |adc_tech_i2c_master_0_0_bbox       |     1|
+|44    |adc_tech_jtag_axi_0_0_bbox         |     1|
+|45    |adc_tech_proc_sys_reset_0_0_bbox   |     1|
+|46    |adc_tech_s00_mmu_0_bbox            |     1|
+|47    |adc_tech_s01_mmu_0_bbox            |     1|
+|48    |adc_tech_util_ds_buf_0_2_bbox      |     1|
+|49    |adc_tech_util_ds_buf_3_0_bbox      |     1|
+|50    |adc_tech_xbar_0_bbox               |     1|
+|51    |adc_tech_zynq_ultra_ps_e_0_0_bbox  |     1|
+|52    |IBUF                               |     1|
+|53    |OBUF                               |     6|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 2426.789 ; gain = 814.637
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2426.789 ; gain = 855.727
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2438.516 ; gain = 825.227
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2438.516 ; gain = 865.227
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 2438.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2451.504 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2471.383 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2484.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-174 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+192 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 2471.383 ; gain = 1444.965
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2484.320 ; gain = 1457.941
 INFO: [Common 17-1381] The checkpoint 'C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/synth_1/adc_tech_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_tech_wrapper_utilization_synth.rpt -pb adc_tech_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 21 09:27:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 22 10:24:18 2025...
