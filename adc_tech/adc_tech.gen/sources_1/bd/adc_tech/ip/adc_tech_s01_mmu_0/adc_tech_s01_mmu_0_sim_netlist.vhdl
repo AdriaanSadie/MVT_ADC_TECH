@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 -- Date        : Wed Oct 22 10:23:21 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_s01_mmu_0 -prefix
+--               adc_tech_s01_mmu_0_ adc_tech_s01_mmu_0_sim_netlist.vhdl
 -- Design      : adc_tech_s01_mmu_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -56,8 +56,6 @@ entity adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave is
     \gen_axi.gen_read.s_axi_rlast_i_reg_0\ : in STD_LOGIC;
     \gen_axi.gen_read.read_cnt_reg[7]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave : entity is "axi_mmu_v2_1_20_decerr_slave";
 end adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave is
@@ -770,8 +768,6 @@ entity adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice is
     err_rvalid : in STD_LOGIC;
     s_ready_i_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice : entity is "axi_register_slice_v2_1_22_axic_register_slice";
 end adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice is
@@ -2711,8 +2707,6 @@ entity adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice is
     err_rvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice : entity is "axi_register_slice_v2_1_22_axi_register_slice";
 end adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice is
@@ -2931,8 +2925,6 @@ entity adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top is
   attribute C_USES_DEST of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is 0;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is "axi_mmu_v2_1_20_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is 1;
   attribute P_AXI4 : integer;

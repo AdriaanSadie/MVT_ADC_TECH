@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"39,-39",
+   "Default View_TopLeft":"-67,-115",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -30,10 +30,10 @@ preplace netloc dac_cal_bram_data 1 1 2 660 40 990
 preplace netloc dac_cal_bram_addr 1 1 2 670 50 980
 preplace netloc dac_cal_bram_we 1 1 2 650 30 1010
 preplace netloc adc_frontend_1 1 0 2 20J 180 N
-preplace netloc Conn1 1 0 2 30J 510 NJ
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 610 350n
 preplace netloc Conn2 1 0 1 30 320n
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 610 350n
 preplace netloc Processing_Subsystem_M04_AXI_0 1 0 1 NJ 60
+preplace netloc Conn1 1 0 2 30J 510 NJ
 levelinfo -pg 1 0 470 830 1040
 pagesize -pg 1 -db -bbox -sgen -170 -40 1180 610
 "

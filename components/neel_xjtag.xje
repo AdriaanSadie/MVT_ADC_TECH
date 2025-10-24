@@ -1,0 +1,373 @@
+DEVICE NAME := "AD5669R"
+  COMPAT_VERSION := 1;
+  DESCRIPTION := "Octal, 16-bit, I2C, DAC";
+
+  PINS
+    SCL := 14;
+    SDA := 13;
+  END;
+
+  DISABLE DEVICE
+  END;
+
+  TEST COVERAGE
+    SCL := OPEN LO HI;
+    SDA := OPEN LO HI;
+  END;
+
+  // Additional files
+  FILES
+    "IIC_PIO.xje";
+    "Math.xje";
+  END;
+END;
+
+//------------------------------------------------------
+// Constants/Initial Values
+//------------------------------------------------------
+
+/// The Device Address is defined in "Global_Vars.xje"
+
+CONST INT DEBUG               := FALSE;
+
+CONST INT INPUT_REGISTER_CMD := 0x00; //Write to Input Register n
+CONST INT DAC_REGISTER_CMD := 0x10;	//Update DAC Register n
+CONST INT DAC_INPUT_REGISTER_CMD := 0x30; // Write to and update DAC Channel n
+CONST INT POWER_UP_CMD := 0x4F;  //Control Power Up or Power Down for all channels
+CONST INT INTERNAL_REF_CMD := 0x80; // Enable the internal REF
+CONST INT INTERNAL_REF_DATA := 0x0001; // Enable the internal REF
+CONST INT VREF := 1250; //Internal reference is 1.25 V.  Value given in mV //The internal Vref has a gain of 2
+
+/// Define this value in Global Setup Vars.xje for project to make it generic 
+// CONST INT DAC_8CH_DEFUALT_CONTROL := 0x8001;  //All outputs enabled (Powered Up)
+// CONST INT AD5669_GAIN := 2; // Gain set to 1 in Ver 03 Assembly by hardware 
+
+/// Functions in this file:
+//
+// AD5669_WRITE_REGISTER			// Write data to selected register
+// AD5669_READ_INPUT_REGISTER_ALL	// Read value of the Input Register
+// AD5669_WRITE_DAC_INPUT_REGISTER	// Write to and update DAC channel n
+// AD5669_WRITE_INPUT_REGISTER		// Set Input register with new value
+// AD5669_WRITE_DAC_REGISTER		// Commit Input Register value to DAC output
+
+// AD5669_WRITE_CONFIG_REG_DEFAULT	// Set Config register default value
+// AD5669_READ_REGISTER				// Read the contents of a single register
+
+// AD5669_CALC_DAC_VOLTAGE			// Calculate and print DAC voltage of Set voltage supplied given default Control register
+// AD5669_CALC_DAC_VALUE			// Calculate and print DAC value based on voltage supplied (mV) given default Control register
+// AD5669_CALC_DAC_VALUE_uV			// Calculate and print DAC value based on voltage supplied (uV) given default Control register
+// AD5669_CALC_DAC_VALUE_mV			// Calculate and print DAC value based on voltage supplied given default Control register
+
+
+//Write data to selected channel register 
+//-----------------------------------
+AD5669_WRITE_REGISTER(INT Addr, INT Cmd WIDTH 8, INT Data WIDTH 16)(INT Result)
+//-----------------------------------
+	
+	//Cmd byte needs to include the channel to be changed.
+	//Any combination of channels can be selected for change
+	INT ack;
+	Result := RESULT_PASS; //initialise result as PASS
+	
+	
+	IIC_START_ADDR(Addr)(Result);
+    IF (Result = RESULT_FAIL) THEN
+		Result := RESULT_FAIL; 
+		PRINT("\nDevice at address 0x",HEX(Addr)," not responding\n");
+		RETURN;
+	END;	
+	//PRINT("send Byte address\n");
+	IIC_Transmit(Cmd)(ack);//Write Command byte
+	IF (ack) THEN
+			PRINT("IIC Error: ", DEVICE_REF, " failed to acknowledge CMD.\n");
+			Result := RESULT_FAIL;
+			RETURN;
+	END;
+	IIC_Transmit(Data[15..8])(ack);//Write MSB byte of Data
+	IF (ack) THEN
+			PRINT("IIC Error: ", DEVICE_REF, " failed to acknowledge MSB data.\n");
+			Result := RESULT_FAIL;
+			RETURN;
+	END;
+	IIC_Transmit(Data[7..0])(ack);//Write LSB byte of Data
+	IF (ack) THEN
+			PRINT("IIC Error: ", DEVICE_REF, " failed to acknowledge LSB data.\n");
+			Result := RESULT_FAIL;
+			RETURN;
+	END;
+	
+	IIC_Stop(); //Issue stop condition
+END; //end AD5669_WRITE_REGISTER
+
+// Read value of All the Input Register
+//-----------------------------------
+AD5669_READ_INPUT_REGISTER_ALL(INT Addr)(INT Result, INT Data_RX WIDTH 128)
+//-----------------------------------
+	//Data_RX contains Channel A to D register values.
+	//Data_RX[63..48] = ChD, Data_RX[47..32] = ChC,Data_RX[31..16] = ChB, Data_RX[15..0] = ChA
+	
+	INT addr_r,value;
+	INT i;
+	INT read_ack := FALSE; // need to ACK after first data byte
+	INT read_nack := TRUE; //need to NACK after second data byte
+	INT ack, cmd, data;	
+	
+	cmd := 0x9F; // Enable multiple mode: 0x9, All channels: 0xF
+	data := 0;
+	Result := RESULT_PASS; //initialise result as PASS
+	addr_r := Addr + 1;	
+	
+	//Setup for read starting at channel A
+	AD5669_WRITE_REGISTER(Addr,cmd,data)(Result);
+
+	//Start Read cycle
+	IIC_START_ADDR(addr_r)(Result);
+	IF (Result = RESULT_FAIL) THEN
+		Result := RESULT_FAIL; 
+		PRINT("\nDevice at address 0x",HEX(Addr)," not responding\n");
+		RETURN;
+	END;
+	//Get channel A data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[15..8] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	Data_RX[7..0] := value; //populate LSB byte
+	
+	//Get channel B data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	//Data_RX[33..24] := value; //populate MSB byte
+	Data_RX[31..24] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	Data_RX[23..16] := value; //populate LSB byte
+	
+	//Get channel C data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	//Data_RX[47..41] := value; //populate MSB byte
+	Data_RX[47..40] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	//Data_RX[40..33] := value; //populate LSB byte	
+	Data_RX[39..32] := value; //populate LSB byte
+		
+	//Get channel D data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[63..56] := value; //populate MSB byte
+	IIC_Receive(read_nack )( value ); //Read byte and NACK
+	Data_RX[55..48] := value; //populate LSB byte
+	
+	//Get channel E data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[79..72] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	Data_RX[71..64] := value; //populate LSB byte
+	
+	//Get channel F data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[95..88] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	Data_RX[87..80] := value; //populate LSB byte
+	
+	//Get channel G data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[111..104] := value; //populate MSB byte
+	IIC_Receive(read_ack )( value ); //Read byte and NACK
+	Data_RX[103..96] := value; //populate LSB byte
+		
+	//Get channel H data
+	IIC_Receive(read_ack )( value ); //Read byte and ACK
+	Data_RX[127..120] := value; //populate MSB byte
+	IIC_Receive(read_nack )( value ); //Read byte and NACK
+	Data_RX[119..112] := value; //populate LSB byte
+		
+	IIC_Stop(); //Issue stop condition	
+END; //end AD5669_READ_INPUT_REGISTER_ALL
+
+/// Read the contents of a single register
+//-----------------------------------
+AD5669_READ_REGISTER(INT Addr)(INT Result, INT Cmd, INT Data_RX)
+//-----------------------------------
+
+	INT addr_r,value;
+	INT read_ack := FALSE; // need to ACK after first data byte
+	INT read_nack := TRUE; //need to NACK after second data byte
+	INT ack;	
+	
+	Result := RESULT_PASS; //initialise result as PASS
+	addr_r := Addr + 1;	
+	
+	//Start Read cycle
+	IIC_START_ADDR(addr_r)(Result);
+	IF (Result = RESULT_FAIL) THEN
+		Result := RESULT_FAIL; 
+		PRINT("\nDevice at address 0x",HEX(Addr)," not responding\n");
+		RETURN;
+	END;
+	
+	// Read command byte 
+	IIC_Receive(read_ack)(value); //Read byte 
+	Cmd := value;
+	
+	// Read two data bytes
+	IIC_Receive(read_ack)( value ); //Read byte and ACK
+	Data_RX[15..8] := value; //populate MSB byte
+	IIC_Receive(read_nack)( value ); //Read byte and NACK
+	Data_RX[7..0] := value; //populate LSB byte
+	
+	IIC_Stop(); //Issue stop condition
+	
+END; // End of AD5669_READ_REGISTER
+
+// Write to and update DAC channel n
+//-----------------------------------
+AD5669_WRITE_DAC_INPUT_REGISTER(INT Addr,INT Channel WIDTH 8,INT Data WIDTH 16)(INT Result)
+//-----------------------------------
+
+	INT cmd;
+	Result := RESULT_PASS;
+	cmd[7..4] := DAC_INPUT_REGISTER_CMD; // Command: Write to and update DAC channel n
+	cmd[3..0] := Channel[3..0]; //add selected channel to command
+	//PRINT("Setting New DAC value\n");
+	AD5669_WRITE_REGISTER(Addr,cmd,Data)(Result);
+	IF(Result = RESULT_FAIL) THEN	
+		PRINT("Failed to set new DAC value of 0x",FORMAT(Data,"%04X")," to device at address 0x",FORMAT(Addr,"%02X"),"\n");
+		RETURN;
+	END;
+	//PRINT("DAC output register set to value 0x",FORMAT(Data,"%04X"),"\n");
+END; //end AD5669_WRITE_DAC_INPUT_REGISTER  
+
+//Set Input register with new value
+//-----------------------------------
+AD5669_WRITE_INPUT_REGISTER(INT Addr,INT Channel WIDTH 8,INT Data WIDTH 16)(INT Result)
+//-----------------------------------
+
+	INT cmd;
+
+	Result := RESULT_PASS;
+
+	cmd := INPUT_REGISTER_CMD;
+	cmd[3..0] := Channel[3..0]; //add selected channel to command
+	
+	//PRINT("Setting New value to DAC Input register\n");
+	AD5669_WRITE_REGISTER(Addr,cmd,Data)(Result);
+	IF(Result = RESULT_FAIL) THEN	
+		PRINT("Failed to set Input register value of 0x",FORMAT(Data,"%04X")," to device at address 0x",FORMAT(Addr,"%02X"),"\n");
+		RETURN;
+	END;
+	//PRINT("DAC input register set to value 0x",FORMAT(Data,"%04X"),"\n");
+END; //end AD5669_WRITE_INPUT_REGISTER  
+
+//Commit Input Register value to DAC output
+//-----------------------------------
+AD5669_WRITE_DAC_REGISTER(INT Addr,INT Channel WIDTH 8)(INT Result)
+//-----------------------------------
+	
+	INT cmd;
+	Result := RESULT_PASS;
+	cmd := DAC_REGISTER_CMD;
+	cmd[3..0] := Channel[3..0]; //add selected channel to command
+	PRINT("Set DAC to value of Input register\n");
+	AD5669_WRITE_REGISTER(Addr,cmd,0x0000)(Result); //Data is don't cares so use zero value
+	IF(Result = RESULT_FAIL) THEN	
+		PRINT("Failed to Set DAC output to Input register value for device at address 0x",FORMAT(Addr,"%02X"),"\n");
+		RETURN;
+	END;
+	PRINT("DAC output set to Input register value \n");
+END; //end AD5669_WRITE_DAC_REGISTER
+
+//Set Config register to Default value
+//-----------------------------------
+AD5669_WRITE_CONFIG_REG_DEFAULT(INT Addr)(INT Result)
+//-----------------------------------
+	
+	Result := RESULT_PASS;
+	
+	// Power up the DAC 
+	PRINT("Setting DAC Config Register to power up \n");
+	AD5669_WRITE_REGISTER(Addr, POWER_UP_CMD, 0x0000)(Result);
+	IF(Result = RESULT_FAIL) THEN	
+		PRINT("Failed to set Config register to power up with value of 0x",FORMAT(POWER_UP_CMD,"%04X")," to device at address 0x",FORMAT(Addr,"%02X"),"\n");
+		RETURN;
+	END;
+	PRINT("DAC Config register power up set to value of 0x",FORMAT(POWER_UP_CMD,"%04X"),"\n");
+	
+	// Set the DAC internal reference on
+	PRINT("Setting DAC Internal Reference register to on\n");
+	AD5669_WRITE_REGISTER(Addr, INTERNAL_REF_CMD, INTERNAL_REF_DATA)(Result);
+	IF(Result = RESULT_FAIL) THEN	
+		PRINT("Failed to set Internal Reference register to value of 0x",FORMAT(INTERNAL_REF_CMD,"%04X")," to device at address 0x",FORMAT(Addr,"%02X"),"\n");
+		RETURN;
+	END;
+	PRINT("Internal Reference register set to value of 0x",FORMAT(INTERNAL_REF_CMD,"%04X"),"\n");	
+END; //end AD5669_WRITE_CONFIG_REGISTER_DEFAULT      
+
+
+//Calculate and print DAC voltage of Set voltage supplied given default Control register
+//-----------------------------------
+AD5669_CALC_DAC_VOLTAGE(INT Dac_Set_Value WIDTH 16)(INT Result,STRING Voltage_V)
+//-----------------------------------
+
+	INT voltage_mV, voltage_uV, voltage_V;
+	INT ref_uV;
+	INT voltage_mV_pnt; //value after decimal point for mV result.
+	INT voltage_V_pnt; //value after decimal point for V result.
+	INT voltage_uV_pnt; //value after decimal point for uV result.
+	Result := RESULT_PASS;
+	
+	
+	//Do calculation in uV
+	ref_uV := VREF * 1000;
+	voltage_uV := AD5669_GAIN * ref_uV * Dac_Set_Value /65536 ; // Vout = gain * Vref*(Setvalue/65536) 
+	voltage_mV := voltage_uV/1000; // Trunced mV value
+	voltage_mV_pnt := voltage_uV - (voltage_mV * 1000);
+	voltage_V := voltage_uV/1000000; // Trunced mV value
+	voltage_V_pnt := voltage_uV - (voltage_V * 1000000);
+	
+	PRINT("DAC output Voltage for DAC setvalue of 0x",FORMAT(Dac_Set_Value,"%04X")," is calculated as ",voltage_uV,".",voltage_uV_pnt,"uV. \n");
+	PRINT("DAC output Voltage for DAC setvalue of 0x",FORMAT(Dac_Set_Value,"%04X")," is calculated as ",voltage_mV,".",voltage_mV_pnt,"mV. \n");
+	PRINT("DAC output Voltage for DAC setvalue of 0x",FORMAT(Dac_Set_Value,"%04X")," is calculated as ",voltage_V,".",voltage_V_pnt,"V. \n");	
+	Voltage_V := FORMAT(voltage_V,"%i") + "." + FORMAT(voltage_V_pnt,"%i");	
+END; //end AD5669_CALC_DAC_VOLTAGE(INT Dac_Set_Value WITHDOF 16)(INT Result)
+
+//Calculate and print DAC value based on voltage supplied given default Control register
+//Value supplied needs to be in mV
+//-----------------------------------
+AD5669_CALC_DAC_VALUE_mV(INT Dac_Voltage_mV)(INT Dac_Value WIDTH 16)
+//-----------------------------------
+
+	
+	INT voltage_uV;
+	INT ref_uV;
+	INT gain_ref_uV; //result of gain * ref in uV
+	INT volt_const; // used for calculation of voltage * 65536
+	
+	//Result := RESULT_PASS;
+	
+	//Do calculation in uV
+	ref_uV := VREF * 1000;
+	voltage_uV := Dac_Voltage_mV * 1000; // change to uV value to reduce truncing effect
+	volt_const := voltage_uV * 65536;
+	
+	gain_ref_uV := AD5669_GAIN * ref_uV; 
+	Dac_Value := volt_const/gain_ref_uV; 	
+END; //end AD5669_CALC_DAC_VALUE
+
+//Calculate and print DAC value based on voltage supplied given default Control register
+//Value supplied needs to be in uV
+//-----------------------------------
+AD5669_CALC_DAC_VALUE_uV(INT Dac_Voltage_uV)(INT Dac_Value WIDTH 16)
+//-----------------------------------
+
+	
+	INT ref_uV;
+	INT gain_ref_uV; //result of gain * ref in uV
+	INT volt_const; // used for calculation of voltage * 65536
+	
+	//Result := RESULT_PASS;
+	
+	//Do calculation in uV
+	ref_uV := VREF * 1000;
+	
+	volt_const := Dac_Voltage_uV * 65536;
+	
+	gain_ref_uV := AD5669_GAIN * ref_uV; 
+	Dac_Value := volt_const/gain_ref_uV; 	
+END; //end AD5669_CALC_DAC_VALUE(INT Dac_Set_Value WITHDOF 16)(INT Result)

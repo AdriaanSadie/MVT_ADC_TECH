@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Oct  7 10:44:56 2025
+// Date        : Thu Oct 23 14:31:47 2025
 // Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_dac_cal_0_0/adc_tech_dac_cal_0_0_sim_netlist.v
@@ -47,7 +47,7 @@ module adc_tech_dac_cal_0_0
   wire [31:0]control;
   wire [31:0]counter;
   wire counting_flag;
-  wire [1:0]\^debug ;
+  wire [2:0]debug;
   wire [15:0]pulse_in;
   wire rst_n;
   wire sync_in;
@@ -61,8 +61,6 @@ module adc_tech_dac_cal_0_0
   assign bram_addr[9:2] = \^bram_addr [9:2];
   assign bram_addr[1] = \<const0> ;
   assign bram_addr[0] = \<const0> ;
-  assign debug[2] = \<const0> ;
-  assign debug[1:0] = \^debug [1:0];
   GND GND
        (.G(\<const0> ));
   adc_tech_dac_cal_0_0_dac_cal U0
@@ -73,7 +71,7 @@ module adc_tech_dac_cal_0_0
         .control({control[19:16],control[3:0]}),
         .counter(counter),
         .counting_flag(counting_flag),
-        .debug(\^debug ),
+        .debug(debug),
         .pulse_in(pulse_in),
         .rst_n(rst_n),
         .sync_in(sync_in));
@@ -95,7 +93,7 @@ module adc_tech_dac_cal_0_0_dac_cal
   output [31:0]counter;
   output [31:0]bram_data;
   output [7:0]bram_addr;
-  output [1:0]debug;
+  output [2:0]debug;
   output counting_flag;
   output bram_we;
   input [7:0]control;
@@ -105,9 +103,9 @@ module adc_tech_dac_cal_0_0_dac_cal
   input rst_n;
 
   wire \FSM_sequential_dac_state[1]_i_1_n_0 ;
-  wire \FSM_sequential_dac_state[1]_i_3_n_0 ;
   wire \FSM_sequential_dac_state[1]_i_4_n_0 ;
   wire \FSM_sequential_dac_state[1]_i_5_n_0 ;
+  wire \FSM_sequential_dac_state[1]_i_6_n_0 ;
   wire \FSM_sequential_dac_state_reg_n_0_[0] ;
   wire \FSM_sequential_dac_state_reg_n_0_[1] ;
   wire [7:0]addr_count;
@@ -120,6 +118,7 @@ module adc_tech_dac_cal_0_0_dac_cal
   wire \addr_count[6]_i_1_n_0 ;
   wire \addr_count[7]_i_1_n_0 ;
   wire \addr_count[7]_i_2_n_0 ;
+  wire addr_count_4;
   wire \addr_count_4_reg_n_0_[2] ;
   wire \addr_count_4_reg_n_0_[3] ;
   wire \addr_count_4_reg_n_0_[4] ;
@@ -174,13 +173,15 @@ module adc_tech_dac_cal_0_0_dac_cal
   wire \dac_counter_reg_n_0_[7] ;
   wire \dac_counter_reg_n_0_[8] ;
   wire \dac_counter_reg_n_0_[9] ;
-  wire [0:0]dac_state;
-  wire dac_state0__4;
-  wire dac_state11_out;
-  wire [1:0]debug;
+  wire [1:0]dac_state;
+  wire dac_state011_out;
+  wire dac_state0__1;
+  wire dac_state14_out;
+  wire dac_state18_out;
+  wire [2:0]debug;
   wire \debug[0]_i_1_n_0 ;
   wire \debug[1]_i_1_n_0 ;
-  wire \debug[1]_i_2_n_0 ;
+  wire \debug[2]_i_1_n_0 ;
   wire [19:0]delay_counter;
   wire \delay_counter[19]_i_1_n_0 ;
   wire \delay_counter_reg_n_0_[0] ;
@@ -203,7 +204,7 @@ module adc_tech_dac_cal_0_0_dac_cal
   wire \delay_counter_reg_n_0_[7] ;
   wire \delay_counter_reg_n_0_[8] ;
   wire \delay_counter_reg_n_0_[9] ;
-  wire [31:1]in9;
+  wire [31:1]in12;
   wire p_0_in;
   wire [19:1]plusOp;
   wire plusOp_carry__0_n_0;
@@ -272,14 +273,15 @@ module adc_tech_dac_cal_0_0_dac_cal
   wire [7:6]\NLW_plusOp_inferred__1/i__carry__2_CO_UNCONNECTED ;
   wire [7:7]\NLW_plusOp_inferred__1/i__carry__2_O_UNCONNECTED ;
 
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'hA4)) 
+  LUT5 #(
+    .INIT(32'hF0F04F40)) 
     \FSM_sequential_dac_state[0]_i_1 
-       (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I1(dac_state0__4),
-        .I2(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .O(dac_state));
+       (.I0(dac_state18_out),
+        .I1(dac_state14_out),
+        .I2(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .I3(dac_state011_out),
+        .I4(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .O(dac_state[0]));
   LUT6 #(
     .INIT(64'h2222222222222220)) 
     \FSM_sequential_dac_state[0]_i_2 
@@ -289,75 +291,86 @@ module adc_tech_dac_cal_0_0_dac_cal
         .I3(control[2]),
         .I4(control[0]),
         .I5(control[1]),
-        .O(dac_state0__4));
-  LUT4 #(
-    .INIT(16'h2EFF)) 
+        .O(dac_state011_out));
+  LUT6 #(
+    .INIT(64'h00FEFFFEFFFFFFFF)) 
     \FSM_sequential_dac_state[1]_i_1 
-       (.I0(dac_state11_out),
-        .I1(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I2(p_0_in),
-        .I3(\FSM_sequential_dac_state_reg_n_0_[0] ),
+       (.I0(dac_state14_out),
+        .I1(dac_state0__1),
+        .I2(dac_state18_out),
+        .I3(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I4(p_0_in),
+        .I5(\FSM_sequential_dac_state_reg_n_0_[0] ),
         .O(\FSM_sequential_dac_state[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h1055FFFF)) 
+    .INIT(32'h04004444)) 
     \FSM_sequential_dac_state[1]_i_2 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .I2(dac_state18_out),
+        .I3(dac_state14_out),
+        .I4(addr_count[7]),
+        .O(dac_state[1]));
+  LUT5 #(
+    .INIT(32'h1055FFFF)) 
+    \FSM_sequential_dac_state[1]_i_3 
        (.I0(\delay_counter_reg_n_0_[15] ),
-        .I1(\FSM_sequential_dac_state[1]_i_3_n_0 ),
-        .I2(\FSM_sequential_dac_state[1]_i_4_n_0 ),
+        .I1(\FSM_sequential_dac_state[1]_i_4_n_0 ),
+        .I2(\FSM_sequential_dac_state[1]_i_5_n_0 ),
         .I3(\delay_counter_reg_n_0_[14] ),
-        .I4(\FSM_sequential_dac_state[1]_i_5_n_0 ),
+        .I4(\FSM_sequential_dac_state[1]_i_6_n_0 ),
         .O(p_0_in));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    \FSM_sequential_dac_state[1]_i_3 
+    \FSM_sequential_dac_state[1]_i_4 
        (.I0(\delay_counter_reg_n_0_[11] ),
         .I1(\delay_counter_reg_n_0_[10] ),
         .I2(\delay_counter_reg_n_0_[13] ),
         .I3(\delay_counter_reg_n_0_[12] ),
-        .O(\FSM_sequential_dac_state[1]_i_3_n_0 ));
+        .O(\FSM_sequential_dac_state[1]_i_4_n_0 ));
   LUT4 #(
     .INIT(16'h01FF)) 
-    \FSM_sequential_dac_state[1]_i_4 
+    \FSM_sequential_dac_state[1]_i_5 
        (.I0(\delay_counter_reg_n_0_[6] ),
         .I1(\delay_counter_reg_n_0_[7] ),
         .I2(\delay_counter_reg_n_0_[8] ),
         .I3(\delay_counter_reg_n_0_[9] ),
-        .O(\FSM_sequential_dac_state[1]_i_4_n_0 ));
+        .O(\FSM_sequential_dac_state[1]_i_5_n_0 ));
   LUT4 #(
     .INIT(16'h8000)) 
-    \FSM_sequential_dac_state[1]_i_5 
+    \FSM_sequential_dac_state[1]_i_6 
        (.I0(\delay_counter_reg_n_0_[17] ),
         .I1(\delay_counter_reg_n_0_[16] ),
         .I2(\delay_counter_reg_n_0_[19] ),
         .I3(\delay_counter_reg_n_0_[18] ),
-        .O(\FSM_sequential_dac_state[1]_i_5_n_0 ));
-  (* FSM_ENCODED_STATES = "dac_s_count:01,dac_s_write:10,dac_s_idle:00,dac_s_debounce:11" *) 
+        .O(\FSM_sequential_dac_state[1]_i_6_n_0 ));
+  (* FSM_ENCODED_STATES = "dac_s_count:01,dac_s_debounce:11,dac_s_idle:00,dac_s_write:10" *) 
   FDCE \FSM_sequential_dac_state_reg[0] 
        (.C(clk),
         .CE(\FSM_sequential_dac_state[1]_i_1_n_0 ),
         .CLR(counting_flag_i_2_n_0),
-        .D(dac_state),
+        .D(dac_state[0]),
         .Q(\FSM_sequential_dac_state_reg_n_0_[0] ));
-  (* FSM_ENCODED_STATES = "dac_s_count:01,dac_s_write:10,dac_s_idle:00,dac_s_debounce:11" *) 
+  (* FSM_ENCODED_STATES = "dac_s_count:01,dac_s_debounce:11,dac_s_idle:00,dac_s_write:10" *) 
   FDCE \FSM_sequential_dac_state_reg[1] 
        (.C(clk),
         .CE(\FSM_sequential_dac_state[1]_i_1_n_0 ),
         .CLR(counting_flag_i_2_n_0),
-        .D(\bram_data[31]_i_1_n_0 ),
+        .D(dac_state[1]),
         .Q(\FSM_sequential_dac_state_reg_n_0_[1] ));
   LUT1 #(
     .INIT(2'h1)) 
     \addr_count[0]_i_1 
        (.I0(addr_count[0]),
         .O(\addr_count[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \addr_count[1]_i_1 
        (.I0(addr_count[0]),
         .I1(addr_count[1]),
         .O(\addr_count[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \addr_count[2]_i_1 
@@ -365,7 +378,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .I1(addr_count[1]),
         .I2(addr_count[2]),
         .O(\addr_count[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \addr_count[3]_i_1 
@@ -374,7 +387,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .I2(addr_count[2]),
         .I3(addr_count[3]),
         .O(\addr_count[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \addr_count[4]_i_1 
@@ -394,14 +407,14 @@ module adc_tech_dac_cal_0_0_dac_cal
         .I4(addr_count[4]),
         .I5(addr_count[5]),
         .O(\addr_count[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \addr_count[6]_i_1 
        (.I0(\addr_count[7]_i_2_n_0 ),
         .I1(addr_count[6]),
         .O(\addr_count[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \addr_count[7]_i_1 
@@ -562,13 +575,15 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CLR(counting_flag_i_2_n_0),
         .D(\addr_count_4_reg_n_0_[9] ),
         .Q(bram_addr[7]));
-  LUT4 #(
-    .INIT(16'h0040)) 
+  LUT6 #(
+    .INIT(64'h0040004000440040)) 
     \bram_data[31]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
         .I1(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I2(dac_state11_out),
+        .I2(dac_state18_out),
         .I3(addr_count[7]),
+        .I4(dac_state0__1),
+        .I5(dac_state14_out),
         .O(\bram_data[31]_i_1_n_0 ));
   FDCE \bram_data_reg[0] 
        (.C(clk),
@@ -762,38 +777,67 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CLR(counting_flag_i_2_n_0),
         .D(\dac_counter_reg_n_0_[9] ),
         .Q(bram_data[9]));
-  LUT5 #(
-    .INIT(32'hFFA25500)) 
+  LUT4 #(
+    .INIT(16'hF250)) 
     bram_we_i_1
        (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I1(dac_state11_out),
-        .I2(addr_count[7]),
-        .I3(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I4(bram_we),
+        .I1(addr_count_4),
+        .I2(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I3(bram_we),
         .O(bram_we_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h2232)) 
+    bram_we_i_2
+       (.I0(dac_state18_out),
+        .I1(addr_count[7]),
+        .I2(dac_state0__1),
+        .I3(dac_state14_out),
+        .O(addr_count_4));
   FDCE bram_we_reg
        (.C(clk),
         .CE(1'b1),
         .CLR(counting_flag_i_2_n_0),
         .D(bram_we_i_1_n_0),
         .Q(bram_we));
-  LUT3 #(
-    .INIT(8'h40)) 
+  LUT5 #(
+    .INIT(32'h40444040)) 
     \counter[31]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
         .I1(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I2(dac_state11_out),
+        .I2(dac_state18_out),
+        .I3(dac_state14_out),
+        .I4(dac_state0__1),
         .O(\counter[31]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0002000000000000)) 
+    .INIT(64'h0000000000004000)) 
     \counter[31]_i_2 
-       (.I0(pulse_in_r1),
-        .I1(pulse_in_r2),
+       (.I0(pulse_in_r2),
+        .I1(pulse_in_r1),
+        .I2(control[3]),
+        .I3(control[1]),
+        .I4(control[2]),
+        .I5(control[0]),
+        .O(dac_state18_out));
+  LUT6 #(
+    .INIT(64'h4000000000000000)) 
+    \counter[31]_i_3 
+       (.I0(pulse_in_r2),
+        .I1(pulse_in_r1),
+        .I2(control[3]),
+        .I3(control[2]),
+        .I4(control[0]),
+        .I5(control[1]),
+        .O(dac_state14_out));
+  LUT6 #(
+    .INIT(64'h0000000080000000)) 
+    \counter[31]_i_4 
+       (.I0(pulse_in_r2),
+        .I1(control[1]),
         .I2(control[0]),
         .I3(control[2]),
-        .I4(control[1]),
-        .I5(control[3]),
-        .O(dac_state11_out));
+        .I4(control[3]),
+        .I5(pulse_in_r1),
+        .O(dac_state0__1));
   FDCE \counter_reg[0] 
        (.C(clk),
         .CE(\counter[31]_i_1_n_0 ),
@@ -986,6 +1030,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CLR(counting_flag_i_2_n_0),
         .D(\dac_counter_reg_n_0_[9] ),
         .Q(counter[9]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     counting_flag_i_1
@@ -1004,261 +1049,293 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CLR(counting_flag_i_2_n_0),
         .D(counting_flag_i_1_n_0),
         .Q(counting_flag));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h23)) 
+  LUT5 #(
+    .INIT(32'h0A0A0F0B)) 
     \dac_counter[0]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(\dac_counter_reg_n_0_[0] ),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(\dac_counter_reg_n_0_[0] ),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[0]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[10]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[10]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[10]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[10]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[11]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[11]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[11]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[11]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[12]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[12]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[12]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[12]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[13]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[13]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[13]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[13]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[14]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[14]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[14]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[14]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[15]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[15]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[15]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[15]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[16]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[16]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[16]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[16]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[17]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[17]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[17]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[17]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[18]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[18]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[18]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[18]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[19]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[19]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[19]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[19]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[1]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[1]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[1]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[1]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[20]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[20]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[20]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[20]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[21]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[21]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[21]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[21]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[22]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[22]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[22]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[22]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[23]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[23]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[23]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[23]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[24]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[24]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[24]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[24]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[25]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[25]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[25]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[25]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[26]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[26]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[26]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[26]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[27]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[27]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[27]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[27]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[28]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[28]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[28]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[28]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[29]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[29]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[29]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[29]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[2]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[2]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[2]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[2]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[30]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[30]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[30]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[30]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[31]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[31]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[31]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[31]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[3]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[3]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[3]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[3]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[4]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[4]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[4]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[4]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[5]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[5]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[5]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[5]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[6]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[6]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[6]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[6]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[7]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[7]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[7]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[7]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[8]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[8]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[8]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[8]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'h8C)) 
+  LUT5 #(
+    .INIT(32'hA0A0F0B0)) 
     \dac_counter[9]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(in9[9]),
-        .I2(dac_state11_out),
+        .I1(dac_state0__1),
+        .I2(in12[9]),
+        .I3(dac_state14_out),
+        .I4(dac_state18_out),
         .O(dac_counter[9]));
   FDCE \dac_counter_reg[0] 
        (.C(clk),
@@ -1452,181 +1529,219 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CLR(counting_flag_i_2_n_0),
         .D(dac_counter[9]),
         .Q(\dac_counter_reg_n_0_[9] ));
-  LUT1 #(
-    .INIT(2'h1)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h555555F7)) 
     \debug[0]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .I1(dac_state0__1),
+        .I2(dac_state14_out),
+        .I3(dac_state18_out),
+        .I4(\FSM_sequential_dac_state_reg_n_0_[1] ),
         .O(\debug[0]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'hFEAA)) 
     \debug[1]_i_1 
-       (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I1(\FSM_sequential_dac_state_reg_n_0_[1] ),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(dac_state14_out),
+        .I2(dac_state18_out),
+        .I3(\FSM_sequential_dac_state_reg_n_0_[0] ),
         .O(\debug[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \debug[1]_i_2 
-       (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
-        .I1(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .O(\debug[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT4 #(
+    .INIT(16'hABAA)) 
+    \debug[2]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(dac_state14_out),
+        .I2(dac_state18_out),
+        .I3(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .O(\debug[2]_i_1_n_0 ));
   FDCE \debug_reg[0] 
        (.C(clk),
-        .CE(\debug[1]_i_1_n_0 ),
+        .CE(1'b1),
         .CLR(counting_flag_i_2_n_0),
         .D(\debug[0]_i_1_n_0 ),
         .Q(debug[0]));
   FDCE \debug_reg[1] 
        (.C(clk),
-        .CE(\debug[1]_i_1_n_0 ),
+        .CE(1'b1),
         .CLR(counting_flag_i_2_n_0),
-        .D(\debug[1]_i_2_n_0 ),
+        .D(\debug[1]_i_1_n_0 ),
         .Q(debug[1]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT2 #(
-    .INIT(4'h4)) 
+  FDCE \debug_reg[2] 
+       (.C(clk),
+        .CE(1'b1),
+        .CLR(counting_flag_i_2_n_0),
+        .D(\debug[2]_i_1_n_0 ),
+        .Q(debug[2]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT3 #(
+    .INIT(8'h20)) 
     \delay_counter[0]_i_1 
-       (.I0(\delay_counter_reg_n_0_[0] ),
-        .I1(p_0_in),
-        .O(delay_counter[0]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[10]_i_1 
-       (.I0(plusOp[10]),
-        .I1(p_0_in),
-        .O(delay_counter[10]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[11]_i_1 
-       (.I0(plusOp[11]),
-        .I1(p_0_in),
-        .O(delay_counter[11]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[12]_i_1 
-       (.I0(plusOp[12]),
-        .I1(p_0_in),
-        .O(delay_counter[12]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[13]_i_1 
-       (.I0(plusOp[13]),
-        .I1(p_0_in),
-        .O(delay_counter[13]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[14]_i_1 
-       (.I0(plusOp[14]),
-        .I1(p_0_in),
-        .O(delay_counter[14]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[15]_i_1 
-       (.I0(plusOp[15]),
-        .I1(p_0_in),
-        .O(delay_counter[15]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[16]_i_1 
-       (.I0(plusOp[16]),
-        .I1(p_0_in),
-        .O(delay_counter[16]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[17]_i_1 
-       (.I0(plusOp[17]),
-        .I1(p_0_in),
-        .O(delay_counter[17]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[18]_i_1 
-       (.I0(plusOp[18]),
-        .I1(p_0_in),
-        .O(delay_counter[18]));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \delay_counter[19]_i_1 
        (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
-        .I1(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .I1(\delay_counter_reg_n_0_[0] ),
+        .I2(p_0_in),
+        .O(delay_counter[0]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[10]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[10]),
+        .I2(p_0_in),
+        .O(delay_counter[10]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[11]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[11]),
+        .I2(p_0_in),
+        .O(delay_counter[11]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[12]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[12]),
+        .I2(p_0_in),
+        .O(delay_counter[12]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[13]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[13]),
+        .I2(p_0_in),
+        .O(delay_counter[13]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[14]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[14]),
+        .I2(p_0_in),
+        .O(delay_counter[14]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[15]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[15]),
+        .I2(p_0_in),
+        .O(delay_counter[15]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[16]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[16]),
+        .I2(p_0_in),
+        .O(delay_counter[16]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[17]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[17]),
+        .I2(p_0_in),
+        .O(delay_counter[17]));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \delay_counter[18]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[18]),
+        .I2(p_0_in),
+        .O(delay_counter[18]));
+  LUT4 #(
+    .INIT(16'hAA08)) 
+    \delay_counter[19]_i_1 
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[0] ),
+        .I1(dac_state14_out),
+        .I2(dac_state18_out),
+        .I3(\FSM_sequential_dac_state_reg_n_0_[1] ),
         .O(\delay_counter[19]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[19]_i_2 
-       (.I0(plusOp[19]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[19]),
+        .I2(p_0_in),
         .O(delay_counter[19]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[1]_i_1 
-       (.I0(plusOp[1]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[1]),
+        .I2(p_0_in),
         .O(delay_counter[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[2]_i_1 
-       (.I0(plusOp[2]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[2]),
+        .I2(p_0_in),
         .O(delay_counter[2]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[3]_i_1 
-       (.I0(plusOp[3]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[3]),
+        .I2(p_0_in),
         .O(delay_counter[3]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[4]_i_1 
-       (.I0(plusOp[4]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[4]),
+        .I2(p_0_in),
         .O(delay_counter[4]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[5]_i_1 
-       (.I0(plusOp[5]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[5]),
+        .I2(p_0_in),
         .O(delay_counter[5]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[6]_i_1 
-       (.I0(plusOp[6]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[6]),
+        .I2(p_0_in),
         .O(delay_counter[6]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[7]_i_1 
-       (.I0(plusOp[7]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[7]),
+        .I2(p_0_in),
         .O(delay_counter[7]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[8]_i_1 
-       (.I0(plusOp[8]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[8]),
+        .I2(p_0_in),
         .O(delay_counter[8]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
     \delay_counter[9]_i_1 
-       (.I0(plusOp[9]),
-        .I1(p_0_in),
+       (.I0(\FSM_sequential_dac_state_reg_n_0_[1] ),
+        .I1(plusOp[9]),
+        .I2(p_0_in),
         .O(delay_counter[9]));
   FDCE \delay_counter_reg[0] 
        (.C(clk),
@@ -1778,7 +1893,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CI_TOP(1'b0),
         .CO({\plusOp_inferred__1/i__carry_n_0 ,\plusOp_inferred__1/i__carry_n_1 ,\plusOp_inferred__1/i__carry_n_2 ,\plusOp_inferred__1/i__carry_n_3 ,\plusOp_inferred__1/i__carry_n_4 ,\plusOp_inferred__1/i__carry_n_5 ,\plusOp_inferred__1/i__carry_n_6 ,\plusOp_inferred__1/i__carry_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(in9[8:1]),
+        .O(in12[8:1]),
         .S({\dac_counter_reg_n_0_[8] ,\dac_counter_reg_n_0_[7] ,\dac_counter_reg_n_0_[6] ,\dac_counter_reg_n_0_[5] ,\dac_counter_reg_n_0_[4] ,\dac_counter_reg_n_0_[3] ,\dac_counter_reg_n_0_[2] ,\dac_counter_reg_n_0_[1] }));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY8 \plusOp_inferred__1/i__carry__0 
@@ -1786,7 +1901,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CI_TOP(1'b0),
         .CO({\plusOp_inferred__1/i__carry__0_n_0 ,\plusOp_inferred__1/i__carry__0_n_1 ,\plusOp_inferred__1/i__carry__0_n_2 ,\plusOp_inferred__1/i__carry__0_n_3 ,\plusOp_inferred__1/i__carry__0_n_4 ,\plusOp_inferred__1/i__carry__0_n_5 ,\plusOp_inferred__1/i__carry__0_n_6 ,\plusOp_inferred__1/i__carry__0_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(in9[16:9]),
+        .O(in12[16:9]),
         .S({\dac_counter_reg_n_0_[16] ,\dac_counter_reg_n_0_[15] ,\dac_counter_reg_n_0_[14] ,\dac_counter_reg_n_0_[13] ,\dac_counter_reg_n_0_[12] ,\dac_counter_reg_n_0_[11] ,\dac_counter_reg_n_0_[10] ,\dac_counter_reg_n_0_[9] }));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY8 \plusOp_inferred__1/i__carry__1 
@@ -1794,7 +1909,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CI_TOP(1'b0),
         .CO({\plusOp_inferred__1/i__carry__1_n_0 ,\plusOp_inferred__1/i__carry__1_n_1 ,\plusOp_inferred__1/i__carry__1_n_2 ,\plusOp_inferred__1/i__carry__1_n_3 ,\plusOp_inferred__1/i__carry__1_n_4 ,\plusOp_inferred__1/i__carry__1_n_5 ,\plusOp_inferred__1/i__carry__1_n_6 ,\plusOp_inferred__1/i__carry__1_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O(in9[24:17]),
+        .O(in12[24:17]),
         .S({\dac_counter_reg_n_0_[24] ,\dac_counter_reg_n_0_[23] ,\dac_counter_reg_n_0_[22] ,\dac_counter_reg_n_0_[21] ,\dac_counter_reg_n_0_[20] ,\dac_counter_reg_n_0_[19] ,\dac_counter_reg_n_0_[18] ,\dac_counter_reg_n_0_[17] }));
   (* ADDER_THRESHOLD = "35" *) 
   CARRY8 \plusOp_inferred__1/i__carry__2 
@@ -1802,7 +1917,7 @@ module adc_tech_dac_cal_0_0_dac_cal
         .CI_TOP(1'b0),
         .CO({\NLW_plusOp_inferred__1/i__carry__2_CO_UNCONNECTED [7:6],\plusOp_inferred__1/i__carry__2_n_2 ,\plusOp_inferred__1/i__carry__2_n_3 ,\plusOp_inferred__1/i__carry__2_n_4 ,\plusOp_inferred__1/i__carry__2_n_5 ,\plusOp_inferred__1/i__carry__2_n_6 ,\plusOp_inferred__1/i__carry__2_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_plusOp_inferred__1/i__carry__2_O_UNCONNECTED [7],in9[31:25]}),
+        .O({\NLW_plusOp_inferred__1/i__carry__2_O_UNCONNECTED [7],in12[31:25]}),
         .S({1'b0,\dac_counter_reg_n_0_[31] ,\dac_counter_reg_n_0_[30] ,\dac_counter_reg_n_0_[29] ,\dac_counter_reg_n_0_[28] ,\dac_counter_reg_n_0_[27] ,\dac_counter_reg_n_0_[26] ,\dac_counter_reg_n_0_[25] }));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 

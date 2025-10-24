@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 22 10:22:30 2025" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Oct 23 14:31:07 2025" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:zcu106:part0:2.6" DEVICE="xczu7ev" NAME="adc_tech" PACKAGE="ffvc1156" SPEEDGRADE="-2"/>
 
@@ -2417,6 +2417,341 @@
             <CONNECTION INSTANCE="Processing_Subsystem_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M05_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M05_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awuser" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M05_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M05_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_aruser" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="15" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="Processing_Subsystem_zynq_ultra_ps_e_0" PORT="maxigp2_awid"/>
@@ -2612,296 +2947,178 @@
             <CONNECTION INSTANCE="Processing_Subsystem_zynq_ultra_ps_e_0" PORT="maxigp2_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awaddr">
+        <PORT DIR="O" LEFT="39" NAME="M09_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M06_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awvalid">
+        <PORT DIR="O" NAME="M09_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_awready">
+        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M09_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="M09_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M06_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wvalid">
+        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_wready">
+        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M09_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bvalid">
+        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_bready">
+        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_araddr">
+        <PORT DIR="O" LEFT="39" NAME="M09_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M06_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_arvalid">
+        <PORT DIR="O" NAME="M09_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_arready">
+        <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M09_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M09_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M06_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rvalid">
+        <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI_rready">
+        <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_bram_test_control" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S01_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awid">
+        <PORT DIR="O" LEFT="39" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awid"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awaddr">
+        <PORT DIR="O" NAME="M07_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awaddr"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awlen">
+        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awlen"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awsize">
+        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awsize"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awburst">
+        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awburst"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awlock">
+        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awlock"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awcache">
+        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awcache"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awprot">
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awprot"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awqos">
+        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awqos"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awvalid">
+        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awvalid"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awready">
+        <PORT DIR="O" LEFT="39" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awready"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wdata">
+        <PORT DIR="O" NAME="M07_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wdata"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wstrb">
+        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wstrb"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wlast">
+        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wlast"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wvalid">
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wvalid"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wready">
+        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wready"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="S01_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bid">
+        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S01_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S01_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S01_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_arlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arqos"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="S01_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="S01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_rlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rready"/>
+            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="39" NAME="M08_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_read_s_axi_awaddr">
@@ -3065,585 +3282,189 @@
             <CONNECTION INSTANCE="ADC_blocks_adc_bram_read" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awaddr">
+        <PORT DIR="I" LEFT="0" NAME="S01_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awvalid">
+        <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_awready">
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wdata">
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wstrb">
+        <PORT DIR="I" LEFT="1" NAME="S01_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wvalid">
+        <PORT DIR="I" NAME="S01_AXI_awlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_wready">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bresp">
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bvalid">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awqos">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awqos"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_bready">
+        <PORT DIR="I" NAME="S01_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_araddr">
+        <PORT DIR="O" NAME="S01_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_arvalid">
+        <PORT DIR="I" LEFT="31" NAME="S01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_arready">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rdata">
+        <PORT DIR="I" NAME="S01_AXI_wlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rresp">
+        <PORT DIR="I" NAME="S01_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rvalid">
+        <PORT DIR="O" NAME="S01_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI_rready">
+        <PORT DIR="O" LEFT="0" NAME="S01_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="i2c_read" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awaddr">
+        <PORT DIR="O" LEFT="1" NAME="S01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awvalid">
+        <PORT DIR="O" NAME="S01_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awready">
+        <PORT DIR="I" NAME="S01_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wdata">
+        <PORT DIR="I" LEFT="0" NAME="S01_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wstrb">
+        <PORT DIR="I" LEFT="31" NAME="S01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wvalid">
+        <PORT DIR="I" LEFT="7" NAME="S01_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arlen"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wready">
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arsize">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arsize"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bresp">
+        <PORT DIR="I" LEFT="1" NAME="S01_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arburst">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arburst"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bvalid">
+        <PORT DIR="I" NAME="S01_AXI_arlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arlock">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bready">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arcache">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arcache"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_araddr">
+        <PORT DIR="I" LEFT="2" NAME="S01_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arprot">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_arvalid">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arqos">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arqos"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_arready">
+        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rdata">
+        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rresp">
+        <PORT DIR="O" LEFT="0" NAME="S01_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M02_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rvalid">
+        <PORT DIR="O" LEFT="31" NAME="S01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rready">
+        <PORT DIR="O" LEFT="1" NAME="S01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awaddr">
+        <PORT DIR="O" NAME="S01_AXI_rlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M05_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awlen">
+        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awlen"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awsize">
+        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_S01_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M05_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M05_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M05_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arlock" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arlock"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M05_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rlast" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M05_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_tester_axi_bram_ctrl_0" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dac_calibration_dac_cal_control" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="Processing_Subsystem_jtag_axi_0" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="39" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI_awaddr">
@@ -3651,15 +3472,7 @@
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_awuser" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_awvalid"/>
@@ -3680,7 +3493,6 @@
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_wvalid"/>
@@ -3711,15 +3523,7 @@
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arcache" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M00_AXI_aruser" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_arvalid"/>
@@ -3740,7 +3544,6 @@
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef"/>
         <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_leds" PORT="s_axi_rvalid"/>
@@ -3912,109 +3715,178 @@
             <CONNECTION INSTANCE="dac_calibration_dac_bram" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M09_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awaddr">
+        <PORT DIR="O" LEFT="39" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awuser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awvalid">
+        <PORT DIR="O" NAME="M02_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_awready">
+        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M09_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M09_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wvalid">
+        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_wready">
+        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M09_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bvalid">
+        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_bready">
+        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M09_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_araddr">
+        <PORT DIR="O" LEFT="39" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_aruser" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_arvalid">
+        <PORT DIR="O" NAME="M02_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_arready">
+        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M09_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M09_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rvalid">
+        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="ADC_blocks_adc_bram_control_s_axi_rready">
+        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ADC_blocks_adc_bram_control" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="my_i2c" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal_read" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4073,7 +3945,6 @@
             <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S01_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="S01_AXI_awprot"/>
             <PORTMAP LOGICAL="AWQOS" PHYSICAL="S01_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="S01_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="S01_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="S01_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="S01_AXI_wdata"/>
@@ -4094,7 +3965,6 @@
             <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S01_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="S01_AXI_arprot"/>
             <PORTMAP LOGICAL="ARQOS" PHYSICAL="S01_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="S01_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="S01_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="S01_AXI_arready"/>
             <PORTMAP LOGICAL="RID" PHYSICAL="S01_AXI_rid"/>
@@ -4108,40 +3978,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M00_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M00_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M00_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M00_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M00_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M00_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M00_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M00_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M00_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M00_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M00_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M00_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M00_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M00_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M00_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M00_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M00_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M00_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M00_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
           </PORTMAPS>
@@ -4190,40 +4042,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M02_AXI" DATAWIDTH="32" NAME="M02_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M02_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M02_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M02_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M02_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M02_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M02_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M02_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M02_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M02_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M02_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M02_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M02_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M02_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M02_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M02_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M02_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M02_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M02_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M02_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M02_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M02_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M02_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M02_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M02_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M02_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M02_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M02_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M02_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M02_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M02_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M02_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M02_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M02_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M02_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M02_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M02_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M02_AXI_rready"/>
           </PORTMAPS>
@@ -4231,40 +4065,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M03_AXI" DATAWIDTH="32" NAME="M03_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M03_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M03_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M03_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M03_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M03_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M03_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M03_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M03_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M03_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M03_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M03_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M03_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M03_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M03_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M03_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M03_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M03_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M03_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M03_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M03_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M03_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M03_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M03_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M03_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M03_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M03_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M03_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M03_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M03_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M03_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M03_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M03_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M03_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M03_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M03_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M03_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M03_AXI_rready"/>
           </PORTMAPS>
@@ -4272,40 +4088,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M04_AXI" DATAWIDTH="32" NAME="M04_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M04_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M04_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M04_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M04_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M04_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M04_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M04_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M04_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M04_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M04_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M04_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M04_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M04_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M04_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M04_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M04_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M04_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M04_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M04_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M04_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M04_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M04_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M04_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M04_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M04_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M04_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M04_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M04_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M04_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M04_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M04_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M04_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M04_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M04_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M04_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M04_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M04_AXI_rready"/>
           </PORTMAPS>
@@ -4354,40 +4152,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M06_AXI" DATAWIDTH="32" NAME="M06_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M06_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M06_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M06_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M06_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M06_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M06_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M06_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M06_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M06_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M06_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M06_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M06_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M06_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M06_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M06_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M06_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M06_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M06_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M06_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M06_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M06_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M06_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M06_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M06_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M06_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M06_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M06_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M06_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M06_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M06_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M06_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M06_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M06_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M06_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M06_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M06_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M06_AXI_rready"/>
           </PORTMAPS>
@@ -4395,40 +4175,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M07_AXI" DATAWIDTH="32" NAME="M07_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M07_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M07_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M07_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M07_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M07_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M07_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M07_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M07_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M07_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M07_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M07_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M07_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M07_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M07_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M07_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M07_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M07_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M07_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M07_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M07_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M07_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M07_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M07_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M07_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M07_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M07_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M07_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M07_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M07_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M07_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M07_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M07_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M07_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M07_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M07_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M07_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M07_AXI_rready"/>
           </PORTMAPS>
@@ -4477,40 +4239,22 @@
         <BUSINTERFACE BUSNAME="Processing_Subsystem_axi_interconnect_0_M09_AXI" DATAWIDTH="32" NAME="M09_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M09_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M09_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M09_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M09_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M09_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M09_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M09_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M09_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M09_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWUSER" PHYSICAL="M09_AXI_awuser"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M09_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M09_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M09_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M09_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M09_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M09_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M09_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M09_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M09_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M09_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M09_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M09_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M09_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M09_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M09_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M09_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M09_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M09_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M09_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARUSER" PHYSICAL="M09_AXI_aruser"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M09_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M09_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M09_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M09_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M09_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M09_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M09_AXI_rready"/>
           </PORTMAPS>
@@ -11779,7 +11523,13 @@
             <CONNECTION INSTANCE="dac_calibration_dac_cal_bram" PORT="wea"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="debug" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="2" NAME="debug" RIGHT="0" SIGIS="undef" SIGNAME="dac_calibration_dac_cal_debug">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -14066,7 +13816,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="dac_calibration_dac_cal_debug">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal" PORT="debug"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="debug2"/>
@@ -14086,7 +13840,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="dac_calibration_dac_cal_debug">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal" PORT="debug"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="debug1"/>
@@ -14106,7 +13864,11 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="dac_calibration_dac_cal_debug">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dac_calibration_dac_cal" PORT="debug"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_3_Dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="debug0"/>

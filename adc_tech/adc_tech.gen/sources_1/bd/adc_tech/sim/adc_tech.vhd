@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Oct 22 10:22:28 2025
+--Date        : Thu Oct 23 14:31:06 2025
 --Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 --Command     : generate_target adc_tech.bd
 --Design      : adc_tech
@@ -9367,6 +9367,7 @@ architecture STRUCTURE of adc_tech is
   signal axi_gpio_0_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal c_counter_binary_0_Q : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal dac_cal_0_counting_flag : STD_LOGIC;
+  signal dac_cal_debug : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal i2c_master_0_axi_gpio_out : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal i2c_master_0_scl : STD_LOGIC;
   signal my_i2c_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -9410,15 +9411,11 @@ architecture STRUCTURE of adc_tech is
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_2_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_3_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_dac_calibration_debug_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_data_splitter_0_port_out0_UNCONNECTED : STD_LOGIC;
   signal NLW_data_splitter_0_port_out1_UNCONNECTED : STD_LOGIC;
   signal NLW_data_splitter_0_port_out2_UNCONNECTED : STD_LOGIC;
   signal NLW_data_splitter_0_port_out3_UNCONNECTED : STD_LOGIC;
   signal NLW_i2c_master_0_sda_en_UNCONNECTED : STD_LOGIC;
-  signal NLW_xlslice_1_Din_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_xlslice_2_Din_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_xlslice_3_Din_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of pl_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.PL_CLK_N CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -9925,7 +9922,7 @@ dac_calibration: entity work.dac_calibration_imp_1RQT82H
       S_AXI_wvalid => Processing_Subsystem_M04_AXI_0_WVALID,
       adc_frontend(15 downto 0) => adc_front_end_adc_frontend(15 downto 0),
       counting_flag => dac_cal_0_counting_flag,
-      debug(2 downto 0) => NLW_dac_calibration_debug_UNCONNECTED(2 downto 0),
+      debug(2 downto 0) => dac_cal_debug(2 downto 0),
       s_axi_aclk => Processing_Subsystem_global_clk,
       s_axi_aresetn => Processing_Subsystem_global_rst_n(0),
       sync_in => sync_in_0_1
@@ -10007,17 +10004,17 @@ xlslice_0: component adc_tech_xlslice_0_0
     );
 xlslice_1: component adc_tech_xlslice_1_0
      port map (
-      Din(2 downto 0) => NLW_xlslice_1_Din_UNCONNECTED(2 downto 0),
+      Din(2 downto 0) => dac_cal_debug(2 downto 0),
       Dout(0) => xlslice_1_Dout(0)
     );
 xlslice_2: component adc_tech_xlslice_1_1
      port map (
-      Din(2 downto 0) => NLW_xlslice_2_Din_UNCONNECTED(2 downto 0),
+      Din(2 downto 0) => dac_cal_debug(2 downto 0),
       Dout(0) => xlslice_2_Dout(0)
     );
 xlslice_3: component adc_tech_xlslice_1_2
      port map (
-      Din(2 downto 0) => NLW_xlslice_3_Din_UNCONNECTED(2 downto 0),
+      Din(2 downto 0) => dac_cal_debug(2 downto 0),
       Dout(0) => xlslice_3_Dout(0)
     );
 end STRUCTURE;

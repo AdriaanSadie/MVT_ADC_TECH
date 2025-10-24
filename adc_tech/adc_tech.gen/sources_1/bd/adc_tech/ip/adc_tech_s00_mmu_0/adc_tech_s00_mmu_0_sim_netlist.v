@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 // Date        : Wed Oct 22 10:23:20 2025
 // Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s00_mmu_0/adc_tech_s00_mmu_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top adc_tech_s00_mmu_0 -prefix
+//               adc_tech_s00_mmu_0_ adc_tech_s00_mmu_0_sim_netlist.v
 // Design      : adc_tech_s00_mmu_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -388,7 +388,6 @@ module adc_tech_s00_mmu_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_mmu_v2_1_20_decerr_slave" *) 
 module adc_tech_s00_mmu_0_axi_mmu_v2_1_20_decerr_slave
    (err_awready,
     err_bvalid,
@@ -1413,11 +1412,10 @@ endmodule
 (* C_M_AXI_SUPPORTS_WRITE = "7'b1111111" *) (* C_NUM_RANGES = "7" *) (* C_PREFIX = "7'b0000000" *) 
 (* C_PREFIX_WIDTH = "1" *) (* C_RANGE_SIZE = "224'b00000000000000000000000000001101000000000000000000000000000011010000000000000000000000000000110100000000000000000000000000010001000000000000000000000000000100010000000000000000000000000001000000000000000000000000000000001100" *) (* C_S_AXI_ADDR_WIDTH = "40" *) 
 (* C_S_AXI_SUPPORTS_READ = "1" *) (* C_S_AXI_SUPPORTS_WRITE = "1" *) (* C_USES_DEST = "0" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_mmu_v2_1_20_top" *) (* P_AXI3 = "1" *) 
-(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_DECERR = "2'b11" *) 
-(* P_NUM_RANGES_LOG = "3" *) (* R_DECERR = "2'b11" *) (* R_IDLE = "2'b00" *) 
-(* R_PENDING = "2'b01" *) (* W_DECERR = "2'b11" *) (* W_IDLE = "2'b00" *) 
-(* W_PENDING = "2'b01" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_DECERR = "2'b11" *) (* P_NUM_RANGES_LOG = "3" *) 
+(* R_DECERR = "2'b11" *) (* R_IDLE = "2'b00" *) (* R_PENDING = "2'b01" *) 
+(* W_DECERR = "2'b11" *) (* W_IDLE = "2'b00" *) (* W_PENDING = "2'b01" *) 
 module adc_tech_s00_mmu_0_axi_mmu_v2_1_20_top
    (aclk,
     aresetn,
@@ -2618,7 +2616,6 @@ module adc_tech_s00_mmu_0_axi_mmu_v2_1_20_top
         .O(s_axi_wready_INST_0_i_1_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_22_axi_register_slice" *) 
 module adc_tech_s00_mmu_0_axi_register_slice_v2_1_22_axi_register_slice
    (sr_axi_arready,
     \aresetn_d_reg[1] ,
@@ -2873,7 +2870,6 @@ module adc_tech_s00_mmu_0_axi_register_slice_v2_1_22_axi_register_slice
         .w_mask(w_mask));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_22_axic_register_slice" *) 
 module adc_tech_s00_mmu_0_axi_register_slice_v2_1_22_axic_register_slice
    (s_ready_i_reg_0,
     m_valid_i_reg_inv_0,

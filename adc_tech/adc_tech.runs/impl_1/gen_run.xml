@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1761121360">
+<GenRun Id="impl_1" LaunchPart="xczu7ev-ffvc1156-2-e" LaunchTime="1761222675">
   <File Type="BITSTR-BMM" Name="adc_tech_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="adc_tech_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="adc_tech_wrapper_timing_summary_init.rpt"/>
@@ -214,9 +214,7 @@
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_bram_ctrl_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_blk_mem_gen_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_axi_bram_ctrl_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_i2c_master_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_tech_data_acquitision_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_s00_mmu_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_tech_s01_mmu_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_tech_dac_cal_0_0"/>
 </GenRun>

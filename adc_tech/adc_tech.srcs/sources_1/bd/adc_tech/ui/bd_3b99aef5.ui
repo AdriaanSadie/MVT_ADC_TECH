@@ -6,8 +6,8 @@
    "Color Coded_ScaleFactor":"1.0",
    "Color Coded_TopLeft":"-166,-238",
    "Default View_Layers":"/Processing_Subsystem/proc_sys_reset_0_interconnect_aresetn:true|/Processing_Subsystem/clk_wiz_0_clk_out1:true|/Processing_Subsystem/proc_sys_reset_0_peripheral_aresetn:true|/Processing_Subsystem/zynq_ultra_ps_e_0_pl_resetn0:true|",
-   "Default View_ScaleFactor":"1.00411",
-   "Default View_TopLeft":"189,181",
+   "Default View_ScaleFactor":"0.618102",
+   "Default View_TopLeft":"280,-79",
    "Display-PortTypeClock":"true",
    "Display-PortTypeOthers":"true",
    "Display-PortTypeReset":"true",
@@ -92,7 +92,7 @@ preplace netloc c_counter_binary_0_Q 1 3 1 1040J 810n
 preplace netloc xlslice_0_Dout 1 4 2 NJ 850 1710
 preplace netloc pulse_in_p_1 1 0 1 NJ 1120
 preplace netloc pulse_in_n_1 1 0 1 NJ 1140
-preplace netloc dac_cal_debug 1 3 1 1050 170n
+preplace netloc dac_cal_debug 1 3 1 1050 50n
 preplace netloc pulse_in_p1_1 1 0 1 NJ 1160
 preplace netloc pulse_in_n1_1 1 0 1 NJ 1180
 preplace netloc pulse_in_p2_1 1 0 1 NJ 560
@@ -131,15 +131,15 @@ preplace netloc my_i2c_gpio_io_o 1 3 2 1030 450 NJ
 preplace netloc i2c_master_0_scl 1 5 1 1710 440n
 preplace netloc Net 1 5 1 1720 420n
 preplace netloc i2c_master_0_axi_gpio_out 1 4 2 N 540 1700
-preplace netloc Processing_Subsystem_M09_AXI_1 1 1 2 360 400 620
-preplace netloc Processing_Subsystem_M02_AXI_0 1 2 1 660 160n
-preplace netloc Processing_Subsystem_M00_AXI_0 1 2 1 670 120n
-preplace netloc Processing_Subsystem_M04_AXI_0 1 2 1 680 -20n
-preplace netloc Processing_Subsystem_M03_AXI_0 1 2 1 690 0n
 preplace netloc Processing_Subsystem_M07_AXI_0 1 2 2 NJ 260 1040
-preplace netloc Processing_Subsystem_M05_AXI_0 1 2 1 650 220n
-preplace netloc Processing_Subsystem_M09_AXI_0 1 2 1 700 20n
 preplace netloc Processing_Subsystem_M06_AXI_0 1 2 1 640 240n
+preplace netloc Processing_Subsystem_M09_AXI_0 1 2 1 700 20n
+preplace netloc Processing_Subsystem_M02_AXI_0 1 2 1 660 160n
+preplace netloc Processing_Subsystem_M03_AXI_0 1 2 1 690 0n
+preplace netloc Processing_Subsystem_M00_AXI_0 1 2 1 670 120n
+preplace netloc Processing_Subsystem_M09_AXI_1 1 1 2 360 400 620
+preplace netloc Processing_Subsystem_M05_AXI_0 1 2 1 650 220n
+preplace netloc Processing_Subsystem_M04_AXI_0 1 2 1 680 -20n
 preplace netloc Processing_Subsystem_M08_AXI_0 1 1 2 350 390 630
 levelinfo -pg 1 -320 170 490 880 1210 1540 1750
 pagesize -pg 1 -db -bbox -sgen -460 -80 1890 1340

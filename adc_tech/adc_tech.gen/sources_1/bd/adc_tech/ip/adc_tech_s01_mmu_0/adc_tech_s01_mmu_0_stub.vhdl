@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 -- Date        : Wed Oct 22 10:23:21 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top adc_tech_s01_mmu_0 -prefix
+--               adc_tech_s01_mmu_0_ adc_tech_s01_mmu_0_stub.vhdl
 -- Design      : adc_tech_s01_mmu_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu7ev-ffvc1156-2-e

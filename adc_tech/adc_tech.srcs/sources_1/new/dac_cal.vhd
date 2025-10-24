@@ -192,14 +192,18 @@ begin
                             dac_state <= dac_s_idle; -- BRAM is full. Ignore
                         end if;
 
-                    elsif (pulse_in_r1 = '1' and pulse_in_r2 = '0' and control_direction = x"A") then -- Rising edge, but we look for falling. This is for debouncing during rising
+                        debug <= b"010";
+
+                    elsif (pulse_in_r1 = '1' and pulse_in_r2 = '0' and control_direction = x"F") then -- Rising edge, but we look for falling. This is for debouncing during rising
 
                         delay_counter <= (others => '0');
                         dac_state     <= dac_s_debounce;
 
                         dac_counter <= dac_counter + 1; -- Still increment, counter is running
 
-                    elsif (pulse_in_r1 = '0' and pulse_in_r2 = '1' and control = x"F") then -- Count until falling edge
+                        debug <= b"011";
+
+                    elsif (pulse_in_r1 = '0' and pulse_in_r2 = '1' and control_direction = x"F") then -- Count until falling edge
                         counter     <= std_logic_vector(dac_counter);
                         dac_counter <= (others => '0');
 
@@ -216,13 +220,18 @@ begin
                             dac_state <= dac_s_idle; -- BRAM is full. Ignore
                         end if;
 
+                        debug <= b"100";
+
                     else
                         dac_counter <= dac_counter + 1;
+
+                        debug <= b"101";
+
                     end if;
 
                     counting_flag <= '1';
 
-                    debug <= b"010";
+                    
 
                 when dac_s_debounce =>
 
@@ -235,13 +244,15 @@ begin
 
                     dac_counter <= dac_counter + 1; -- Keep incrementing the main counter since we are just passing the rising edge
 
+                    debug <= b"110";
+
                 when dac_s_write =>
 
                     bram_we <= '1';     -- Enable write for one clock cycle now that data is stable
 
                     dac_state <= dac_s_idle;
 
-                    debug <= b"011";
+                    debug <= b"111";
 
                 when others =>
 

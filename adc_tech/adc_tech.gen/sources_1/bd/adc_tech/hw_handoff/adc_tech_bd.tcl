@@ -2433,7 +2433,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_leds/gpio_io_o] [get_bd_pins data_splitter_0/port_in]
   connect_bd_net -net c_counter_binary_0_Q [get_bd_pins c_counter_binary_0/Q] [get_bd_pins xlslice_0/Din]
   connect_bd_net -net dac_cal_0_counting_flag [get_bd_ports counting_flag] [get_bd_pins dac_calibration/counting_flag]
-  connect_bd_net -net dac_cal_debug [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
+  connect_bd_net -net dac_cal_debug [get_bd_pins dac_calibration/debug] [get_bd_pins xlslice_1/Din] [get_bd_pins xlslice_2/Din] [get_bd_pins xlslice_3/Din]
   connect_bd_net -net i2c_master_0_axi_gpio_out [get_bd_pins i2c_master_0/axi_gpio_out] [get_bd_pins i2c_read/gpio_io_i]
   connect_bd_net -net i2c_master_0_scl [get_bd_ports my_i2c_scl] [get_bd_pins i2c_master_0/scl]
   connect_bd_net -net my_i2c_gpio_io_o [get_bd_pins i2c_master_0/axi_gpio_in] [get_bd_pins my_i2c/gpio_io_o]

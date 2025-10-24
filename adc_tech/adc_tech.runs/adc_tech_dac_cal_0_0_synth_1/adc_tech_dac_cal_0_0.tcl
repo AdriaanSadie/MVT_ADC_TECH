@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "adc_tech_dac_cal_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 5
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu7ev-ffvc1156-2-e
