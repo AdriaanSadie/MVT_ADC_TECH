@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Oct 22 10:23:32 2025
+| Date         : Mon Oct 27 06:54:26 2025
 | Host         : ZA-WASADIE1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file adc_tech_xbar_0_utilization_synth.rpt -pb adc_tech_xbar_0_utilization_synth.pb
 | Design       : adc_tech_xbar_0
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  560 |     0 |    230400 |  0.24 |
-|   LUT as Logic          |  560 |     0 |    230400 |  0.24 |
+| CLB LUTs*               |  579 |     0 |    230400 |  0.25 |
+|   LUT as Logic          |  579 |     0 |    230400 |  0.25 |
 |   LUT as Memory         |    0 |     0 |    101760 |  0.00 |
 | CLB Registers           |  223 |     0 |    460800 |  0.05 |
 |   Register as Flip Flop |  223 |     0 |    460800 |  0.05 |
@@ -155,14 +155,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  245 |                 CLB |
-| LUT5     |  222 |                 CLB |
+| LUT6     |  251 |                 CLB |
 | FDRE     |  221 |            Register |
+| LUT5     |  219 |                 CLB |
 | LUT3     |   70 |                 CLB |
-| LUT2     |   51 |                 CLB |
+| LUT2     |   49 |                 CLB |
 | LUT4     |   47 |                 CLB |
-| LUT1     |    2 |                 CLB |
 | FDSE     |    2 |            Register |
+| LUT1     |    1 |                 CLB |
 +----------+------+---------------------+
 
 

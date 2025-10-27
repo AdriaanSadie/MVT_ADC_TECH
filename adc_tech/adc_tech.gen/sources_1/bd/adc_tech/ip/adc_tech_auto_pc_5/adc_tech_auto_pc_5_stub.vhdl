@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Fri Sep 26 10:24:04 2025
+-- Date        : Mon Oct 27 06:54:25 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top adc_tech_auto_pc_5 -prefix
---               adc_tech_auto_pc_5_ adc_tech_auto_pc_3_stub.vhdl
--- Design      : adc_tech_auto_pc_3
+--               adc_tech_auto_pc_5_ adc_tech_auto_pc_1_stub.vhdl
+-- Design      : adc_tech_auto_pc_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu7ev-ffvc1156-2-e
 -- --------------------------------------------------------------------------------

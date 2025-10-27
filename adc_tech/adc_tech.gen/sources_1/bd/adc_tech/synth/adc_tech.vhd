@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Thu Oct 23 14:31:05 2025
+--Date        : Mon Oct 27 06:52:36 2025
 --Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 --Command     : generate_target adc_tech.bd
 --Design      : adc_tech
@@ -962,29 +962,29 @@ architecture STRUCTURE of bram_tester_imp_HXNXDB is
   signal Processing_Subsystem_global_clk : STD_LOGIC;
   signal Processing_Subsystem_global_rst_n : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
-  attribute DEBUG : string;
-  attribute DEBUG of axi_bram_ctrl_0_BRAM_PORTA_ADDR : signal is "true";
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of axi_bram_ctrl_0_BRAM_PORTA_ADDR : signal is std.standard.true;
+  attribute debug : string;
+  attribute debug of axi_bram_ctrl_0_BRAM_PORTA_ADDR : signal is "true";
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
-  attribute DEBUG of axi_bram_ctrl_0_BRAM_PORTA_CLK : signal is "true";
   attribute MARK_DEBUG of axi_bram_ctrl_0_BRAM_PORTA_CLK : signal is std.standard.true;
+  attribute debug of axi_bram_ctrl_0_BRAM_PORTA_CLK : signal is "true";
   signal axi_bram_ctrl_0_BRAM_PORTA_DOUT : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute DEBUG of axi_bram_ctrl_0_BRAM_PORTA_DOUT : signal is "true";
   attribute MARK_DEBUG of axi_bram_ctrl_0_BRAM_PORTA_DOUT : signal is std.standard.true;
+  attribute debug of axi_bram_ctrl_0_BRAM_PORTA_DOUT : signal is "true";
   signal bram_test_control_gpio_io_o : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal bram_writer_0_addra : STD_LOGIC_VECTOR ( 12 downto 0 );
-  attribute DEBUG of bram_writer_0_addra : signal is "true";
   attribute MARK_DEBUG of bram_writer_0_addra : signal is std.standard.true;
+  attribute debug of bram_writer_0_addra : signal is "true";
   signal bram_writer_0_dia : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute DEBUG of bram_writer_0_dia : signal is "true";
   attribute MARK_DEBUG of bram_writer_0_dia : signal is std.standard.true;
+  attribute debug of bram_writer_0_dia : signal is "true";
   signal bram_writer_0_wea : STD_LOGIC;
-  attribute DEBUG of bram_writer_0_wea : signal is "true";
   attribute MARK_DEBUG of bram_writer_0_wea : signal is std.standard.true;
+  attribute debug of bram_writer_0_wea : signal is "true";
   signal xlslice_4_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute DEBUG of xlslice_4_Dout : signal is "true";
   attribute MARK_DEBUG of xlslice_4_Dout : signal is std.standard.true;
+  attribute debug of xlslice_4_Dout : signal is "true";
   signal NLW_axi_bram_ctrl_0_bram_en_a_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_bram_ctrl_0_bram_rst_a_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_bram_ctrl_0_bram_we_a_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -9012,10 +9012,10 @@ entity adc_tech is
     pulse_in_p9 : in STD_LOGIC;
     sync_in : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of adc_tech : entity is "adc_tech,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_tech,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=75,numReposBlks=57,numNonXlnxBlks=0,numHierBlks=18,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of adc_tech : entity is "adc_tech.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of adc_tech : entity is "adc_tech,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_tech,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=75,numReposBlks=57,numNonXlnxBlks=0,numHierBlks=18,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=6,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of adc_tech : entity is "adc_tech.hwdef";
 end adc_tech;
 
 architecture STRUCTURE of adc_tech is
@@ -9416,12 +9416,12 @@ architecture STRUCTURE of adc_tech is
   signal NLW_data_splitter_0_port_out2_UNCONNECTED : STD_LOGIC;
   signal NLW_data_splitter_0_port_out3_UNCONNECTED : STD_LOGIC;
   signal NLW_i2c_master_0_sda_en_UNCONNECTED : STD_LOGIC;
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of pl_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.PL_CLK_N CLK";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of pl_clk_n : signal is "XIL_INTERFACENAME CLK.PL_CLK_N, CLK_DOMAIN adc_tech_pl_clk_n, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
-  attribute X_INTERFACE_INFO of pl_clk_p : signal is "xilinx.com:signal:clock:1.0 CLK.PL_CLK_P CLK";
-  attribute X_INTERFACE_PARAMETER of pl_clk_p : signal is "XIL_INTERFACENAME CLK.PL_CLK_P, CLK_DOMAIN adc_tech_pl_clk_p, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
+  attribute x_interface_info : string;
+  attribute x_interface_info of pl_clk_n : signal is "xilinx.com:signal:clock:1.0 CLK.PL_CLK_N CLK";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of pl_clk_n : signal is "XIL_INTERFACENAME CLK.PL_CLK_N, CLK_DOMAIN adc_tech_pl_clk_n, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
+  attribute x_interface_info of pl_clk_p : signal is "xilinx.com:signal:clock:1.0 CLK.PL_CLK_P CLK";
+  attribute x_interface_parameter of pl_clk_p : signal is "XIL_INTERFACENAME CLK.PL_CLK_P, CLK_DOMAIN adc_tech_pl_clk_p, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
 begin
   counting_flag <= dac_cal_0_counting_flag;
   debug0(0) <= xlslice_3_Dout(0);

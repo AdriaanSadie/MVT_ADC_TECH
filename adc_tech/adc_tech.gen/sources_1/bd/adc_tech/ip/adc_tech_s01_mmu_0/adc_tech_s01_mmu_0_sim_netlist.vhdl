@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Oct 22 10:23:21 2025
+-- Date        : Mon Oct 27 06:54:12 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top adc_tech_s01_mmu_0 -prefix
---               adc_tech_s01_mmu_0_ adc_tech_s01_mmu_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_s01_mmu_0/adc_tech_s01_mmu_0_sim_netlist.vhdl
 -- Design      : adc_tech_s01_mmu_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -56,6 +56,8 @@ entity adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave is
     \gen_axi.gen_read.s_axi_rlast_i_reg_0\ : in STD_LOGIC;
     \gen_axi.gen_read.read_cnt_reg[7]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave : entity is "axi_mmu_v2_1_20_decerr_slave";
 end adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave is
@@ -761,20 +763,22 @@ entity adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice is
     s_axi_arready_0 : in STD_LOGIC_VECTOR ( 5 downto 0 );
     m_axi_arready : in STD_LOGIC;
     err_arready : in STD_LOGIC;
-    \gen_read.ar_cnt_reg[2]\ : in STD_LOGIC;
-    \gen_read.ar_cnt_reg[2]_0\ : in STD_LOGIC;
+    \gen_read.ar_cnt_reg[3]\ : in STD_LOGIC;
+    \gen_read.ar_cnt_reg[3]_0\ : in STD_LOGIC;
     \gen_read.ar_cnt_reg[5]_1\ : in STD_LOGIC;
     \m_payload_i_reg[58]_0\ : in STD_LOGIC_VECTOR ( 57 downto 0 );
     err_rvalid : in STD_LOGIC;
     s_ready_i_reg_0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice : entity is "axi_register_slice_v2_1_22_axic_register_slice";
 end adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_register_slice is
   signal \^q\ : STD_LOGIC_VECTOR ( 58 downto 0 );
   signal \gen_axi.gen_read.s_axi_rlast_i_i_4_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_2_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_5_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_2_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_5_n_0\ : STD_LOGIC;
   signal \gen_read.ar_cnt[5]_i_4_n_0\ : STD_LOGIC;
   signal \m_payload_i[32]_i_2__0_n_0\ : STD_LOGIC;
   signal \m_payload_i[32]_i_3__0_n_0\ : STD_LOGIC;
@@ -794,20 +798,14 @@ architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_reg
   signal s_ready_i_i_2_n_0 : STD_LOGIC;
   signal sr_axi_arready : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_read.r_state[1]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[2]_i_5\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[4]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[5]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[5]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \gen_read.ar_cnt[5]_i_4\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of m_axi_arvalid_INST_0 : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_11__0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_9__0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of m_valid_i_inv_i_1 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_read.r_state[1]_i_2\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of m_axi_arvalid_INST_0 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_11__0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_9__0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of m_valid_i_inv_i_1 : label is "soft_lutpair5";
   attribute inverted : string;
   attribute inverted of m_valid_i_reg_inv : label is "yes";
-  attribute SOFT_HLUTNM of s_axi_arready_INST_0 : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of s_axi_arready_INST_0 : label is "soft_lutpair5";
 begin
   Q(58 downto 0) <= \^q\(58 downto 0);
   m_valid_i_reg_inv_0 <= \^m_valid_i_reg_inv_0\;
@@ -865,7 +863,7 @@ begin
       INIT => X"69"
     )
         port map (
-      I0 => \gen_read.ar_cnt[2]_i_2_n_0\,
+      I0 => \gen_read.ar_cnt[4]_i_2_n_0\,
       I1 => s_axi_arready_0(1),
       I2 => s_axi_arready_0(0),
       O => \gen_read.ar_cnt_reg[5]\(0)
@@ -878,23 +876,48 @@ begin
       I0 => s_axi_arready_0(2),
       I1 => s_axi_arready_0(1),
       I2 => s_axi_arready_0(0),
-      I3 => \gen_read.ar_cnt[2]_i_2_n_0\,
+      I3 => \gen_read.ar_cnt[4]_i_2_n_0\,
       O => \gen_read.ar_cnt_reg[5]\(1)
     );
-\gen_read.ar_cnt[2]_i_2\: unisim.vcomponents.LUT6
+\gen_read.ar_cnt[3]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFE8001"
+    )
+        port map (
+      I0 => s_axi_arready_0(2),
+      I1 => \gen_read.ar_cnt[4]_i_2_n_0\,
+      I2 => s_axi_arready_0(0),
+      I3 => s_axi_arready_0(1),
+      I4 => s_axi_arready_0(3),
+      O => \gen_read.ar_cnt_reg[5]\(2)
+    );
+\gen_read.ar_cnt[4]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFF8000FFFE0001"
+    )
+        port map (
+      I0 => s_axi_arready_0(2),
+      I1 => \gen_read.ar_cnt[4]_i_2_n_0\,
+      I2 => s_axi_arready_0(0),
+      I3 => s_axi_arready_0(1),
+      I4 => s_axi_arready_0(4),
+      I5 => s_axi_arready_0(3),
+      O => \gen_read.ar_cnt_reg[5]\(3)
+    );
+\gen_read.ar_cnt[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00000000002F0000"
     )
         port map (
-      I0 => \gen_read.ar_cnt_reg[2]\,
+      I0 => \gen_read.ar_cnt_reg[3]\,
       I1 => \m_payload_i[32]_i_6__0_n_0\,
-      I2 => \gen_read.ar_cnt_reg[2]_0\,
+      I2 => \gen_read.ar_cnt_reg[3]_0\,
       I3 => \m_payload_i[32]_i_8__0_n_0\,
-      I4 => \gen_read.ar_cnt[2]_i_5_n_0\,
+      I4 => \gen_read.ar_cnt[4]_i_5_n_0\,
       I5 => \gen_read.ar_cnt_reg[5]_1\,
-      O => \gen_read.ar_cnt[2]_i_2_n_0\
+      O => \gen_read.ar_cnt[4]_i_2_n_0\
     );
-\gen_read.ar_cnt[2]_i_5\: unisim.vcomponents.LUT3
+\gen_read.ar_cnt[4]_i_5\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"40"
     )
@@ -902,28 +925,7 @@ begin
       I0 => s_axi_arready_0(5),
       I1 => s_axi_arvalid,
       I2 => sr_axi_arready,
-      O => \gen_read.ar_cnt[2]_i_5_n_0\
-    );
-\gen_read.ar_cnt[3]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"96"
-    )
-        port map (
-      I0 => \gen_read.ar_cnt[5]_i_4_n_0\,
-      I1 => s_axi_arready_0(2),
-      I2 => s_axi_arready_0(3),
-      O => \gen_read.ar_cnt_reg[5]\(2)
-    );
-\gen_read.ar_cnt[4]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"A96A"
-    )
-        port map (
-      I0 => s_axi_arready_0(4),
-      I1 => s_axi_arready_0(2),
-      I2 => s_axi_arready_0(3),
-      I3 => \gen_read.ar_cnt[5]_i_4_n_0\,
-      O => \gen_read.ar_cnt_reg[5]\(3)
+      O => \gen_read.ar_cnt[4]_i_5_n_0\
     );
 \gen_read.ar_cnt[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -955,7 +957,7 @@ begin
     )
         port map (
       I0 => s_axi_arready_0(2),
-      I1 => \gen_read.ar_cnt[2]_i_2_n_0\,
+      I1 => \gen_read.ar_cnt[4]_i_2_n_0\,
       I2 => s_axi_arready_0(0),
       I3 => s_axi_arready_0(1),
       O => \gen_read.ar_cnt[5]_i_4_n_0\
@@ -1720,20 +1722,20 @@ architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axic_reg
   signal sr_axi_awready : STD_LOGIC;
   signal w_match : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_gen_write.w_state[1]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \FSM_onehot_gen_write.w_state[2]_i_3\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \gen_axi.gen_write.s_axi_awready_i_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[2]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[3]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[4]_i_2\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[5]_i_3\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[5]_i_7\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of m_axi_awvalid_INST_0 : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_10\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_12\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_15\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_9\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_valid_i_inv_i_1__0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \FSM_onehot_gen_write.w_state[1]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \FSM_onehot_gen_write.w_state[2]_i_3\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \gen_axi.gen_write.s_axi_awready_i_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \gen_write.aw_cnt[2]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \gen_write.aw_cnt[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \gen_write.aw_cnt[4]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \gen_write.aw_cnt[5]_i_3\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \gen_write.aw_cnt[5]_i_7\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of m_axi_awvalid_INST_0 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_10\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_12\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_15\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_payload_i[32]_i_9\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_valid_i_inv_i_1__0\ : label is "soft_lutpair11";
   attribute inverted : string;
   attribute inverted of m_valid_i_reg_inv : label is "yes";
 begin
@@ -2695,8 +2697,8 @@ entity adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice is
     \gen_write.w_mask_reg\ : in STD_LOGIC;
     w_mask : in STD_LOGIC;
     w_mask0 : in STD_LOGIC;
-    \gen_read.ar_cnt_reg[2]\ : in STD_LOGIC;
-    \gen_read.ar_cnt_reg[2]_0\ : in STD_LOGIC;
+    \gen_read.ar_cnt_reg[3]\ : in STD_LOGIC;
+    \gen_read.ar_cnt_reg[3]_0\ : in STD_LOGIC;
     \gen_read.ar_cnt_reg[5]_1\ : in STD_LOGIC;
     \gen_write.aw_cnt_reg[5]_0\ : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
@@ -2707,6 +2709,8 @@ entity adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice is
     err_rvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice : entity is "axi_register_slice_v2_1_22_axi_register_slice";
 end adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice;
 
 architecture STRUCTURE of adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_axi_register_slice is
@@ -2723,8 +2727,8 @@ begin
       aclk => aclk,
       err_arready => err_arready,
       err_rvalid => err_rvalid,
-      \gen_read.ar_cnt_reg[2]\ => \gen_read.ar_cnt_reg[2]\,
-      \gen_read.ar_cnt_reg[2]_0\ => \gen_read.ar_cnt_reg[2]_0\,
+      \gen_read.ar_cnt_reg[3]\ => \gen_read.ar_cnt_reg[3]\,
+      \gen_read.ar_cnt_reg[3]_0\ => \gen_read.ar_cnt_reg[3]_0\,
       \gen_read.ar_cnt_reg[5]\(4 downto 0) => \gen_read.ar_cnt_reg[5]\(4 downto 0),
       \gen_read.ar_cnt_reg[5]_0\(0) => \gen_read.ar_cnt_reg[5]_0\(0),
       \gen_read.ar_cnt_reg[5]_1\ => \gen_read.ar_cnt_reg[5]_1\,
@@ -2925,6 +2929,8 @@ entity adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top is
   attribute C_USES_DEST of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is 0;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is "axi_mmu_v2_1_20_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -2962,10 +2968,10 @@ architecture STRUCTURE of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top is
   signal err_awready : STD_LOGIC;
   signal err_rvalid : STD_LOGIC;
   signal \gen_read.ar_cnt[0]_i_1_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_3_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_4_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_6_n_0\ : STD_LOGIC;
-  signal \gen_read.ar_cnt[2]_i_7_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_3_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_4_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_6_n_0\ : STD_LOGIC;
+  signal \gen_read.ar_cnt[4]_i_7_n_0\ : STD_LOGIC;
   signal \gen_read.ar_cnt[5]_i_3_n_0\ : STD_LOGIC;
   signal \gen_read.ar_cnt_reg\ : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal \gen_write.aw_cnt[0]_i_1_n_0\ : STD_LOGIC;
@@ -3029,60 +3035,50 @@ architecture STRUCTURE of adc_tech_s01_mmu_0_axi_mmu_v2_1_20_top is
   signal w_mask : STD_LOGIC;
   signal w_mask0 : STD_LOGIC;
   signal \w_state__0\ : STD_LOGIC_VECTOR ( 1 to 1 );
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_gen_write.w_state[2]_i_2\ : label is "soft_lutpair21";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_write.w_state_reg[1]\ : label is "W_DECERR:100,iSTATE:001,W_PENDING:010";
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_write.w_state_reg[2]\ : label is "W_DECERR:100,iSTATE:001,W_PENDING:010";
-  attribute SOFT_HLUTNM of \FSM_sequential_gen_read.r_state[0]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \FSM_sequential_gen_read.r_state[0]_i_1\ : label is "soft_lutpair16";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_read.r_state_reg[0]\ : label is "R_PENDING:01,iSTATE:00,R_DECERR:10";
   attribute FSM_ENCODED_STATES of \FSM_sequential_gen_read.r_state_reg[1]\ : label is "R_PENDING:01,iSTATE:00,R_DECERR:10";
-  attribute SOFT_HLUTNM of \gen_write.aw_cnt[5]_i_6\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[0]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[3]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[4]_i_2\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[5]_i_3\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[5]_i_6\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \gen_write.w_cnt[5]_i_7\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \gen_write.w_mask_i_2\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of m_axi_wvalid_INST_0 : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \s_axi_bresp[0]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \s_axi_bresp[1]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \s_axi_rdata[0]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \s_axi_rdata[10]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \s_axi_rdata[11]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s_axi_rdata[12]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s_axi_rdata[13]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \s_axi_rdata[14]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \s_axi_rdata[15]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \s_axi_rdata[16]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \s_axi_rdata[17]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \s_axi_rdata[18]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \s_axi_rdata[19]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \s_axi_rdata[1]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s_axi_rdata[20]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \s_axi_rdata[21]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \s_axi_rdata[22]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \s_axi_rdata[23]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \s_axi_rdata[24]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \s_axi_rdata[25]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \s_axi_rdata[26]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \s_axi_rdata[27]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \s_axi_rdata[28]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \s_axi_rdata[29]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \s_axi_rdata[2]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s_axi_rdata[30]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \s_axi_rdata[31]_INST_0\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \s_axi_rdata[3]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \s_axi_rdata[4]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \s_axi_rdata[5]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \s_axi_rdata[6]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \s_axi_rdata[7]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \s_axi_rdata[8]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \s_axi_rdata[9]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \s_axi_rresp[0]_INST_0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \gen_write.w_cnt[5]_i_3\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \gen_write.w_cnt[5]_i_7\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of m_axi_wvalid_INST_0 : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \s_axi_bresp[1]_INST_0\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \s_axi_rdata[0]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \s_axi_rdata[10]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s_axi_rdata[11]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \s_axi_rdata[12]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \s_axi_rdata[13]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s_axi_rdata[14]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s_axi_rdata[15]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s_axi_rdata[16]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s_axi_rdata[17]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \s_axi_rdata[18]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \s_axi_rdata[19]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s_axi_rdata[1]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \s_axi_rdata[20]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s_axi_rdata[21]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \s_axi_rdata[22]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \s_axi_rdata[23]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s_axi_rdata[24]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s_axi_rdata[25]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \s_axi_rdata[26]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \s_axi_rdata[27]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \s_axi_rdata[28]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \s_axi_rdata[29]_INST_0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \s_axi_rdata[2]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \s_axi_rdata[30]_INST_0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \s_axi_rdata[31]_INST_0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \s_axi_rdata[3]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s_axi_rdata[4]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s_axi_rdata[5]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \s_axi_rdata[6]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \s_axi_rdata[7]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s_axi_rdata[8]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s_axi_rdata[9]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s_axi_rresp[0]_INST_0\ : label is "soft_lutpair32";
 begin
   \^s_axi_bready\ <= s_axi_bready;
   \^s_axi_rready\ <= s_axi_rready;
@@ -3237,20 +3233,20 @@ decerr_slave_inst: entity work.adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave
       I0 => \gen_read.ar_cnt_reg\(0),
       O => \gen_read.ar_cnt[0]_i_1_n_0\
     );
-\gen_read.ar_cnt[2]_i_3\: unisim.vcomponents.LUT6
+\gen_read.ar_cnt[4]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"001000100010FFFF"
     )
         port map (
       I0 => register_slice_inst_n_146,
-      I1 => \gen_read.ar_cnt[2]_i_6_n_0\,
+      I1 => \gen_read.ar_cnt[4]_i_6_n_0\,
       I2 => register_slice_inst_n_143,
       I3 => register_slice_inst_n_142,
       I4 => register_slice_inst_n_145,
-      I5 => \gen_read.ar_cnt[2]_i_7_n_0\,
-      O => \gen_read.ar_cnt[2]_i_3_n_0\
+      I5 => \gen_read.ar_cnt[4]_i_7_n_0\,
+      O => \gen_read.ar_cnt[4]_i_3_n_0\
     );
-\gen_read.ar_cnt[2]_i_4\: unisim.vcomponents.LUT6
+\gen_read.ar_cnt[4]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFF2BFF6BF"
     )
@@ -3261,9 +3257,9 @@ decerr_slave_inst: entity work.adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave
       I3 => s_axi_araddr(31),
       I4 => register_slice_inst_n_143,
       I5 => register_slice_inst_n_142,
-      O => \gen_read.ar_cnt[2]_i_4_n_0\
+      O => \gen_read.ar_cnt[4]_i_4_n_0\
     );
-\gen_read.ar_cnt[2]_i_6\: unisim.vcomponents.LUT4
+\gen_read.ar_cnt[4]_i_6\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFEF"
     )
@@ -3272,9 +3268,9 @@ decerr_slave_inst: entity work.adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave
       I1 => s_axi_araddr(11),
       I2 => s_axi_araddr(18),
       I3 => s_axi_araddr(10),
-      O => \gen_read.ar_cnt[2]_i_6_n_0\
+      O => \gen_read.ar_cnt[4]_i_6_n_0\
     );
-\gen_read.ar_cnt[2]_i_7\: unisim.vcomponents.LUT6
+\gen_read.ar_cnt[4]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AAAAAAAAAAAAAAA8"
     )
@@ -3285,7 +3281,7 @@ decerr_slave_inst: entity work.adc_tech_s01_mmu_0_axi_mmu_v2_1_20_decerr_slave
       I3 => s_axi_araddr(15),
       I4 => s_axi_araddr(17),
       I5 => s_axi_araddr(16),
-      O => \gen_read.ar_cnt[2]_i_7_n_0\
+      O => \gen_read.ar_cnt[4]_i_7_n_0\
     );
 \gen_read.ar_cnt[5]_i_3\: unisim.vcomponents.LUT4
     generic map(
@@ -3675,8 +3671,8 @@ register_slice_inst: entity work.adc_tech_s01_mmu_0_axi_register_slice_v2_1_22_a
       err_arready => err_arready,
       err_awready => err_awready,
       err_rvalid => err_rvalid,
-      \gen_read.ar_cnt_reg[2]\ => \gen_read.ar_cnt[2]_i_3_n_0\,
-      \gen_read.ar_cnt_reg[2]_0\ => \gen_read.ar_cnt[2]_i_4_n_0\,
+      \gen_read.ar_cnt_reg[3]\ => \gen_read.ar_cnt[4]_i_3_n_0\,
+      \gen_read.ar_cnt_reg[3]_0\ => \gen_read.ar_cnt[4]_i_4_n_0\,
       \gen_read.ar_cnt_reg[5]\(4) => register_slice_inst_n_130,
       \gen_read.ar_cnt_reg[5]\(3) => register_slice_inst_n_131,
       \gen_read.ar_cnt_reg[5]\(2) => register_slice_inst_n_132,
@@ -4295,7 +4291,7 @@ architecture STRUCTURE of adc_tech_s01_mmu_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 400000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -4306,7 +4302,7 @@ architecture STRUCTURE of adc_tech_s01_mmu_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI RLAST";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI WLAST";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
@@ -4319,7 +4315,7 @@ architecture STRUCTURE of adc_tech_s01_mmu_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI RLAST";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";

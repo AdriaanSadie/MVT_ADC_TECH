@@ -37,8 +37,8 @@ def main():
         sys.exit(1)
 
     decimals = [int(c, 16) for c in reversed(hex_str)]
-    voltages = np.array([d * 0.1 for d in decimals])      # 0-1.5 V
-    dt = 5e-9                                            # 200 MHz
+    voltages = np.array([d * 0.108125 for d in decimals])      # 1.73/16
+    dt = 25e-10                                            # 400 MHz
     times_adc = np.arange(0, len(voltages) * dt, dt)
 
     # write voltages.txt

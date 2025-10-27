@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.8",
-   "Default View_TopLeft":"-360,-250",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-285,-266",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -10,24 +10,24 @@ preplace port ADC_BRAM_CONTROL -pg 1 -lvl 0 -x -20 -y -190 -defaultsOSRD
 preplace port clk -pg 1 -lvl 0 -x -20 -y 40 -defaultsOSRD
 preplace port rst_n -pg 1 -lvl 0 -x -20 -y 110 -defaultsOSRD
 preplace portBus adc_frontend -pg 1 -lvl 0 -x -20 -y -20 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 840 -y 260 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 850 -y 260 -defaultsOSRD
 preplace inst adc_encoder -pg 1 -lvl 1 -x 460 -y 0 -defaultsOSRD
 preplace inst adc_bram_read -pg 1 -lvl 1 -x 460 -y 170 -defaultsOSRD
-preplace inst adc_to_bram_0 -pg 1 -lvl 2 -x 840 -y 50 -defaultsOSRD
+preplace inst adc_to_bram_0 -pg 1 -lvl 2 -x 850 -y 50 -defaultsOSRD
 preplace inst adc_bram_control -pg 1 -lvl 1 -x 460 -y -170 -defaultsOSRD
 preplace netloc clk_1 1 0 2 10 -90 630
 preplace netloc rst_n_1 1 0 2 20 -80 640
 preplace netloc adc_frontend_1 1 0 1 0 -20n
 preplace netloc adc_encoder_adc_encoded 1 1 1 620 0n
 preplace netloc adc_bram_control_gpio_io_o 1 1 1 650 -160n
-preplace netloc adc_to_bram_0_bram_data 1 1 2 660 -50 1010
-preplace netloc adc_to_bram_0_bram_addr 1 1 2 680 -40 1000
-preplace netloc adc_to_bram_0_bram_we 1 1 2 670 140 1000
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 620 170n
+preplace netloc adc_to_bram_0_bram_data 1 1 2 660 -50 1020
+preplace netloc adc_to_bram_0_bram_addr 1 1 2 680 -40 1010
+preplace netloc adc_to_bram_0_bram_we 1 1 2 670 140 1010
 preplace netloc Conn1 1 0 1 N 150
 preplace netloc Conn2 1 0 1 N -190
-levelinfo -pg 1 -20 460 840 1030
-pagesize -pg 1 -db -bbox -sgen -230 -290 1030 390
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 1 1 620 170n
+levelinfo -pg 1 -20 460 850 1040
+pagesize -pg 1 -db -bbox -sgen -230 -290 1040 390
 "
 }
 0

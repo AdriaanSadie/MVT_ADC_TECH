@@ -93,7 +93,7 @@ set_property ip_output_repo c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0.xci
+read_ip -quiet C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.srcs/sources_1/bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0.xci
 set_property used_in_implementation false [get_files -all c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_c_counter_binary_0_0/adc_tech_c_counter_binary_0_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }

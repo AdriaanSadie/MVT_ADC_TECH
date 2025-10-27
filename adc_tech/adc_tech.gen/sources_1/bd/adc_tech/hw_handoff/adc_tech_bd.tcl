@@ -667,13 +667,13 @@ proc create_hier_cell_Processing_Subsystem { parentCell nameHier } {
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKIN1_JITTER_PS {80.0} \
-   CONFIG.CLKOUT1_JITTER {161.295} \
+   CONFIG.CLKOUT1_JITTER {146.303} \
    CONFIG.CLKOUT1_PHASE_ERROR {222.305} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.000} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {400.000} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {48.000} \
    CONFIG.MMCM_CLKIN1_PERIOD {8.000} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {3.000} \
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 

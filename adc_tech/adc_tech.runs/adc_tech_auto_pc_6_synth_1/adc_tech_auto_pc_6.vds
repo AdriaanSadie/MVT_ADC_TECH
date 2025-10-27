@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 27 06:54:29 2025
+# Process ID: 138032
+# Current directory: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_auto_pc_6_synth_1
+# Command line: vivado.exe -log adc_tech_auto_pc_6.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_tech_auto_pc_6.tcl
+# Log file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_auto_pc_6_synth_1/adc_tech_auto_pc_6.vds
+# Journal file: C:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.runs/adc_tech_auto_pc_6_synth_1\vivado.jou
+#-----------------------------------------------------------
+source adc_tech_auto_pc_6.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP adc_tech_auto_pc_6, cache-ID = 1d7f53ddbdec0e86.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 27 06:54:35 2025...

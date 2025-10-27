@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Sep 22 10:03:58 2025
+| Date         : Mon Oct 27 06:54:50 2025
 | Host         : ZA-WASADIE1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file adc_tech_jtag_axi_0_0_utilization_synth.rpt -pb adc_tech_jtag_axi_0_0_utilization_synth.pb
 | Design       : adc_tech_jtag_axi_0_0
@@ -160,13 +160,13 @@ Table of Contents
 +----------+------+---------------------+
 | RAMD64E  | 2560 |                 CLB |
 | FDRE     | 1953 |            Register |
-| LUT6     |  754 |                 CLB |
+| LUT6     |  755 |                 CLB |
 | MUXF7    |  256 |                 CLB |
 | LUT2     |  139 |                 CLB |
 | LUT4     |  130 |                 CLB |
 | MUXF8    |  128 |                 CLB |
 | LUT3     |  121 |                 CLB |
-| LUT5     |   71 |                 CLB |
+| LUT5     |   70 |                 CLB |
 | LUT1     |   20 |                 CLB |
 | CARRY8   |   16 |                 CLB |
 | FDSE     |   12 |            Register |

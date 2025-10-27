@@ -52,6 +52,6 @@
 # #########################################################
 
 
-create_clock -period 5 -name CLK [get_ports CLK]
+create_clock -period 2.500 -name CLK [get_ports CLK]
 
 

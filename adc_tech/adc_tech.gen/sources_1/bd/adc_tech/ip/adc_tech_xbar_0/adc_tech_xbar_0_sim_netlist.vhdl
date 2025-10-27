@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Oct 22 10:23:32 2025
+-- Date        : Mon Oct 27 06:54:26 2025
 -- Host        : ZA-WASADIE1 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/work/Technology/Vivado/MVT_ADC_TECH/adc_tech/adc_tech.gen/sources_1/bd/adc_tech/ip/adc_tech_xbar_0/adc_tech_xbar_0_sim_netlist.vhdl
@@ -20,10 +20,11 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
     Q : out STD_LOGIC_VECTOR ( 96 downto 0 );
     s_axi_bvalid : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \gen_arbiter.m_grant_hot_i_reg[1]_0\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    D : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \gen_arbiter.any_grant_reg_inv_0\ : out STD_LOGIC_VECTOR ( 10 downto 0 );
     m_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     aresetn_d_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \m_ready_d_reg[2]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_wvalid_0_sp_1 : out STD_LOGIC;
     m_axi_wlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wlast_1_sp_1 : out STD_LOGIC;
@@ -37,14 +38,13 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
     m_axi_bready : out STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_bready_0_sp_1 : out STD_LOGIC;
     m_axi_awvalid : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    \m_ready_d_reg[2]_0\ : out STD_LOGIC;
+    \m_ready_d_reg[2]\ : out STD_LOGIC;
     m_axi_wvalid : out STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_wready : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \gen_axi.read_cs_reg[0]\ : out STD_LOGIC;
     s_axi_awready : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_arready : out STD_LOGIC_VECTOR ( 1 downto 0 );
     aresetn_d_reg_0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \gen_arbiter.any_grant_reg_inv_0\ : out STD_LOGIC_VECTOR ( 10 downto 0 );
     aclk : in STD_LOGIC;
     \m_axi_awvalid[0]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \m_ready_d_reg[0]_0\ : in STD_LOGIC;
@@ -69,11 +69,14 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
     s_axi_awqos : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_aruser : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awuser : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    \m_ready_d_reg[2]_0\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_1\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_2\ : in STD_LOGIC;
     aresetn_d : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    D : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \gen_arbiter.m_grant_hot_i_reg[0]_0\ : in STD_LOGIC;
+    \gen_arbiter.m_grant_hot_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \gen_arbiter.m_grant_hot_i_reg[0]_1\ : in STD_LOGIC;
     \m_ready_d_reg[1]_0\ : in STD_LOGIC;
     \m_ready_d_reg[1]_1\ : in STD_LOGIC;
     \m_ready_d_reg[1]_2\ : in STD_LOGIC;
@@ -91,9 +94,6 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
     mi_arready : in STD_LOGIC_VECTOR ( 0 to 0 );
     mi_rvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_bready : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \m_ready_d_reg[2]_1\ : in STD_LOGIC;
-    \m_ready_d_reg[2]_2\ : in STD_LOGIC;
-    \m_ready_d_reg[2]_3\ : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awvalid : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
@@ -102,6 +102,7 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
 end adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd;
 
 architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd is
+  signal \^d\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 96 downto 0 );
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal aa_grant_enc : STD_LOGIC;
@@ -202,6 +203,7 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
   signal \gen_arbiter.m_grant_hot_i[1]_i_1_n_0\ : STD_LOGIC;
   signal \gen_arbiter.m_grant_hot_i[1]_i_2_n_0\ : STD_LOGIC;
   signal \gen_arbiter.m_grant_hot_i[1]_i_3_n_0\ : STD_LOGIC;
+  signal \gen_arbiter.m_grant_hot_i[1]_i_4_n_0\ : STD_LOGIC;
   signal \^gen_arbiter.m_grant_hot_i_reg[1]_0\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \gen_arbiter.m_valid_i_i_1_n_0\ : STD_LOGIC;
   signal \gen_arbiter.s_ready_i[1]_i_1_n_0\ : STD_LOGIC;
@@ -212,11 +214,6 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
   signal \m_atarget_enc[3]_i_3_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[0]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[10]_i_10_n_0\ : STD_LOGIC;
-  signal \m_atarget_hot[10]_i_11_n_0\ : STD_LOGIC;
-  signal \m_atarget_hot[10]_i_12_n_0\ : STD_LOGIC;
-  signal \m_atarget_hot[10]_i_13_n_0\ : STD_LOGIC;
-  signal \m_atarget_hot[10]_i_14_n_0\ : STD_LOGIC;
-  signal \m_atarget_hot[10]_i_15_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[10]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[10]_i_3_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[10]_i_4_n_0\ : STD_LOGIC;
@@ -227,9 +224,14 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
   signal \m_atarget_hot[10]_i_9_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[1]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[1]_i_3_n_0\ : STD_LOGIC;
+  signal \m_atarget_hot[2]_i_2_n_0\ : STD_LOGIC;
+  signal \m_atarget_hot[2]_i_3_n_0\ : STD_LOGIC;
+  signal \m_atarget_hot[2]_i_4_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[4]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[5]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[5]_i_3_n_0\ : STD_LOGIC;
+  signal \m_atarget_hot[7]_i_2_n_0\ : STD_LOGIC;
+  signal \m_atarget_hot[7]_i_3_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[8]_i_2_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[8]_i_3_n_0\ : STD_LOGIC;
   signal \m_atarget_hot[8]_i_4_n_0\ : STD_LOGIC;
@@ -242,9 +244,7 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
   signal \m_ready_d[1]_i_2__0_n_0\ : STD_LOGIC;
   signal \m_ready_d[1]_i_3_n_0\ : STD_LOGIC;
   signal \m_ready_d[2]_i_3_n_0\ : STD_LOGIC;
-  signal \m_ready_d[2]_i_4_n_0\ : STD_LOGIC;
   signal \^m_ready_d_reg[0]\ : STD_LOGIC;
-  signal \^m_ready_d_reg[2]\ : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal m_valid_i : STD_LOGIC;
   signal m_valid_i_i_2_n_0 : STD_LOGIC;
   signal m_valid_i_i_3_n_0 : STD_LOGIC;
@@ -262,130 +262,116 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
   signal s_axi_wvalid_0_sn_1 : STD_LOGIC;
   signal s_ready_i : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_gen_axi.write_cs[2]_i_4\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \FSM_onehot_gen_axi.write_cs[2]_i_4\ : label is "soft_lutpair18";
   attribute inverted : string;
   attribute inverted of \gen_arbiter.any_grant_reg_inv\ : label is "yes";
-  attribute SOFT_HLUTNM of \gen_arbiter.grant_rnw_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_amesg_i[0]_i_5\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \gen_arbiter.m_valid_i_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_atarget_enc[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_atarget_enc[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_atarget_hot[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_10\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_12\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_3\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_5\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_8\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_9\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_atarget_hot[1]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \m_atarget_hot[3]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \m_atarget_hot[4]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \m_atarget_hot[5]_i_3\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_atarget_hot[7]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_atarget_hot[8]_i_3\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_atarget_hot[9]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[0]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[1]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[2]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[3]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[4]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[5]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[6]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[7]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[8]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[9]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[1]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[2]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[3]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[4]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[5]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[6]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[7]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[8]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[9]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axi_bready[0]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_axi_bready[1]_INST_0\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \m_axi_bready[2]_INST_0\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \m_axi_bready[3]_INST_0\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \m_axi_bready[4]_INST_0\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \m_axi_bready[5]_INST_0\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \m_axi_bready[6]_INST_0\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \m_axi_bready[7]_INST_0\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \m_axi_bready[8]_INST_0\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \m_axi_bready[9]_INST_0\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \m_axi_wdata[0]_INST_0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \m_axi_wdata[10]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \m_axi_wdata[11]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \m_axi_wdata[12]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \m_axi_wdata[13]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \m_axi_wdata[14]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \m_axi_wdata[15]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \m_axi_wdata[16]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \m_axi_wdata[17]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \m_axi_wdata[18]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \m_axi_wdata[19]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \m_axi_wdata[1]_INST_0\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \m_axi_wdata[20]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \m_axi_wdata[21]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \m_axi_wdata[22]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \m_axi_wdata[23]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \m_axi_wdata[24]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \m_axi_wdata[25]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \m_axi_wdata[26]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \m_axi_wdata[27]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \m_axi_wdata[28]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axi_wdata[29]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axi_wdata[2]_INST_0\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \m_axi_wdata[30]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \m_axi_wdata[31]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \m_axi_wdata[3]_INST_0\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \m_axi_wdata[4]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \m_axi_wdata[5]_INST_0\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \m_axi_wdata[6]_INST_0\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \m_axi_wdata[7]_INST_0\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \m_axi_wdata[8]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \m_axi_wdata[9]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \m_axi_wlast[0]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[0]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[1]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[2]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axi_wstrb[3]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[1]_INST_0\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[2]_INST_0\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[3]_INST_0\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[4]_INST_0\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[5]_INST_0\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[6]_INST_0\ : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[7]_INST_0\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[8]_INST_0\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[9]_INST_0\ : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \m_payload_i[34]_i_3\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_ready_d[0]_i_1__0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_2__0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_3\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_5\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of m_valid_i_i_1 : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s_arvalid_reg[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \s_arvalid_reg[1]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \s_axi_arready[0]_INST_0\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \s_axi_arready[1]_INST_0\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \s_axi_awready[0]_INST_0\ : label is "soft_lutpair56";
-  attribute SOFT_HLUTNM of \s_axi_awready[1]_INST_0\ : label is "soft_lutpair55";
-  attribute SOFT_HLUTNM of \s_axi_bvalid[0]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \s_axi_bvalid[1]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \s_axi_wready[0]_INST_0\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of \s_axi_wready[1]_INST_0\ : label is "soft_lutpair54";
-  attribute SOFT_HLUTNM of s_ready_i_i_1 : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \gen_arbiter.grant_rnw_i_2\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gen_arbiter.m_amesg_i[0]_i_5\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_3\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_5\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_6\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_atarget_hot[10]_i_8\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_4\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_atarget_hot[3]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \m_atarget_hot[5]_i_3\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_atarget_hot[6]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \m_atarget_hot[7]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_atarget_hot[8]_i_3\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[0]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[1]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[2]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[3]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[4]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[5]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[6]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[7]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[8]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[9]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[1]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[2]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[3]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[4]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[5]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[6]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[7]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[8]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[9]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axi_bready[0]_INST_0\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \m_axi_bready[1]_INST_0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \m_axi_bready[2]_INST_0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \m_axi_bready[3]_INST_0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \m_axi_bready[4]_INST_0\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \m_axi_bready[5]_INST_0\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \m_axi_bready[6]_INST_0\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \m_axi_bready[7]_INST_0\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \m_axi_bready[8]_INST_0\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \m_axi_bready[9]_INST_0\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \m_axi_wdata[0]_INST_0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \m_axi_wdata[10]_INST_0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \m_axi_wdata[11]_INST_0\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \m_axi_wdata[12]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \m_axi_wdata[13]_INST_0\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \m_axi_wdata[14]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \m_axi_wdata[15]_INST_0\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \m_axi_wdata[16]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \m_axi_wdata[17]_INST_0\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \m_axi_wdata[18]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \m_axi_wdata[19]_INST_0\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \m_axi_wdata[1]_INST_0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \m_axi_wdata[20]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \m_axi_wdata[21]_INST_0\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \m_axi_wdata[22]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \m_axi_wdata[23]_INST_0\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \m_axi_wdata[24]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \m_axi_wdata[25]_INST_0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \m_axi_wdata[26]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axi_wdata[27]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axi_wdata[28]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axi_wdata[29]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axi_wdata[2]_INST_0\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \m_axi_wdata[30]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axi_wdata[31]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axi_wdata[3]_INST_0\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \m_axi_wdata[4]_INST_0\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \m_axi_wdata[5]_INST_0\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \m_axi_wdata[6]_INST_0\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \m_axi_wdata[7]_INST_0\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \m_axi_wdata[8]_INST_0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \m_axi_wdata[9]_INST_0\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \m_axi_wlast[0]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[0]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[1]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[2]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axi_wstrb[3]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[0]_INST_0\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[1]_INST_0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[2]_INST_0\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[3]_INST_0\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[4]_INST_0\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[5]_INST_0\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[6]_INST_0\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[7]_INST_0\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[8]_INST_0\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[9]_INST_0\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \m_payload_i[34]_i_3\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \m_ready_d[1]_i_3\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \s_arvalid_reg[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \s_arvalid_reg[1]_i_2\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \s_axi_arready[0]_INST_0\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \s_axi_awready[0]_INST_0\ : label is "soft_lutpair49";
+  attribute SOFT_HLUTNM of \s_axi_awready[1]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s_axi_bvalid[1]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s_axi_wready[0]_INST_0\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \s_axi_wready[1]_INST_0\ : label is "soft_lutpair48";
 begin
+  D(2 downto 0) <= \^d\(2 downto 0);
   Q(96 downto 0) <= \^q\(96 downto 0);
   SR(0) <= \^sr\(0);
   aresetn_d_reg_0_sp_1 <= aresetn_d_reg_0_sn_1;
   \gen_arbiter.m_grant_hot_i_reg[1]_0\(1 downto 0) <= \^gen_arbiter.m_grant_hot_i_reg[1]_0\(1 downto 0);
   m_axi_wlast(0) <= \^m_axi_wlast\(0);
   \m_ready_d_reg[0]\ <= \^m_ready_d_reg[0]\;
-  \m_ready_d_reg[2]\(2 downto 0) <= \^m_ready_d_reg[2]\(2 downto 0);
   s_axi_bready_0_sp_1 <= s_axi_bready_0_sn_1;
   s_axi_wlast_1_sp_1 <= s_axi_wlast_1_sn_1;
   s_axi_wvalid_0_sp_1 <= s_axi_wvalid_0_sn_1;
@@ -410,7 +396,7 @@ begin
       I0 => \m_axi_awvalid[0]\(2),
       I1 => m_valid_i,
       I2 => aa_grant_rnw,
-      O => \m_ready_d_reg[2]_0\
+      O => \m_ready_d_reg[2]\
     );
 \gen_arbiter.any_grant_inv_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -3506,12 +3492,12 @@ begin
       INIT => X"8888888F88888888"
     )
         port map (
-      I0 => D(0),
+      I0 => \gen_arbiter.m_grant_hot_i_reg[0]_0\(0),
       I1 => \gen_arbiter.m_grant_hot_i[1]_i_3_n_0\,
       I2 => \m_ready_d[1]_i_2__0_n_0\,
-      I3 => \m_ready_d[2]_i_4_n_0\,
-      I4 => \gen_arbiter.m_grant_hot_i_reg[0]_0\,
-      I5 => \^m_ready_d_reg[2]\(1),
+      I3 => \gen_arbiter.m_grant_hot_i[1]_i_4_n_0\,
+      I4 => \gen_arbiter.m_grant_hot_i_reg[0]_1\,
+      I5 => \^d\(1),
       O => \gen_arbiter.m_grant_hot_i[1]_i_2_n_0\
     );
 \gen_arbiter.m_grant_hot_i[1]_i_3\: unisim.vcomponents.LUT6
@@ -3526,6 +3512,19 @@ begin
       I4 => m_valid_i,
       I5 => aa_grant_rnw,
       O => \gen_arbiter.m_grant_hot_i[1]_i_3_n_0\
+    );
+\gen_arbiter.m_grant_hot_i[1]_i_4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00FF00FF000100FF"
+    )
+        port map (
+      I0 => \m_ready_d_reg[2]_0\,
+      I1 => \m_ready_d_reg[2]_1\,
+      I2 => \m_ready_d_reg[2]_2\,
+      I3 => \m_axi_awvalid[0]\(2),
+      I4 => m_valid_i,
+      I5 => aa_grant_rnw,
+      O => \gen_arbiter.m_grant_hot_i[1]_i_4_n_0\
     );
 \gen_arbiter.m_grant_hot_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -3718,16 +3717,17 @@ begin
       I5 => \^q\(40),
       O => \m_atarget_enc[3]_i_2_n_0\
     );
-\m_atarget_enc[3]_i_3\: unisim.vcomponents.LUT5
+\m_atarget_enc[3]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFEF"
+      INIT => X"FFFFFFFFFFFEFFFF"
     )
         port map (
-      I0 => \m_atarget_hot[8]_i_5_n_0\,
-      I1 => \^q\(38),
-      I2 => \^q\(41),
-      I3 => \m_atarget_hot[8]_i_4_n_0\,
-      I4 => \m_atarget_hot[10]_i_10_n_0\,
+      I0 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \m_atarget_hot[10]_i_7_n_0\,
+      I2 => \m_atarget_hot[8]_i_5_n_0\,
+      I3 => \^q\(38),
+      I4 => \^q\(41),
+      I5 => \m_atarget_hot[8]_i_4_n_0\,
       O => \m_atarget_enc[3]_i_3_n_0\
     );
 \m_atarget_hot[0]_i_1\: unisim.vcomponents.LUT5
@@ -3752,7 +3752,7 @@ begin
       I2 => \^q\(30),
       I3 => \^q\(31),
       I4 => \^q\(28),
-      I5 => \m_atarget_hot[10]_i_14_n_0\,
+      I5 => \m_atarget_hot[7]_i_3_n_0\,
       O => \m_atarget_hot[0]_i_2_n_0\
     );
 \m_atarget_hot[10]_i_1\: unisim.vcomponents.LUT6
@@ -3768,63 +3768,7 @@ begin
       I5 => p_0_in,
       O => \gen_arbiter.any_grant_reg_inv_0\(10)
     );
-\m_atarget_hot[10]_i_10\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => \m_atarget_hot[10]_i_15_n_0\,
-      I1 => \m_atarget_hot[10]_i_7_n_0\,
-      O => \m_atarget_hot[10]_i_10_n_0\
-    );
-\m_atarget_hot[10]_i_11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFFE"
-    )
-        port map (
-      I0 => \^q\(40),
-      I1 => \^q\(39),
-      I2 => \^q\(43),
-      I3 => \^q\(42),
-      I4 => \^q\(41),
-      I5 => \^q\(38),
-      O => \m_atarget_hot[10]_i_11_n_0\
-    );
-\m_atarget_hot[10]_i_12\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \^q\(34),
-      I1 => \^q\(37),
-      I2 => \^q\(35),
-      I3 => \^q\(36),
-      O => \m_atarget_hot[10]_i_12_n_0\
-    );
-\m_atarget_hot[10]_i_13\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => \^q\(49),
-      I1 => \^q\(44),
-      I2 => \^q\(48),
-      I3 => \^q\(45),
-      O => \m_atarget_hot[10]_i_13_n_0\
-    );
-\m_atarget_hot[10]_i_14\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000001"
-    )
-        port map (
-      I0 => \m_atarget_hot[10]_i_15_n_0\,
-      I1 => \^q\(32),
-      I2 => \^q\(33),
-      I3 => \m_atarget_hot[10]_i_12_n_0\,
-      I4 => \m_atarget_hot[10]_i_11_n_0\,
-      O => \m_atarget_hot[10]_i_14_n_0\
-    );
-\m_atarget_hot[10]_i_15\: unisim.vcomponents.LUT6
+\m_atarget_hot[10]_i_10\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
@@ -3835,7 +3779,7 @@ begin
       I3 => \^q\(52),
       I4 => \^q\(55),
       I5 => \^q\(51),
-      O => \m_atarget_hot[10]_i_15_n_0\
+      O => \m_atarget_hot[10]_i_10_n_0\
     );
 \m_atarget_hot[10]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -3862,16 +3806,17 @@ begin
       I4 => \m_atarget_hot[10]_i_9_n_0\,
       O => \m_atarget_hot[10]_i_3_n_0\
     );
-\m_atarget_hot[10]_i_4\: unisim.vcomponents.LUT5
+\m_atarget_hot[10]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000100"
+      INIT => X"0000000000010000"
     )
         port map (
-      I0 => \^q\(32),
-      I1 => \m_atarget_hot[10]_i_10_n_0\,
-      I2 => \m_atarget_hot[10]_i_11_n_0\,
-      I3 => \^q\(33),
-      I4 => \m_atarget_hot[10]_i_12_n_0\,
+      I0 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \m_atarget_hot[10]_i_7_n_0\,
+      I2 => \^q\(32),
+      I3 => \m_atarget_hot[2]_i_3_n_0\,
+      I4 => \^q\(33),
+      I5 => \m_atarget_hot[2]_i_4_n_0\,
       O => \m_atarget_hot[10]_i_4_n_0\
     );
 \m_atarget_hot[10]_i_5\: unisim.vcomponents.LUT5
@@ -3891,8 +3836,8 @@ begin
       INIT => X"FBFF"
     )
         port map (
-      I0 => \m_atarget_hot[10]_i_13_n_0\,
-      I1 => \m_atarget_hot[10]_i_14_n_0\,
+      I0 => \m_atarget_hot[7]_i_2_n_0\,
+      I1 => \m_atarget_hot[7]_i_3_n_0\,
       I2 => \^q\(47),
       I3 => \^q\(46),
       O => \m_atarget_hot[10]_i_6_n_0\
@@ -3925,9 +3870,9 @@ begin
       INIT => X"04"
     )
         port map (
-      I0 => \m_atarget_hot[10]_i_15_n_0\,
+      I0 => \m_atarget_hot[10]_i_10_n_0\,
       I1 => \^q\(34),
-      I2 => \m_atarget_hot[10]_i_11_n_0\,
+      I2 => \m_atarget_hot[2]_i_3_n_0\,
       O => \m_atarget_hot[10]_i_9_n_0\
     );
 \m_atarget_hot[1]_i_1\: unisim.vcomponents.LUT2
@@ -3944,8 +3889,8 @@ begin
       INIT => X"0000000000010000"
     )
         port map (
-      I0 => \m_atarget_hot[10]_i_12_n_0\,
-      I1 => \m_atarget_hot[10]_i_10_n_0\,
+      I0 => \m_atarget_hot[2]_i_4_n_0\,
+      I1 => \m_atarget_hot[2]_i_2_n_0\,
       I2 => \m_atarget_hot[1]_i_3_n_0\,
       I3 => \^q\(41),
       I4 => \^q\(42),
@@ -3962,14 +3907,51 @@ begin
       I2 => \^q\(43),
       O => \m_atarget_hot[1]_i_3_n_0\
     );
-\m_atarget_hot[2]_i_1\: unisim.vcomponents.LUT2
+\m_atarget_hot[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"4"
+      INIT => X"0000000000000100"
     )
         port map (
-      I0 => p_0_in,
-      I1 => \m_atarget_hot[10]_i_4_n_0\,
+      I0 => \^q\(32),
+      I1 => \m_atarget_hot[2]_i_2_n_0\,
+      I2 => \m_atarget_hot[2]_i_3_n_0\,
+      I3 => \^q\(33),
+      I4 => \m_atarget_hot[2]_i_4_n_0\,
+      I5 => p_0_in,
       O => \gen_arbiter.any_grant_reg_inv_0\(2)
+    );
+\m_atarget_hot[2]_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \m_atarget_hot[10]_i_7_n_0\,
+      O => \m_atarget_hot[2]_i_2_n_0\
+    );
+\m_atarget_hot[2]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFFE"
+    )
+        port map (
+      I0 => \^q\(40),
+      I1 => \^q\(39),
+      I2 => \^q\(43),
+      I3 => \^q\(42),
+      I4 => \^q\(41),
+      I5 => \^q\(38),
+      O => \m_atarget_hot[2]_i_3_n_0\
+    );
+\m_atarget_hot[2]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \^q\(34),
+      I1 => \^q\(37),
+      I2 => \^q\(35),
+      I3 => \^q\(36),
+      O => \m_atarget_hot[2]_i_4_n_0\
     );
 \m_atarget_hot[3]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -3992,16 +3974,17 @@ begin
       I4 => \m_atarget_hot[10]_i_2_n_0\,
       O => \gen_arbiter.any_grant_reg_inv_0\(4)
     );
-\m_atarget_hot[4]_i_2\: unisim.vcomponents.LUT5
+\m_atarget_hot[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000400"
+      INIT => X"0000000000100000"
     )
         port map (
       I0 => \m_atarget_hot[10]_i_10_n_0\,
-      I1 => \^q\(32),
-      I2 => \m_atarget_hot[10]_i_11_n_0\,
-      I3 => \^q\(33),
-      I4 => \m_atarget_hot[10]_i_12_n_0\,
+      I1 => \m_atarget_hot[10]_i_7_n_0\,
+      I2 => \^q\(32),
+      I3 => \m_atarget_hot[2]_i_3_n_0\,
+      I4 => \^q\(33),
+      I5 => \m_atarget_hot[2]_i_4_n_0\,
       O => \m_atarget_hot[4]_i_2_n_0\
     );
 \m_atarget_hot[5]_i_1\: unisim.vcomponents.LUT5
@@ -4022,7 +4005,7 @@ begin
     )
         port map (
       I0 => \m_atarget_hot[5]_i_3_n_0\,
-      I1 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \m_atarget_hot[2]_i_2_n_0\,
       I2 => \m_atarget_hot[8]_i_4_n_0\,
       I3 => \^q\(41),
       I4 => \^q\(38),
@@ -4049,14 +4032,40 @@ begin
       I1 => \m_atarget_hot[10]_i_3_n_0\,
       O => \gen_arbiter.any_grant_reg_inv_0\(6)
     );
-\m_atarget_hot[7]_i_1\: unisim.vcomponents.LUT2
+\m_atarget_hot[7]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"1"
+      INIT => X"00000400"
     )
         port map (
-      I0 => p_0_in,
-      I1 => \m_atarget_hot[10]_i_6_n_0\,
+      I0 => \m_atarget_hot[7]_i_2_n_0\,
+      I1 => \m_atarget_hot[7]_i_3_n_0\,
+      I2 => \^q\(47),
+      I3 => \^q\(46),
+      I4 => p_0_in,
       O => \gen_arbiter.any_grant_reg_inv_0\(7)
+    );
+\m_atarget_hot[7]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \^q\(49),
+      I1 => \^q\(44),
+      I2 => \^q\(48),
+      I3 => \^q\(45),
+      O => \m_atarget_hot[7]_i_2_n_0\
+    );
+\m_atarget_hot[7]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00000001"
+    )
+        port map (
+      I0 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \^q\(32),
+      I2 => \^q\(33),
+      I3 => \m_atarget_hot[2]_i_4_n_0\,
+      I4 => \m_atarget_hot[2]_i_3_n_0\,
+      O => \m_atarget_hot[7]_i_3_n_0\
     );
 \m_atarget_hot[8]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -4076,7 +4085,7 @@ begin
     )
         port map (
       I0 => \m_atarget_hot[8]_i_3_n_0\,
-      I1 => \m_atarget_hot[10]_i_10_n_0\,
+      I1 => \m_atarget_hot[2]_i_2_n_0\,
       I2 => \m_atarget_hot[8]_i_4_n_0\,
       I3 => \^q\(41),
       I4 => \^q\(38),
@@ -4129,16 +4138,17 @@ begin
       I4 => \m_atarget_hot[10]_i_2_n_0\,
       O => \gen_arbiter.any_grant_reg_inv_0\(9)
     );
-\m_atarget_hot[9]_i_2\: unisim.vcomponents.LUT5
+\m_atarget_hot[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000010"
+      INIT => X"0000000000000100"
     )
         port map (
       I0 => \m_atarget_hot[10]_i_10_n_0\,
-      I1 => \^q\(33),
-      I2 => \^q\(32),
-      I3 => \m_atarget_hot[10]_i_12_n_0\,
-      I4 => \m_atarget_hot[10]_i_11_n_0\,
+      I1 => \m_atarget_hot[10]_i_7_n_0\,
+      I2 => \^q\(33),
+      I3 => \^q\(32),
+      I4 => \m_atarget_hot[2]_i_4_n_0\,
+      I5 => \m_atarget_hot[2]_i_3_n_0\,
       O => \m_atarget_hot[9]_i_2_n_0\
     );
 \m_atarget_hot[9]_i_3\: unisim.vcomponents.LUT5
@@ -4979,7 +4989,7 @@ begin
       I0 => s_axi_bready_0_sn_1,
       I1 => \m_axi_awvalid[0]\(0),
       I2 => \m_ready_d_reg[0]_0\,
-      O => \^m_ready_d_reg[2]\(0)
+      O => \^d\(0)
     );
 \m_ready_d[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -4992,7 +5002,7 @@ begin
       I3 => \m_ready_d_reg[1]_2\,
       I4 => \m_ready_d[1]_i_3_n_0\,
       I5 => \m_axi_awvalid[0]\(1),
-      O => \^m_ready_d_reg[2]\(1)
+      O => \^d\(1)
     );
 \m_ready_d[1]_i_2__0\: unisim.vcomponents.LUT2
     generic map(
@@ -5046,39 +5056,31 @@ begin
       I1 => aresetn_d,
       O => aresetn_d_reg(0)
     );
-\m_ready_d[2]_i_2\: unisim.vcomponents.LUT1
+\m_ready_d[2]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1"
+      INIT => X"FF00FF00FFFEFF00"
     )
         port map (
-      I0 => \m_ready_d[2]_i_4_n_0\,
-      O => \^m_ready_d_reg[2]\(2)
+      I0 => \m_ready_d_reg[2]_0\,
+      I1 => \m_ready_d_reg[2]_1\,
+      I2 => \m_ready_d_reg[2]_2\,
+      I3 => \m_axi_awvalid[0]\(2),
+      I4 => m_valid_i,
+      I5 => aa_grant_rnw,
+      O => \^d\(2)
     );
 \m_ready_d[2]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"1010101010111010"
     )
         port map (
-      I0 => \m_ready_d[2]_i_4_n_0\,
-      I1 => \gen_arbiter.m_grant_hot_i_reg[0]_0\,
+      I0 => \gen_arbiter.m_grant_hot_i[1]_i_4_n_0\,
+      I1 => \gen_arbiter.m_grant_hot_i_reg[0]_1\,
       I2 => \m_axi_awvalid[0]\(1),
       I3 => s_axi_wvalid_0_sn_1,
       I4 => \^m_axi_wlast\(0),
       I5 => \s_axi_wready[1]_INST_0_i_1_n_0\,
       O => \m_ready_d[2]_i_3_n_0\
-    );
-\m_ready_d[2]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00FF00FF000100FF"
-    )
-        port map (
-      I0 => \m_ready_d_reg[2]_1\,
-      I1 => \m_ready_d_reg[2]_2\,
-      I2 => \m_ready_d_reg[2]_3\,
-      I3 => \m_axi_awvalid[0]\(2),
-      I4 => m_valid_i,
-      I5 => aa_grant_rnw,
-      O => \m_ready_d[2]_i_4_n_0\
     );
 m_valid_i_i_1: unisim.vcomponents.LUT3
     generic map(
@@ -5350,7 +5352,7 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_decerr_slave is
     \skid_buffer_reg[0]_3\ : in STD_LOGIC;
     \skid_buffer_reg[0]_4\ : in STD_LOGIC;
     \s_axi_wready[1]_INST_0_i_4_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \m_ready_d[2]_i_4\ : in STD_LOGIC;
+    \m_ready_d_reg[2]\ : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_valid_i_i_2 : in STD_LOGIC;
     m_axi_arready : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -5360,8 +5362,8 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_decerr_slave is
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \m_ready_d_reg[0]_2\ : in STD_LOGIC;
     \m_ready_d_reg[0]_3\ : in STD_LOGIC;
-    \m_ready_d[2]_i_4_0\ : in STD_LOGIC;
-    \m_ready_d[2]_i_4_1\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_0\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_1\ : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_wready : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \m_ready_d_reg[1]_1\ : in STD_LOGIC;
@@ -5413,10 +5415,10 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_decerr_slave is
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_axi.write_cs_reg[1]\ : label is "P_WRITE_IDLE:001,P_WRITE_DATA:010,P_WRITE_RESP:100,";
   attribute FSM_ENCODED_STATES of \FSM_onehot_gen_axi.write_cs_reg[2]\ : label is "P_WRITE_IDLE:001,P_WRITE_DATA:010,P_WRITE_RESP:100,";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_axi.read_cnt[0]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \gen_axi.read_cnt[1]_i_1\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \gen_axi.read_cnt[5]_i_2\ : label is "soft_lutpair57";
-  attribute SOFT_HLUTNM of \gen_axi.read_cnt[6]_i_2\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \gen_axi.read_cnt[0]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \gen_axi.read_cnt[1]_i_1\ : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of \gen_axi.read_cnt[5]_i_2\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \gen_axi.read_cnt[6]_i_2\ : label is "soft_lutpair50";
 begin
   \FSM_onehot_gen_axi.write_cs_reg[1]_0\(0) <= \^fsm_onehot_gen_axi.write_cs_reg[1]_0\(0);
   m_axi_wready_0_sp_1 <= m_axi_wready_0_sn_1;
@@ -5478,7 +5480,7 @@ begin
       Q => \FSM_onehot_gen_axi.write_cs_reg_n_0_[2]\,
       R => SR(0)
     );
-\gen_arbiter.m_grant_hot_i[1]_i_4\: unisim.vcomponents.LUT5
+\gen_arbiter.m_grant_hot_i[1]_i_5\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00FF0001"
     )
@@ -5910,17 +5912,17 @@ begin
       I5 => m_axi_arready(0),
       O => \m_ready_d[1]_i_9_n_0\
     );
-\m_ready_d[2]_i_7\: unisim.vcomponents.LUT6
+\m_ready_d[2]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EFEEEFEEFFFFEFEE"
     )
         port map (
-      I0 => \m_ready_d[2]_i_4_0\,
-      I1 => \m_ready_d[2]_i_4_1\,
+      I0 => \m_ready_d_reg[2]_0\,
+      I1 => \m_ready_d_reg[2]_1\,
       I2 => \skid_buffer_reg[0]\,
       I3 => m_axi_awready(0),
       I4 => mi_awready(10),
-      I5 => \m_ready_d[2]_i_4\,
+      I5 => \m_ready_d_reg[2]\,
       O => \m_axi_awready[8]\
     );
 m_valid_i_i_4: unisim.vcomponents.LUT6
@@ -5929,7 +5931,7 @@ m_valid_i_i_4: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^mi_rvalid\(0),
-      I1 => \m_ready_d[2]_i_4\,
+      I1 => \m_ready_d_reg[2]\,
       I2 => m_axi_rvalid(0),
       I3 => \skid_buffer_reg[0]_4\,
       I4 => m_axi_rvalid(1),
@@ -6048,17 +6050,17 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter is
     m_axi_awready_3_sp_1 : out STD_LOGIC;
     \m_ready_d_reg[2]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \s_axi_bvalid[1]_INST_0_i_1\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_1\ : in STD_LOGIC;
     m_axi_bvalid : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    \gen_arbiter.m_grant_hot_i[1]_i_4\ : in STD_LOGIC;
+    \gen_arbiter.m_grant_hot_i[1]_i_5\ : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC_VECTOR ( 8 downto 0 );
     m_axi_wready : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \m_ready_d_reg[1]_0\ : in STD_LOGIC;
     \m_ready_d_reg[1]_1\ : in STD_LOGIC;
     \m_ready_d_reg[1]_2\ : in STD_LOGIC;
-    \m_ready_d[2]_i_4\ : in STD_LOGIC;
+    \m_ready_d_reg[2]_2\ : in STD_LOGIC;
+    \s_axi_bvalid[1]_INST_0_i_1\ : in STD_LOGIC;
     \s_axi_bvalid[1]_INST_0_i_1_0\ : in STD_LOGIC;
-    \s_axi_bvalid[1]_INST_0_i_1_1\ : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC
@@ -6068,7 +6070,7 @@ entity adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter is
 end adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter;
 
 architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter is
-  signal \gen_arbiter.m_grant_hot_i[1]_i_6_n_0\ : STD_LOGIC;
+  signal \gen_arbiter.m_grant_hot_i[1]_i_7_n_0\ : STD_LOGIC;
   signal m_axi_awready_2_sn_1 : STD_LOGIC;
   signal m_axi_awready_3_sn_1 : STD_LOGIC;
   signal m_axi_awready_7_sn_1 : STD_LOGIC;
@@ -6086,20 +6088,20 @@ begin
   m_axi_bvalid_7_sp_1 <= m_axi_bvalid_7_sn_1;
   m_axi_wready_1_sp_1 <= m_axi_wready_1_sn_1;
   m_axi_wready_4_sp_1 <= m_axi_wready_4_sn_1;
-\gen_arbiter.m_grant_hot_i[1]_i_5\: unisim.vcomponents.LUT6
+\gen_arbiter.m_grant_hot_i[1]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"EFEEEFEEFFFFEFEE"
     )
         port map (
       I0 => m_axi_bvalid_3_sn_1,
-      I1 => \gen_arbiter.m_grant_hot_i[1]_i_6_n_0\,
-      I2 => \s_axi_bvalid[1]_INST_0_i_1\,
+      I1 => \gen_arbiter.m_grant_hot_i[1]_i_7_n_0\,
+      I2 => \m_ready_d_reg[2]_1\,
       I3 => m_axi_bvalid(8),
       I4 => m_axi_bvalid(2),
-      I5 => \gen_arbiter.m_grant_hot_i[1]_i_4\,
+      I5 => \gen_arbiter.m_grant_hot_i[1]_i_5\,
       O => \m_axi_bvalid[9]\
     );
-\gen_arbiter.m_grant_hot_i[1]_i_6\: unisim.vcomponents.LUT6
+\gen_arbiter.m_grant_hot_i[1]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000C00200000002"
     )
@@ -6110,20 +6112,9 @@ begin
       I3 => Q(2),
       I4 => Q(3),
       I5 => m_axi_bvalid(6),
-      O => \gen_arbiter.m_grant_hot_i[1]_i_6_n_0\
+      O => \gen_arbiter.m_grant_hot_i[1]_i_7_n_0\
     );
-\m_ready_d[2]_i_10\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFDF"
-    )
-        port map (
-      I0 => Q(1),
-      I1 => Q(0),
-      I2 => Q(3),
-      I3 => Q(2),
-      O => \m_atarget_enc_reg[1]\
-    );
-\m_ready_d[2]_i_5\: unisim.vcomponents.LUT6
+\m_ready_d[2]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"00000E0000000200"
     )
@@ -6136,20 +6127,20 @@ begin
       I5 => m_axi_awready(6),
       O => m_axi_awready_2_sn_1
     );
-\m_ready_d[2]_i_6\: unisim.vcomponents.LUT6
+\m_ready_d[2]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"22F2FFFF22F222F2"
     )
         port map (
       I0 => m_axi_awready(8),
-      I1 => \s_axi_bvalid[1]_INST_0_i_1\,
+      I1 => \m_ready_d_reg[2]_1\,
       I2 => m_axi_awready(1),
       I3 => \m_ready_d_reg[1]_0\,
-      I4 => \m_ready_d[2]_i_4\,
+      I4 => \m_ready_d_reg[2]_2\,
       I5 => m_axi_awready(4),
       O => \m_axi_awready[9]\
     );
-\m_ready_d[2]_i_8\: unisim.vcomponents.LUT6
+\m_ready_d[2]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"02000C0002000000"
     )
@@ -6162,7 +6153,7 @@ begin
       I5 => m_axi_awready(5),
       O => m_axi_awready_3_sn_1
     );
-\m_ready_d[2]_i_9\: unisim.vcomponents.LUT6
+\m_ready_d[2]_i_8\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"0000800300008000"
     )
@@ -6174,6 +6165,17 @@ begin
       I4 => Q(3),
       I5 => m_axi_awready(0),
       O => m_axi_awready_7_sn_1
+    );
+\m_ready_d[2]_i_9\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFDF"
+    )
+        port map (
+      I0 => Q(1),
+      I1 => Q(0),
+      I2 => Q(3),
+      I3 => Q(2),
+      O => \m_atarget_enc_reg[1]\
     );
 \m_ready_d_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -6217,7 +6219,7 @@ begin
       I1 => \m_ready_d_reg[1]_0\,
       I2 => m_axi_bvalid(5),
       I3 => \m_ready_d_reg[1]_2\,
-      I4 => \m_ready_d[2]_i_4\,
+      I4 => \m_ready_d_reg[2]_2\,
       I5 => m_axi_bvalid(4),
       O => m_axi_bvalid_1_sn_1
     );
@@ -6227,10 +6229,10 @@ begin
     )
         port map (
       I0 => m_axi_bvalid(6),
-      I1 => \s_axi_bvalid[1]_INST_0_i_1_0\,
+      I1 => \s_axi_bvalid[1]_INST_0_i_1\,
       I2 => m_axi_bvalid(0),
-      I3 => \s_axi_bvalid[1]_INST_0_i_1_1\,
-      I4 => \s_axi_bvalid[1]_INST_0_i_1\,
+      I3 => \s_axi_bvalid[1]_INST_0_i_1_0\,
+      I4 => \m_ready_d_reg[2]_1\,
       I5 => m_axi_bvalid(8),
       O => m_axi_bvalid_7_sn_1
     );
@@ -6670,42 +6672,18 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_register_slice_v2_1_22_axic_regist
   signal \skid_buffer_reg_n_0_[9]\ : STD_LOGIC;
   signal \^sr_rvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \m_axi_rready[0]_INST_0\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \m_axi_rready[1]_INST_0\ : label is "soft_lutpair76";
-  attribute SOFT_HLUTNM of \m_axi_rready[2]_INST_0\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \m_axi_rready[3]_INST_0\ : label is "soft_lutpair75";
-  attribute SOFT_HLUTNM of \m_axi_rready[4]_INST_0\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \m_axi_rready[5]_INST_0\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \m_axi_rready[6]_INST_0\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \m_axi_rready[7]_INST_0\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \m_axi_rready[8]_INST_0\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \m_axi_rready[9]_INST_0\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \m_payload_i[0]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \m_payload_i[10]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \m_payload_i[11]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of \m_payload_i[16]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \m_payload_i[17]_i_3\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \m_payload_i[19]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \m_payload_i[20]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \m_payload_i[21]_i_1\ : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of \m_payload_i[22]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \m_payload_i[23]_i_1\ : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of \m_payload_i[24]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \m_payload_i[27]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \m_payload_i[32]_i_1\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \m_payload_i[33]_i_5\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \m_payload_i[34]_i_8\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \m_payload_i[3]_i_1\ : label is "soft_lutpair65";
-  attribute SOFT_HLUTNM of \m_payload_i[4]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \m_payload_i[8]_i_1\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \m_payload_i[9]_i_1\ : label is "soft_lutpair64";
-  attribute SOFT_HLUTNM of \m_ready_d[0]_i_1\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \s_axi_bresp[0]_INST_0_i_1\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \s_axi_bresp[0]_INST_0_i_2\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \s_axi_bresp[1]_INST_0_i_1\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \s_axi_bresp[1]_INST_0_i_2\ : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of \s_axi_bvalid[1]_INST_0_i_6\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \s_axi_rvalid[1]_INST_0\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \m_axi_rready[0]_INST_0\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \m_axi_rready[1]_INST_0\ : label is "soft_lutpair57";
+  attribute SOFT_HLUTNM of \m_axi_rready[2]_INST_0\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \m_axi_rready[3]_INST_0\ : label is "soft_lutpair56";
+  attribute SOFT_HLUTNM of \m_axi_rready[4]_INST_0\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \m_axi_rready[5]_INST_0\ : label is "soft_lutpair55";
+  attribute SOFT_HLUTNM of \m_axi_rready[6]_INST_0\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \m_axi_rready[7]_INST_0\ : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \m_axi_rready[8]_INST_0\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \m_axi_rready[9]_INST_0\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \m_ready_d[0]_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of \s_axi_rvalid[1]_INST_0\ : label is "soft_lutpair52";
 begin
   Q(34 downto 0) <= \^q\(34 downto 0);
   aa_rready <= \^aa_rready\;
@@ -10122,20 +10100,20 @@ architecture STRUCTURE of adc_tech_xbar_0_axi_crossbar_v2_1_23_crossbar_sasd is
   signal \^q\ : STD_LOGIC_VECTOR ( 96 downto 0 );
   signal aa_grant_hot : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal aa_rready : STD_LOGIC;
-  signal addr_arbiter_inst_n_138 : STD_LOGIC;
-  signal addr_arbiter_inst_n_142 : STD_LOGIC;
-  signal addr_arbiter_inst_n_144 : STD_LOGIC;
-  signal addr_arbiter_inst_n_145 : STD_LOGIC;
-  signal addr_arbiter_inst_n_146 : STD_LOGIC;
-  signal addr_arbiter_inst_n_147 : STD_LOGIC;
-  signal addr_arbiter_inst_n_160 : STD_LOGIC;
+  signal addr_arbiter_inst_n_152 : STD_LOGIC;
+  signal addr_arbiter_inst_n_153 : STD_LOGIC;
+  signal addr_arbiter_inst_n_155 : STD_LOGIC;
+  signal addr_arbiter_inst_n_156 : STD_LOGIC;
+  signal addr_arbiter_inst_n_157 : STD_LOGIC;
+  signal addr_arbiter_inst_n_158 : STD_LOGIC;
   signal addr_arbiter_inst_n_171 : STD_LOGIC;
   signal addr_arbiter_inst_n_182 : STD_LOGIC;
-  signal addr_arbiter_inst_n_195 : STD_LOGIC;
-  signal addr_arbiter_inst_n_200 : STD_LOGIC;
-  signal addr_arbiter_inst_n_201 : STD_LOGIC;
-  signal addr_arbiter_inst_n_202 : STD_LOGIC;
-  signal addr_arbiter_inst_n_203 : STD_LOGIC;
+  signal addr_arbiter_inst_n_193 : STD_LOGIC;
+  signal addr_arbiter_inst_n_206 : STD_LOGIC;
+  signal addr_arbiter_inst_n_211 : STD_LOGIC;
+  signal addr_arbiter_inst_n_212 : STD_LOGIC;
+  signal addr_arbiter_inst_n_213 : STD_LOGIC;
+  signal addr_arbiter_inst_n_214 : STD_LOGIC;
   signal aresetn_d : STD_LOGIC;
   signal \gen_axi.s_axi_rid_i\ : STD_LOGIC;
   signal \gen_decerr.decerr_slave_inst_n_2\ : STD_LOGIC;
@@ -10201,25 +10179,26 @@ begin
   \m_payload_i_reg[34]\(34 downto 0) <= \^m_payload_i_reg[34]\(34 downto 0);
 addr_arbiter_inst: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter_sasd
      port map (
-      D(0) => m_ready_d0_0(1),
+      D(2 downto 0) => m_ready_d0(2 downto 0),
       E(0) => p_1_in,
       Q(96 downto 0) => \^q\(96 downto 0),
       SR(0) => reset,
       aa_rready => aa_rready,
       aclk => aclk,
       aresetn_d => aresetn_d,
-      aresetn_d_reg(0) => addr_arbiter_inst_n_138,
-      \aresetn_d_reg[1]\ => addr_arbiter_inst_n_147,
-      aresetn_d_reg_0(3) => addr_arbiter_inst_n_200,
-      aresetn_d_reg_0(2) => addr_arbiter_inst_n_201,
-      aresetn_d_reg_0(1) => addr_arbiter_inst_n_202,
-      aresetn_d_reg_0(0) => addr_arbiter_inst_n_203,
-      aresetn_d_reg_0_sp_1 => addr_arbiter_inst_n_146,
+      aresetn_d_reg(0) => addr_arbiter_inst_n_152,
+      \aresetn_d_reg[1]\ => addr_arbiter_inst_n_158,
+      aresetn_d_reg_0(3) => addr_arbiter_inst_n_211,
+      aresetn_d_reg_0(2) => addr_arbiter_inst_n_212,
+      aresetn_d_reg_0(1) => addr_arbiter_inst_n_213,
+      aresetn_d_reg_0(0) => addr_arbiter_inst_n_214,
+      aresetn_d_reg_0_sp_1 => addr_arbiter_inst_n_157,
       \gen_arbiter.any_grant_reg_inv_0\(10 downto 0) => m_atarget_hot0(10 downto 0),
       \gen_arbiter.m_grant_hot_i[1]_i_2_0\(0) => \^m_payload_i_reg[34]\(0),
-      \gen_arbiter.m_grant_hot_i_reg[0]_0\ => \gen_decerr.decerr_slave_inst_n_2\,
+      \gen_arbiter.m_grant_hot_i_reg[0]_0\(0) => m_ready_d0_0(1),
+      \gen_arbiter.m_grant_hot_i_reg[0]_1\ => \gen_decerr.decerr_slave_inst_n_2\,
       \gen_arbiter.m_grant_hot_i_reg[1]_0\(1 downto 0) => aa_grant_hot(1 downto 0),
-      \gen_axi.read_cs_reg[0]\ => addr_arbiter_inst_n_195,
+      \gen_axi.read_cs_reg[0]\ => addr_arbiter_inst_n_206,
       \gen_axi.s_axi_rid_i\ => \gen_axi.s_axi_rid_i\,
       \gen_axi.s_axi_wready_i_reg\(0) => \gen_decerr.decerr_slave_inst_n_9\,
       \gen_axi.s_axi_wready_i_reg_0\(10 downto 0) => m_atarget_hot(10 downto 0),
@@ -10232,17 +10211,16 @@ addr_arbiter_inst: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter
       m_axi_wlast(0) => \^m_axi_wlast\(0),
       m_axi_wstrb(3 downto 0) => m_axi_wstrb(3 downto 0),
       m_axi_wvalid(9 downto 0) => m_axi_wvalid(9 downto 0),
-      \m_ready_d_reg[0]\ => addr_arbiter_inst_n_145,
+      \m_ready_d_reg[0]\ => addr_arbiter_inst_n_156,
       \m_ready_d_reg[0]_0\ => \gen_decerr.decerr_slave_inst_n_6\,
-      \m_ready_d_reg[1]\ => addr_arbiter_inst_n_160,
+      \m_ready_d_reg[1]\ => addr_arbiter_inst_n_171,
       \m_ready_d_reg[1]_0\ => splitter_aw_n_4,
       \m_ready_d_reg[1]_1\ => splitter_aw_n_5,
       \m_ready_d_reg[1]_2\ => \gen_decerr.decerr_slave_inst_n_8\,
-      \m_ready_d_reg[2]\(2 downto 0) => m_ready_d0(2 downto 0),
-      \m_ready_d_reg[2]_0\ => addr_arbiter_inst_n_182,
-      \m_ready_d_reg[2]_1\ => splitter_aw_n_3,
-      \m_ready_d_reg[2]_2\ => splitter_aw_n_7,
-      \m_ready_d_reg[2]_3\ => \gen_decerr.decerr_slave_inst_n_7\,
+      \m_ready_d_reg[2]\ => addr_arbiter_inst_n_193,
+      \m_ready_d_reg[2]_0\ => splitter_aw_n_3,
+      \m_ready_d_reg[2]_1\ => splitter_aw_n_7,
+      \m_ready_d_reg[2]_2\ => \gen_decerr.decerr_slave_inst_n_7\,
       m_valid_i_reg(1) => reg_slice_r_n_63,
       m_valid_i_reg(0) => reg_slice_r_n_64,
       m_valid_i_reg_0 => \gen_decerr.decerr_slave_inst_n_4\,
@@ -10274,16 +10252,16 @@ addr_arbiter_inst: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_addr_arbiter
       s_axi_awuser(31 downto 0) => s_axi_awuser(31 downto 0),
       s_axi_awvalid(1 downto 0) => s_axi_awvalid(1 downto 0),
       s_axi_bready(1 downto 0) => s_axi_bready(1 downto 0),
-      s_axi_bready_0_sp_1 => addr_arbiter_inst_n_171,
+      s_axi_bready_0_sp_1 => addr_arbiter_inst_n_182,
       s_axi_bvalid(1 downto 0) => s_axi_bvalid(1 downto 0),
       s_axi_rready(1 downto 0) => s_axi_rready(1 downto 0),
       s_axi_wdata(63 downto 0) => s_axi_wdata(63 downto 0),
       s_axi_wlast(1 downto 0) => s_axi_wlast(1 downto 0),
-      s_axi_wlast_1_sp_1 => addr_arbiter_inst_n_144,
+      s_axi_wlast_1_sp_1 => addr_arbiter_inst_n_155,
       s_axi_wready(1 downto 0) => s_axi_wready(1 downto 0),
       s_axi_wstrb(7 downto 0) => s_axi_wstrb(7 downto 0),
       s_axi_wvalid(1 downto 0) => s_axi_wvalid(1 downto 0),
-      s_axi_wvalid_0_sp_1 => addr_arbiter_inst_n_142,
+      s_axi_wvalid_0_sp_1 => addr_arbiter_inst_n_153,
       sr_rvalid => sr_rvalid
     );
 aresetn_d_reg: unisim.vcomponents.FDRE
@@ -10299,7 +10277,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
     );
 \gen_decerr.decerr_slave_inst\: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_decerr_slave
      port map (
-      \FSM_onehot_gen_axi.write_cs_reg[0]_0\ => addr_arbiter_inst_n_171,
+      \FSM_onehot_gen_axi.write_cs_reg[0]_0\ => addr_arbiter_inst_n_182,
       \FSM_onehot_gen_axi.write_cs_reg[1]_0\(0) => \gen_decerr.decerr_slave_inst_n_9\,
       Q(0) => m_atarget_hot(10),
       SR(0) => reset,
@@ -10308,12 +10286,12 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       aresetn_d => aresetn_d,
       \gen_axi.read_cnt_reg[7]_0\(7 downto 0) => \^q\(63 downto 56),
       \gen_axi.read_cs_reg[0]_0\ => \gen_decerr.decerr_slave_inst_n_4\,
-      \gen_axi.s_axi_arready_i_reg_0\ => addr_arbiter_inst_n_160,
-      \gen_axi.s_axi_awready_i_reg_0\ => addr_arbiter_inst_n_182,
-      \gen_axi.s_axi_bvalid_i_reg_0\ => addr_arbiter_inst_n_142,
+      \gen_axi.s_axi_arready_i_reg_0\ => addr_arbiter_inst_n_171,
+      \gen_axi.s_axi_awready_i_reg_0\ => addr_arbiter_inst_n_193,
+      \gen_axi.s_axi_bvalid_i_reg_0\ => addr_arbiter_inst_n_153,
       \gen_axi.s_axi_rid_i\ => \gen_axi.s_axi_rid_i\,
-      \gen_axi.s_axi_rlast_i_reg_0\ => addr_arbiter_inst_n_195,
-      \gen_axi.s_axi_wready_i_reg_0\ => addr_arbiter_inst_n_144,
+      \gen_axi.s_axi_rlast_i_reg_0\ => addr_arbiter_inst_n_206,
+      \gen_axi.s_axi_wready_i_reg_0\ => addr_arbiter_inst_n_155,
       m_axi_arready(2) => m_axi_arready(9),
       m_axi_arready(1 downto 0) => m_axi_arready(7 downto 6),
       \m_axi_arready[7]\ => \gen_decerr.decerr_slave_inst_n_5\,
@@ -10335,9 +10313,6 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       m_axi_wready_0_sp_1 => \gen_decerr.decerr_slave_inst_n_8\,
       \m_ready_d[2]_i_3\ => splitter_aw_n_1,
       \m_ready_d[2]_i_3_0\(0) => m_ready_d_1(0),
-      \m_ready_d[2]_i_4\ => splitter_aw_n_0,
-      \m_ready_d[2]_i_4_0\ => splitter_aw_n_11,
-      \m_ready_d[2]_i_4_1\ => splitter_aw_n_10,
       \m_ready_d_reg[0]\ => \gen_decerr.decerr_slave_inst_n_2\,
       \m_ready_d_reg[0]_0\ => splitter_aw_n_6,
       \m_ready_d_reg[0]_1\ => reg_slice_r_n_40,
@@ -10346,6 +10321,9 @@ aresetn_d_reg: unisim.vcomponents.FDRE
       \m_ready_d_reg[1]\ => reg_slice_r_n_41,
       \m_ready_d_reg[1]_0\ => reg_slice_r_n_48,
       \m_ready_d_reg[1]_1\ => splitter_aw_n_8,
+      \m_ready_d_reg[2]\ => splitter_aw_n_0,
+      \m_ready_d_reg[2]_0\ => splitter_aw_n_11,
+      \m_ready_d_reg[2]_1\ => splitter_aw_n_10,
       m_valid_i_i_2 => reg_slice_r_n_45,
       mi_arready(0) => mi_arready(10),
       mi_rvalid(0) => mi_rvalid(10),
@@ -10364,7 +10342,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_203,
+      D => addr_arbiter_inst_n_214,
       Q => m_atarget_enc(0),
       R => '0'
     );
@@ -10375,7 +10353,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_202,
+      D => addr_arbiter_inst_n_213,
       Q => m_atarget_enc(1),
       R => '0'
     );
@@ -10386,7 +10364,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_201,
+      D => addr_arbiter_inst_n_212,
       Q => m_atarget_enc(2),
       R => '0'
     );
@@ -10397,7 +10375,7 @@ aresetn_d_reg: unisim.vcomponents.FDRE
         port map (
       C => aclk,
       CE => '1',
-      D => addr_arbiter_inst_n_200,
+      D => addr_arbiter_inst_n_211,
       Q => m_atarget_enc(3),
       R => '0'
     );
@@ -10555,12 +10533,12 @@ reg_slice_r: entity work.adc_tech_xbar_0_axi_register_slice_v2_1_22_axic_registe
       m_axi_rvalid(0) => m_axi_rvalid(0),
       \m_axi_rvalid[9]\ => reg_slice_r_n_49,
       \m_payload_i_reg[7]_0\(3 downto 0) => m_atarget_enc(3 downto 0),
-      \m_ready_d_reg[0]\ => addr_arbiter_inst_n_145,
+      \m_ready_d_reg[0]\ => addr_arbiter_inst_n_156,
       \m_ready_d_reg[0]_0\(0) => m_ready_d(0),
-      m_valid_i_reg_0 => addr_arbiter_inst_n_147,
+      m_valid_i_reg_0 => addr_arbiter_inst_n_158,
       s_axi_rvalid(1 downto 0) => s_axi_rvalid(1 downto 0),
       \s_axi_rvalid[1]\(1 downto 0) => aa_grant_hot(1 downto 0),
-      s_ready_i_reg_0 => addr_arbiter_inst_n_146,
+      s_ready_i_reg_0 => addr_arbiter_inst_n_157,
       \skid_buffer_reg[0]_0\ => \gen_decerr.decerr_slave_inst_n_3\,
       sr_rvalid => sr_rvalid
     );
@@ -10703,10 +10681,10 @@ splitter_ar: entity work.\adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter__paramet
       m_axi_arready(6) => m_axi_arready(8),
       m_axi_arready(5 downto 0) => m_axi_arready(5 downto 0),
       \m_ready_d[1]_i_6_0\(3 downto 0) => m_atarget_enc(3 downto 0),
-      \m_ready_d_reg[0]_0\ => addr_arbiter_inst_n_145,
+      \m_ready_d_reg[0]_0\ => addr_arbiter_inst_n_156,
       \m_ready_d_reg[0]_1\(0) => \^m_payload_i_reg[34]\(0),
       \m_ready_d_reg[0]_2\(0) => m_ready_d0_0(0),
-      \m_ready_d_reg[1]_0\ => addr_arbiter_inst_n_160,
+      \m_ready_d_reg[1]_0\ => addr_arbiter_inst_n_171,
       \m_ready_d_reg[1]_1\ => \gen_decerr.decerr_slave_inst_n_5\,
       \m_ready_d_reg[1]_2\ => reg_slice_r_n_42,
       \m_ready_d_reg[1]_3\ => reg_slice_r_n_46,
@@ -10719,9 +10697,9 @@ splitter_aw: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter
      port map (
       D(2 downto 0) => m_ready_d0(2 downto 0),
       Q(3 downto 0) => m_atarget_enc(3 downto 0),
-      SR(0) => addr_arbiter_inst_n_138,
+      SR(0) => addr_arbiter_inst_n_152,
       aclk => aclk,
-      \gen_arbiter.m_grant_hot_i[1]_i_4\ => reg_slice_r_n_40,
+      \gen_arbiter.m_grant_hot_i[1]_i_5\ => reg_slice_r_n_40,
       \m_atarget_enc_reg[1]\ => splitter_aw_n_0,
       m_axi_awready(8) => m_axi_awready(9),
       m_axi_awready(7 downto 0) => m_axi_awready(7 downto 0),
@@ -10741,14 +10719,14 @@ splitter_aw: entity work.adc_tech_xbar_0_axi_crossbar_v2_1_23_splitter
       \m_axi_wready[7]\ => splitter_aw_n_4,
       m_axi_wready_1_sp_1 => splitter_aw_n_5,
       m_axi_wready_4_sp_1 => splitter_aw_n_8,
-      \m_ready_d[2]_i_4\ => reg_slice_r_n_38,
       \m_ready_d_reg[1]_0\ => reg_slice_r_n_42,
       \m_ready_d_reg[1]_1\ => reg_slice_r_n_45,
       \m_ready_d_reg[1]_2\ => reg_slice_r_n_39,
       \m_ready_d_reg[2]_0\(2 downto 0) => m_ready_d_1(2 downto 0),
-      \s_axi_bvalid[1]_INST_0_i_1\ => reg_slice_r_n_48,
-      \s_axi_bvalid[1]_INST_0_i_1_0\ => reg_slice_r_n_41,
-      \s_axi_bvalid[1]_INST_0_i_1_1\ => reg_slice_r_n_47
+      \m_ready_d_reg[2]_1\ => reg_slice_r_n_48,
+      \m_ready_d_reg[2]_2\ => reg_slice_r_n_38,
+      \s_axi_bvalid[1]_INST_0_i_1\ => reg_slice_r_n_41,
+      \s_axi_bvalid[1]_INST_0_i_1_0\ => reg_slice_r_n_47
     );
 end STRUCTURE;
 library IEEE;
@@ -12140,7 +12118,7 @@ architecture STRUCTURE of adc_tech_xbar_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 200000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 400000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RSTIF RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 M00_AXI ARADDR [39:0] [39:0], xilinx.com:interface:aximm:1.0 M01_AXI ARADDR [39:0] [79:40], xilinx.com:interface:aximm:1.0 M02_AXI ARADDR [39:0] [119:80], xilinx.com:interface:aximm:1.0 M03_AXI ARADDR [39:0] [159:120], xilinx.com:interface:aximm:1.0 M04_AXI ARADDR [39:0] [199:160], xilinx.com:interface:aximm:1.0 M05_AXI ARADDR [39:0] [239:200], xilinx.com:interface:aximm:1.0 M06_AXI ARADDR [39:0] [279:240], xilinx.com:interface:aximm:1.0 M07_AXI ARADDR [39:0] [319:280], xilinx.com:interface:aximm:1.0 M08_AXI ARADDR [39:0] [359:320], xilinx.com:interface:aximm:1.0 M09_AXI ARADDR [39:0] [399:360]";
@@ -12173,7 +12151,7 @@ architecture STRUCTURE of adc_tech_xbar_0 is
   attribute X_INTERFACE_INFO of m_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI RDATA [31:0] [63:32], xilinx.com:interface:aximm:1.0 M02_AXI RDATA [31:0] [95:64], xilinx.com:interface:aximm:1.0 M03_AXI RDATA [31:0] [127:96], xilinx.com:interface:aximm:1.0 M04_AXI RDATA [31:0] [159:128], xilinx.com:interface:aximm:1.0 M05_AXI RDATA [31:0] [191:160], xilinx.com:interface:aximm:1.0 M06_AXI RDATA [31:0] [223:192], xilinx.com:interface:aximm:1.0 M07_AXI RDATA [31:0] [255:224], xilinx.com:interface:aximm:1.0 M08_AXI RDATA [31:0] [287:256], xilinx.com:interface:aximm:1.0 M09_AXI RDATA [31:0] [319:288]";
   attribute X_INTERFACE_INFO of m_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RLAST [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RLAST [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RLAST [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI RLAST [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI RLAST [0:0] [4:4], xilinx.com:interface:aximm:1.0 M05_AXI RLAST [0:0] [5:5], xilinx.com:interface:aximm:1.0 M06_AXI RLAST [0:0] [6:6], xilinx.com:interface:aximm:1.0 M07_AXI RLAST [0:0] [7:7], xilinx.com:interface:aximm:1.0 M08_AXI RLAST [0:0] [8:8], xilinx.com:interface:aximm:1.0 M09_AXI RLAST [0:0] [9:9]";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RREADY [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RREADY [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI RREADY [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI RREADY [0:0] [4:4], xilinx.com:interface:aximm:1.0 M05_AXI RREADY [0:0] [5:5], xilinx.com:interface:aximm:1.0 M06_AXI RREADY [0:0] [6:6], xilinx.com:interface:aximm:1.0 M07_AXI RREADY [0:0] [7:7], xilinx.com:interface:aximm:1.0 M08_AXI RREADY [0:0] [8:8], xilinx.com:interface:aximm:1.0 M09_AXI RREADY [0:0] [9:9]";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M02_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M03_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M04_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M05_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M06_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M07_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M08_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M09_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M02_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M03_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M04_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M05_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M06_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M07_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M08_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M09_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RRESP [1:0] [1:0], xilinx.com:interface:aximm:1.0 M01_AXI RRESP [1:0] [3:2], xilinx.com:interface:aximm:1.0 M02_AXI RRESP [1:0] [5:4], xilinx.com:interface:aximm:1.0 M03_AXI RRESP [1:0] [7:6], xilinx.com:interface:aximm:1.0 M04_AXI RRESP [1:0] [9:8], xilinx.com:interface:aximm:1.0 M05_AXI RRESP [1:0] [11:10], xilinx.com:interface:aximm:1.0 M06_AXI RRESP [1:0] [13:12], xilinx.com:interface:aximm:1.0 M07_AXI RRESP [1:0] [15:14], xilinx.com:interface:aximm:1.0 M08_AXI RRESP [1:0] [17:16], xilinx.com:interface:aximm:1.0 M09_AXI RRESP [1:0] [19:18]";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RVALID [0:0] [1:1], xilinx.com:interface:aximm:1.0 M02_AXI RVALID [0:0] [2:2], xilinx.com:interface:aximm:1.0 M03_AXI RVALID [0:0] [3:3], xilinx.com:interface:aximm:1.0 M04_AXI RVALID [0:0] [4:4], xilinx.com:interface:aximm:1.0 M05_AXI RVALID [0:0] [5:5], xilinx.com:interface:aximm:1.0 M06_AXI RVALID [0:0] [6:6], xilinx.com:interface:aximm:1.0 M07_AXI RVALID [0:0] [7:7], xilinx.com:interface:aximm:1.0 M08_AXI RVALID [0:0] [8:8], xilinx.com:interface:aximm:1.0 M09_AXI RVALID [0:0] [9:9]";
   attribute X_INTERFACE_INFO of m_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI WDATA [31:0] [63:32], xilinx.com:interface:aximm:1.0 M02_AXI WDATA [31:0] [95:64], xilinx.com:interface:aximm:1.0 M03_AXI WDATA [31:0] [127:96], xilinx.com:interface:aximm:1.0 M04_AXI WDATA [31:0] [159:128], xilinx.com:interface:aximm:1.0 M05_AXI WDATA [31:0] [191:160], xilinx.com:interface:aximm:1.0 M06_AXI WDATA [31:0] [223:192], xilinx.com:interface:aximm:1.0 M07_AXI WDATA [31:0] [255:224], xilinx.com:interface:aximm:1.0 M08_AXI WDATA [31:0] [287:256], xilinx.com:interface:aximm:1.0 M09_AXI WDATA [31:0] [319:288]";
@@ -12213,7 +12191,7 @@ architecture STRUCTURE of adc_tech_xbar_0 is
   attribute X_INTERFACE_INFO of s_axi_rid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RID [16:0] [16:0], xilinx.com:interface:aximm:1.0 S01_AXI RID [16:0] [33:17]";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RLAST [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RLAST [0:0] [1:1]";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RREADY [0:0] [1:1]";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 17, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S01_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 17, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 17, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME S01_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 400000000, ID_WIDTH 17, ADDR_WIDTH 40, AWUSER_WIDTH 16, ARUSER_WIDTH 16, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_tech_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RRESP [1:0] [1:0], xilinx.com:interface:aximm:1.0 S01_AXI RRESP [1:0] [3:2]";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 S01_AXI RVALID [0:0] [1:1]";
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 S01_AXI WDATA [31:0] [63:32]";

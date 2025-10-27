@@ -40,11 +40,11 @@ def main():
     decimals = [int(c, 16) for c in reversed(hex_str)]
     
     # Scale to voltages: 0-15 -> 0-1.5V (step 0.1V)
-    voltages = np.array([d * 0.1 for d in decimals])
+    voltages = np.array([d * 0.108125 for d in decimals]) # 1.73V/16
 
     # Write voltages to file
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    output_file = os.path.join(script_dir, "voltages1.txt")
+    output_file = os.path.join(script_dir, "voltages.txt")
     with open(output_file, 'w') as f:
         f.write('\n'.join(f"{v:.1f}" for v in voltages))
 
@@ -53,13 +53,13 @@ def main():
     print(f"   Last  5 (MSB): {voltages[-5:].tolist()}")
 
     # Time array: 200 MHz -> dt = 5e-9 s
-    dt = 5e-9  # seconds
+    dt = 25e-10  # seconds
     times = np.arange(0, len(voltages) * dt, dt)
 
     # Define sine function
-    amp = 0.85
+    amp = 0.73
     offset = 0.85
-    freq = 500e3  # 500 kHz
+    freq = 1750e3  # 1.75 MHz
     def sine(phi):
         return offset + amp * np.sin(2 * np.pi * freq * times + phi)
 
@@ -80,8 +80,8 @@ def main():
     plt.plot(times, sine_vals, label='Fitted Sine Wave (12-bit equivalent)', color='red', linewidth=1.5)
     plt.xlabel('Time (seconds)')
     plt.ylabel('Voltage (V)')
-    plt.title('ADC Waveform with Superimposed Fitted Sine (200 MHz sampling)')
-    plt.legend(loc='upper right')
+    plt.title('ADC Waveform with Superimposed Fitted Sine (400 MHz sampling)')
+    plt.legend()
     plt.grid(True)
     
     # Save plot
