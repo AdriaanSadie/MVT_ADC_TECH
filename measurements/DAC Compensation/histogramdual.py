@@ -73,7 +73,7 @@ def main():
             color='#ff7f0e', edgecolor='black', label=args.label2)
 
     # Styling
-    title = args.title or f"Bit 10 Error voltage measured for Vref = 0.9V"
+    title = args.title or f"Bit 4 Error voltage measured for Vref = 0.9V"
     ax.set_title(title, fontsize=14)
     ax.set_xlabel('Error in voltage (mV)')
     ax.set_ylabel('Frequency')
